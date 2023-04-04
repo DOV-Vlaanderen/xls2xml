@@ -1,0 +1,1 @@
+In deze folder komen de gegenereerde xml bestanden terecht na het runnen van het script!
