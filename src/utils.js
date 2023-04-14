@@ -179,7 +179,7 @@ export function hasRequiredProperties(row, index, header, properties) {
 
 export function readCsv(path) {
   const data = fs
-    .readFileSync(path)
+    .readFileSync(path, {encoding: 'utf-8'})
     .toString()
     .trimEnd('\n')
     .split('\n')
