@@ -24,7 +24,7 @@ Heb je het script reeds aangeleverd gekregen als zip bestand? Kijk dan zeker op 
 Het script vergt aangeleverde data in het juiste csv-formaat. In de map van het script zit een map 'data'. Hierin vind je de excel template die gebruikt wordt voor elk object.
 
 Vul het excel bestand in met de data die je in DOV wenst to te voegen. Als je klaar bent sla je elk blad van de excel die je wenst toe te voegen op als csv. De naam van dit csv bestand moet de naam van het excel blad zijn (bv. grondwaterlocaties.csv, bodemlocaties.csv, bodemobservaties.csv, ...). Sla de csv bestanden op in de map 'data'.  
-LET OP: gebruik steeds een ; (puntkomma) als scheidingsteken, en geen , (komma).
+$\textcolor{red}{Gebruik\ steeds\ een\ ';' (puntkomma)\ als\ scheidingsteken,\ en\ geen\ ','(komma).}$
 <br> 
 
 ## Stap 4: Het script uitvoeren
@@ -43,8 +43,14 @@ Open Finder. Rechtermuisklik op de map met het script. Er verschijnt een menu, e
 
 ### Stap 4.2: Packages installeren
 
-Om het script uit te kunnen voeren moeten er nog een aantal extensies geïnstallerd worden. Dit kan je eenvoudigweg doen door in de terminal die hebt openstaan het volgende commando uit te voeren (typ het commando en druk op Enter):
+Om het script uit te kunnen voeren moeten er nog een aantal extensies geïnstalleerd worden. Dit kan je eenvoudigweg doen door in de terminal die hebt openstaan het volgende commando uit te voeren (typ het commando en druk op Enter):
 ```
+npm install
+```
+Indien uw netwerk een proxy server vereist voert u het volgende commando uit (vervang PROXYSERVER met de URL naar de proxy server).
+```
+npm config set proxy PROXYSERVER
+npm config set https-proxy PROXYSERVER
 npm install
 ```
 <br>
