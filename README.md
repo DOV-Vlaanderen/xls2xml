@@ -13,7 +13,7 @@ Let wel op: mogelijks heb je voor de installatie wel de hulp of rechten nodig va
 
 ## Stap 2: Download het script
 
-Klik op de github pagina rechtsboven op download en download de bestanden in een zip formaat. Pak vervolgens het zip bestand uit op je computer.
+Klik op de [github pagina](https://github.com/DOV-Vlaanderen/xls2xml) rechtsboven op download en download de bestanden in een zip formaat. Pak vervolgens het zip bestand uit op je computer.
 Ben je meer gevorderd met git en github, dan kan je ook altijd de repo forken.
 
 Heb je het script reeds aangeleverd gekregen als zip bestand? Kijk dan zeker op de githubpagina naar de datum van de laatste update. Indien het script recent geupdated is geweest, download je best de nieuwste versie van het script.  
@@ -23,7 +23,11 @@ Heb je het script reeds aangeleverd gekregen als zip bestand? Kijk dan zeker op 
 
 Het script vergt aangeleverde data in het juiste csv-formaat. In de map van het script zit een map 'data'. Hierin vind je de excel template die gebruikt wordt voor elk object.
 
-Vul het excel bestand in met de data die je in DOV wenst to te voegen. Als je klaar bent sla je elk blad van de excel die je wenst toe te voegen op als csv. De naam van dit csv bestand moet de naam van het excel blad zijn (bv. grondwaterlocaties.csv, bodemlocaties.csv, bodemobservaties.csv, ...). Sla de csv bestanden op in de map 'data'.  LET OP: gebruik steeds een ; (puntkomma) als scheidingsteken, en geen , (komma). 
+Vul het excel bestand in met de data die je in DOV wenst to te voegen. Als je klaar bent sla je elk blad van de excel die je wenst toe te voegen op als csv. De naam van dit csv bestand moet de naam van het excel blad zijn (bv. grondwaterlocaties.csv, bodemlocaties.csv, bodemobservaties.csv, ...). Sla de csv bestanden op in de map 'data'.  
+
+<span style="color: red">*LET OP: gebruik steeds een ; (puntkomma) als scheidingsteken, en geen , (komma).*</span>
+$${\color{red}LET OP: gebruik steeds een ; (puntkomma) als scheidingsteken, en geen , (komma).}$$
+
 <br> 
 
 ## Stap 4: Het script uitvoeren
