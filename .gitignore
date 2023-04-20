@@ -1,3 +1,4 @@
 node_modules
 vmm.js
 src/vmm
+data/vmm
