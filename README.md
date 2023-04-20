@@ -24,10 +24,7 @@ Heb je het script reeds aangeleverd gekregen als zip bestand? Kijk dan zeker op 
 Het script vergt aangeleverde data in het juiste csv-formaat. In de map van het script zit een map 'data'. Hierin vind je de excel template die gebruikt wordt voor elk object.
 
 Vul het excel bestand in met de data die je in DOV wenst to te voegen. Als je klaar bent sla je elk blad van de excel die je wenst toe te voegen op als csv. De naam van dit csv bestand moet de naam van het excel blad zijn (bv. grondwaterlocaties.csv, bodemlocaties.csv, bodemobservaties.csv, ...). Sla de csv bestanden op in de map 'data'.  
-
-<span style="color: red">*LET OP: gebruik steeds een ; (puntkomma) als scheidingsteken, en geen , (komma).*</span>
-$${\color{red}LET OP: gebruik steeds een ; (puntkomma) als scheidingsteken, en geen , (komma).}$$
-
+LET OP: gebruik steeds een ; (puntkomma) als scheidingsteken, en geen , (komma).
 <br> 
 
 ## Stap 4: Het script uitvoeren
