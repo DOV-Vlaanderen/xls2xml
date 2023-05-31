@@ -180,10 +180,11 @@ function generateGrondwaterFilters() {
         identificatie: findValue(row, gwFilterHeader, 'filter identificatie'),
         filtertype: findValue(row, gwFilterHeader, 'filtertype'),
         grondwaterlocatie: findValue(row, gwFilterHeader, 'grondwaterlocatie'),
+        meetnet: mapNumber(findValue(row, gwFilterHeader, 'meetnet')),
         datum_ingebruikname: mapDate(findValue(row, gwFilterHeader, 'datum ingebruikname')),
-        meetnet: findValue(row, gwFilterHeader, 'meetnet'),
         ligging: {
-          aquifer: findValue(row, gwFilterHeader, 'aquifer')
+          aquifer: findValue(row, gwFilterHeader, 'aquifer'),
+          regime: findValue(row, gwFilterHeader, 'regime'),
         },
         status: mapStatus(findValue(row, gwFilterHeader, 'status')),
       },
