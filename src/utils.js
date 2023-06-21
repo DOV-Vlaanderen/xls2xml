@@ -126,19 +126,19 @@ export function mapTime(value) {
 }
 
 export function mapBetrouwbaarheid(value) {
-  return value && Object.values(BETROUWBAARHEID).includes(value.toLowerCase()) ? value.toLowerCase() : BETROUWBAARHEID.ONBEKEND;
+  return value && Object.values(BETROUWBAARHEID).map(v => v.toLowerCase()).includes(value.toLowerCase()) ? value.toLowerCase() : BETROUWBAARHEID.ONBEKEND;
 }
 
 export function mapMethodeXY(value) {
-  return value && Object.values(METHODE_XY).includes(value.toLowerCase()) ? value.toLowerCase() : METHODE_XY.ONBEKEND;
+  return value && Object.values(METHODE_XY).map(v => v.toLowerCase()).includes(value.toLowerCase()) ? value.toLowerCase() : METHODE_XY.ONBEKEND;
 }
 
 export function mapMethodeZ(value) {
-  return value && Object.values(METHODE_Z).includes(value.toLowerCase()) ? value.toLowerCase() : METHODE_Z.ONBEKEND;
+  return value && Object.values(METHODE_Z).map(v => v.toLowerCase()).includes(value.toLowerCase()) ? value.toLowerCase() : METHODE_Z.ONBEKEND;
 }
 
 export function mapStatus(value) {
-  return value && Object.values(STATUS).includes(value.toLowerCase()) ? value.toLowerCase() : STATUS.PUBLIEK;
+  return value && Object.values(STATUS).map(v => v.toLowerCase()).includes(value.toLowerCase()) ? value.toLowerCase() : STATUS.PUBLIEK;
 }
 
 export function mapStartTovMaaiveld(value) {
