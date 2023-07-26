@@ -52,6 +52,17 @@ export const STATUS = {
   VOOR_PARTNERS: 'voor partners',
 };
 
+export const PUTMATERIAAL = {
+  KLEI: 'klei',
+  GROUT: 'grout',
+  GRIND: 'grind',
+  FILTERZAND: 'filterzand',
+  OPGEBOORD_MATERIAAL: 'opgeboord materiaal',
+  BENTONIET_CEBOGEL_QSE: 'bentoniet cebogel QSE',
+  BENTONIET_MIKOLIT_300: 'bentoniet Mikolit 300',
+  ONBEKEND: 'onbekend'
+}
+
 export let verbose = false;
 
 export function setVerbose() {
@@ -130,11 +141,11 @@ export function mapBetrouwbaarheid(value) {
 }
 
 export function mapMethodeXY(value) {
-  return value && Object.values(METHODE_XY).map(v => v.toLowerCase()).includes(value.toLowerCase()) ? value.toLowerCase() : METHODE_XY.ONBEKEND;
+  return value && Object.values(METHODE_XY).map(v => v.toLowerCase()).includes(value.toLowerCase()) ? Object.values(METHODE_XY)[Object.values(METHODE_XY).map(v => v.toLowerCase()).indexOf(value.toLowerCase())] : METHODE_XY.ONBEKEND;
 }
 
 export function mapMethodeZ(value) {
-  return value && Object.values(METHODE_Z).map(v => v.toLowerCase()).includes(value.toLowerCase()) ? value.toLowerCase() : METHODE_Z.ONBEKEND;
+  return value && Object.values(METHODE_Z).map(v => v.toLowerCase()).includes(value.toLowerCase()) ? Object.values(METHODE_Z)[Object.values(METHODE_Z).map(v => v.toLowerCase()).indexOf(value.toLowerCase())] : METHODE_Z.ONBEKEND;
 }
 
 export function mapStatus(value) {
@@ -143,6 +154,10 @@ export function mapStatus(value) {
 
 export function mapStartTovMaaiveld(value) {
   !mapNumber(value) ? 'MAAIVELD' : mapNumber(value) > 0 ? 'BOVEN_MV' : 'ONDER_MV'
+}
+
+export function mapReferentie(value) {
+  return value?.length ? value : 'Onbekend';
 }
 
 export function removeEmptyProperties(obj) {
@@ -179,7 +194,7 @@ export function hasRequiredProperties(row, index, header, properties) {
 
 export function readCsv(path) {
   const data = fs
-    .readFileSync(path, {encoding: 'utf-8'})
+    .readFileSync(path, { encoding: 'utf-8' })
     .toString()
     .trimEnd('\n')
     .split('\n')
