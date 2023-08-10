@@ -24,21 +24,30 @@ const skippedCounter = {
   grondwaterlocaties: 0,
   grondwatermonsters: 0,
   grondwaterobservaties: 0,
+  filters: 0,
+  filtermetingen: 0
 };
 
 export function createGrondwaterXML() {
   // Grondwaterlocaties
-  if (fs.existsSync('./data/grondwaterlocaties.csv')) {
+  if (fs.existsSync('./data/grondwaterlocaties.txt')) {
     generateGrondwaterLocaties();
   } else {
-    console.log('Geen bestand grondwaterlocaties.csv gevonden in de `data` folder. Grondwaterlocaties worden overgeslagen in de XML.');
+    console.log('Geen bestand grondwaterlocaties.txt gevonden in de `data` folder. Grondwaterlocaties worden overgeslagen in de XML.');
   }
 
-  // Grondwaterfilters
-    if (fs.existsSync('./data/grondwaterfilters.csv')) {
-    generateGrondwaterFilters();
+  // Filters
+    if (fs.existsSync('./data/filters.txt')) {
+    generateFilters();
   } else {
-    console.log('Geen bestand grondwaterfilters.csv gevonden in de `data` folder. Grondwaterfilters worden overgeslagen in de XML.');
+    console.log('Geen bestand filters.txt gevonden in de `data` folder. Filters worden overgeslagen in de XML.');
+  }
+
+  // Filtermetingen
+    if (fs.existsSync('./data/filtermetingen.txt')) {
+    generateFilterMetingen();
+  } else {
+    console.log('Geen bestand filtermetingen.txt gevonden in de `data` folder. Filtermetingen worden overgeslagen in de XML.');
   }
 
   // Grondwatermonsters
@@ -75,19 +84,30 @@ function generateGrondwaterLocaties() {
   // Read csv file
   console.log('Reading grondwaterlocaties...');
 
-  const gwLocatieData = readCsv('./data/grondwaterlocaties.csv');
+  const gwLocatieData = readCsv('./data/grondwaterlocaties.txt');
 
   const gwLocatieHeader = mapHeader(gwLocatieData[0]);
 
   // Remove excess lines at the top
-  gwLocatieData.splice(0, 1);
+  gwLocatieData.splice(0, 7);
 
   gwLocatieData.forEach((row, index) => {
     if (
       !hasRequiredProperties(row, index, gwLocatieHeader, [
-        'grondwaterlocatie',
-        'x (m l72)',
-        'y (m l72)',
+        'datum_ingebruikname',
+        'identificatie',
+        'putsoort',
+        'beheer_vanaf',
+        'beheer_beheerder_contact_naam',
+        'puntligging_xy_x',
+        'puntligging_xy_y',
+        'puntligging_xy_betrouwbaarheid',
+        'puntligging_xy_methode_opmeten',
+        'puntligging_xy_origine_opmeten_contact_naam',
+        'puntligging_oorspronkelijk_maaiveld_waarde',
+        'puntligging_oorspronkelijk_maaiveld_origine_opmeten_contact_naam',
+        'puntligging_oorspronkelijk_maaiveld_betrouwbaarheid',
+        'puntligging_oorspronkelijk_maaiveld_methode_opmeten'
       ])
     ) {
       skippedCounter.grondwaterlocaties++;
@@ -96,42 +116,43 @@ function generateGrondwaterLocaties() {
 
     const object = {
       grondwaterlocatie: {
-        identificatie: findValue(row, gwLocatieHeader, 'grondwaterlocatie'),
+        identificatie: findValue(row, gwLocatieHeader, 'identificatie'),
         grondwaterlocatieType: 'PUT',
         puntligging: {
           xy: {
-            x: mapNumber(findValue(row, gwLocatieHeader, 'x (m l72)')),
-            y: mapNumber(findValue(row, gwLocatieHeader, 'y (m l72)')),
-            betrouwbaarheid: mapBetrouwbaarheid(findValue(row, gwLocatieHeader, 'betrouwbaarheid XY')),
-            methode_opmeten: mapMethodeXY(findValue(row, gwLocatieHeader, 'methode XY')),
+            x: mapNumber(findValue(row, gwLocatieHeader, 'puntligging_xy_x')),
+            y: mapNumber(findValue(row, gwLocatieHeader, 'puntligging_xy_y')),
+            betrouwbaarheid: mapBetrouwbaarheid(findValue(row, gwLocatieHeader, 'puntligging_xy_betrouwbaarheid')),
+            methode_opmeten: mapMethodeXY(findValue(row, gwLocatieHeader, 'puntligging_xy_methode_opmeten')),
             origine_opmeten: {
-              naam: findValue(row, gwLocatieHeader, 'origine XY'),
+              naam: findValue(row, gwLocatieHeader, 'puntligging_xy_origine_opmeten_contact_naam'),
             },
           },
           oorspronkelijk_maaiveld: {
-            waarde: mapNumber(findValue(row, gwLocatieHeader, 'Z - maaiveld (mtaw)')),
-            betrouwbaarheid: mapBetrouwbaarheid(findValue(row, gwLocatieHeader, 'betrouwbaarheid Z')),
-            methode_opmeten: mapMethodeXY(findValue(row, gwLocatieHeader, 'methode Z')),
+            waarde: mapNumber(findValue(row, gwLocatieHeader, 'puntligging_oorspronkelijk_maaiveld_waarde')),
+            betrouwbaarheid: mapBetrouwbaarheid(findValue(row, gwLocatieHeader, 'puntligging_oorspronkelijk_maaiveld_betrouwbaarheid')),
+            methode_opmeten: mapMethodeXY(findValue(row, gwLocatieHeader, 'puntligging_oorspronkelijk_maaiveld_methode_opmeten')),
             origine_opmeten: {
-              naam: findValue(row, gwLocatieHeader, 'origine Z'),
+              naam: findValue(row, gwLocatieHeader, 'puntligging_oorspronkelijk_maaiveld_origine_opmeten_contact_naam'),
             },
           },
-          start_tov_maaiveld: {
-            gestart_op: mapStartTovMaaiveld(findValue(row, gwLocatieHeader, 'start tov maaiveld (m)')),
-            verschil: mapNumber(findValue(row, gwLocatieHeader, 'start tov maaiveld (m)'))
-              ? Math.abs(mapNumber(findValue(row, gwLocatieHeader, 'start tov maaiveld (m)')))
-              : null,
-          },
+          //start_tov_maaiveld: {
+          //  gestart_op: findValue(row, gwLocatieHeader, 'puntligging_start_tov_maaiveld_contact_gestart_op'),
+          //:  verschil: mapNumber(findValue(row, gwLocatieHeader, 'puntligging_start_tov_maaiveld_verschil'))
+          //    ? Math.abs(mapNumber(findValue(row, gwLocatieHeader, 'puntligging_start_tov_maaiveld_verschil')))
+          //    : null,
+          //},
         },
-        diepte: mapNumber(findValue(row, gwLocatieHeader, 'diepte (m)')) ? Math.abs(mapNumber(findValue(row, gwLocatieHeader, 'diepte (m)'))) : null,
-        datum_ingebruikname: mapDate(findValue(row, gwLocatieHeader, 'datum ingebruikname')),
-        putsoort: findValue(row, gwLocatieHeader, 'putsoort') ?? 'onbekend',
+        //diepte: mapNumber(findValue(row, gwLocatieHeader, 'diepte (m)')) ? Math.abs(mapNumber(findValue(row, gwLocatieHeader, 'puntligging_start_tov_maaiveld_verschil'))) : null,
+        datum_ingebruikname: mapDate(findValue(row, gwLocatieHeader, 'datum_ingebruikname')),
+        putsoort: findValue(row, gwLocatieHeader, 'putsoort'),
         beheer: {
+          vanaf: mapDate(findValue(row, gwLocatieHeader, 'beheer_vanaf')),
           beheerder: {
-            naam: findValue(row, gwLocatieHeader, 'beheerder'),
+            naam: findValue(row, gwLocatieHeader, 'beheer_beheerder_contact_naam'),
           },
         },
-        status: mapStatus(findValue(row, gwLocatieHeader, 'status')),
+        //status: mapStatus(findValue(row, gwLocatieHeader, 'status')),
       },
     };
 
@@ -152,41 +173,54 @@ function generateGrondwaterLocaties() {
   }
 }
 
-function generateGrondwaterFilters() {
+function generateFilters() {
   // Read csv file
-  console.log('Reading grondwaterfilters...');
+  console.log('Reading filters...');
 
-  const gwFilterData = readCsv('./data/grondwaterfilters.csv');
+  const gwFilterData = readCsv('./data/filters.txt');
 
   const gwFilterHeader = mapHeader(gwFilterData[0]);
 
   // Remove excess lines at the top
-  gwFilterData.splice(0, 1);
+  gwFilterData.splice(0, 4);
 
   gwFilterData.forEach((row, index) => {
     if (
       !hasRequiredProperties(row, index, gwFilterHeader, [
         'grondwaterlocatie',
-        'filter identificatie',
+        'identificatie',
+        'datum_ingebruikname',
         'filtertype',
+        'meetnet',
+        'ligging_aquifer',
+        'ligging_regime',
+        'opbouw_onderdeel_van',
+        'opbouw_onderdeel_tot'
       ])
     ) {
-      skippedCounter.grondwaterfilters++;
+      skippedCounter.filters++;
       return;
     }
 
     const object = {
       filter: {
-        identificatie: findValue(row, gwFilterHeader, 'filter identificatie'),
+        identificatie: findValue(row, gwFilterHeader, 'identificatie'),
         filtertype: findValue(row, gwFilterHeader, 'filtertype'),
         grondwaterlocatie: findValue(row, gwFilterHeader, 'grondwaterlocatie'),
-        meetnet: mapNumber(findValue(row, gwFilterHeader, 'meetnet')),
-        datum_ingebruikname: mapDate(findValue(row, gwFilterHeader, 'datum ingebruikname')),
+        meetnet: findValue(row, gwFilterHeader, 'meetnet'),
+        datum_ingebruikname: mapDate(findValue(row, gwFilterHeader, 'datum_ingebruikname')),
         ligging: {
-          aquifer: findValue(row, gwFilterHeader, 'aquifer'),
-          regime: findValue(row, gwFilterHeader, 'regime'),
+          aquifer: findValue(row, gwFilterHeader, 'ligging_aquifer'),
+          regime: findValue(row, gwFilterHeader, 'ligging_regime'),
         },
-        status: mapStatus(findValue(row, gwFilterHeader, 'status')),
+        opbouw: {
+          onderdeel: {
+            van: mapNumber(findValue(row, gwFilterHeader, 'opbouw_onderdeel_van')),
+            tot: mapNumber(findValue(row, gwFilterHeader, 'opbouw_onderdeel_tot')),
+            filterelement: findValue(row, gwFilterHeader, 'opbouw_onderdeel_filterelement'),
+          }
+        }
+        //status: mapStatus(findValue(row, gwFilterHeader, 'status')),
       },
     };
 
@@ -196,14 +230,90 @@ function generateGrondwaterFilters() {
     xmlObjects.push(xml);
   });
 
-  if (skippedCounter.grondwaterfilters) {
+  if (skippedCounter.filters) {
     console.log('\x1b[33m%s\x1b[0m', 'Opgelet: rijen met fouten werden overgeslagen.');
-    console.log('\x1b[33m%s\x1b[0m', 'Grondwaterfilters: ' + skippedCounter.grondwaterfilters + ' rijen met fouten');
+    console.log('\x1b[33m%s\x1b[0m', 'Filters: ' + skippedCounter.filters + ' rijen met fouten');
     if (!verbose) {
       console.log('\x1b[33m%s\x1b[0m', 'Run het script opnieuw met de `-v` parameter om meer informatie te verkrijgen per ongeldige rij.');
     }
   } else {
-    console.log('Grondwaterfilters foutloos verwerkt!');
+    console.log('Filters foutloos verwerkt!');
+  }
+}
+
+function generateFilterMetingen() {
+  // Read csv file
+  console.log('Reading filtermetingen...');
+
+  const gwFilterMeting = readCsv('./data/filtermetingen.txt');
+
+  const gwFilterMetingHeader = mapHeader(gwFilterMeting[0]);
+
+  // Remove excess lines at the top
+  gwFilterMeting.splice(0, 8);
+
+  gwFilterMeting.forEach((row, index) => {
+    if (!hasRequiredProperties(row, index, gwFilterMetingHeader, [
+      'grondwaterlocatie',
+      'filter_identificatie',
+      'watermonster_identificatie',
+      'watermonster_monstername_datum',
+      'watermonster_observatie_eenheid',
+      'watermonster_observatie_parameter',
+      'watermonster_observatie_parametergroep',
+      'watermonster_observatie_detectieconditie',
+      'watermonster_observatie_veld_labo',
+      'watermonster_observatie_waarde_numeriek'])) {
+      skippedCounter.filtermetingen++;
+      return;
+    }
+
+    const object = {
+      filtermeting: {
+        grondwaterlocatie: findValue(row, gwFilterMetingHeader, 'grondwaterlocatie'),
+        filter: {
+          identificatie: findValue(row, gwFilterMetingHeader, 'filter_identificatie'),
+          filtertype: findValue(row, gwFilterMetingHeader, 'filter_filtertype'),
+        },
+        watermonster: {
+          identificatie: findValue(row, gwFilterMetingHeader, 'watermonster_identificatie'),
+          monstername: {
+            datum: mapDate(findValue(row, gwFilterMetingHeader, 'watermonster_monstername_datum')),
+            labo: {
+              naam: findValue(row, gwFilterMetingHeader, 'watermonster_monstername_labo_naam'),
+            }
+          },
+          laboanalyse: {
+            datum: mapDate(findValue(row, gwFilterMetingHeader, 'watermonster_laboanalyse_datum')),
+            labo: {
+              naam: findValue(row, gwFilterMetingHeader, 'watermonster_laboanalyse_labo_naam'),
+            }
+          },
+          observatie: {
+            parameter: findValue(row, gwFilterMetingHeader, 'watermonster_observatie_parameter'),
+            parametergroep: findValue(row, gwFilterMetingHeader, 'watermonster_observatie_parametergroep'),
+            waarde_numeriek: mapNumber(findValue(row, gwFilterMetingHeader, 'watermonster_observatie_waarde_numeriek')),
+            eenheid: findValue(row, gwFilterMetingHeader, 'watermonster_observatie_eenheid'),
+            detectieconditie: findValue(row, gwFilterMetingHeader, 'watermonster_observatie_detectieconditie'),
+            veld_labo: findValue(row, gwFilterMetingHeader, 'watermonster_observatie_veld_labo'),
+          }
+        }
+      }
+    }
+    const json = JSON.stringify(removeEmptyProperties(object));
+    const xml = json2xml(json, { compact: true, spaces: 4 });
+
+    xmlObjects.push(xml);
+  });
+
+  if (skippedCounter.filtermetingen) {
+    console.log('\x1b[33m%s\x1b[0m', 'Opgelet: rijen met fouten werden overgeslagen.');
+    console.log('\x1b[33m%s\x1b[0m', 'Filtermetingen: ' + skippedCounter.filtermetingen + ' rijen met fouten');
+    if (!verbose) {
+      console.log('\x1b[33m%s\x1b[0m', 'Run het script opnieuw met de `-v` parameter om meer informatie te verkrijgen per ongeldige rij.');
+    }
+  } else {
+    console.log('Filtermetingen foutloos verwerkt!');
   }
 }
 
@@ -211,7 +321,7 @@ function generateGrondwaterMonsters() {
   // Read csv file
   console.log('Reading grondwatermonsters...');
 
-  const gwMonsterData = readCsv('./data/grondwatermonsters.csv');
+  const gwMonsterData = readCsv('./data/grondwatermonsters.txt');
 
   const gwMonsterHeader = mapHeader(gwMonsterData[0]);
 
@@ -219,7 +329,10 @@ function generateGrondwaterMonsters() {
   gwMonsterData.splice(0, 1);
 
   gwMonsterData.forEach((row, index) => {
-    if (!hasRequiredProperties(row, index, gwMonsterHeader, ['grondwaterlocatie', 'filter', 'identificatie watermonster', 'datum monstername'])) {
+    if (!hasRequiredProperties(row, index, gwMonsterHeader, [
+      'grondwaterlocatie',
+      'identificatie watermonster',
+      'datum monstername'])) {
       skippedCounter.grondwatermonsters++;
       return;
     }
@@ -229,7 +342,7 @@ function generateGrondwaterMonsters() {
         grondwaterlocatie: findValue(row, gwMonsterHeader, 'grondwaterlocatie'),
         filter: {
           identificatie: findValue(row, gwMonsterHeader, 'filter'),
-          filtertype: findValue(row, gwMonsterHeader, 'filtertype'),
+          //filtertype: findValue(row, gwMonsterHeader, 'filtertype'),
         },
         watermonster: {
           identificatie: findValue(row, gwMonsterHeader, 'identificatie watermonster'),

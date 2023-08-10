@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:dov-schema xmlns:ns3="http://kern.schemas.dov.vlaanderen.be">
+<grondwaterlocatie>
+    <identificatie>StadA_volkstuin_boere schuur</identificatie>
+    <grondwaterlocatieType>PUT</grondwaterlocatieType>
+    <puntligging>
+        <xy>
+            <x>155290</x>
+            <y>216990</y>
+            <betrouwbaarheid>onbekend</betrouwbaarheid>
+            <methode_opmeten>methode onbekend</methode_opmeten>
+            <origine_opmeten>
+                <naam>Stad_Antwerpen</naam>
+            </origine_opmeten>
+        </xy>
+        <oorspronkelijk_maaiveld>
+            <waarde>0</waarde>
+            <betrouwbaarheid>onbekend</betrouwbaarheid>
+            <methode_opmeten>methode onbekend</methode_opmeten>
+            <origine_opmeten>
+                <naam>onbekend</naam>
+            </origine_opmeten>
+        </oorspronkelijk_maaiveld>
+    </puntligging>
+    <datum_ingebruikname>2000-01-01</datum_ingebruikname>
+    <putsoort>onbekend</putsoort>
+    <beheer>
+        <vanaf>2000-01-01</vanaf>
+        <beheerder>
+            <naam>onbekend</naam>
+        </beheerder>
+    </beheer>
+</grondwaterlocatie>
+<filter>
+    <identificatie>filter_test</identificatie>
+    <filtertype>pompfilter</filtertype>
+    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <meetnet>12</meetnet>
+    <datum_ingebruikname>2000-01-01</datum_ingebruikname>
+    <ligging>
+        <aquifer>0000</aquifer>
+        <regime>onbekend</regime>
+    </ligging>
+    <opbouw>
+        <onderdeel>
+            <van>0</van>
+            <tot>10</tot>
+            <filterelement>onbekend</filterelement>
+        </onderdeel>
+    </opbouw>
+</filter>
+<filtermeting>
+    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <filter>
+        <identificatie>filter_test</identificatie>
+        <filtertype>pompfilter</filtertype>
+    </filter>
+    <watermonster>
+        <identificatie>Volkstuin_privaat_boere schuur_1</identificatie>
+        <monstername>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </monstername>
+        <laboanalyse>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </laboanalyse>
+        <observatie>
+            <parameter>PFBA</parameter>
+            <parametergroep>GW_CHEM_PFAS</parametergroep>
+            <waarde_numeriek>66</waarde_numeriek>
+            <eenheid>ng/l</eenheid>
+            <detectieconditie>-</detectieconditie>
+            <veld_labo>LABO</veld_labo>
+        </observatie>
+    </watermonster>
+</filtermeting>
+<filtermeting>
+    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <filter>
+        <identificatie>filter_test</identificatie>
+        <filtertype>pompfilter</filtertype>
+    </filter>
+    <watermonster>
+        <identificatie>Volkstuin_privaat_boere schuur_1</identificatie>
+        <monstername>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </monstername>
+        <laboanalyse>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </laboanalyse>
+        <observatie>
+            <parameter>PFHpA</parameter>
+            <parametergroep>GW_CHEM_PFAS</parametergroep>
+            <waarde_numeriek>0</waarde_numeriek>
+            <eenheid>ng/l</eenheid>
+            <detectieconditie>&lt;</detectieconditie>
+            <veld_labo>LABO</veld_labo>
+        </observatie>
+    </watermonster>
+</filtermeting>
+<filtermeting>
+    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <filter>
+        <identificatie>filter_test</identificatie>
+        <filtertype>pompfilter</filtertype>
+    </filter>
+    <watermonster>
+        <identificatie>Volkstuin_privaat_boere schuur_1</identificatie>
+        <monstername>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </monstername>
+        <laboanalyse>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </laboanalyse>
+        <observatie>
+            <parameter>PFPeA</parameter>
+            <parametergroep>GW_CHEM_PFAS</parametergroep>
+            <waarde_numeriek>0</waarde_numeriek>
+            <eenheid>ng/l</eenheid>
+            <detectieconditie>&lt;</detectieconditie>
+            <veld_labo>LABO</veld_labo>
+        </observatie>
+    </watermonster>
+</filtermeting>
+<filtermeting>
+    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <filter>
+        <identificatie>filter_test</identificatie>
+        <filtertype>pompfilter</filtertype>
+    </filter>
+    <watermonster>
+        <identificatie>Volkstuin_privaat_boere schuur_1</identificatie>
+        <monstername>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </monstername>
+        <laboanalyse>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </laboanalyse>
+        <observatie>
+            <parameter>PFHxA</parameter>
+            <parametergroep>GW_CHEM_PFAS</parametergroep>
+            <waarde_numeriek>0</waarde_numeriek>
+            <eenheid>ng/l</eenheid>
+            <detectieconditie>&lt;</detectieconditie>
+            <veld_labo>LABO</veld_labo>
+        </observatie>
+    </watermonster>
+</filtermeting>
+<filtermeting>
+    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <filter>
+        <identificatie>filter_test</identificatie>
+        <filtertype>pompfilter</filtertype>
+    </filter>
+    <watermonster>
+        <identificatie>Volkstuin_privaat_boere schuur_1</identificatie>
+        <monstername>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </monstername>
+        <laboanalyse>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </laboanalyse>
+        <observatie>
+            <parameter>PFOAtotal</parameter>
+            <parametergroep>GW_CHEM_PFAS</parametergroep>
+            <waarde_numeriek>24</waarde_numeriek>
+            <eenheid>ng/l</eenheid>
+            <detectieconditie>-</detectieconditie>
+            <veld_labo>LABO</veld_labo>
+        </observatie>
+    </watermonster>
+</filtermeting>
+<filtermeting>
+    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <filter>
+        <identificatie>filter_test</identificatie>
+        <filtertype>pompfilter</filtertype>
+    </filter>
+    <watermonster>
+        <identificatie>Volkstuin_privaat_boere schuur_1</identificatie>
+        <monstername>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </monstername>
+        <laboanalyse>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </laboanalyse>
+        <observatie>
+            <parameter>PFBS</parameter>
+            <parametergroep>GW_CHEM_PFAS</parametergroep>
+            <waarde_numeriek>45</waarde_numeriek>
+            <eenheid>ng/l</eenheid>
+            <detectieconditie>-</detectieconditie>
+            <veld_labo>LABO</veld_labo>
+        </observatie>
+    </watermonster>
+</filtermeting>
+<filtermeting>
+    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <filter>
+        <identificatie>filter_test</identificatie>
+        <filtertype>pompfilter</filtertype>
+    </filter>
+    <watermonster>
+        <identificatie>Volkstuin_privaat_boere schuur_1</identificatie>
+        <monstername>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </monstername>
+        <laboanalyse>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </laboanalyse>
+        <observatie>
+            <parameter>PFPeS</parameter>
+            <parametergroep>GW_CHEM_PFAS</parametergroep>
+            <waarde_numeriek>0</waarde_numeriek>
+            <eenheid>ng/l</eenheid>
+            <detectieconditie>&lt;</detectieconditie>
+            <veld_labo>LABO</veld_labo>
+        </observatie>
+    </watermonster>
+</filtermeting>
+<filtermeting>
+    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <filter>
+        <identificatie>filter_test</identificatie>
+        <filtertype>pompfilter</filtertype>
+    </filter>
+    <watermonster>
+        <identificatie>Volkstuin_privaat_boere schuur_1</identificatie>
+        <monstername>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </monstername>
+        <laboanalyse>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </laboanalyse>
+        <observatie>
+            <parameter>PFHxS</parameter>
+            <parametergroep>GW_CHEM_PFAS</parametergroep>
+            <waarde_numeriek>15</waarde_numeriek>
+            <eenheid>ng/l</eenheid>
+            <detectieconditie>-</detectieconditie>
+            <veld_labo>LABO</veld_labo>
+        </observatie>
+    </watermonster>
+</filtermeting>
+<filtermeting>
+    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <filter>
+        <identificatie>filter_test</identificatie>
+        <filtertype>pompfilter</filtertype>
+    </filter>
+    <watermonster>
+        <identificatie>Volkstuin_privaat_boere schuur_1</identificatie>
+        <monstername>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </monstername>
+        <laboanalyse>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </laboanalyse>
+        <observatie>
+            <parameter>PFHpS</parameter>
+            <parametergroep>GW_CHEM_PFAS</parametergroep>
+            <waarde_numeriek>0</waarde_numeriek>
+            <eenheid>ng/l</eenheid>
+            <detectieconditie>&lt;</detectieconditie>
+            <veld_labo>LABO</veld_labo>
+        </observatie>
+    </watermonster>
+</filtermeting>
+<filtermeting>
+    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <filter>
+        <identificatie>filter_test</identificatie>
+        <filtertype>pompfilter</filtertype>
+    </filter>
+    <watermonster>
+        <identificatie>Volkstuin_privaat_boere schuur_1</identificatie>
+        <monstername>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </monstername>
+        <laboanalyse>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </laboanalyse>
+        <observatie>
+            <parameter>PFOStotal</parameter>
+            <parametergroep>GW_CHEM_PFAS</parametergroep>
+            <waarde_numeriek>0</waarde_numeriek>
+            <eenheid>ng/l</eenheid>
+            <detectieconditie>&lt;</detectieconditie>
+            <veld_labo>LABO</veld_labo>
+        </observatie>
+    </watermonster>
+</filtermeting>
+<filtermeting>
+    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <filter>
+        <identificatie>filter_test</identificatie>
+        <filtertype>pompfilter</filtertype>
+    </filter>
+    <watermonster>
+        <identificatie>Volkstuin_privaat_boere schuur_1</identificatie>
+        <monstername>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </monstername>
+        <laboanalyse>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </laboanalyse>
+        <observatie>
+            <parameter>6:2 FTS</parameter>
+            <parametergroep>GW_CHEM_PFAS</parametergroep>
+            <waarde_numeriek>0</waarde_numeriek>
+            <eenheid>ng/l</eenheid>
+            <detectieconditie>&lt;</detectieconditie>
+            <veld_labo>LABO</veld_labo>
+        </observatie>
+    </watermonster>
+</filtermeting>
+<filtermeting>
+    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <filter>
+        <identificatie>filter_test</identificatie>
+        <filtertype>pompfilter</filtertype>
+    </filter>
+    <watermonster>
+        <identificatie>Volkstuin_privaat_boere schuur_2</identificatie>
+        <monstername>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </monstername>
+        <laboanalyse>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </laboanalyse>
+        <observatie>
+            <parameter>PFBA</parameter>
+            <parametergroep>GW_CHEM_PFAS</parametergroep>
+            <waarde_numeriek>74</waarde_numeriek>
+            <eenheid>ng/l</eenheid>
+            <detectieconditie>-</detectieconditie>
+            <veld_labo>LABO</veld_labo>
+        </observatie>
+    </watermonster>
+</filtermeting>
+<filtermeting>
+    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <filter>
+        <identificatie>filter_test</identificatie>
+        <filtertype>pompfilter</filtertype>
+    </filter>
+    <watermonster>
+        <identificatie>Volkstuin_privaat_boere schuur_2</identificatie>
+        <monstername>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </monstername>
+        <laboanalyse>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </laboanalyse>
+        <observatie>
+            <parameter>PFHpA</parameter>
+            <parametergroep>GW_CHEM_PFAS</parametergroep>
+            <waarde_numeriek>0</waarde_numeriek>
+            <eenheid>ng/l</eenheid>
+            <detectieconditie>&lt;</detectieconditie>
+            <veld_labo>LABO</veld_labo>
+        </observatie>
+    </watermonster>
+</filtermeting>
+<filtermeting>
+    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <filter>
+        <identificatie>filter_test</identificatie>
+        <filtertype>pompfilter</filtertype>
+    </filter>
+    <watermonster>
+        <identificatie>Volkstuin_privaat_boere schuur_2</identificatie>
+        <monstername>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </monstername>
+        <laboanalyse>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </laboanalyse>
+        <observatie>
+            <parameter>PFPeA</parameter>
+            <parametergroep>GW_CHEM_PFAS</parametergroep>
+            <waarde_numeriek>13</waarde_numeriek>
+            <eenheid>ng/l</eenheid>
+            <detectieconditie>-</detectieconditie>
+            <veld_labo>LABO</veld_labo>
+        </observatie>
+    </watermonster>
+</filtermeting>
+<filtermeting>
+    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <filter>
+        <identificatie>filter_test</identificatie>
+        <filtertype>pompfilter</filtertype>
+    </filter>
+    <watermonster>
+        <identificatie>Volkstuin_privaat_boere schuur_2</identificatie>
+        <monstername>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </monstername>
+        <laboanalyse>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </laboanalyse>
+        <observatie>
+            <parameter>PFHxA</parameter>
+            <parametergroep>GW_CHEM_PFAS</parametergroep>
+            <waarde_numeriek>11</waarde_numeriek>
+            <eenheid>ng/l</eenheid>
+            <detectieconditie>-</detectieconditie>
+            <veld_labo>LABO</veld_labo>
+        </observatie>
+    </watermonster>
+</filtermeting>
+<filtermeting>
+    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <filter>
+        <identificatie>filter_test</identificatie>
+        <filtertype>pompfilter</filtertype>
+    </filter>
+    <watermonster>
+        <identificatie>Volkstuin_privaat_boere schuur_2</identificatie>
+        <monstername>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </monstername>
+        <laboanalyse>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </laboanalyse>
+        <observatie>
+            <parameter>PFOAtotal</parameter>
+            <parametergroep>GW_CHEM_PFAS</parametergroep>
+            <waarde_numeriek>37</waarde_numeriek>
+            <eenheid>ng/l</eenheid>
+            <detectieconditie>-</detectieconditie>
+            <veld_labo>LABO</veld_labo>
+        </observatie>
+    </watermonster>
+</filtermeting>
+<filtermeting>
+    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <filter>
+        <identificatie>filter_test</identificatie>
+        <filtertype>pompfilter</filtertype>
+    </filter>
+    <watermonster>
+        <identificatie>Volkstuin_privaat_boere schuur_2</identificatie>
+        <monstername>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </monstername>
+        <laboanalyse>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </laboanalyse>
+        <observatie>
+            <parameter>PFBS</parameter>
+            <parametergroep>GW_CHEM_PFAS</parametergroep>
+            <waarde_numeriek>51</waarde_numeriek>
+            <eenheid>ng/l</eenheid>
+            <detectieconditie>-</detectieconditie>
+            <veld_labo>LABO</veld_labo>
+        </observatie>
+    </watermonster>
+</filtermeting>
+<filtermeting>
+    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <filter>
+        <identificatie>filter_test</identificatie>
+        <filtertype>pompfilter</filtertype>
+    </filter>
+    <watermonster>
+        <identificatie>Volkstuin_privaat_boere schuur_2</identificatie>
+        <monstername>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </monstername>
+        <laboanalyse>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </laboanalyse>
+        <observatie>
+            <parameter>PFPeS</parameter>
+            <parametergroep>GW_CHEM_PFAS</parametergroep>
+            <waarde_numeriek>0</waarde_numeriek>
+            <eenheid>ng/l</eenheid>
+            <detectieconditie>&lt;</detectieconditie>
+            <veld_labo>LABO</veld_labo>
+        </observatie>
+    </watermonster>
+</filtermeting>
+<filtermeting>
+    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <filter>
+        <identificatie>filter_test</identificatie>
+        <filtertype>pompfilter</filtertype>
+    </filter>
+    <watermonster>
+        <identificatie>Volkstuin_privaat_boere schuur_2</identificatie>
+        <monstername>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </monstername>
+        <laboanalyse>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </laboanalyse>
+        <observatie>
+            <parameter>PFHxS</parameter>
+            <parametergroep>GW_CHEM_PFAS</parametergroep>
+            <waarde_numeriek>14</waarde_numeriek>
+            <eenheid>ng/l</eenheid>
+            <detectieconditie>-</detectieconditie>
+            <veld_labo>LABO</veld_labo>
+        </observatie>
+    </watermonster>
+</filtermeting>
+<filtermeting>
+    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <filter>
+        <identificatie>filter_test</identificatie>
+        <filtertype>pompfilter</filtertype>
+    </filter>
+    <watermonster>
+        <identificatie>Volkstuin_privaat_boere schuur_2</identificatie>
+        <monstername>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </monstername>
+        <laboanalyse>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </laboanalyse>
+        <observatie>
+            <parameter>PFHpS</parameter>
+            <parametergroep>GW_CHEM_PFAS</parametergroep>
+            <waarde_numeriek>0</waarde_numeriek>
+            <eenheid>ng/l</eenheid>
+            <detectieconditie>&lt;</detectieconditie>
+            <veld_labo>LABO</veld_labo>
+        </observatie>
+    </watermonster>
+</filtermeting>
+<filtermeting>
+    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <filter>
+        <identificatie>filter_test</identificatie>
+        <filtertype>pompfilter</filtertype>
+    </filter>
+    <watermonster>
+        <identificatie>Volkstuin_privaat_boere schuur_2</identificatie>
+        <monstername>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </monstername>
+        <laboanalyse>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </laboanalyse>
+        <observatie>
+            <parameter>PFOStotal</parameter>
+            <parametergroep>GW_CHEM_PFAS</parametergroep>
+            <waarde_numeriek>23</waarde_numeriek>
+            <eenheid>ng/l</eenheid>
+            <detectieconditie>-</detectieconditie>
+            <veld_labo>LABO</veld_labo>
+        </observatie>
+    </watermonster>
+</filtermeting>
+<filtermeting>
+    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <filter>
+        <identificatie>filter_test</identificatie>
+        <filtertype>pompfilter</filtertype>
+    </filter>
+    <watermonster>
+        <identificatie>Volkstuin_privaat_boere schuur_2</identificatie>
+        <monstername>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </monstername>
+        <laboanalyse>
+            <datum>2000-01-01</datum>
+            <labo>
+                <naam>onbekend</naam>
+            </labo>
+        </laboanalyse>
+        <observatie>
+            <parameter>6:2 FTS</parameter>
+            <parametergroep>GW_CHEM_PFAS</parametergroep>
+            <waarde_numeriek>0</waarde_numeriek>
+            <eenheid>ng/l</eenheid>
+            <detectieconditie>&lt;</detectieconditie>
+            <veld_labo>LABO</veld_labo>
+        </observatie>
+    </watermonster>
+</filtermeting>
+</ns3:dov-schema>
