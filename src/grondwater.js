@@ -156,6 +156,8 @@ function generateGrondwaterLocaties() {
       },
     };
 
+
+
     const json = JSON.stringify(removeEmptyProperties(object));
     const xml = json2xml(json, { compact: true, spaces: 4 });
 
@@ -300,7 +302,30 @@ function generateFilterMetingen() {
         }
       }
     }
-    const json = JSON.stringify(removeEmptyProperties(object));
+
+    if (hasRequiredProperties(row, index, gwFilterMetingHeader, [
+      'referentiepunt_datum',
+      'referentiepunt_meetpunt',
+      'referentiepunt_referentie']))
+    {
+        object['filtermeting']['referentiepunt'] = {datum:mapDate(findValue(row, gwFilterMetingHeader, 'referentiepunt_datum')),
+        meetpunt:findValue(row, gwFilterMetingHeader, 'referentiepunt_meetpunt'),
+        referentie:findValue(row, gwFilterMetingHeader, 'referentiepunt_referentie')}
+
+    }
+
+    const objectOrder = {
+    'grondwaterlocatie': null,
+    'filter': null,
+    'referentiepunt':null,
+    'watermonster':null
+
+    }
+
+    const filtermeting_object = Object.assign(objectOrder, object['filtermeting']);
+    const object2 = {'filtermeting': filtermeting_object}
+
+    const json = JSON.stringify(removeEmptyProperties(object2));
     const xml = json2xml(json, { compact: true, spaces: 4 });
 
     xmlObjects.push(xml);
@@ -362,6 +387,7 @@ function generateGrondwaterMonsters() {
         },
       },
     };
+
 
     const json = JSON.stringify(removeEmptyProperties(object));
     const xml = json2xml(json, { compact: true, spaces: 4 });

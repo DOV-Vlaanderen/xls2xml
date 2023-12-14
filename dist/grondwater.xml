@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns3:dov-schema xmlns:ns3="http://kern.schemas.dov.vlaanderen.be">
 <grondwaterlocatie>
-    <identificatie>StadA_volkstuin_boere schuur</identificatie>
+    <identificatie>test_ruben2</identificatie>
     <grondwaterlocatieType>PUT</grondwaterlocatieType>
     <puntligging>
         <xy>
-            <x>155290</x>
-            <y>216990</y>
-            <betrouwbaarheid>onbekend</betrouwbaarheid>
+            <x>120931.4</x>
+            <y>174775.41</y>
+            <betrouwbaarheid>goed</betrouwbaarheid>
             <methode_opmeten>methode onbekend</methode_opmeten>
             <origine_opmeten>
                 <naam>Stad_Antwerpen</naam>
@@ -15,7 +15,7 @@
         </xy>
         <oorspronkelijk_maaiveld>
             <waarde>0</waarde>
-            <betrouwbaarheid>onbekend</betrouwbaarheid>
+            <betrouwbaarheid>twijfelachtig</betrouwbaarheid>
             <methode_opmeten>methode onbekend</methode_opmeten>
             <origine_opmeten>
                 <naam>onbekend</naam>
@@ -23,7 +23,7 @@
         </oorspronkelijk_maaiveld>
     </puntligging>
     <datum_ingebruikname>2000-01-01</datum_ingebruikname>
-    <putsoort>onbekend</putsoort>
+    <putsoort>batterijput</putsoort>
     <beheer>
         <vanaf>2000-01-01</vanaf>
         <beheerder>
@@ -34,27 +34,32 @@
 <filter>
     <identificatie>filter_test</identificatie>
     <filtertype>pompfilter</filtertype>
-    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <meetnet>12</meetnet>
     <datum_ingebruikname>2000-01-01</datum_ingebruikname>
     <ligging>
-        <aquifer>0000</aquifer>
-        <regime>onbekend</regime>
+        <aquifer>0133</aquifer>
+        <regime>niet-freatisch</regime>
     </ligging>
     <opbouw>
         <onderdeel>
             <van>0</van>
             <tot>10</tot>
-            <filterelement>onbekend</filterelement>
+            <filterelement>stijgbuis</filterelement>
         </onderdeel>
     </opbouw>
 </filter>
 <filtermeting>
-    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
     </filter>
+    <referentiepunt>
+        <datum>2023-12-13</datum>
+        <meetpunt>12.38</meetpunt>
+        <referentie>Bovenkant van de beschermbuis</referentie>
+    </referentiepunt>
     <watermonster>
         <identificatie>Volkstuin_privaat_boere schuur_1</identificatie>
         <monstername>
@@ -80,7 +85,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -110,7 +115,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -140,7 +145,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -170,7 +175,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -200,7 +205,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -230,7 +235,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -260,7 +265,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -290,7 +295,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -320,7 +325,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -350,7 +355,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -380,7 +385,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -410,7 +415,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -440,7 +445,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -470,7 +475,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -500,7 +505,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -530,7 +535,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -560,7 +565,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -590,7 +595,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -620,7 +625,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -650,7 +655,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -680,7 +685,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>StadA_volkstuin_boere schuur</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>

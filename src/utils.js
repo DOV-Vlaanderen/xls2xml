@@ -95,6 +95,7 @@ export function mapNumber(value) {
 }
 
 export function mapDate(value) {
+  value = value.replace( /(\d{2})[-/](\d{2})[-/](\d+)/, "$2/$1/$3")
   if (!value || value.toLowerCase() === 'onbekend' || value.toLowerCase() === 'niet beschikbaar' || value.toLowerCase() === 'niet gekend') {
     return null;
   }
