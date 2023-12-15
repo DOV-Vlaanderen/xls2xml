@@ -146,6 +146,8 @@ export function mapStartTovMaaiveld(value) {
   !mapNumber(value) ? 'MAAIVELD' : mapNumber(value) > 0 ? 'BOVEN_MV' : 'ONDER_MV'
 }
 
+
+
 export function removeEmptyProperties(obj) {
   if (Array.isArray(obj)) {
     for (let item of obj) {

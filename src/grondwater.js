@@ -309,7 +309,7 @@ function generateFilterMetingen() {
       'referentiepunt_referentie']))
     {
         object['filtermeting']['referentiepunt'] = {datum:mapDate(findValue(row, gwFilterMetingHeader, 'referentiepunt_datum')),
-        meetpunt:findValue(row, gwFilterMetingHeader, 'referentiepunt_meetpunt'),
+        meetpunt:mapNumber(findValue(row, gwFilterMetingHeader, 'referentiepunt_meetpunt')),
         referentie:findValue(row, gwFilterMetingHeader, 'referentiepunt_referentie')}
 
     }
