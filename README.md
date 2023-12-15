@@ -38,11 +38,11 @@ Het script kan uitgevoerd worden met een commando in de terminal. Dit kan op ver
 
 ### Stap 4.1a: Een terminal openen voor Windows gebruikers
 
-Open je Windows verkenner. Houdt de `SHIFT` toets ingedrukt en rechtermuisklik op de map met het script. Er verschijnt een menu, en kies voor de optie 'Open PowerShell venster'.
+Open je Windows verkenner. Houdt de `SHIFT` toets ingedrukt en rechtermuisklik op de map met het main script. Er verschijnt een menu, en kies voor de optie 'Open PowerShell venster'.
 
 ### Stap 4.1b: Een terminal openen voor MacOS gebruikers
 
-Open Finder. Rechtermuisklik op de map met het script. Er verschijnt een menu, en kies voor de optie 'Nieuwe terminal op Map'.  
+Open Finder. Rechtermuisklik op de map met het main script. Er verschijnt een menu, en kies voor de optie 'Nieuwe terminal op Map'.  
 <br>
 
 ### Stap 4.2: Packages installeren
