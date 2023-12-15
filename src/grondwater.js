@@ -51,18 +51,18 @@ export function createGrondwaterXML() {
   }
 
   // Grondwatermonsters
-  if (fs.existsSync('./data/grondwatermonsters.csv')) {
-    generateGrondwaterMonsters();
-  } else {
-    console.log('Geen bestand grondwatermonsters.csv gevonden in de `data` folder. Grondwatermonsters worden overgeslagen in de XML.');
-  }
-
-  // Grondwaterobservaties
-  if (fs.existsSync('./data/grondwaterobservaties.csv')) {
-    generateGrondwaterObservaties();
-  } else {
-    console.log('Geen bestand grondwaterobservaties.csv gevonden in de `data` folder. Grondwaterobservaties worden overgeslagen in de XML.');
-  }
+//  if (fs.existsSync('./data/grondwatermonsters.csv')) {
+//    generateGrondwaterMonsters();
+//  } else {
+//    console.log('Geen bestand grondwatermonsters.csv gevonden in de `data` folder. Grondwatermonsters worden overgeslagen in de XML.');
+//  }
+//
+//  // Grondwaterobservaties
+//  if (fs.existsSync('./data/grondwaterobservaties.csv')) {
+//    generateGrondwaterObservaties();
+//  } else {
+//    console.log('Geen bestand grondwaterobservaties.csv gevonden in de `data` folder. Grondwaterobservaties worden overgeslagen in de XML.');
+//  }
 
   // Write XML file
 
