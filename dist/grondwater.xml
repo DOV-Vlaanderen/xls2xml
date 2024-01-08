@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:dov-schema xmlns:ns3="http://kern.schemas.dov.vlaanderen.be">
+<grondwaterlocatie>
+    <identificatie>test_ruben2</identificatie>
+    <grondwaterlocatieType>PUT</grondwaterlocatieType>
+    <puntligging>
+        <xy>
+            <x>120931.4</x>
+            <y>174775.41</y>
+            <betrouwbaarheid>goed</betrouwbaarheid>
+            <methode_opmeten>methode onbekend</methode_opmeten>
+            <origine_opmeten>
+                <naam>Stad_Antwerpen</naam>
+            </origine_opmeten>
+        </xy>
+        <oorspronkelijk_maaiveld>
+            <waarde>0</waarde>
+            <betrouwbaarheid>twijfelachtig</betrouwbaarheid>
+            <methode_opmeten>methode onbekend</methode_opmeten>
+            <origine_opmeten>
+                <naam>onbekend</naam>
+            </origine_opmeten>
+        </oorspronkelijk_maaiveld>
+    </puntligging>
+    <datum_ingebruikname>2000-01-02</datum_ingebruikname>
+    <putsoort>batterijput</putsoort>
+    <beheer>
+        <vanaf>2000-01-01</vanaf>
+        <beheerder>
+            <naam>onbekend</naam>
+        </beheerder>
+    </beheer>
+</grondwaterlocatie>
+<filter>
+    <identificatie>filter_test</identificatie>
+    <filtertype>pompfilter</filtertype>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
+    <meetnet>12</meetnet>
+    <datum_ingebruikname>2000-01-01</datum_ingebruikname>
+    <ligging>
+        <aquifer>0133</aquifer>
+        <regime>niet-freatisch</regime>
+    </ligging>
+    <opbouw>
+        <onderdeel>
+            <van>0</van>
+            <tot>10</tot>
+            <filterelement>stijgbuis</filterelement>
+        </onderdeel>
+    </opbouw>
+</filter>
+<filtermeting>
+    <referentiepunt>
+        <datum>2023-12-13</datum>
+        <meetpunt>12.38</meetpunt>
+        <referentie>Bovenkant van de beschermbuis</referentie>
+    </referentiepunt>
+</filtermeting>
+<filtermeting/>
+<filtermeting/>
+<filtermeting/>
+<filtermeting/>
+<filtermeting/>
+<filtermeting/>
+<filtermeting/>
+<filtermeting/>
+<filtermeting/>
+<filtermeting/>
+<filtermeting/>
+<filtermeting/>
+<filtermeting/>
+<filtermeting/>
+<filtermeting/>
+<filtermeting/>
+<filtermeting/>
+<filtermeting/>
+<filtermeting/>
+<filtermeting/>
+<filtermeting/>
+</ns3:dov-schema>

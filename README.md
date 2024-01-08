@@ -21,11 +21,15 @@ Heb je het script reeds aangeleverd gekregen als zip bestand? Kijk dan zeker op 
 
 ## Stap 3: Data voorbereiden
 
-Het script vergt aangeleverde data in het juiste csv-formaat. In de map van het script zit een map 'data'. Hierin vind je de excel template die gebruikt wordt voor elk object.
+Het script vergt aangeleverde data in het juiste formaat. In de map data vind je de Excel-template (Data_input.xlsx) die nodig is voor het aanleveren van de data.
 
-Vul het excel bestand in met de data die je in DOV wenst to te voegen. Als je klaar bent sla je elk blad van de excel die je wenst toe te voegen op als csv. De naam van dit csv bestand moet de naam van het excel blad zijn (bv. grondwaterlocaties.csv, bodemlocaties.csv, bodemobservaties.csv, ...). Sla de csv bestanden op in de map 'data'.  
-$\textcolor{red}{Gebruik\ steeds\ een\ ';' (puntkomma)\ als\ scheidingsteken,\ en\ geen\ ','(komma).}$
-<br> 
+Vul het Excel-bestand in met de data die je in DOV wenst toe te voegen. Als je klaar bent sla je elk blad van de Excel die je wenst toe te voegen op als txt-bestand. De naam van dit txt-bestand moet de naam van het excel blad zijn (bv. grondwaterlocaties.txt, filters.txt, filtermetingen.txt, ...). Sla de txt-bestanden op in de map 'data'.  
+
+In het excel bestand zijn enkele gegevensvalidaties aanwezig. Zo zijn enkel datums later dan 01/01/1900 toegelaten in velden waar een datum wordt verwacht.
+Ook zijn er enkele velden waar de optie uit een codelijst moet komen. Deze zijn makkelijk zichtbaar aan de verwijzing in de kolomnamen, die rechtstreeks verwijzen naar de relevante codelijst op het Excel-blad "Codelijsten".
+
+Op het blad Codelijsten zul je zien dat in elke tabel een rood veld aanwezig is. De waarden onder dit veld zijn de waarden die kunnen ingevuld worden in de voorgaande bladen.
+De andere kolommen bevatten extra informatie omtrent deze attribuutwaarden.
 
 ## Stap 4: Het script uitvoeren
 
@@ -34,11 +38,11 @@ Het script kan uitgevoerd worden met een commando in de terminal. Dit kan op ver
 
 ### Stap 4.1a: Een terminal openen voor Windows gebruikers
 
-Open je Windows verkenner. Houdt de `SHIFT` toets ingedrukt en rechtermuisklik op de map met het script. Er verschijnt een menu, en kies voor de optie 'Open PowerShell venster'.
+Open je Windows verkenner. Houdt de `SHIFT` toets ingedrukt en rechtermuisklik op de map met het main script. Er verschijnt een menu, en kies voor de optie 'Open PowerShell venster'.
 
 ### Stap 4.1b: Een terminal openen voor MacOS gebruikers
 
-Open Finder. Rechtermuisklik op de map met het script. Er verschijnt een menu, en kies voor de optie 'Nieuwe terminal op Map'.  
+Open Finder. Rechtermuisklik op de map met het main script. Er verschijnt een menu, en kies voor de optie 'Nieuwe terminal op Map'.  
 <br>
 
 ### Stap 4.2: Packages installeren
