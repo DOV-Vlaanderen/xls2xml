@@ -187,8 +187,9 @@ export function readCsv(path) {
     .trimEnd('\n')
     .split('\n')
     .map((e) => e.trim())
-    .map((e) => e.split('\t').map((e) => e.trim()))
-    .filter(row => !!row.find(item => item));
+    .map((e) => e.split('\t').map((e) => e.trim()));
 
   return data;
 }
+
+

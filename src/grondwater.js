@@ -251,26 +251,29 @@ function generateFilterMetingen() {
 
   const gwFilterMetingHeader = mapHeader(gwFilterMeting[0]);
 
+
   // Remove excess lines at the top
   gwFilterMeting.splice(0, 8);
 
-  gwFilterMeting.forEach((row, index) => {
-  //  if (!hasRequiredProperties(row, index, gwFilterMetingHeader, [
-  //    'grondwaterlocatie',
-  //    'filter_identificatie',
-  //    'watermonster_identificatie',
-  //    'watermonster_monstername_datum',
-  //    'watermonster_observatie_eenheid',
-  //    'watermonster_observatie_parameter',
-  //    'watermonster_observatie_parametergroep',
-  //    'watermonster_observatie_detectieconditie',
-  //    'watermonster_observatie_veld_labo',
-  //    'watermonster_observatie_waarde_numeriek'])) {
-  //    skippedCounter.filtermetingen++;
-  //    return;
-  //  }
+  console.log(gwFilterMeting)
 
-    const object = {
+
+  gwFilterMeting.forEach((row, index) => {
+
+  const object = {
+      filtermeting: {}}
+    if (hasRequiredProperties(row, index, gwFilterMetingHeader, [
+      'grondwaterlocatie',
+      'filter_identificatie',
+      'watermonster_identificatie',
+      'watermonster_monstername_datum',
+      'watermonster_observatie_eenheid',
+      'watermonster_observatie_parameter',
+      'watermonster_observatie_parametergroep',
+      'watermonster_observatie_detectieconditie',
+      'watermonster_observatie_veld_labo',
+      'watermonster_observatie_waarde_numeriek'])) {
+        const object = {
       filtermeting: {
         grondwaterlocatie: findValue(row, gwFilterMetingHeader, 'grondwaterlocatie'),
         filter: {
@@ -302,6 +305,10 @@ function generateFilterMetingen() {
         }
       }
     }
+    }
+
+
+
 
     if (hasRequiredProperties(row, index, gwFilterMetingHeader, [
       'referentiepunt_datum',
