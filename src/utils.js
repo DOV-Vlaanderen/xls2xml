@@ -69,6 +69,9 @@ export function mapHeader(header) {
 
 export function findValue(row, header, property) {
   const index = header[property.toLowerCase()];
+  if (!row[index]){
+    return row[index]
+  }
   return row[index].replaceAll('"','');
 }
 

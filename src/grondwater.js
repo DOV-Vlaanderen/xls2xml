@@ -92,7 +92,6 @@ function generateGrondwaterLocaties() {
   gwLocatieData.splice(0, 7);
 
   gwLocatieData.forEach((row, index) => {
-    console.log(row)
     if (
       !hasRequiredProperties(row, index, gwLocatieHeader, [
         'datum_ingebruikname',
@@ -137,14 +136,7 @@ function generateGrondwaterLocaties() {
               naam: findValue(row, gwLocatieHeader, 'puntligging_oorspronkelijk_maaiveld_origine_opmeten_contact_naam'),
             },
           },
-          //start_tov_maaiveld: {
-          //  gestart_op: findValue(row, gwLocatieHeader, 'puntligging_start_tov_maaiveld_contact_gestart_op'),
-          //:  verschil: mapNumber(findValue(row, gwLocatieHeader, 'puntligging_start_tov_maaiveld_verschil'))
-          //    ? Math.abs(mapNumber(findValue(row, gwLocatieHeader, 'puntligging_start_tov_maaiveld_verschil')))
-          //    : null,
-          //},
         },
-        //diepte: mapNumber(findValue(row, gwLocatieHeader, 'diepte (m)')) ? Math.abs(mapNumber(findValue(row, gwLocatieHeader, 'puntligging_start_tov_maaiveld_verschil'))) : null,
         datum_ingebruikname: mapDate(findValue(row, gwLocatieHeader, 'datum_ingebruikname')),
         putsoort: findValue(row, gwLocatieHeader, 'putsoort'),
         beheer: {
@@ -153,7 +145,6 @@ function generateGrondwaterLocaties() {
             naam: findValue(row, gwLocatieHeader, 'beheer_beheerder_contact_naam'),
           },
         },
-        //status: mapStatus(findValue(row, gwLocatieHeader, 'status')),
       },
     };
 
@@ -261,7 +252,7 @@ function generateFilterMetingen() {
 
   gwFilterMeting.forEach((row, index) => {
 
-  const object = {
+  var object = {
       filtermeting: {}}
     if (hasRequiredProperties(row, index, gwFilterMetingHeader, [
       'grondwaterlocatie',
@@ -274,7 +265,9 @@ function generateFilterMetingen() {
       'watermonster_observatie_detectieconditie',
       'watermonster_observatie_veld_labo',
       'watermonster_observatie_waarde_numeriek'])) {
-        const object = {
+
+
+        object = {
       filtermeting: {
         grondwaterlocatie: findValue(row, gwFilterMetingHeader, 'grondwaterlocatie'),
         filter: {
@@ -306,10 +299,10 @@ function generateFilterMetingen() {
         }
       }
     }
+
     }
 
-
-
+    console.log(object)
 
     if (hasRequiredProperties(row, index, gwFilterMetingHeader, [
       'referentiepunt_datum',
