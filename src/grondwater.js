@@ -302,7 +302,6 @@ function generateFilterMetingen() {
 
     }
 
-    console.log(object)
 
     if (hasRequiredProperties(row, index, gwFilterMetingHeader, [
       'referentiepunt_datum',
