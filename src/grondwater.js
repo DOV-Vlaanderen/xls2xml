@@ -92,6 +92,7 @@ function generateGrondwaterLocaties() {
   gwLocatieData.splice(0, 7);
 
   gwLocatieData.forEach((row, index) => {
+    console.log(row)
     if (
       !hasRequiredProperties(row, index, gwLocatieHeader, [
         'datum_ingebruikname',

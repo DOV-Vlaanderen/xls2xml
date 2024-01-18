@@ -69,7 +69,7 @@ export function mapHeader(header) {
 
 export function findValue(row, header, property) {
   const index = header[property.toLowerCase()];
-  return row[index];
+  return row[index].replaceAll('"','');
 }
 
 export function mapDetectieDonditie(condition) {
@@ -191,5 +191,3 @@ export function readCsv(path) {
 
   return data;
 }
-
-
