@@ -247,8 +247,6 @@ function generateFilterMetingen() {
   // Remove excess lines at the top
   gwFilterMeting.splice(0, 8);
 
-  console.log(gwFilterMeting)
-
 
   gwFilterMeting.forEach((row, index) => {
 
