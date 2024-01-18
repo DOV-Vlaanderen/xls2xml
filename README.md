@@ -23,7 +23,7 @@ Heb je het script reeds aangeleverd gekregen als zip bestand? Kijk dan zeker op 
 
 Het script vergt aangeleverde data in het juiste formaat. In de map data vind je de Excel-template (Data_input.xlsx) die nodig is voor het aanleveren van de data.
 
-Vul het Excel-bestand in met de data die je in DOV wenst toe te voegen. Als je klaar bent sla je elk blad van de Excel die je wenst toe te voegen op als txt-bestand. De naam van dit txt-bestand moet de naam van het excel blad zijn (bv. grondwaterlocaties.txt, filters.txt, filtermetingen.txt, ...). Sla de txt-bestanden op in de map 'data'.  
+Vul het Excel-bestand in met de data die je in DOV wenst toe te voegen. Als je klaar bent sla je elk blad van de Excel die je wenst toe te voegen op als txt-bestand. De naam van dit txt-bestand moet de naam van het excel blad zijn (bv. grondwaterlocatie.txt, filter.txt, filtermeting.txt, ...). Sla de txt-bestanden op in de map 'data'.  
 
 In het excel bestand zijn enkele gegevensvalidaties aanwezig. Zo zijn enkel datums later dan 01/01/1900 toegelaten in velden waar een datum wordt verwacht.
 Ook zijn er enkele velden waar de optie uit een codelijst moet komen. Deze zijn makkelijk zichtbaar aan de verwijzing in de kolomnamen, die rechtstreeks verwijzen naar de relevante codelijst op het Excel-blad "Codelijsten".

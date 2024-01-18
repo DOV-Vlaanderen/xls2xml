@@ -30,24 +30,24 @@ const skippedCounter = {
 
 export function createGrondwaterXML() {
   // Grondwaterlocaties
-  if (fs.existsSync('./data/grondwaterlocaties.txt')) {
+  if (fs.existsSync('./data/grondwaterlocatie.txt')) {
     generateGrondwaterLocaties();
   } else {
-    console.log('Geen bestand grondwaterlocaties.txt gevonden in de `data` folder. Grondwaterlocaties worden overgeslagen in de XML.');
+    console.log('Geen bestand grondwaterlocatie.txt gevonden in de `data` folder. Grondwaterlocaties worden overgeslagen in de XML.');
   }
 
   // Filters
-    if (fs.existsSync('./data/filters.txt')) {
+    if (fs.existsSync('./data/filter.txt')) {
     generateFilters();
   } else {
-    console.log('Geen bestand filters.txt gevonden in de `data` folder. Filters worden overgeslagen in de XML.');
+    console.log('Geen bestand filter.txt gevonden in de `data` folder. Filters worden overgeslagen in de XML.');
   }
 
   // Filtermetingen
-    if (fs.existsSync('./data/filtermetingen.txt')) {
+    if (fs.existsSync('./data/filtermeting.txt')) {
     generateFilterMetingen();
   } else {
-    console.log('Geen bestand filtermetingen.txt gevonden in de `data` folder. Filtermetingen worden overgeslagen in de XML.');
+    console.log('Geen bestand filtermeting.txt gevonden in de `data` folder. Filtermetingen worden overgeslagen in de XML.');
   }
 
   // Grondwatermonsters
@@ -84,7 +84,7 @@ function generateGrondwaterLocaties() {
   // Read csv file
   console.log('Reading grondwaterlocaties...');
 
-  const gwLocatieData = readCsv('./data/grondwaterlocaties.txt');
+  const gwLocatieData = readCsv('./data/grondwaterlocatie.txt');
 
   const gwLocatieHeader = mapHeader(gwLocatieData[0]);
 
@@ -171,7 +171,7 @@ function generateFilters() {
   // Read csv file
   console.log('Reading filters...');
 
-  const gwFilterData = readCsv('./data/filters.txt');
+  const gwFilterData = readCsv('./data/filter.txt');
 
   const gwFilterHeader = mapHeader(gwFilterData[0]);
 
@@ -239,7 +239,7 @@ function generateFilterMetingen() {
   // Read csv file
   console.log('Reading filtermetingen...');
 
-  const gwFilterMeting = readCsv('./data/filtermetingen.txt');
+  const gwFilterMeting = readCsv('./data/filtermeting.txt');
 
   const gwFilterMetingHeader = mapHeader(gwFilterMeting[0]);
 
@@ -346,7 +346,7 @@ function generateGrondwaterMonsters() {
   // Read csv file
   console.log('Reading grondwatermonsters...');
 
-  const gwMonsterData = readCsv('./data/grondwatermonsters.txt');
+  const gwMonsterData = readCsv('./data/grondwatermonster.txt');
 
   const gwMonsterHeader = mapHeader(gwMonsterData[0]);
 
