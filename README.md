@@ -64,16 +64,16 @@ npm install
 Nu je een terminal hebt open staan, kan je een van volgende commando's uitvoeren (typ het commando en druk op Enter):
 
 ```
-node main -bodem
-```
-
-voor bodemdata of
-
-```
 node main -grondwater
 ```
 
-voor grondwaterdata.
+voor grondwaterdata of
+
+```
+node main -opdracht
+```
+
+voor opdrachtdata.
 
 <br>
 Wanneer het script gedaan is, worden de xml bestanden toegevoegd aan de map 'dist'. Indien er zich errors voordoen, krijg je die te zien.
