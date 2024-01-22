@@ -52,17 +52,6 @@ export const STATUS = {
   VOOR_PARTNERS: 'voor partners',
 };
 
-export const PUTMATERIAAL = {
-  KLEI: 'klei',
-  GROUT: 'grout',
-  GRIND: 'grind',
-  FILTERZAND: 'filterzand',
-  OPGEBOORD_MATERIAAL: 'opgeboord materiaal',
-  BENTONIET_CEBOGEL_QSE: 'bentoniet cebogel QSE',
-  BENTONIET_MIKOLIT_300: 'bentoniet Mikolit 300',
-  ONBEKEND: 'onbekend'
-}
-
 export let verbose = false;
 
 export function setVerbose() {
@@ -80,7 +69,10 @@ export function mapHeader(header) {
 
 export function findValue(row, header, property) {
   const index = header[property.toLowerCase()];
-  return row[index];
+  if (!row[index]){
+    return row[index]
+  }
+  return row[index].replaceAll('"','');
 }
 
 export function mapDetectieDonditie(condition) {
@@ -106,6 +98,7 @@ export function mapNumber(value) {
 }
 
 export function mapDate(value) {
+  value = value.replace( /(\d{2})[-/](\d{2})[-/](\d+)/, "$2/$1/$3")
   if (!value || value.toLowerCase() === 'onbekend' || value.toLowerCase() === 'niet beschikbaar' || value.toLowerCase() === 'niet gekend') {
     return null;
   }
@@ -137,28 +130,26 @@ export function mapTime(value) {
 }
 
 export function mapBetrouwbaarheid(value) {
-  return value && Object.values(BETROUWBAARHEID).map(v => v.toLowerCase()).includes(value.toLowerCase()) ? value.toLowerCase() : BETROUWBAARHEID.ONBEKEND;
+  return value && Object.values(BETROUWBAARHEID).includes(value.toLowerCase()) ? value.toLowerCase() : BETROUWBAARHEID.ONBEKEND;
 }
 
 export function mapMethodeXY(value) {
-  return value && Object.values(METHODE_XY).map(v => v.toLowerCase()).includes(value.toLowerCase()) ? Object.values(METHODE_XY)[Object.values(METHODE_XY).map(v => v.toLowerCase()).indexOf(value.toLowerCase())] : METHODE_XY.ONBEKEND;
+  return value && Object.values(METHODE_XY).includes(value.toLowerCase()) ? value.toLowerCase() : METHODE_XY.ONBEKEND;
 }
 
 export function mapMethodeZ(value) {
-  return value && Object.values(METHODE_Z).map(v => v.toLowerCase()).includes(value.toLowerCase()) ? Object.values(METHODE_Z)[Object.values(METHODE_Z).map(v => v.toLowerCase()).indexOf(value.toLowerCase())] : METHODE_Z.ONBEKEND;
+  return value && Object.values(METHODE_Z).includes(value.toLowerCase()) ? value.toLowerCase() : METHODE_Z.ONBEKEND;
 }
 
 export function mapStatus(value) {
-  return value && Object.values(STATUS).map(v => v.toLowerCase()).includes(value.toLowerCase()) ? value.toLowerCase() : STATUS.PUBLIEK;
+  return value && Object.values(STATUS).includes(value.toLowerCase()) ? value.toLowerCase() : STATUS.PUBLIEK;
 }
 
 export function mapStartTovMaaiveld(value) {
   !mapNumber(value) ? 'MAAIVELD' : mapNumber(value) > 0 ? 'BOVEN_MV' : 'ONDER_MV'
 }
 
-export function mapReferentie(value) {
-  return value?.length ? value : 'Onbekend';
-}
+
 
 export function removeEmptyProperties(obj) {
   if (Array.isArray(obj)) {
@@ -194,13 +185,12 @@ export function hasRequiredProperties(row, index, header, properties) {
 
 export function readCsv(path) {
   const data = fs
-    .readFileSync(path, { encoding: 'utf-8' })
+    .readFileSync(path, {encoding: 'utf-8'})
     .toString()
     .trimEnd('\n')
     .split('\n')
     .map((e) => e.trim())
-    .map((e) => e.split(';').map((e) => e.trim()))
-    .filter(row => !!row.find(item => item));
+    .map((e) => e.split('\t').map((e) => e.trim()));
 
   return data;
 }
