@@ -1,3 +1,5 @@
 node_modules
-vmm.js
-src/vmm
+dist/vmm/*
+data/vmm/*.csv
+data/vmm/niet_publieke_filters/*
+data/vmm/niet_publieke_putten/*
