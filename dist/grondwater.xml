@@ -30,6 +30,7 @@
             <naam>onbekend</naam>
         </beheerder>
     </beheer>
+    <opdracht>PFAS-xls2xml_test1</opdracht>
 </grondwaterlocatie>
 <filter>
     <identificatie>filter_test</identificatie>
@@ -48,9 +49,10 @@
             <filterelement>stijgbuis</filterelement>
         </onderdeel>
     </opbouw>
+    <opdracht>PFAS-xls2xml_test1</opdracht>
 </filter>
 <filtermeting>
-    <grondwaterlocatie>test_ruben3</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -85,7 +87,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben3</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -115,7 +117,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben3</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -145,7 +147,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben3</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -175,7 +177,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben3</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -205,7 +207,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben3</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -235,7 +237,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben3</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -265,7 +267,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben3</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -295,7 +297,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben3</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -325,7 +327,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben3</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -355,7 +357,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben3</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -385,7 +387,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben3</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -415,7 +417,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben3</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -445,7 +447,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben3</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -475,7 +477,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben3</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -505,7 +507,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben3</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -535,7 +537,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben3</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -565,7 +567,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben3</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -595,7 +597,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben3</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -625,7 +627,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben3</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -655,7 +657,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben3</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -685,7 +687,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben3</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -713,5 +715,17 @@
             <veld_labo>LABO</veld_labo>
         </observatie>
     </watermonster>
+</filtermeting>
+<filtermeting>
+    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
+    <filter>
+        <identificatie>filter_test</identificatie>
+        <filtertype>pompfilter</filtertype>
+    </filter>
+    <referentiepunt>
+        <datum>2023-12-13</datum>
+        <meetpunt>13.38</meetpunt>
+        <referentie>Bovenkant straatpot</referentie>
+    </referentiepunt>
 </filtermeting>
 </ns3:dov-schema>

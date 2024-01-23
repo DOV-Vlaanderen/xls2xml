@@ -189,7 +189,7 @@ export function readCsv(path) {
     .toString()
     .trimEnd('\n')
     .split('\n')
-    .map((e) => e.trim())
+    .map((e) => e.trimRight())
     .map((e) => e.split('\t').map((e) => e.trim()));
 
   return data;
