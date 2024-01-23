@@ -98,11 +98,11 @@ export function mapNumber(value) {
 }
 
 export function mapDate(value) {
-  value = value.replace( /(\d{2})[-/](\d{2})[-/](\d+)/, "$2/$1/$3")
+  value = value.replace( /(\d{2})[-/](\d{2})[-/](\d+)/, "$3-$2-$1")
   if (!value || value.toLowerCase() === 'onbekend' || value.toLowerCase() === 'niet beschikbaar' || value.toLowerCase() === 'niet gekend') {
     return null;
   }
-  return moment(value.replace("'", '')).format('yyyy-MM-DD');
+  return value;
 }
 
 export function mapTime(value) {
