@@ -145,6 +145,7 @@ function generateGrondwaterLocaties() {
             naam: findValue(row, gwLocatieHeader, 'beheer_beheerder_contact_naam'),
           },
         },
+        opdracht: findValue(row, gwLocatieHeader, 'opdracht')
       },
     };
 
@@ -213,8 +214,9 @@ function generateFilters() {
             tot: mapNumber(findValue(row, gwFilterHeader, 'opbouw_onderdeel_tot')),
             filterelement: findValue(row, gwFilterHeader, 'opbouw_onderdeel_filterelement'),
           }
-        }
+        },
         //status: mapStatus(findValue(row, gwFilterHeader, 'status')),
+        opdracht: findValue(row, gwFilterHeader, 'opdracht')
       },
     };
 
