@@ -75,7 +75,7 @@ export function findValue(row, header, property) {
   return row[index].replaceAll('"','');
 }
 
-export function mapDetectieDonditie(condition) {
+export function mapDetectieConditie(condition) {
   if (condition === '<' || condition === '>') {
     return condition;
   }
@@ -136,19 +136,6 @@ export function mapBetrouwbaarheid(value) {
 export function mapMethodeXY(value) {
   return value && Object.values(METHODE_XY).includes(value.toLowerCase()) ? value.toLowerCase() : METHODE_XY.ONBEKEND;
 }
-
-export function mapMethodeZ(value) {
-  return value && Object.values(METHODE_Z).includes(value.toLowerCase()) ? value.toLowerCase() : METHODE_Z.ONBEKEND;
-}
-
-export function mapStatus(value) {
-  return value && Object.values(STATUS).includes(value.toLowerCase()) ? value.toLowerCase() : STATUS.PUBLIEK;
-}
-
-export function mapStartTovMaaiveld(value) {
-  !mapNumber(value) ? 'MAAIVELD' : mapNumber(value) > 0 ? 'BOVEN_MV' : 'ONDER_MV'
-}
-
 
 
 export function removeEmptyProperties(obj) {

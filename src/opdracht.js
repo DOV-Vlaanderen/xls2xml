@@ -3,20 +3,14 @@ import { json2xml } from 'xml-js';
 
 import {
   verbose,
-  mapDetectieDonditie,
   mapNumber,
   removeEmptyProperties,
   mapHeader,
   findValue,
-  mapBetrouwbaarheid,
   mapDate,
   mapTime,
-  mapMethodeXY,
-  mapMethodeZ,
-  mapStatus,
   hasRequiredProperties,
   readCsv,
-  mapStartTovMaaiveld,
 } from './utils.js';
 
 const xmlObjects = [];
