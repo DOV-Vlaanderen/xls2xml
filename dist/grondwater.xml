@@ -477,7 +477,7 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
+    <grondwaterlocatie>test_ruben3</grondwaterlocatie>
     <filter>
         <identificatie>filter_test</identificatie>
         <filtertype>pompfilter</filtertype>
@@ -725,7 +725,7 @@
     <referentiepunt>
         <datum>2023-12-13</datum>
         <meetpunt>13.38</meetpunt>
-        <referentie>Bovenkant straatpot</referentie>
+        <referentie>Bovenkant van de peilbuis</referentie>
     </referentiepunt>
 </filtermeting>
 </ns3:dov-schema>
