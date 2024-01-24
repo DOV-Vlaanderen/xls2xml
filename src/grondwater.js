@@ -145,6 +145,7 @@ function generateGrondwaterLocaties() {
             naam: findValue(row, gwLocatieHeader, 'beheer_beheerder_contact_naam'),
           },
         },
+        opdracht: findValue(row, gwLocatieHeader, 'opdracht')
       },
     };
 
@@ -213,8 +214,9 @@ function generateFilters() {
             tot: mapNumber(findValue(row, gwFilterHeader, 'opbouw_onderdeel_tot')),
             filterelement: findValue(row, gwFilterHeader, 'opbouw_onderdeel_filterelement'),
           }
-        }
+        },
         //status: mapStatus(findValue(row, gwFilterHeader, 'status')),
+        opdracht: findValue(row, gwFilterHeader, 'opdracht')
       },
     };
 
@@ -250,11 +252,29 @@ function generateFilterMetingen() {
 
   gwFilterMeting.forEach((row, index) => {
 
-  var object = {
-      filtermeting: {}}
-    if (hasRequiredProperties(row, index, gwFilterMetingHeader, [
-      'grondwaterlocatie',
+  if (!hasRequiredProperties(row, index, gwFilterMetingHeader, [
+        'grondwaterlocatie',
       'filter_identificatie',
+      'filter_filtertype'
+      ])
+    ) {
+      skippedCounter.grondwaterlocaties++;
+
+      return;
+    }
+
+
+
+  var object = {
+      filtermeting: {
+        grondwaterlocatie: findValue(row, gwFilterMetingHeader, 'grondwaterlocatie'),
+        filter: {
+          identificatie: findValue(row, gwFilterMetingHeader, 'filter_identificatie'),
+          filtertype: findValue(row, gwFilterMetingHeader, 'filter_filtertype'),
+        }
+      }}
+
+    if (hasRequiredProperties(row, index, gwFilterMetingHeader, [
       'watermonster_identificatie',
       'watermonster_monstername_datum',
       'watermonster_observatie_eenheid',
@@ -272,6 +292,7 @@ function generateFilterMetingen() {
           identificatie: findValue(row, gwFilterMetingHeader, 'filter_identificatie'),
           filtertype: findValue(row, gwFilterMetingHeader, 'filter_filtertype'),
         },
+        referentiepunt: null,
         watermonster: {
           identificatie: findValue(row, gwFilterMetingHeader, 'watermonster_identificatie'),
           monstername: {
@@ -300,7 +321,6 @@ function generateFilterMetingen() {
 
     }
 
-
     if (hasRequiredProperties(row, index, gwFilterMetingHeader, [
       'referentiepunt_datum',
       'referentiepunt_meetpunt',
@@ -312,18 +332,8 @@ function generateFilterMetingen() {
 
     }
 
-    const objectOrder = {
-    'grondwaterlocatie': null,
-    'filter': null,
-    'referentiepunt':null,
-    'watermonster':null
 
-    }
-
-    const filtermeting_object = Object.assign(objectOrder, object['filtermeting']);
-    const object2 = {'filtermeting': filtermeting_object}
-
-    const json = JSON.stringify(removeEmptyProperties(object2));
+    const json = JSON.stringify(removeEmptyProperties(object));
     const xml = json2xml(json, { compact: true, spaces: 4 });
 
     xmlObjects.push(xml);

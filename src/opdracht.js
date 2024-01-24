@@ -61,6 +61,7 @@ function generateOpdracht() {
   OpdrachtData.splice(0, 6);
 
   OpdrachtData.forEach((row, index) => {
+
     if (
       !hasRequiredProperties(row, index, OpdrachtHeader, [
         'naam',
@@ -77,6 +78,7 @@ function generateOpdracht() {
     const object = {
       opdracht: {
         naam: findValue(row, OpdrachtHeader, 'naam'),
+        omschrijving: null,
         opdrachtgever: {
             naam: findValue(row, OpdrachtHeader, 'opdrachtgever-choice_1-naam')
         },
@@ -86,14 +88,43 @@ function generateOpdracht() {
         dataleverancier: {
             naam: findValue(row, OpdrachtHeader, 'dataleverancier-choice_1-naam')
         },
+        einddatum: null,
         locatie: {
             coordinatenstelsel: findValue(row, OpdrachtHeader, 'locatie-coordinatenstelsel'),
             wkt: findValue(row, OpdrachtHeader, 'locatie-wkt')
-        }
+        },
+        kwaliteit: null
       }
     };
 
 
+
+
+    if (hasRequiredProperties(row, index, OpdrachtHeader, ['einddatum'])) {
+      object['opdracht']['einddatum'] = mapDate(findValue(row, OpdrachtHeader, 'einddatum'))
+    }
+
+    if (hasRequiredProperties(row, index, OpdrachtHeader, ['beschrijving'])) {
+      object['opdracht']['omschrijving'] = findValue(row, OpdrachtHeader, 'beschrijving')
+    }
+
+    var kwaliteit = {
+    origine: null,
+    aard: null
+    }
+
+    if (hasRequiredProperties(row, index, OpdrachtHeader, ['origine'])) {
+      kwaliteit['origine'] = findValue(row, OpdrachtHeader, 'origine')
+    }
+    if (hasRequiredProperties(row, index, OpdrachtHeader, ['aard'])) {
+      kwaliteit['aard'] = findValue(row, OpdrachtHeader, 'aard')
+    }
+
+
+    kwaliteit = removeEmptyProperties(kwaliteit)
+    if (!(JSON.stringify(kwaliteit).length == '{}')) {
+        object['opdracht']['kwaliteit'] = kwaliteit
+    }
 
     const json = JSON.stringify(removeEmptyProperties(object));
     const xml = json2xml(json, { compact: true, spaces: 4 });
