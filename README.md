@@ -64,18 +64,21 @@ npm install
 Nu je een terminal hebt open staan, kan je een van volgende commando's uitvoeren (typ het commando en druk op Enter):
 
 ```
-node main -grondwater
-```
-
-voor grondwaterdata of
-
-```
 node main -opdracht
 ```
 
-voor opdrachtdata.
+voor opdrachtdata of
+
+```
+node main -grondwater
+```
+
+voor grondwaterdata.
+
+
 
 <br>
 Wanneer het script gedaan is, worden de xml bestanden toegevoegd aan de map 'dist'. Indien er zich errors voordoen, krijg je die te zien.
+Indien u verwijst naar een opdracht in een grondwaterlocatie of filter is het belangrijk dat u eerst de opdracht-xml uploadt. 
 
 Wanneer er rijen ongeldig waren werden die overgeslagen in het script. Om meer informatie te krijgen waarom de rijen ongeldig waren, voeg `-v` toe aan je commando en voer het script op nieuw uit.

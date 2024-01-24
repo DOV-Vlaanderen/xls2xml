@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns3:dov-schema xmlns:ns3="http://kern.schemas.dov.vlaanderen.be">
 <grondwaterlocatie>
-    <identificatie>test_ruben3</identificatie>
+    <identificatie>test_xml</identificatie>
     <grondwaterlocatieType>PUT</grondwaterlocatieType>
     <puntligging>
         <xy>
@@ -33,9 +33,9 @@
     <opdracht>PFAS-xls2xml_test1</opdracht>
 </grondwaterlocatie>
 <filter>
-    <identificatie>filter_test</identificatie>
+    <identificatie>filter_test1</identificatie>
     <filtertype>pompfilter</filtertype>
-    <grondwaterlocatie>test_ruben3</grondwaterlocatie>
+    <grondwaterlocatie>test_xml</grondwaterlocatie>
     <meetnet>12</meetnet>
     <datum_ingebruikname>2000-01-01</datum_ingebruikname>
     <ligging>
@@ -49,12 +49,30 @@
             <filterelement>stijgbuis</filterelement>
         </onderdeel>
     </opbouw>
-    <opdracht>PFAS-xls2xml_test1</opdracht>
+    <opdracht>xml_test_opdracht_2</opdracht>
+</filter>
+<filter>
+    <identificatie>filter_test2</identificatie>
+    <filtertype>natuurlijke filter</filtertype>
+    <grondwaterlocatie>test_xml</grondwaterlocatie>
+    <meetnet>2</meetnet>
+    <datum_ingebruikname>2000-01-01</datum_ingebruikname>
+    <ligging>
+        <aquifer>0131</aquifer>
+        <regime>niet-freatisch</regime>
+    </ligging>
+    <opbouw>
+        <onderdeel>
+            <van>0</van>
+            <tot>11</tot>
+            <filterelement>stijgbuis</filterelement>
+        </onderdeel>
+    </opbouw>
 </filter>
 <filtermeting>
-    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
+    <grondwaterlocatie>test_xml</grondwaterlocatie>
     <filter>
-        <identificatie>filter_test</identificatie>
+        <identificatie>filter_test1</identificatie>
         <filtertype>pompfilter</filtertype>
     </filter>
     <referentiepunt>
@@ -87,9 +105,9 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
+    <grondwaterlocatie>test_xml</grondwaterlocatie>
     <filter>
-        <identificatie>filter_test</identificatie>
+        <identificatie>filter_test1</identificatie>
         <filtertype>pompfilter</filtertype>
     </filter>
     <watermonster>
@@ -117,9 +135,9 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
+    <grondwaterlocatie>test_xml</grondwaterlocatie>
     <filter>
-        <identificatie>filter_test</identificatie>
+        <identificatie>filter_test1</identificatie>
         <filtertype>pompfilter</filtertype>
     </filter>
     <watermonster>
@@ -147,9 +165,9 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
+    <grondwaterlocatie>test_xml</grondwaterlocatie>
     <filter>
-        <identificatie>filter_test</identificatie>
+        <identificatie>filter_test1</identificatie>
         <filtertype>pompfilter</filtertype>
     </filter>
     <watermonster>
@@ -177,10 +195,10 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
+    <grondwaterlocatie>test_xml</grondwaterlocatie>
     <filter>
-        <identificatie>filter_test</identificatie>
-        <filtertype>pompfilter</filtertype>
+        <identificatie>filter_test2</identificatie>
+        <filtertype>natuurlijke filter</filtertype>
     </filter>
     <watermonster>
         <identificatie>Volkstuin_privaat_boere schuur_1</identificatie>
@@ -207,10 +225,10 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
+    <grondwaterlocatie>test_xml</grondwaterlocatie>
     <filter>
-        <identificatie>filter_test</identificatie>
-        <filtertype>pompfilter</filtertype>
+        <identificatie>filter_test2</identificatie>
+        <filtertype>natuurlijke filter</filtertype>
     </filter>
     <watermonster>
         <identificatie>Volkstuin_privaat_boere schuur_1</identificatie>
@@ -237,10 +255,10 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
+    <grondwaterlocatie>test_xml</grondwaterlocatie>
     <filter>
-        <identificatie>filter_test</identificatie>
-        <filtertype>pompfilter</filtertype>
+        <identificatie>filter_test2</identificatie>
+        <filtertype>natuurlijke filter</filtertype>
     </filter>
     <watermonster>
         <identificatie>Volkstuin_privaat_boere schuur_1</identificatie>
@@ -267,10 +285,10 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
+    <grondwaterlocatie>test_xml</grondwaterlocatie>
     <filter>
-        <identificatie>filter_test</identificatie>
-        <filtertype>pompfilter</filtertype>
+        <identificatie>filter_test2</identificatie>
+        <filtertype>natuurlijke filter</filtertype>
     </filter>
     <watermonster>
         <identificatie>Volkstuin_privaat_boere schuur_1</identificatie>
@@ -297,10 +315,10 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
+    <grondwaterlocatie>test_xml</grondwaterlocatie>
     <filter>
-        <identificatie>filter_test</identificatie>
-        <filtertype>pompfilter</filtertype>
+        <identificatie>filter_test2</identificatie>
+        <filtertype>natuurlijke filter</filtertype>
     </filter>
     <watermonster>
         <identificatie>Volkstuin_privaat_boere schuur_1</identificatie>
@@ -327,10 +345,10 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
+    <grondwaterlocatie>test_xml</grondwaterlocatie>
     <filter>
-        <identificatie>filter_test</identificatie>
-        <filtertype>pompfilter</filtertype>
+        <identificatie>filter_test2</identificatie>
+        <filtertype>natuurlijke filter</filtertype>
     </filter>
     <watermonster>
         <identificatie>Volkstuin_privaat_boere schuur_1</identificatie>
@@ -357,9 +375,9 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
+    <grondwaterlocatie>test_xml</grondwaterlocatie>
     <filter>
-        <identificatie>filter_test</identificatie>
+        <identificatie>filter_test1</identificatie>
         <filtertype>pompfilter</filtertype>
     </filter>
     <watermonster>
@@ -387,10 +405,10 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
+    <grondwaterlocatie>test_xml</grondwaterlocatie>
     <filter>
-        <identificatie>filter_test</identificatie>
-        <filtertype>pompfilter</filtertype>
+        <identificatie>filter_test2</identificatie>
+        <filtertype>natuurlijke filter</filtertype>
     </filter>
     <watermonster>
         <identificatie>Volkstuin_privaat_boere schuur_2</identificatie>
@@ -417,10 +435,10 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
+    <grondwaterlocatie>test_xml</grondwaterlocatie>
     <filter>
-        <identificatie>filter_test</identificatie>
-        <filtertype>pompfilter</filtertype>
+        <identificatie>filter_test2</identificatie>
+        <filtertype>natuurlijke filter</filtertype>
     </filter>
     <watermonster>
         <identificatie>Volkstuin_privaat_boere schuur_2</identificatie>
@@ -447,10 +465,10 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
+    <grondwaterlocatie>test_xml</grondwaterlocatie>
     <filter>
-        <identificatie>filter_test</identificatie>
-        <filtertype>pompfilter</filtertype>
+        <identificatie>filter_test2</identificatie>
+        <filtertype>natuurlijke filter</filtertype>
     </filter>
     <watermonster>
         <identificatie>Volkstuin_privaat_boere schuur_2</identificatie>
@@ -477,9 +495,9 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben3</grondwaterlocatie>
+    <grondwaterlocatie>test_xml</grondwaterlocatie>
     <filter>
-        <identificatie>filter_test</identificatie>
+        <identificatie>filter_test1</identificatie>
         <filtertype>pompfilter</filtertype>
     </filter>
     <watermonster>
@@ -507,9 +525,9 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
+    <grondwaterlocatie>test_xml</grondwaterlocatie>
     <filter>
-        <identificatie>filter_test</identificatie>
+        <identificatie>filter_test1</identificatie>
         <filtertype>pompfilter</filtertype>
     </filter>
     <watermonster>
@@ -537,9 +555,9 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
+    <grondwaterlocatie>test_xml</grondwaterlocatie>
     <filter>
-        <identificatie>filter_test</identificatie>
+        <identificatie>filter_test1</identificatie>
         <filtertype>pompfilter</filtertype>
     </filter>
     <watermonster>
@@ -567,9 +585,9 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
+    <grondwaterlocatie>test_xml</grondwaterlocatie>
     <filter>
-        <identificatie>filter_test</identificatie>
+        <identificatie>filter_test1</identificatie>
         <filtertype>pompfilter</filtertype>
     </filter>
     <watermonster>
@@ -597,10 +615,10 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
+    <grondwaterlocatie>test_xml</grondwaterlocatie>
     <filter>
-        <identificatie>filter_test</identificatie>
-        <filtertype>pompfilter</filtertype>
+        <identificatie>filter_test2</identificatie>
+        <filtertype>natuurlijke filter</filtertype>
     </filter>
     <watermonster>
         <identificatie>Volkstuin_privaat_boere schuur_2</identificatie>
@@ -627,9 +645,9 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
+    <grondwaterlocatie>test_xml</grondwaterlocatie>
     <filter>
-        <identificatie>filter_test</identificatie>
+        <identificatie>filter_test1</identificatie>
         <filtertype>pompfilter</filtertype>
     </filter>
     <watermonster>
@@ -657,9 +675,9 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
+    <grondwaterlocatie>test_xml</grondwaterlocatie>
     <filter>
-        <identificatie>filter_test</identificatie>
+        <identificatie>filter_test1</identificatie>
         <filtertype>pompfilter</filtertype>
     </filter>
     <watermonster>
@@ -687,9 +705,9 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
+    <grondwaterlocatie>test_xml</grondwaterlocatie>
     <filter>
-        <identificatie>filter_test</identificatie>
+        <identificatie>filter_test1</identificatie>
         <filtertype>pompfilter</filtertype>
     </filter>
     <watermonster>
@@ -717,15 +735,15 @@
     </watermonster>
 </filtermeting>
 <filtermeting>
-    <grondwaterlocatie>test_ruben2</grondwaterlocatie>
+    <grondwaterlocatie>test_xml</grondwaterlocatie>
     <filter>
-        <identificatie>filter_test</identificatie>
-        <filtertype>pompfilter</filtertype>
+        <identificatie>filter_test2</identificatie>
+        <filtertype>natuurlijke filter</filtertype>
     </filter>
     <referentiepunt>
         <datum>2023-12-13</datum>
         <meetpunt>13.38</meetpunt>
-        <referentie>Bovenkant van de peilbuis</referentie>
+        <referentie>Bovenkant van de beschermbuis</referentie>
     </referentiepunt>
 </filtermeting>
 </ns3:dov-schema>

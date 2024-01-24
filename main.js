@@ -1,5 +1,5 @@
 import Parse from 'args-parser';
-import { createBodemXML } from './src/bodem.js';
+//import { createBodemXML } from './src/bodem.js';
 import { createGrondwaterXML } from './src/grondwater.js';
 import { createOpdrachtXML } from './src/opdracht.js';
 import { setVerbose } from './src/utils.js';
