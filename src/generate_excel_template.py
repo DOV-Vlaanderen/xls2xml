@@ -1,6 +1,8 @@
 import json
 import math
 import xlsxwriter
+from dfs_schema import Node, Choice_Node, Sequence_Node
+
 
 with open("../code_lijsten/xsd_test.json") as f:
     data = json.load(f)
@@ -12,75 +14,6 @@ TYPE_LIJST = {x["id"]: x for x in data["schemas"][0]["types"]}
 dov_schema_id = [x["id"] for x in data["schemas"][0]["types"] if x["name"] == "DovSchemaType"][0]
 
 
-class Node:
-
-    def __init__(self):
-        self.children = []
-        self.min_amount = None
-        self.max_amount = None
-        self.name = None
-        self.constraints = []
-        self.enum = None
-
-    def set_metadata(self, metadata):
-
-        self.name = metadata["name"]
-        self.min_amount, self.max_amount = [math.inf if x == "n" else int(x) for x in
-                                            metadata["constraints"]['cardinality'].split('..')]
-        constraint_stack = [metadata]
-        while constraint_stack:
-            cm = constraint_stack.pop(0)
-            self.constraints.append(cm["constraints"])
-            if "propertyType" in cm and 'ref' in cm['propertyType']:
-                constraint_stack.append(TYPE_LIJST[cm['propertyType']['ref']])
-            if "superType" in cm:
-                constraint_stack.append(TYPE_LIJST[cm['superType']['ref']])
-        enums = [c['values'] for c in [c['enumeration']['@value'] for c in self.constraints if 'enumeration' in c] if
-                 c['allowOthers'] == False]
-
-        if enums:
-            self.enum = enums
-
-    def __str__(self):
-        return f'Node(name="{self.name}", {self.min_amount}..{self.max_amount})'
-
-    def __repr__(self):
-        return str(self)
-
-    def pprint_lines(self):
-        lines = [str(self)]
-        for child in self.children:
-            lines += ['\t' + l for l in child.pprint_lines()]
-
-        return lines
-
-    def pprint(self):
-        for line in self.pprint_lines():
-            print(line)
-
-    def get_specific_child(self, name):
-
-        for child in self.children:
-            if child.name == name:
-                return child
-
-
-class Choice_Node(Node):
-
-    def __init__(self):
-        super().__init__()
-
-    def __str__(self):
-        return f'Choice_Node(name="{self.name}", {self.min_amount}..{self.max_amount})'
-
-
-class Sequence_Node(Node):
-
-    def __init__(self):
-        super().__init__()
-
-    def __str__(self):
-        return f'Sequence_Node(name="{self.name}", {self.min_amount}..{self.max_amount})'
 
 
 def create_dfs_schema(node, old_node=None):
@@ -121,13 +54,13 @@ def get_nth_col_name(n):
     return ''.join(reversed(name))
 
 
-def excel_dfs(current_node, current_lijst, column, sheet_data, constraint_data, is_needed=True, first = False):
+def excel_dfs(current_node, current_lijst, column, sheet_data, constraint_data, is_needed=True, first=False):
     current_lijst.append(current_node.name)
     length = 0
     min_occur, max_occur = [math.inf if x == 'n' else int(x) for x in
                             current_node.constraints[0]['cardinality'].split('..')]
     if current_node.children:
-        for child in current_node.children:
+        for child in sorted(current_node.children, key=lambda x: -x.min_amount):
             length += excel_dfs(child, current_lijst, column + length, sheet_data, constraint_data,
                                 (is_needed and min_occur > 0) or first)
         if len(current_lijst) > 1:
@@ -141,10 +74,8 @@ def excel_dfs(current_node, current_lijst, column, sheet_data, constraint_data, 
 
         length += 1
 
-    current_lijst.remove(current_node.name)
+    del current_lijst[-1]
     return length
-
-
 
 
 def get_excel_format_data(xls_root):
@@ -186,6 +117,7 @@ def create_xls(filename, sheets, root):
              "fg_color": "#FABF8F", }
         )
 
+        bottom_header_index = max(r for r, c, l in sheet_data)
         for coords, data in sheet_data.items():
             row, col, length = coords
 
@@ -200,8 +132,23 @@ def create_xls(filename, sheets, root):
             else:
                 worksheet.write(f'{get_nth_col_name(col)}{row + 1}', data, cell_format)
 
+            if row == bottom_header_index:
+                col_constraints = constraint_data[coords][1]
+                enums = [c['values'] for c in
+                         [c['enumeration']['@value'] for c in col_constraints if 'enumeration' in c] if
+                         c['allowOthers'] == False]
+
+                assert len(enums) <= 1, 'Undefined behaviour!'
+                assert length == 1, 'Undefined behaviour!'
+
+                if enums:
+                    worksheet.data_validation(bottom_header_index + 1, col, 1000000, col, {
+                        'validate': 'list',
+                        'source': enums[0]
+                    })
+
     workbook.close()
 
 
 root = create_dfs_schema(TYPE_LIJST[dov_schema_id])
-create_xls('dev.xlsx', sheets, root)
+create_xls('dev2.xlsx', sheets, root)
