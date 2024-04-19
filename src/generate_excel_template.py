@@ -131,9 +131,11 @@ def create_xls(filename, sheets, root):
 
     codelijst_worksheet = workbook.add_worksheet('Codelijsten')
 
+    worksheets = []
     for sheet in sheets:
         first_code_lijst_index = last_code_lijst_index
         worksheet = workbook.add_worksheet(sheet)
+        worksheets.append(worksheet)
         xls_root = root.get_specific_child(sheet)
         sheet_data = get_excel_format_data(xls_root)
         bottom_header_index = max(d.row_range[1] for d in sheet_data)
@@ -212,10 +214,11 @@ def create_xls(filename, sheets, root):
         codelijst_worksheet.merge_range(0, 2 * first_code_lijst_index, 0, 2 * last_code_lijst_index - 1, sheet,
                                         cell_format=standard_format)
 
+    worksheets[0].activate()
     workbook.close()
 
 
 if __name__ == '__main__':
     root = get_dfs_schema()
     sheets = ["grondwaterlocatie", 'filter', 'filtermeting', 'opdracht']
-    create_xls('develop.xlsx', sheets, root)
+    create_xls('../data/template.xlsx', sheets, root)

@@ -186,4 +186,4 @@ if __name__ == '__main__':
     sheets = ["opdracht", "grondwaterlocatie", "filter", "filtermeting", "bodemlocatie", "bodemmonster",
               "bodemobservatie"]
 
-    read_to_xml('dev2.xlsx', '../dist/dev.xml', sheets)
+    read_to_xml('../data_voorbeeld/dev2.xlsx', '../dist/dev.xml', sheets)
