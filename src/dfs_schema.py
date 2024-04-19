@@ -1,15 +1,21 @@
 import json
 import math
-import xlsxwriter
+import os
+from pathlib import Path
 
-with open("./config/xsd_test.json") as f:
-    data = json.load(f)
+TYPE_LIJST = dict()
+dov_schema_id = None
 
-sheets = ["opdracht", "grondwaterlocatie", "filter", "filtermeting", "bodemlocatie", "bodemmonster", "bodemobservatie"]
 
-TYPE_LIJST = {x["id"]: x for x in data["schemas"][0]["types"]}
+def init():
+    xsd_schema = Path(os.path.dirname(__file__)+"/config/xsd_schema.json")
+    with open(xsd_schema) as f:
+        data = json.load(f)
 
-dov_schema_id = [x["id"] for x in data["schemas"][0]["types"] if x["name"] == "DovSchemaType"][0]
+    global TYPE_LIJST
+    TYPE_LIJST = {x["id"]: x for x in data["schemas"][0]["types"]}
+    global dov_schema_id
+    dov_schema_id = [x["id"] for x in data["schemas"][0]["types"] if x["name"] == "DovSchemaType"][0]
 
 
 class Node:
@@ -101,8 +107,6 @@ class Sequence_Node(Node):
         return f'Sequence_Node(name="{self.name}", {self.min_amount}..{self.max_amount})'
 
 
-
-
 def create_dfs_schema(node, old_node=None):
     if not old_node:
         if 'choice' in node['constraints'] and node['constraints']["choice"]:
@@ -129,6 +133,10 @@ def create_dfs_schema(node, old_node=None):
             current_node.children.append(child_node)
             child_node.set_metadata(child)
 
-
-
     return current_node
+
+
+def get_dfs_schema():
+    init()
+    root = create_dfs_schema(TYPE_LIJST[dov_schema_id])
+    return root

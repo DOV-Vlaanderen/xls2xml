@@ -1,10 +1,8 @@
-import json
 from collections import defaultdict
-import math
 import xlsxwriter
 from colorsys import hsv_to_rgb
 import configparser
-from dfs_schema import Node, Choice_Node, Sequence_Node, create_dfs_schema
+from src.dfs_schema import Choice_Node, get_dfs_schema
 
 header_convertor = configparser.ConfigParser()
 header_convertor.read('./config/header_convertor.ini')
@@ -12,20 +10,11 @@ header_convertor.read('./config/header_convertor.ini')
 codelijst_beschrijvingen = configparser.ConfigParser()
 codelijst_beschrijvingen.read('./config/beschrijvingen.ini')
 
-with open("./config/xsd_test.json") as f:
-    data = json.load(f)
-
-sheets = ["grondwaterlocatie", 'filter', 'filtermeting', 'opdracht']
-
 priority_columns = defaultdict(list)
 with open('./config/priority_columns.csv') as f:
     for line in f.readlines():
         line = line.strip(',\n').split(',')
         priority_columns[line[0]] = line[1:]
-
-TYPE_LIJST = {x["id"]: x for x in data["schemas"][0]["types"]}
-
-dov_schema_id = [x["id"] for x in data["schemas"][0]["types"] if x["name"] == "DovSchemaType"][0]
 
 
 def rgb_to_hex(r, g, b):
@@ -226,5 +215,7 @@ def create_xls(filename, sheets, root):
     workbook.close()
 
 
-root = create_dfs_schema(TYPE_LIJST[dov_schema_id])
-create_xls('develop.xlsx', sheets, root)
+if __name__ == '__main__':
+    root = get_dfs_schema()
+    sheets = ["grondwaterlocatie", 'filter', 'filtermeting', 'opdracht']
+    create_xls('develop.xlsx', sheets, root)
