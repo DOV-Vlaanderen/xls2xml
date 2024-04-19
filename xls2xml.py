@@ -3,10 +3,12 @@ import argparse
 from src.read_excel import read_to_xml
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(prog='XLS2XML',
+    parser = argparse.ArgumentParser(prog='xls2xml',
                                      description="Function to parse data from xlsx-files to XML ready to be uploaded in DOV")
 
-    parser.add_argument('input_file', help='Input xlsx file that will be parsed to XML')
+    parser.add_argument("-i", '--input_file',
+                        help='Input xlsx file that will be parsed to XML, default: data/template.xlsx',
+                        default='./data/template.xlsx')
 
     # Adding optional argument
     parser.add_argument("-o", "--output_file",
