@@ -2,7 +2,7 @@ import json
 import math
 import xlsxwriter
 
-with open("../code_lijsten/xsd_test.json") as f:
+with open("./config/xsd_test.json") as f:
     data = json.load(f)
 
 sheets = ["opdracht", "grondwaterlocatie", "filter", "filtermeting", "bodemlocatie", "bodemmonster", "bodemobservatie"]
@@ -32,8 +32,11 @@ class Node:
         while constraint_stack:
             cm = constraint_stack.pop(0)
             self.constraints.append(cm["constraints"])
-            if "propertyType" in cm and 'ref' in cm['propertyType']:
-                constraint_stack.append(TYPE_LIJST[cm['propertyType']['ref']])
+            if "propertyType" in cm:
+                if 'ref' in cm['propertyType']:
+                    constraint_stack.append(TYPE_LIJST[cm['propertyType']['ref']])
+                else:
+                    constraint_stack.append(cm['propertyType'])
             if "superType" in cm:
                 constraint_stack.append(TYPE_LIJST[cm['superType']['ref']])
         enums = [c['values'] for c in [c['enumeration']['@value'] for c in self.constraints if 'enumeration' in c] if
@@ -98,6 +101,8 @@ class Sequence_Node(Node):
         return f'Sequence_Node(name="{self.name}", {self.min_amount}..{self.max_amount})'
 
 
+
+
 def create_dfs_schema(node, old_node=None):
     if not old_node:
         if 'choice' in node['constraints'] and node['constraints']["choice"]:
@@ -114,8 +119,11 @@ def create_dfs_schema(node, old_node=None):
 
     if "declares" in node:
         for child in node["declares"]:
-            if "propertyType" in child and 'ref' in child['propertyType']:
-                child_node = create_dfs_schema(TYPE_LIJST[child['propertyType']['ref']])
+            if "propertyType" in child:
+                if 'ref' in child['propertyType']:
+                    child_node = create_dfs_schema(TYPE_LIJST[child['propertyType']['ref']])
+                else:
+                    child_node = Node()
             else:
                 child_node = create_dfs_schema(child)
             current_node.children.append(child_node)
