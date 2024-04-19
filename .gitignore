@@ -1,5 +1,1 @@
-node_modules
-dist/vmm/*
-data/vmm/*.csv
-data/vmm/niet_publieke_filters/*
-data/vmm/niet_publieke_putten/*
+venv/*
