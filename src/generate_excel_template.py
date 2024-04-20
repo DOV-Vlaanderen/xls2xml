@@ -3,6 +3,7 @@ import xlsxwriter
 from colorsys import hsv_to_rgb
 import configparser
 from src.dfs_schema import Choice_Node, get_dfs_schema
+from datetime import date
 
 header_convertor = configparser.ConfigParser()
 header_convertor.read('./config/header_convertor.ini')
@@ -128,6 +129,7 @@ def create_xls(filename, sheets, root):
     last_code_lijst_index = 0
 
     standard_format = workbook.add_format({"bold": 1, "border": 1, "align": "center", "valign": "vcenter", })
+    date_format = workbook.add_format({'num_format': 'dd/mm/yyyy'})
 
     codelijst_worksheet = workbook.add_worksheet('Codelijsten')
 
@@ -150,7 +152,8 @@ def create_xls(filename, sheets, root):
                     format["fg_color"] = hex
 
                 if data.row_range[0] == 0:
-                    worksheet.set_column(data.col_range[0], data.col_range[1], len(data.data) * 2, None,
+                    worksheet.set_column(data.col_range[0], data.col_range[1], len(data.data) * 2,
+                                         date_format if data.data_type == "java.sql.Date" else None,
                                          {'hidden': data.data not in priority_columns[sheet] and not data.mandatory})
 
 
@@ -170,6 +173,13 @@ def create_xls(filename, sheets, root):
                 worksheet.write(f'{get_nth_col_name(data.col_range[0])}{data.row_range[0] + 1}', data.data, cell_format)
 
             if data.row_range[0] == bottom_header_index:
+                if data.data_type == 'java.sql.Date':
+                    worksheet.data_validation(bottom_header_index + 1, data.col_range[0], 1000000, data.col_range[0], {
+                        'validate': 'date',
+                        'criteria': '>',
+                        'minimum': date(1900, 1, 1)
+                    })
+
                 if data.code_lijst:
 
                     # Toevoegen van codelijst aan Codelijsten sheet

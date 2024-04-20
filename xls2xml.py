@@ -1,4 +1,3 @@
-import sys
 import argparse
 from src.read_excel import read_to_xml
 
