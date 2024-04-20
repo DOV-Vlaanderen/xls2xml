@@ -1,7 +1,14 @@
+elementpath==4.4.0
+et-xmlfile==1.1.0
 numpy==1.26.2
+openpyxl==3.1.2
+pandas==2.2.2
+python-dateutil==2.9.0.post0
 pytz==2023.3.post1
 scipy==1.11.4
 shapely==2.0.2
 six==1.16.0
 tzdata==2023.3
+XlsxWriter==3.2.0
 xmljson==0.2.1
+xmlschema==3.3.0

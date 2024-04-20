@@ -4,7 +4,7 @@ import xmlschema
 import pandas as pd
 import numpy as np
 from src.dfs_schema import Choice_Node, get_dfs_schema
-
+import traceback
 
 
 
@@ -156,6 +156,7 @@ def read_sheets(filename, sheets):
             for part in partition:
                 data_root.children[sheet].append(recursive_data_read(df, part, base, []))
         except:
+            traceback.print_exc()
             pass
 
 
