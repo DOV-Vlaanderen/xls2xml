@@ -68,5 +68,5 @@ python xls2xml.py
 ```
 
 <br>
-Wanneer het script gedaan is, worden de xml bestanden toegevoegd aan de map 'dist'. Indien er zich errors voordoen, krijg je die te zien.
+Wanneer het script klaar is, worden de xml bestanden toegevoegd aan de map 'dist'. Indien er zich errors voordoen, krijg je die te zien.
 
