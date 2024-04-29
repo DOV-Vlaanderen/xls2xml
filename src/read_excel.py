@@ -7,8 +7,6 @@ from src.dfs_schema import Choice_Node, get_dfs_schema
 import traceback
 
 
-
-
 class DataNode():
 
     def __init__(self, name):
@@ -144,6 +142,11 @@ def data_node_to_json(data_node, schema_node):
 
 
 def read_sheets(filename, sheets):
+    if not sheets:
+        xl = pd.ExcelFile(filename)
+        sheets = xl.sheet_names
+        sheets.remove('Codelijsten')
+
     root = get_dfs_schema()
     for sheet in sheets:
         try:
@@ -155,10 +158,8 @@ def read_sheets(filename, sheets):
             partition = get_partition(df, np.ones(df.shape[0], dtype='bool'), [], base)
             for part in partition:
                 data_root.children[sheet].append(recursive_data_read(df, part, base, []))
-        except:
-            traceback.print_exc()
-
-
+        except ValueError:
+            print(f'No {sheet} sheet found.')
 
     data_root.delete_empty()
     json_dict = data_node_to_json(data_root, root)[0]
@@ -175,9 +176,7 @@ def write_xml(xml, filename):
         f.write(xmlschema.etree_tostring(xml))
 
 
-def read_to_xml(input_filename, output_filename='./dist/result.xml',
-                sheets=("opdracht", "grondwaterlocatie", "filter", "filtermeting", "bodemlocatie", "bodemmonster",
-                        "bodemobservatie")):
+def read_to_xml(input_filename, output_filename='./dist/result.xml', sheets=None):
     filled_xml = read_sheets(input_filename, sheets)
     write_xml(filled_xml, output_filename)
 
