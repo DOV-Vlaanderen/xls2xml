@@ -143,13 +143,13 @@ def create_xls(filename, sheets, root):
         bottom_header_index = max(d.row_range[1] for d in sheet_data)
 
         for data in sheet_data:
-            format = {"bold": 1, "border": 1, "align": "center", "valign": "vcenter", }
+            formatting = {"bold": 1, "border": 1, "align": "center", "valign": "vcenter", }
 
             if data.row_range[0] in (0, bottom_header_index):
                 if data.mandatory:
                     rgb = hsv_to_rgb(27 / 360, 1 / (2 ** data.choices), 1)
-                    hex = rgb_to_hex(*rgb)
-                    format["fg_color"] = hex
+                    _hex = rgb_to_hex(*rgb)
+                    formatting["fg_color"] = _hex
 
                 if data.row_range[0] == 0:
                     worksheet.set_column(data.col_range[0], data.col_range[1], len(data.data) * 2,
@@ -161,8 +161,8 @@ def create_xls(filename, sheets, root):
 
 
             elif data.min_occur > 0:
-                format["fg_color"] = "#FABF8F"
-            cell_format = workbook.add_format(format)
+                formatting["fg_color"] = "#FABF8F"
+            cell_format = workbook.add_format(formatting)
 
             if data.col_range[0] != data.col_range[1]:
                 worksheet.merge_range(

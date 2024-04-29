@@ -157,7 +157,6 @@ def read_sheets(filename, sheets):
                 data_root.children[sheet].append(recursive_data_read(df, part, base, []))
         except:
             traceback.print_exc()
-            pass
 
 
 
