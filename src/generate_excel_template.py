@@ -5,12 +5,14 @@ import configparser
 from src.dfs_schema import ChoiceNode, get_dfs_schema
 from datetime import date
 
+# Initialize configparser objects
 header_convertor = configparser.ConfigParser()
 header_convertor.read('./config/header_convertor.ini')
 
 codelijst_beschrijvingen = configparser.ConfigParser()
 codelijst_beschrijvingen.read('./config/beschrijvingen.ini')
 
+# Initialize defaultdict for priority columns
 priority_columns = defaultdict(list)
 with open('./config/priority_columns.csv') as f:
     for line in f.readlines():
@@ -19,10 +21,24 @@ with open('./config/priority_columns.csv') as f:
 
 
 def rgb_to_hex(r, g, b):
+    """
+    Converts RGB values to hexadecimal color code.
+
+    Args:
+        r (float): Red value (0-1).
+        g (float): Green value (0-1).
+        b (float): Blue value (0-1).
+
+    Returns:
+        str: Hexadecimal color code.
+    """
     return '#{:02x}{:02x}{:02x}'.format(int(255 * r), int(255 * g), int(255 * b))
 
 
 class ExcelData:
+    """
+    Represents data for Excel cell.
+    """
 
     def __init__(self):
         self.col_range = None
@@ -38,6 +54,13 @@ class ExcelData:
         return f"ExcelData[{self.data}]"
 
     def copy(self):
+        """
+        Creates a copy of the ExcelData instance.
+
+        Returns:
+            ExcelData: Copy of the instance.
+        """
+
         copy_data = ExcelData()
         copy_data.col_range = self.col_range
         copy_data.row_range = self.row_range
@@ -52,6 +75,16 @@ class ExcelData:
 
 
 def get_nth_col_name(n):
+    """
+    Converts column number to Excel column name.
+
+    Args:
+        n (int): Column number.
+
+    Returns:
+        str: Excel column name.
+    """
+
     alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     l = len(alphabet)
     name = [alphabet[n % l]]
@@ -65,6 +98,22 @@ def get_nth_col_name(n):
 
 def excel_dfs(current_node, current_lijst, column, sheet_data, choices_made, is_needed=True, first=False):
     current_lijst.append(current_node.name)
+    """
+    Performs depth-first traversal of schema and constructs Excel sheet data.
+
+    Args:
+        current_node (Node): Current node in the schema.
+        current_lijst (List[str]): Current list of elements.
+        column (int): Current column number.
+        sheet_data (List[ExcelData]): List to store ExcelData instances.
+        choices_made (int): Number of choices made.
+        is_needed (bool, optional): Indicates if the data is needed. Defaults to True.
+        first (bool, optional): Indicates if it's the first node. Defaults to False.
+
+    Returns:
+        int: Length of the data.
+    """
+
     length = 0
     data = ExcelData()
 
@@ -124,6 +173,14 @@ def get_excel_format_data(xls_root):
 
 
 def create_xls(filename, sheets, root):
+    """
+    Creates an Excel file based on the given schema.
+
+    Args:
+        filename (str): The name of the Excel file to be created.
+        sheets (List[str]): A list of sheet names.
+        root (Node): The root node of the schema.
+    """
     workbook = xlsxwriter.Workbook(filename)
 
     last_code_lijst_index = 0

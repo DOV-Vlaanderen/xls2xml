@@ -7,17 +7,29 @@ from src.dfs_schema import ChoiceNode, get_dfs_schema
 import traceback
 
 
-class DataNode():
+class DataNode:
+    """
+    Represents a node in the data tree.
+    """
 
     def __init__(self, name):
         self.name = name
         self.children = defaultdict(list)
         self.data = []
 
-    def is_empty(self):
+    def is_empty(self) -> bool:
+        """
+       Checks if the data node is empty.
+
+       Returns:
+           bool: True if the data node is empty, False otherwise.
+       """
         return len(self.data) == 0 and len(self.children.keys()) == 0
 
-    def delete_empty(self):
+    def delete_empty(self) -> None:
+        """
+        Deletes empty child nodes recursively.
+        """
         to_pop = []
         for key, property_children in self.children.items():
             property_can_be_removed = True
@@ -30,7 +42,7 @@ class DataNode():
         for key in to_pop:
             self.children.pop(key)
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f'DataNode(name={self.name}, children=[{", ".join(str(key) + ":" + str(len(val)) for key, val in self.children.items() if len(val) > 0)}], data={self.data}) '
 
 
@@ -38,6 +50,17 @@ data_root = DataNode('schema')
 
 
 def clean_data(data, schema_node):
+    """
+    Cleans the data according to schema constraints.
+
+    Args:
+        data (Any): Data to be cleaned.
+        schema_node (Node): Schema node containing constraints.
+
+    Returns:
+        Any: Cleaned data.
+    """
+
     if isinstance(data, float) and math.isnan(data):
         return None
     else:
@@ -46,8 +69,8 @@ def clean_data(data, schema_node):
                 if restriction['binding'] not in ['java.lang.Object', 'java.lang.String', 'java.sql.Date',
                                                   'java.math.BigDecimal', 'java.lang.Double']:
                     print(restriction['binding'])
-            except:
-                pass
+            except KeyError:
+                raise NotImplementedError
 
         if any(('binding' in restriction and restriction['binding'] == 'java.sql.Date') for restriction in
                schema_node.constraints):
@@ -69,6 +92,15 @@ def clean_data(data, schema_node):
 
 
 def get_identifiers(node, current_lijst, identifiers):
+    """
+    Retrieves identifiers for data partitioning.
+
+    Args:
+        node (Node): Current node in the schema tree.
+        current_lijst (List[str]): Current list of identifiers.
+        identifiers (List[str]): List to store final identifiers.
+    """
+
     relevant_children = [c for c in node.children if c.min_amount > 0]
 
     if any(c.max_amount > 1 for c in relevant_children):
@@ -84,6 +116,19 @@ def get_identifiers(node, current_lijst, identifiers):
 
 
 def get_partition(df, filter, current_lijst, node):
+    """
+    Performs data partitioning based on identifiers.
+
+    Args:
+        df (pd.DataFrame): DataFrame containing data.
+        filter (np.ndarray): Boolean filter indicating relevant rows.
+        current_lijst (List[str]): Current list of identifiers.
+        node (Node): Current node in the schema tree.
+
+    Returns:
+        List[np.ndarray]: List of filters for data partitioning.
+    """
+
     identifiers = []
     get_identifiers(node, current_lijst, identifiers)
     posibilities = set()
@@ -98,7 +143,20 @@ def get_partition(df, filter, current_lijst, node):
     return new_filters
 
 
-def recursive_data_read(df, filter, schema_node, current_lijst):
+def recursive_data_read(df, filter, schema_node, current_lijst) -> DataNode:
+    """
+    Recursively reads data from DataFrame and constructs data nodes.
+
+    Args:
+        df (pd.DataFrame): DataFrame containing data.
+        filter (np.ndarray): Boolean filter indicating relevant rows.
+        schema_node (Node): Current node in the schema tree.
+        current_lijst (List[str]): Current list of identifiers.
+
+    Returns:
+        DataNode: Constructed data node.
+    """
+
     data_node = DataNode(schema_node.name)
     if not schema_node.children:
         data = set()
@@ -123,6 +181,17 @@ def recursive_data_read(df, filter, schema_node, current_lijst):
 
 
 def data_node_to_json(data_node, schema_node):
+    """
+    Converts data nodes to JSON format.
+
+    Args:
+        data_node (DataNode): Data node to be converted.
+        schema_node (Node): Corresponding schema node.
+
+    Returns:
+        List[Dict[str, Any]]: JSON representation of data nodes.
+    """
+
     if not schema_node.children:
         return data_node.data
     assert not (schema_node.children and data_node.data), 'Undefined behaviour!'
@@ -142,6 +211,17 @@ def data_node_to_json(data_node, schema_node):
 
 
 def read_sheets(filename, sheets):
+    """
+    Reads data from Excel sheets and generates filled XML.
+
+    Args:
+        filename (str): Path to the Excel file.
+        sheets (List[str]): List of sheet names to be read.
+
+    Returns:
+        str: Filled XML data.
+    """
+
     if not sheets:
         xl = pd.ExcelFile(filename)
         sheets = xl.sheet_names
@@ -171,12 +251,28 @@ def read_sheets(filename, sheets):
 
 
 def write_xml(xml, filename):
+    """
+    Writes XML data to a file.
+
+    Args:
+        xml (Any): XML data to be written.
+        filename (str): Path to the output file.
+    """
+
     with open(filename, 'w') as f:
         f.write('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n')
         f.write(xmlschema.etree_tostring(xml))
 
 
 def read_to_xml(input_filename, output_filename='./dist/result.xml', sheets=None):
+    """
+    Reads data from Excel sheets and generates filled XML.
+
+    Args:
+        input_filename (str): Path to the input Excel file.
+        output_filename (str, optional): Path to the output XML file. Defaults to './dist/result.xml'.
+        sheets (List[str], optional): List of sheet names to be read. Defaults to None.
+    """
     filled_xml = read_sheets(input_filename, sheets)
     write_xml(filled_xml, output_filename)
 

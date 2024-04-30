@@ -20,6 +20,7 @@ if __name__ == '__main__':
     # Read arguments from command line
     args = parser.parse_args()
 
+    # Call the read_to_xml function with provided arguments
     if args.sheets:
         read_to_xml(args.input_file, args.output_file, sheets=args.sheets)
     else:
