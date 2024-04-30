@@ -70,3 +70,27 @@ python xls2xml.py
 <br>
 Wanneer het script klaar is, worden de xml bestanden toegevoegd aan de map 'dist'. Indien er zich errors voordoen, krijg je die te zien.
 
+### Stap 4.3a: Geavanceerd gebruik
+
+Het is mogelijk om enkele opties aan deze functie toe te voegen:
+
+```
+usage: xls2xml [-h] [-i INPUT_FILE] [-o OUTPUT_FILE]
+               [-s SHEETS [SHEETS ...]]
+
+Function to parse data from xlsx-files to XML ready to be uploaded
+in DOV
+
+options:
+  -h, --help            show this help message and exit
+  -i INPUT_FILE, --input_file INPUT_FILE
+                        Input xlsx file that will be parsed to XML,
+                        default: data/template.xlsx
+  -o OUTPUT_FILE, --output_file OUTPUT_FILE
+                        Output file to which the parsed XML-file is
+                        outputted, default: dist/dev.xml
+  -s SHEETS [SHEETS ...], --sheets SHEETS [SHEETS ...]
+                        Sheet(s) from excel file that needs to be
+                        parsed, by default all sheets will be
+                        parsed
+```

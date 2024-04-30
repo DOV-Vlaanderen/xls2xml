@@ -3,7 +3,7 @@ from collections import defaultdict
 import xmlschema
 import pandas as pd
 import numpy as np
-from src.dfs_schema import Choice_Node, get_dfs_schema
+from src.dfs_schema import ChoiceNode, get_dfs_schema
 import traceback
 
 
@@ -132,7 +132,7 @@ def data_node_to_json(data_node, schema_node):
 
         if c.name in data_node.children:
             for prop_c in data_node.children[c.name]:
-                if isinstance(c, Choice_Node):
+                if isinstance(c, ChoiceNode):
                     for key, val in data_node_to_json(prop_c, c)[0].items():
                         json_dict[key] = json_dict.get(key, []) + val
                 else:

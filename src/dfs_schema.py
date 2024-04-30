@@ -81,13 +81,13 @@ class Node:
         return all(children_bools)
 
 
-class Choice_Node(Node):
+class ChoiceNode(Node):
 
     def __init__(self):
         super().__init__()
 
     def __str__(self):
-        return f'Choice_Node(name="{self.name}", {self.min_amount}..{self.max_amount})'
+        return f'ChoiceNode(name="{self.name}", {self.min_amount}..{self.max_amount})'
 
     def validate(self, children_bools):
         val = False
@@ -98,21 +98,21 @@ class Choice_Node(Node):
         return val
 
 
-class Sequence_Node(Node):
+class SequenceNode(Node):
 
     def __init__(self):
         super().__init__()
 
     def __str__(self):
-        return f'Sequence_Node(name="{self.name}", {self.min_amount}..{self.max_amount})'
+        return f'SequenceNode(name="{self.name}", {self.min_amount}..{self.max_amount})'
 
 
 def create_dfs_schema(node, old_node=None):
     if not old_node:
         if 'choice' in node['constraints'] and node['constraints']["choice"]:
-            current_node = Choice_Node()
+            current_node = ChoiceNode()
         elif node['name'].startswith('sequence'):
-            current_node = Sequence_Node()
+            current_node = SequenceNode()
         else:
             current_node = Node()
     else:

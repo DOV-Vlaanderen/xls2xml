@@ -2,7 +2,7 @@ from collections import defaultdict
 import xlsxwriter
 from colorsys import hsv_to_rgb
 import configparser
-from src.dfs_schema import Choice_Node, get_dfs_schema
+from src.dfs_schema import ChoiceNode, get_dfs_schema
 from datetime import date
 
 header_convertor = configparser.ConfigParser()
@@ -22,7 +22,7 @@ def rgb_to_hex(r, g, b):
     return '#{:02x}{:02x}{:02x}'.format(int(255 * r), int(255 * g), int(255 * b))
 
 
-class Excel_data:
+class ExcelData:
 
     def __init__(self):
         self.col_range = None
@@ -35,10 +35,10 @@ class Excel_data:
         self.choices = 0
 
     def __repr__(self):
-        return f"Excel_data[{self.data}]"
+        return f"ExcelData[{self.data}]"
 
     def copy(self):
-        copy_data = Excel_data()
+        copy_data = ExcelData()
         copy_data.col_range = self.col_range
         copy_data.row_range = self.row_range
         copy_data.data = self.data
@@ -66,15 +66,15 @@ def get_nth_col_name(n):
 def excel_dfs(current_node, current_lijst, column, sheet_data, choices_made, is_needed=True, first=False):
     current_lijst.append(current_node.name)
     length = 0
-    data = Excel_data()
+    data = ExcelData()
 
     for child in sorted(current_node.children, key=lambda x: -x.min_amount):
         length += excel_dfs(child, current_lijst, column + length, sheet_data,
-                            choices_made + int(isinstance(current_node, Choice_Node)),
+                            choices_made + int(isinstance(current_node, ChoiceNode)),
                             (is_needed and current_node.min_amount > 0) or first)
     if not current_node.children:
         length += 1
-        header_data = Excel_data()
+        header_data = ExcelData()
         sheet_data.append(header_data)
         header_data.min_occur = current_node.min_amount
         header_data.row_range = (0, 0)
