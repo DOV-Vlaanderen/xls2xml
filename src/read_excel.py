@@ -46,9 +46,6 @@ class DataNode:
         return f'DataNode(name={self.name}, children=[{", ".join(str(key) + ":" + str(len(val)) for key, val in self.children.items() if len(val) > 0)}], data={self.data}) '
 
 
-data_root = DataNode('schema')
-
-
 def clean_data(data, schema_node):
     """
     Cleans the data according to schema constraints.
@@ -64,29 +61,22 @@ def clean_data(data, schema_node):
     if isinstance(data, float) and math.isnan(data):
         return None
     else:
-        for restriction in schema_node.constraints:
+
+        cleaner = {'java.lang.Boolean': lambda x: bool(x),
+                   'java.math.BigInteger': lambda x: int(x),
+                   'java.sql.Date': lambda x: x.strftime("%Y-%m-%d"),
+                   'java.math.BigDecimal': lambda x: float(x),
+                   'java.lang.Double': lambda x: float(x),
+                   'java.lang.String': lambda x: str(x)
+                   }
+
+        bindings = [restriction['binding'] for restriction in schema_node.constraints if 'binding' in restriction]
+        if bindings:
             try:
-                if restriction['binding'] not in ['java.lang.Object', 'java.lang.String', 'java.sql.Date',
-                                                  'java.math.BigDecimal', 'java.lang.Double']:
-                    print(restriction['binding'])
+                data = cleaner[bindings[0]](data)
             except KeyError:
+                print(bindings[0])
                 raise NotImplementedError
-
-        if any(('binding' in restriction and restriction['binding'] == 'java.sql.Date') for restriction in
-               schema_node.constraints):
-            data = data.strftime("%Y-%m-%d")
-
-        if any(('binding' in restriction and restriction['binding'] == 'java.math.BigDecimal') for restriction in
-               schema_node.constraints):
-            data = float(data)
-
-        if any(('binding' in restriction and restriction['binding'] == 'java.lang.Double') for restriction in
-               schema_node.constraints):
-            data = float(data)
-
-        if any(('binding' in restriction and restriction['binding'] == 'java.lang.String') for restriction in
-               schema_node.constraints):
-            data = str(data)
 
         return data
 
@@ -134,12 +124,23 @@ def get_partition(df, filter, current_lijst, node):
     posibilities = set()
 
     for i, row in df[filter].loc[:, identifiers].iterrows():
-        posibilities.add(tuple(row))
+        if not any(isinstance(x,float) and math.isnan(x) for x in tuple(row)):
+            posibilities.add(tuple(row))
 
     new_filters = []
     for pos in posibilities:
-        new_filters.append(filter * np.array([tuple(row) == pos for _, row in df.loc[:, identifiers].iterrows()]))
-    assert all(sum(new_filters) == filter), 'Not a perfect partition?'
+        started = False
+        new_filter = []
+        for i, row in df.loc[:, identifiers].iterrows():
+            if tuple(row) == pos or (any(isinstance(x,float) and math.isnan(x) for x in tuple(row)) and started):
+                started = True
+                new_filter.append(True)
+            else:
+                started = False
+                new_filter.append(False)
+
+        new_filters.append(filter * np.array(new_filter))
+    assert not new_filters or all(sum(new_filters) == filter), 'Not a perfect partition?'
     return new_filters
 
 
@@ -221,7 +222,7 @@ def read_sheets(filename, sheets):
     Returns:
         str: Filled XML data.
     """
-
+    data_root = DataNode('schema')
     if not sheets:
         xl = pd.ExcelFile(filename)
         sheets = xl.sheet_names
@@ -281,4 +282,4 @@ if __name__ == '__main__':
     sheets = ["opdracht", "grondwaterlocatie", "filter", "filtermeting", "bodemlocatie", "bodemmonster",
               "bodemobservatie"]
 
-    read_to_xml('../data_voorbeeld/dev2.xlsx', '../dist/dev.xml', sheets)
+    read_to_xml('../data_voorbeeld/template_w.xlsx', '../dist/dev.xml', sheets)

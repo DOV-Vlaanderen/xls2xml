@@ -287,5 +287,5 @@ def create_xls(filename, sheets, root):
 
 if __name__ == '__main__':
     root = get_dfs_schema()
-    sheets = ['grondmonster']
+    sheets = ['grondwaterlocatie','filter','filtermeting','opdracht']
     create_xls('../data/template.xlsx', sheets, root)

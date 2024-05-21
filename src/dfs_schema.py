@@ -164,11 +164,11 @@ class SequenceNode(Node):
 
 def create_dfs_schema(node, old_node: Node = None) -> Node:
     """
-    Creates a depth-first schema tree starting from the given node.
+    Recursively creates a depth-first schema tree starting from the given node.
 
     Args:
         node (dict): Dictionary representing the node in the schema.
-        old_node (Node): Previous node in the schema tree (default is None).
+        old_node (Node): Node to which the current constraints should be added (default is None).
 
     Returns:
         Node: Root node of the created schema tree.
@@ -192,6 +192,8 @@ def create_dfs_schema(node, old_node: Node = None) -> Node:
             if "propertyType" in child:
                 if 'ref' in child['propertyType']:
                     child_node = create_dfs_schema(TYPE_LIJST[child['propertyType']['ref']])
+                elif 'declares' in child['propertyType']:
+                    child_node = create_dfs_schema(child['propertyType'])
                 else:
                     child_node = Node()
             else:
