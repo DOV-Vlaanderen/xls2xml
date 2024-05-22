@@ -5,6 +5,9 @@ import pandas as pd
 import numpy as np
 from src.dfs_schema import ChoiceNode, get_dfs_schema
 import traceback
+import warnings
+
+warnings.filterwarnings("ignore", message="Data Validation extension is not supported and will be removed")
 
 
 class DataNode:
@@ -124,7 +127,7 @@ def get_partition(df, filter, current_lijst, node):
     posibilities = set()
 
     for i, row in df[filter].loc[:, identifiers].iterrows():
-        if not any(isinstance(x,float) and math.isnan(x) for x in tuple(row)):
+        if not any(isinstance(x, float) and math.isnan(x) for x in tuple(row)):
             posibilities.add(tuple(row))
 
     new_filters = []
@@ -132,7 +135,7 @@ def get_partition(df, filter, current_lijst, node):
         started = False
         new_filter = []
         for i, row in df.loc[:, identifiers].iterrows():
-            if tuple(row) == pos or (any(isinstance(x,float) and math.isnan(x) for x in tuple(row)) and started):
+            if tuple(row) == pos or (any(isinstance(x, float) and math.isnan(x) for x in tuple(row)) and started):
                 started = True
                 new_filter.append(True)
             else:

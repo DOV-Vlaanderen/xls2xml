@@ -7,32 +7,10 @@ from datetime import date
 
 # Initialize configparser objects
 header_convertor = configparser.ConfigParser()
-header_convertor.read('./config/header_convertor.ini')
-
 codelijst_beschrijvingen = configparser.ConfigParser()
-codelijst_beschrijvingen.read('./config/beschrijvingen.ini')
 
 # Initialize defaultdict for priority columns
 priority_columns = defaultdict(list)
-with open('./config/priority_columns.csv') as f:
-    for line in f.readlines():
-        line = line.strip(',\n').split(',')
-        priority_columns[line[0]] = line[1:]
-
-
-def rgb_to_hex(r, g, b):
-    """
-    Converts RGB values to hexadecimal color code.
-
-    Args:
-        r (float): Red value (0-1).
-        g (float): Green value (0-1).
-        b (float): Blue value (0-1).
-
-    Returns:
-        str: Hexadecimal color code.
-    """
-    return '#{:02x}{:02x}{:02x}'.format(int(255 * r), int(255 * g), int(255 * b))
 
 
 class ExcelData:
@@ -72,6 +50,21 @@ class ExcelData:
         copy_data.choices = self.choices
 
         return copy_data
+
+
+def rgb_to_hex(r, g, b):
+    """
+    Converts RGB values to hexadecimal color code.
+
+    Args:
+        r (float): Red value (0-1).
+        g (float): Green value (0-1).
+        b (float): Blue value (0-1).
+
+    Returns:
+        str: Hexadecimal color code.
+    """
+    return '#{:02x}{:02x}{:02x}'.format(int(255 * r), int(255 * g), int(255 * b))
 
 
 def get_nth_col_name(n):
@@ -172,7 +165,22 @@ def get_excel_format_data(xls_root):
     return sheet_data + header_row
 
 
-def create_xls(filename, sheets, root):
+def initialize_config(beschrijving_config, header_config, priority_config):
+    if beschrijving_config is not None:
+        codelijst_beschrijvingen.read(beschrijving_config)
+
+    if header_config is not None:
+        header_convertor.read(header_config)
+
+    if priority_config is not None:
+        with open(priority_config) as f:
+            for line in f.readlines():
+                line = line.strip(',\n').split(',')
+                priority_columns[line[0]] = line[1:]
+
+
+def create_xls(filename, sheets, root, hide_non_priority=True, beschrijving_config='./config/header_convertor.ini',
+               header_config='./config/header_convertor.ini', priority_config='./config/priority_columns.csv'):
     """
     Creates an Excel file based on the given schema.
 
@@ -181,11 +189,14 @@ def create_xls(filename, sheets, root):
         sheets (List[str]): A list of sheet names.
         root (Node): The root node of the schema.
     """
+
+    initialize_config(beschrijving_config, header_config, priority_config)
+
     workbook = xlsxwriter.Workbook(filename)
 
     last_code_lijst_index = 0
 
-    standard_format = workbook.add_format({"bold": 1, "border": 1, "align": "center", "valign": "vcenter", })
+    standard_format = workbook.add_format({"bold": 1, "border": 1, "align": "left", "valign": "vcenter", })
     date_format = workbook.add_format({'num_format': 'dd/mm/yyyy'})
 
     codelijst_worksheet = workbook.add_worksheet('Codelijsten')
@@ -200,7 +211,7 @@ def create_xls(filename, sheets, root):
         bottom_header_index = max(d.row_range[1] for d in sheet_data)
 
         for data in sheet_data:
-            formatting = {"bold": 1, "border": 1, "align": "center", "valign": "vcenter", }
+            formatting = {"bold": 1, "border": 1, "align": "left", "valign": "vcenter", }
 
             if data.row_range[0] in (0, bottom_header_index):
                 if data.mandatory:
@@ -211,7 +222,8 @@ def create_xls(filename, sheets, root):
                 if data.row_range[0] == 0:
                     worksheet.set_column(data.col_range[0], data.col_range[1], len(data.data) * 2,
                                          date_format if data.data_type == "java.sql.Date" else None,
-                                         {'hidden': data.data not in priority_columns[sheet] and not data.mandatory})
+                                         {'hidden': (data.data not in priority_columns[
+                                             sheet] and not data.mandatory) and hide_non_priority})
 
 
 
@@ -287,5 +299,5 @@ def create_xls(filename, sheets, root):
 
 if __name__ == '__main__':
     root = get_dfs_schema()
-    sheets = ['grondwaterlocatie','filter','filtermeting','opdracht']
-    create_xls('../data/template.xlsx', sheets, root)
+    sheets = ['bodemlocatie', 'bodemsite', 'bodemmonster', 'bodemobservatie']
+    create_xls('../data/template.xlsx', sheets, root, hide_non_priority=False, header_config=None)
