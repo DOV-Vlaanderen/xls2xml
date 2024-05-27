@@ -299,5 +299,29 @@ def create_xls(filename, sheets, root, hide_non_priority=True, beschrijving_conf
 
 if __name__ == '__main__':
     root = get_dfs_schema()
-    sheets = ['bodemlocatie', 'bodemsite', 'bodemmonster', 'bodemobservatie']
-    create_xls('../data/template.xlsx', sheets, root, hide_non_priority=False, header_config=None)
+
+    sheets = ['grondwaterlocatie', 'filter', 'filtermeting', 'filterdebietmeter', 'opdracht']
+    create_xls('../data/grondwater_template.xlsx', sheets, root, hide_non_priority=True,
+               header_config='./config/grondwater/header_convertor.ini')
+    create_xls('../data/grondwater_template_full.xlsx', sheets, root, hide_non_priority=False, header_config=None)
+
+    sheets = ['bodemlocatie', 'bodemsite', 'bodemmonster', 'bodemobservatie', 'bodemlocatieclassificatie',
+              'bodemkundigeopbouw', 'opdracht']
+    create_xls('../data/bodem_template.xlsx', sheets, root, hide_non_priority=True,
+               header_config='./config/bodem/header_convertor.ini')
+    create_xls('../data/bodem_template_full.xlsx', sheets, root, hide_non_priority=False, header_config=None)
+
+    sheets = ['boring', 'interpretaties', 'grondmonster', 'opdracht']
+    create_xls('../data/geologie_template.xlsx', sheets, root, hide_non_priority=True,
+               header_config='./config/geologie/header_convertor.ini')
+    create_xls('../data/geologie_template_full.xlsx', sheets, root, hide_non_priority=False, header_config=None)
+
+    sheets = ['grondwaterlocatie', 'filter', 'filtermeting', 'filterdebietmeter', 'bodemlocatie',
+              'bodemsite',
+              'bodemmonster',
+              'bodemobservatie',
+              'bodemlocatieclassificatie',
+              'bodemkundigeopbouw',
+              'boring', 'interpretaties', 'grondmonster', 'opdracht']
+    create_xls('../data/template.xlsx', sheets, root, hide_non_priority=False,
+               header_config='./config/header_convertor.ini')

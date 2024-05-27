@@ -36,6 +36,12 @@ Vul het Excel-bestand in met de data die je in DOV wenst toe te voegen.
 In het excel bestand zijn enkele gegevensvalidaties aanwezig. Zo zijn enkel datums later dan 01/01/1900 toegelaten in velden waar een datum wordt verwacht.
 Ook zijn er enkele velden waar de optie uit een codelijst moet komen. Deze zijn makkelijk zichtbaar aan de verwijzing in de kolomnamen, die rechtstreeks verwijzen naar de relevante codelijst op het Excel-blad "Codelijsten".
 
+Wanneer over een bepaald object meerdere rijen aan gegevens moeten ingevuld worden, dan kan dit door de gegevens in de verplichte velden te dupliceren naar de onderstaande rijen en vervolgens de gegevens in de corresponderende kolom toe te voegen.
+Een voorbeeld van dit proces wordt weergegeven in onderstaande afbeelding:
+![data_voorbeeld](data_voorbeeld.png)
+
+
+
 ## Stap 4: Het script uitvoeren
 
 Het script kan uitgevoerd worden met een commando in de terminal. Dit kan op verschillende manieren:
