@@ -46,7 +46,7 @@ class DataNode:
             self.children.pop(key)
 
     def __repr__(self) -> str:
-        return f'DataNode(name={self.name}, children=[{", ".join(str(key) + ":" + str(len(val)) for key, val in self.children.items() if len(val) > 0)}], data={self.data}) '
+        return f'DataNode(name={self.name}, children=[{", ".join(str(key) + ":" + str(len(val)) for key, val in self.children.items() if len(val) > 0)}], data={self.data})'
 
 
 def clean_data(data, schema_node):
