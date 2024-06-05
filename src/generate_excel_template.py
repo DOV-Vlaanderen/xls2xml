@@ -300,10 +300,11 @@ def create_xls(filename, sheets, root, hide_non_priority=True, beschrijving_conf
 if __name__ == '__main__':
     root = get_dfs_schema()
 
-    sheets = ['grondwaterlocatie', 'filter', 'filtermeting', 'filterdebietmeter', 'opdracht']
+    sheets = ['grondwaterlocatie', 'filter', 'filtermeting', 'opdracht']
     create_xls('../data/grondwater_template.xlsx', sheets, root, hide_non_priority=True,
                header_config='./config/grondwater/header_convertor.ini',
                priority_config='./config/grondwater/priority_columns.csv')
+    sheets += ['filterdebietmeter']
     create_xls('../data/grondwater_template_full.xlsx', sheets, root, hide_non_priority=False, header_config=None)
 
     sheets = ['bodemlocatie', 'bodemsite', 'bodemmonster', 'bodemobservatie', 'bodemlocatieclassificatie',
@@ -318,6 +319,12 @@ if __name__ == '__main__':
                header_config='./config/geologie/header_convertor.ini',
                priority_config='./config/geologie/priority_columns.csv')
     create_xls('../data/geologie_template_full.xlsx', sheets, root, hide_non_priority=False, header_config=None)
+
+    sheets = ['opdracht']
+    create_xls('../data/opdracht_template.xlsx', sheets, root, hide_non_priority=False,
+               header_config='./config/opdracht/header_convertor.ini',
+               priority_config='./config/opdracht/priority_columns.csv')
+    create_xls('../data/opdracht_template_full.xlsx', sheets, root, hide_non_priority=False, header_config=None)
 
     sheets = ['grondwaterlocatie', 'filter', 'filtermeting', 'filterdebietmeter', 'bodemlocatie',
               'bodemsite',
