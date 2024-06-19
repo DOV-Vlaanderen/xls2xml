@@ -58,11 +58,28 @@ def xls2xml_test(xls_filename, xml_filename, sheets):
     assert valid_xml == generated_xml
 
 
+
+
+
+
+
 class BodemTemplateTest(unittest.TestCase):
 
     def test_bodemlocatie(self):
         xls2xml_test('./data/filled_templates/bodem_template_full.xlsx',
                      './data/verification_xml/bodemlocatie1.xml', ['bodemlocatie'])
+
+    def test_bodemsite(self):
+        xls2xml_test('./data/filled_templates/bodem_template_full.xlsx',
+                     './data/verification_xml/bodemsite1.xml', ['bodemsite'])
+
+
+class GrondwaterTemplateTest(unittest.TestCase):
+
+    def test_grondwaterlocatie(self):
+        xls2xml_test('./data/filled_templates/bodem_template_full.xlsx',
+                     './data/verification_xml/bodemlocatie1.xml', ['bodemlocatie'])
+
 
 
 if __name__ == '__main__':
