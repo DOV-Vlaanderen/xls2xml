@@ -321,7 +321,7 @@ if __name__ == '__main__':
     create_xls('../data/geologie_template_full.xlsx', sheets, root, hide_non_priority=False, header_config=None)
 
     sheets = ['opdracht']
-    create_xls('../data/opdracht_template.xlsx', sheets, root, hide_non_priority=False,
+    create_xls('../data/opdracht_template.xlsx', sheets, root, hide_non_priority=True,
                header_config='./config/opdracht/header_convertor.ini',
                priority_config='./config/opdracht/priority_columns.csv')
     create_xls('../data/opdracht_template_full.xlsx', sheets, root, hide_non_priority=False, header_config=None)
@@ -333,7 +333,7 @@ if __name__ == '__main__':
               'bodemlocatieclassificatie',
               'bodemkundigeopbouw',
               'boring', 'interpretaties', 'grondmonster', 'opdracht']
-    create_xls('../data/template.xlsx', sheets, root, hide_non_priority=False,
+    create_xls('../data/template.xlsx', sheets, root, hide_non_priority=True,
                header_config='./config/header_convertor.ini',
                priority_config='./config/priority_columns.csv')
     create_xls('../data/template_full.xlsx', sheets, root, hide_non_priority=False, header_config=None)
