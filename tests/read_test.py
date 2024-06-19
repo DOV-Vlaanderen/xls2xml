@@ -27,6 +27,8 @@ class ValidationNode:
         return not indices and not other_indices
 
     def __compare_children__(self, other):
+        if any(c1.tag != c2.tag for c1, c2 in zip(self.children, other.children)):
+            return False
 
         indices = set(range(len(self.children)))
         other_indices = set(range(len(other.children)))
@@ -41,14 +43,12 @@ class ValidationNode:
                     other_child = other.children[j]
                     match = (child == other_child)
                     if match:
-                        matching[i]=j
+                        matching[i] = j
                         indices.remove(i)
                         other_indices.remove(j)
                 j += 1
             i += 1
         return matching, indices, other_indices
-
-
 
 
 def xls2xml_test(xls_filename, xml_filename, sheets):
