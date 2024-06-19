@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns4:dov-schema xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns4="http://kern.schemas.dov.vlaanderen.be" xsi:schemaLocation="http://kern.schemas.dov.vlaanderen.be https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd">
+    <bodemlocatie>
+        <naam>CN_247121_2021</naam>
+        <dataidentifier>
+            <permkey>2021-033612</permkey>
+            <uri>https://www.dov.vlaanderen.be/data/bodemlocatie/2021-033612</uri>
+        </dataidentifier>
+        <type>BOR</type>
+        <waarnemingsdatum>2021-04-03</waarnemingsdatum>
+        <invoerdatum>2023-09-29</invoerdatum>
+        <doel>CHEM_FYS</doel>
+        <ligging>
+            <beginpunt>
+                <xy>
+                    <x>120852.27</x>
+                    <y>174472.80</y>
+                    <betrouwbaarheid>goed</betrouwbaarheid>
+                    <methode_opmeten>gedigitaliseerd op orthofoto</methode_opmeten>
+                    <origine_opmeten>
+                        <naam>Deelnemers citizen science project</naam>
+                    </origine_opmeten>
+                </xy>
+                <maaiveld>
+                    <waarde>63.33</waarde>
+                    <betrouwbaarheid>goed</betrouwbaarheid>
+                    <methode_opmeten>DHM_v2</methode_opmeten>
+                    <origine_opmeten>
+                        <naam>Departement Omgeving</naam>
+                    </origine_opmeten>
+                </maaiveld>
+            </beginpunt>
+            <bodemstreek>ZLS</bodemstreek>
+            <bodemdistrict>Schelde-Dender Interfluvium</bodemdistrict>
+            <landbouwstreek>Zandleemstreek</landbouwstreek>
+            <bodemkaartblad>86W</bodemkaartblad>
+            <beschrijving>Curieuzeneuzen: meetpunt (gazondolk) in een particuliere tuin</beschrijving>
+        </ligging>
+        <status>publiek</status>
+        <dataleverancier>
+            <bedrijf>
+                <naam>Universiteit Antwerpen</naam>
+            </bedrijf>
+        </dataleverancier>
+        <auteur>
+            <bedrijf>
+                <naam>Universiteit Antwerpen</naam>
+            </bedrijf>
+        </auteur>
+        <opdracht>Curieuzeneuzen in de tuin 2021</opdracht>
+        <opdracht>Curieuzeneuzen in de tuin</opdracht>
+        <ref_bodemsite>
+            <naam>CN_247121</naam>
+        </ref_bodemsite>
+    </bodemlocatie>
+</ns4:dov-schema>

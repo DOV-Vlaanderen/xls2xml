@@ -93,11 +93,10 @@ def get_identifiers(node, current_lijst, identifiers):
         current_lijst (List[str]): Current list of identifiers.
         identifiers (List[str]): List to store final identifiers.
     """
+    if 'choice' in node.name:
+        return
 
-    relevant_children = [c for c in node.children if c.min_amount > 0]
-
-    if any(c.max_amount > 1 for c in relevant_children):
-        print('Undefined behaviour! 1')
+    relevant_children = [c for c in node.children if c.min_amount > 0 and c.max_amount <= 1]
 
     for c in relevant_children:
         current_lijst.append(c.name)
@@ -285,4 +284,4 @@ if __name__ == '__main__':
     sheets = ["opdracht", "grondwaterlocatie", "filter", "filtermeting", "bodemlocatie", "bodemmonster",
               "bodemobservatie"]
 
-    read_to_xml('../data_voorbeeld/template_w.xlsx', '../dist/dev.xml', sheets)
+    read_to_xml('../tests/data/filled_templates/bodem_template_full.xlsx', '../dist/dev.xml', sheets)
