@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns4:dov-schema xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns4="http://kern.schemas.dov.vlaanderen.be" xsi:schemaLocation="http://kern.schemas.dov.vlaanderen.be https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd">
+    <boring>
+        <identificatie>1508-B2023-00558-B8/P8</identificatie>
+        <dataidentifier>
+            <permkey>2023-204971</permkey>
+            <uri>https://www.dov.vlaanderen.be/data/boring/2023-204971</uri>
+        </dataidentifier>
+        <xy>
+            <x>123378.29</x>
+            <y>184289.90</y>
+            <betrouwbaarheid>onbekend</betrouwbaarheid>
+            <methode_opmeten>methode onbekend</methode_opmeten>
+            <origine_opmeten>
+                <naam>GEOSONDA</naam>
+            </origine_opmeten>
+        </xy>
+        <beschrijving_locatie>onbekend</beschrijving_locatie>
+        <oorspronkelijk_maaiveld>
+            <waarde>19.68</waarde>
+            <betrouwbaarheid>onbekend</betrouwbaarheid>
+            <methode_opmeten>methode onbekend</methode_opmeten>
+            <origine_opmeten>
+                <naam>GEOSONDA</naam>
+            </origine_opmeten>
+        </oorspronkelijk_maaiveld>
+        <start_tov_maaiveld>
+            <gestart_op>MAAIVELD</gestart_op>
+        </start_tov_maaiveld>
+        <diepte_van>0.00</diepte_van>
+        <diepte_tot>5.00</diepte_tot>
+        <datum_aanvang>2023-05-02</datum_aanvang>
+        <doel>Geotechnisch onderzoek</doel>
+        <wet_kader>
+            <niet_ingedeeld/>
+            <type_erkenning>c</type_erkenning>
+        </wet_kader>
+        <uitvoerder>
+            <naam>GEOSONDA</naam>
+        </uitvoerder>
+        <boormeester>
+            <naam>[afgeschermd]</naam>
+            <voornaam>[afgeschermd]</voornaam>
+        </boormeester>
+        <opdrachtgever>
+            <naam>[afgeschermd]</naam>
+        </opdrachtgever>
+        <dataleverancier>
+            <naam>GEOSONDA</naam>
+        </dataleverancier>
+        <boorgatmeting>
+            <uitgevoerd>false</uitgevoerd>
+        </boorgatmeting>
+        <stalen>
+            <bewaard>false</bewaard>
+        </stalen>
+        <details>
+            <boormethode>
+                <van>0.00</van>
+                <tot>0.18</tot>
+                <methode>kernboring</methode>
+            </boormethode>
+            <boormethode>
+                <van>0.18</van>
+                <tot>0.50</tot>
+                <methode>slagboring</methode>
+            </boormethode>
+            <boordiameter>
+                <van>0.00</van>
+                <tot>0.18</tot>
+                <diameter>0.00</diameter>
+            </boordiameter>
+            <boordiameter>
+                <van>0.18</van>
+                <tot>0.50</tot>
+                <diameter>0.00</diameter>
+            </boordiameter>
+        </details>
+    </boring>
+	    <boring>
+        <identificatie>GEO-79/352-b</identificatie>
+        <dataidentifier>
+            <permkey>1979-002247</permkey>
+            <uri>https://www.dov.vlaanderen.be/data/boring/1979-002247</uri>
+        </dataidentifier>
+        <xy>
+            <x>100264.00</x>
+            <y>182786.00</y>
+            <betrouwbaarheid>goed</betrouwbaarheid>
+            <methode_opmeten>gedigitaliseerd op topokaart</methode_opmeten>
+            <origine_opmeten>
+                <naam>VO - Afdeling Geotechniek</naam>
+            </origine_opmeten>
+        </xy>
+        <gemeente>44020</gemeente>
+        <oorspronkelijk_maaiveld>
+            <waarde>7.90</waarde>
+            <betrouwbaarheid>goed</betrouwbaarheid>
+            <methode_opmeten>methode onbekend</methode_opmeten>
+            <origine_opmeten>
+                <naam>MOW - Bestuur Waterwegen</naam>
+            </origine_opmeten>
+        </oorspronkelijk_maaiveld>
+        <start_tov_maaiveld>
+            <gestart_op>MAAIVELD</gestart_op>
+        </start_tov_maaiveld>
+        <diepte_van>0.00</diepte_van>
+        <diepte_tot>12.75</diepte_tot>
+        <datum_aanvang>1979-11-05</datum_aanvang>
+        <doel>Geotechnisch onderzoek</doel>
+        <uitvoerder>
+            <naam>Rijksinstituut voor Grondmechanica (RIG)</naam>
+        </uitvoerder>
+        <opdrachtgever>
+            <naam>MOW - Bestuur Waterwegen</naam>
+        </opdrachtgever>
+        <dataleverancier>
+            <naam>VO - Afdeling Geotechniek</naam>
+        </dataleverancier>
+        <boorgatmeting>
+            <uitgevoerd>false</uitgevoerd>
+        </boorgatmeting>
+        <stalen>
+            <bewaard>false</bewaard>
+        </stalen>
+        <details>
+            <boormethode>
+                <van>0.00</van>
+                <tot>11.20</tot>
+                <methode>lepelboring</methode>
+            </boormethode>
+            <aangenomengrondwaterstand>
+                <diepte_grondwater>3.31</diepte_grondwater>
+            </aangenomengrondwaterstand>
+        </details>
+        <opdracht>GEO-79/352</opdracht>
+    </boring>
+</ns4:dov-schema>

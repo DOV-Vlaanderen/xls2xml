@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns4:dov-schema xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns4="http://kern.schemas.dov.vlaanderen.be" xsi:schemaLocation="http://kern.schemas.dov.vlaanderen.be https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd">
+    <grondmonster>
+        <naam>1</naam>
+        <dataidentifier>
+            <permkey>2017-157170</permkey>
+            <uri>https://www.dov.vlaanderen.be/data/grondmonster/2017-157170</uri>
+        </dataidentifier>
+        <boring>GEO-69/641-b5</boring>
+        <monstertype>ongeroerd</monstertype>
+        <diepte>
+            <van>1.00</van>
+            <tot>1.30</tot>
+        </diepte>
+        <observatieData/>
+        <observatieReeksData>
+            <korrelverdeling_reeks>
+                <humus_kalk_verwijderd>O</humus_kalk_verwijderd>
+            </korrelverdeling_reeks>
+        </observatieReeksData>
+        <proefuitvoeringsData>
+            <proefuitvoering>
+                <proefnaam>VOLMASSA-PROEVEN</proefnaam>
+                <uitvoerder>
+                    <naam>onbekend</naam>
+                </uitvoerder>
+                <identificatie>GEO-69/641</identificatie>
+                <bedrijf_dienst>
+                    <naam>MVG - Afdeling Geotechniek</naam>
+                </bedrijf_dienst>
+            </proefuitvoering>
+            <proefuitvoering>
+                <proefnaam>OKP-KORREL</proefnaam>
+                <uitvoerder>
+                    <naam>onbekend</naam>
+                </uitvoerder>
+                <identificatie>GEO-69/641</identificatie>
+                <bedrijf_dienst>
+                    <naam>MVG - Afdeling Geotechniek</naam>
+                </bedrijf_dienst>
+            </proefuitvoering>
+			</proefuitvoeringsData>
+        <opdracht>GEO-69/641</opdracht>
+        <bijlage>
+            <titel>Korrelverdeling</titel>
+            <bijlage_type>andere</bijlage_type>
+            <opmerking>Id: GEO-69/641 Beschikbaar bij: MVG - Afdeling Geotechniek </opmerking>
+        </bijlage>
+        <bijlage>
+            <titel>Onderkenningsproeven</titel>
+            <bijlage_type>andere</bijlage_type>
+            <opmerking>Id: GEO-69/641 Beschikbaar bij: MVG - Afdeling Geotechniek </opmerking>
+        </bijlage>
+        <bijlage>
+            <titel>Volumemassa &amp; watergehalte</titel>
+            <bijlage_type>andere</bijlage_type>
+            <opmerking>Id: GEO-69/641 Beschikbaar bij: MVG - Afdeling Geotechniek </opmerking>
+        </bijlage>
+    </grondmonster>
+	    <grondmonster>
+        <naam>N2</naam>
+        <dataidentifier>
+            <permkey>2017-171246</permkey>
+            <uri>https://www.dov.vlaanderen.be/data/grondmonster/2017-171246</uri>
+        </dataidentifier>
+        <boring>GEO-09/044-B3</boring>
+        <monstertype>ongeroerd</monstertype>
+        <diepte>
+            <van>4.50</van>
+            <tot>4.98</tot>
+        </diepte>
+        <observatieData>
+            <observatie>
+                <parameter>ASTM_CODE</parameter>
+                <waarde_text>CL</waarde_text>
+                <eenheid>-</eenheid>
+                <methode>Onbekend</methode>
+                <veld_labo>LABO</veld_labo>
+            </observatie>
+            <observatie>
+                <parameter>ASTM_NAAM</parameter>
+                <waarde_text>Sandy lean clay</waarde_text>
+                <eenheid>-</eenheid>
+                <methode>Onbekend</methode>
+                <veld_labo>LABO</veld_labo>
+            </observatie>
+        </observatieData>
+        <observatieReeksData>
+            <korrelverdeling_reeks>
+                <humus_kalk_verwijderd>N</humus_kalk_verwijderd>
+                <korrelverdeling>
+                    <diameter>0.710000</diameter>
+                    <fractie>0.00</fractie>
+                    <methode>ZEEFPROEF</methode>
+                </korrelverdeling>
+                <korrelverdeling>
+                    <diameter>0.500000</diameter>
+                    <fractie>0.00</fractie>
+                    <methode>ZEEFPROEF</methode>
+                </korrelverdeling>
+            </korrelverdeling_reeks>
+        </observatieReeksData>
+        <proefuitvoeringsData>
+            <proefuitvoering>
+                <proefnaam>VOLMASSA-PROEVEN</proefnaam>
+                <uitvoerder>
+                    <naam>VO - Afdeling Geotechniek</naam>
+                </uitvoerder>
+                <identificatie>GEO-09/044</identificatie>
+                <bedrijf_dienst>
+                    <naam>VO - Afdeling Geotechniek</naam>
+                </bedrijf_dienst>
+            </proefuitvoering>
+        </proefuitvoeringsData>
+        <opdracht>GEO-09/044</opdracht>
+        <bijlage>
+            <titel>Schuifweerstandskarakteristieken</titel>
+            <bijlage_type>andere</bijlage_type>
+            <opmerking>Id: GEO-09/044 Beschikbaar bij: VO - Afdeling Geotechniek </opmerking>
+        </bijlage>
+    </grondmonster>
+</ns4:dov-schema>

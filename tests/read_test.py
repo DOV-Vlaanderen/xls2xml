@@ -90,7 +90,17 @@ class GrondwaterTemplateTest(unittest.TestCase):
         xls2xml_test('./data/filled_templates/grondwater_template_full.xlsx',
                      './data/verification_xml/filterdebietmeter1.xml', ['filterdebietmeter'])
 
+class GeologieTemplateTest(unittest.TestCase):
 
+    def test_boring(self):
+        xls2xml_test('./data/filled_templates/geologie_template_full.xlsx',
+                     './data/verification_xml/boring1.xml', ['boring'])
+    def test_interpretaties(self):
+        xls2xml_test('./data/filled_templates/geologie_template_full.xlsx',
+                     './data/verification_xml/interpretaties1.xml', ['interpretaties'])
+    def test_grondmonster(self):
+        xls2xml_test('./data/filled_templates/geologie_template_full.xlsx',
+                     './data/verification_xml/grondmonster1.xml', ['grondmonster'])
 
 if __name__ == '__main__':
     unittest.main()
