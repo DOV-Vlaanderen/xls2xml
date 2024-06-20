@@ -85,9 +85,6 @@
                 <naam>Stad Gent</naam>
             </beheerder>
         </beheer>
-        <afwerking>
-            <beschermbuis/>
-        </afwerking>
         <naam>
             <naam>Noendries 04</naam>
             <naamtype>EIGENAAR</naamtype>
