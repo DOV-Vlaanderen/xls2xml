@@ -77,8 +77,18 @@ class BodemTemplateTest(unittest.TestCase):
 class GrondwaterTemplateTest(unittest.TestCase):
 
     def test_grondwaterlocatie(self):
-        xls2xml_test('./data/filled_templates/bodem_template_full.xlsx',
-                     './data/verification_xml/bodemlocatie1.xml', ['bodemlocatie'])
+        xls2xml_test('./data/filled_templates/grondwater_template_full.xlsx',
+                     './data/verification_xml/grondwaterlocatie1.xml', ['grondwaterlocatie'])
+                     
+    def test_filter(self):
+        xls2xml_test('./data/filled_templates/grondwater_template_full.xlsx',
+                     './data/verification_xml/filter1.xml', ['filter'])
+    def test_filtermeting(self):
+        xls2xml_test('./data/filled_templates/grondwater_template_full.xlsx',
+                     './data/verification_xml/filtermeting1.xml', ['filtermeting'])
+    def test_filterdebietmeter(self):
+        xls2xml_test('./data/filled_templates/grondwater_template_full.xlsx',
+                     './data/verification_xml/filterdebietmeter1.xml', ['filterdebietmeter'])
 
 
 

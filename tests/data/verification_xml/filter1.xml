@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns4:dov-schema xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns4="http://kern.schemas.dov.vlaanderen.be" xsi:schemaLocation="http://kern.schemas.dov.vlaanderen.be https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd">
+    <filter>
+        <identificatie>1</identificatie>
+        <dataidentifier>
+            <permkey>2019-108878</permkey>
+            <uri>https://www.dov.vlaanderen.be/data/filter/2019-108878</uri>
+        </dataidentifier>
+        <filtertype>peilfilter</filtertype>
+        <grondwaterlocatie>Gent-Noendries-04</grondwaterlocatie>
+        <meetnet>12</meetnet>
+        <datum_ingebruikname>2019-03-19</datum_ingebruikname>
+        <monsternameMogelijk>false</monsternameMogelijk>
+        <ligging>
+            <aquifer>0000</aquifer>
+            <afgesloten_volgens_gwdecreet>niet te bepalen obv HCOV</afgesloten_volgens_gwdecreet>
+            <regime>freatisch</regime>
+        </ligging>
+
+        <opbouw>
+            <onderdeel>
+                <van>0.05</van>
+                <tot>4.1</tot>
+                <filterelement>stijgbuis</filterelement>
+            </onderdeel>
+            <onderdeel>
+                <van>4.1</van>
+                <tot>6.1</tot>
+                <filterelement>filter</filterelement>
+            </onderdeel>
+        </opbouw>
+        <status>publiek</status>
+    </filter>
+</ns4:dov-schema>
