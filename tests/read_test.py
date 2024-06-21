@@ -88,9 +88,11 @@ class BodemTemplateTest(unittest.TestCase):
     def test_bodemlocatieclassificatie(self):
         xls2xml_test('./data/filled_templates/bodem_template_full.xlsx',
                      './data/verification_xml/bodemlocatieclassificatie1.xml', ['bodemlocatieclassificatie'])
+
     def test_bodemkundigeopbouw(self):
         xls2xml_test('./data/filled_templates/bodem_template_full.xlsx',
                      './data/verification_xml/bodemkundigeopbouw1.xml', ['bodemkundigeopbouw'])
+
 
 class GrondwaterTemplateTest(unittest.TestCase):
 
@@ -101,6 +103,7 @@ class GrondwaterTemplateTest(unittest.TestCase):
     def test_filter(self):
         xls2xml_test('./data/filled_templates/grondwater_template_full.xlsx',
                      './data/verification_xml/filter1.xml', ['filter'])
+
     def test_filtermeting(self):
         xls2xml_test('./data/filled_templates/grondwater_template_full.xlsx',
                      './data/verification_xml/filtermeting1.xml', ['filtermeting'])
@@ -109,23 +112,28 @@ class GrondwaterTemplateTest(unittest.TestCase):
         xls2xml_test('./data/filled_templates/grondwater_template_full.xlsx',
                      './data/verification_xml/filterdebietmeter1.xml', ['filterdebietmeter'])
 
-class GeologieTemplateTest(unittest.TestCase):
 
+class GeologieTemplateTest(unittest.TestCase):
 
     def test_boring(self):
         xls2xml_test('./data/filled_templates/geologie_template_full.xlsx',
                      './data/verification_xml/boring1.xml', ['boring'])
+
     def test_interpretaties(self):
         xls2xml_test('./data/filled_templates/geologie_template_full.xlsx',
                      './data/verification_xml/interpretaties1.xml', ['interpretaties'])
+
     def test_grondmonster(self):
         xls2xml_test('./data/filled_templates/geologie_template_full.xlsx',
                      './data/verification_xml/grondmonster1.xml', ['grondmonster'])
+
+
 class OpdrachtTemplateTest(unittest.TestCase):
 
     def test_opdracht(self):
         xls2xml_test('./data/filled_templates/opdracht_template_full.xlsx',
                      './data/verification_xml/opdracht1.xml', ['opdracht'])
+
 
 if __name__ == '__main__':
     unittest.main()

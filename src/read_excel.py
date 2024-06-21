@@ -96,10 +96,11 @@ def get_identifiers(node, current_lijst, identifiers):
         current_lijst (List[str]): Current list of identifiers.
         identifiers (List[str]): List to store final identifiers.
     """
-    if 'choice' in node.name:
-        return
+    # if 'choice' in node.name:
+    #     return
 
-    relevant_children = [c for c in node.children if c.min_amount > 0 and c.max_amount <= 1]
+    relevant_children = [c for c in node.children if c.max_amount <= 1]
+
 
     for c in relevant_children:
         current_lijst.append(c.name)
@@ -126,18 +127,22 @@ def get_partition(df, filter, current_lijst, node):
 
     identifiers = []
     get_identifiers(node, current_lijst, identifiers)
-    posibilities = OrderedSet()
+    possibilities = OrderedSet()
 
+    last_row = None
     for i, row in df[filter].loc[:, identifiers].iterrows():
-        if not any(isinstance(x, float) and math.isnan(x) for x in tuple(row)):
-            posibilities.add(tuple(row))
+        if last_row is None or not all(
+                [(x == y or (isinstance(x, float) and math.isnan(x))) for x, y in zip(tuple(row), last_row)]):
+            last_row = tuple(row)
+            possibilities.add(tuple(row))
 
     new_filters = []
-    for pos in posibilities:
+    for pos in possibilities:
         started = False
         new_filter = []
         for i, row in df.loc[:, identifiers].iterrows():
-            if tuple(row) == pos or (any(isinstance(x, float) and math.isnan(x) for x in tuple(row)) and started):
+            if tuple(row) == pos or (all([(x == y or (isinstance(x, float) and math.isnan(x))) for x, y in
+                                          zip(tuple(row), pos)]) and started):
                 started = True
                 new_filter.append(True)
             else:
