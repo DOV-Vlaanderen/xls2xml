@@ -42,17 +42,23 @@
         <opdracht>GEO-69/641</opdracht>
         <bijlage>
             <titel>Korrelverdeling</titel>
-            <bijlage_type>andere</bijlage_type>
+			<jaar>2017</jaar>
+			<bijlage_type>andere</bijlage_type>
+			<url>https://www.dov.vlaanderen.be/data/grondmonster/2017-171246</url>
             <opmerking>Id: GEO-69/641 Beschikbaar bij: MVG - Afdeling Geotechniek </opmerking>
         </bijlage>
         <bijlage>
             <titel>Onderkenningsproeven</titel>
-            <bijlage_type>andere</bijlage_type>
+            <jaar>2017</jaar>
+			<bijlage_type>andere</bijlage_type>
+			<url>https://www.dov.vlaanderen.be/data/grondmonster/2017-171246</url>
             <opmerking>Id: GEO-69/641 Beschikbaar bij: MVG - Afdeling Geotechniek </opmerking>
         </bijlage>
         <bijlage>
             <titel>Volumemassa &amp; watergehalte</titel>
-            <bijlage_type>andere</bijlage_type>
+            <jaar>2017</jaar>
+			<bijlage_type>andere</bijlage_type>
+			<url>https://www.dov.vlaanderen.be/data/grondmonster/2017-171246</url>
             <opmerking>Id: GEO-69/641 Beschikbaar bij: MVG - Afdeling Geotechniek </opmerking>
         </bijlage>
     </grondmonster>
@@ -114,7 +120,9 @@
         <opdracht>GEO-09/044</opdracht>
         <bijlage>
             <titel>Schuifweerstandskarakteristieken</titel>
-            <bijlage_type>andere</bijlage_type>
+            <jaar>2017</jaar>
+			<bijlage_type>andere</bijlage_type>
+			<url>https://www.dov.vlaanderen.be/data/grondmonster/2017-171246</url>
             <opmerking>Id: GEO-09/044 Beschikbaar bij: VO - Afdeling Geotechniek </opmerking>
         </bijlage>
     </grondmonster>

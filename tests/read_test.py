@@ -93,8 +93,6 @@ class GrondwaterTemplateTest(unittest.TestCase):
     def test_filter(self):
         xls2xml_test('./data/filled_templates/grondwater_template_full.xlsx',
                      './data/verification_xml/filter1.xml', ['filter'])
-
-class GeologieTemplateTest(unittest.TestCase):
     def test_filtermeting(self):
         xls2xml_test('./data/filled_templates/grondwater_template_full.xlsx',
                      './data/verification_xml/filtermeting1.xml', ['filtermeting'])
@@ -102,6 +100,9 @@ class GeologieTemplateTest(unittest.TestCase):
     def test_filterdebietmeter(self):
         xls2xml_test('./data/filled_templates/grondwater_template_full.xlsx',
                      './data/verification_xml/filterdebietmeter1.xml', ['filterdebietmeter'])
+
+class GeologieTemplateTest(unittest.TestCase):
+
 
     def test_boring(self):
         xls2xml_test('./data/filled_templates/geologie_template_full.xlsx',
