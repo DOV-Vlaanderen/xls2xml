@@ -3,9 +3,11 @@ from collections import defaultdict
 import xmlschema
 import pandas as pd
 import numpy as np
-from src.dfs_schema import ChoiceNode, get_dfs_schema
+from src.dfs_schema import ChoiceNode, SequenceNode, get_dfs_schema
 import traceback
 import warnings
+
+from ordered_set import OrderedSet
 
 warnings.filterwarnings("ignore", message="Data Validation extension is not supported and will be removed")
 
@@ -70,7 +72,8 @@ def clean_data(data, schema_node):
                    'java.sql.Date': lambda x: x.strftime("%Y-%m-%d"),
                    'java.math.BigDecimal': lambda x: float(x),
                    'java.lang.Double': lambda x: float(x),
-                   'java.lang.String': lambda x: str(x)
+                   'java.lang.String': lambda x: str(x),
+                   'java.net.URI':lambda x: str(x)
                    }
 
         bindings = [restriction['binding'] for restriction in schema_node.constraints if 'binding' in restriction]
@@ -123,7 +126,7 @@ def get_partition(df, filter, current_lijst, node):
 
     identifiers = []
     get_identifiers(node, current_lijst, identifiers)
-    posibilities = set()
+    posibilities = OrderedSet()
 
     for i, row in df[filter].loc[:, identifiers].iterrows():
         if not any(isinstance(x, float) and math.isnan(x) for x in tuple(row)):
@@ -162,7 +165,7 @@ def recursive_data_read(df, filter, schema_node, current_lijst) -> DataNode:
 
     data_node = DataNode(schema_node.name)
     if not schema_node.children:
-        data = set()
+        data = OrderedSet()
         column = '-'.join(current_lijst)
         for d in df[filter].loc[:, column]:
             d = clean_data(d, schema_node)
@@ -172,7 +175,7 @@ def recursive_data_read(df, filter, schema_node, current_lijst) -> DataNode:
 
     for c in schema_node.children:
         current_lijst.append(c.name)
-        if c.max_amount > 1:
+        if c.max_amount > 1 or (isinstance(schema_node, ChoiceNode) and schema_node.max_amount > 1):
             partition = get_partition(df, filter, current_lijst, c)
         else:
             partition = [filter]
@@ -204,7 +207,7 @@ def data_node_to_json(data_node, schema_node):
 
         if c.name in data_node.children:
             for prop_c in data_node.children[c.name]:
-                if isinstance(c, ChoiceNode):
+                if isinstance(c, ChoiceNode) or isinstance(c, SequenceNode):
                     for key, val in data_node_to_json(prop_c, c)[0].items():
                         json_dict[key] = json_dict.get(key, []) + val
                 else:
@@ -213,7 +216,7 @@ def data_node_to_json(data_node, schema_node):
     return [json_dict]
 
 
-def read_sheets(filename, sheets):
+def read_sheets(filename, sheets, xml_schema=None):
     """
     Reads data from Excel sheets and generates filled XML.
 
@@ -247,8 +250,9 @@ def read_sheets(filename, sheets):
     data_root.delete_empty()
     json_dict = data_node_to_json(data_root, root)[0]
 
-    my_schema = xmlschema.XMLSchema('https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd')
-    filled_xml = my_schema.encode(json_dict)
+    if xml_schema is None:
+        xml_schema = xmlschema.XMLSchema('https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd')
+    filled_xml = xml_schema.encode(json_dict)
 
     return filled_xml
 

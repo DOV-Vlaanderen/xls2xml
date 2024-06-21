@@ -3251,6 +3251,7 @@
 					"namespace": "http://observatie.kern.schemas.dov.vlaanderen.be",
 					"description": "de mogelijke waarden voor de analysemethode van een kwaliteitsmeting\n",
 					"constraints": {
+						"binding": "java.lang.String",
 						"enumeration": {
 							"@type": "properties",
 							"@value": {"allowOthers":false,"values":["Aardewerk nieuwe methode organische koolstof","Aardewerk oude methode organische koolstof","AAS","Afgeleid uit boring","AgTU with Ammoniumac. 0,1M; pH 7,0","ANCA Mass spectrometer","Berekend","Berekend uit P totaal","Bulkdensiteit gemeten op ongestoord staal","Chemoluminescentie","Colorimetrie","Combustion","Constant Rate of Strain (CRS)","Dichromaatmethode volgens BOC","Dichromaatmethode Walkley en Black","Doorlatendheid in tx cel","Electrode","Element analysis by CN Interscience analyzer","Element analysis C Jena analyzer","FAAS","Filtratieramp","Fluorescentie","fotometrie","Frantz magnetische separator","GC","GCMS","GCMSMS","Geleidbaarheidsmeter","granulometrische textuurbepaling volgens BOC","Gravimetrie","HPLC","HSGCMS","IC","ICP","ICP-MS","ICP-OES","in AgTU extract","Ionchromatografie","ionselectieve electrode","Ksat Dubbele-ring-methode","Ksat Enkele-ring-methode","Ksat Hooghoudt-boorgatmethode","Ksat Omgekeerde-Hooghoudt-boorgatmethode","Ksat Open-end-methode","Ksat Porchet-methode","Ksat_Soakaway_methode","Laserdiffractie bodem","LC-MS","LCMSMS","LC-QTOF-MS","manuele textuurbepaling volgens BOC","microcoulometrie","Mineralogisch onderzoek Fract. Dens. 2,68","Mineralogisch onderzoek Fract. groter dan 50 \u00b5m","MS","Natriumdithioniet","Onbekend","Opbruisen bij contact met HCl","Oxalaat extraheerbaar Al, Fe en P Schwertmann 1973","pH H2O centrum voor Grondonderzoek De Leenheer","pH in CaCl2; 0,01M; 1:2,5","pH in KCl, 1M, 1:5 (m/V)","pH KCl centrum voor Grondonderzoek De Leenheer","pH KCl volgens BOC","pH-meter","PFAS in bodem volgens CMA_3_D","PFAS in water volgens WAC_IV_A_025","Pipetmethode van De Leenheer en Van Hove 1956","Plaattelling","Samendrukkingsproef/Oedometerproef","Spectrofotometrie","Springer en Klee en microkjeldal-methode","Stereomicroscoop","Textuur manuele schatting (palpatie)","Textuur pipetmethode Robinson-K\u00f6hn","Thermometer","Titratie","TOC volgens BOC","turbidimetrie","Winkler methode","XRD","Zwelproef volgens ASTM D4546-14 methode B","Zwelproef volgens XP P94-091:1995","Aangenomen","Bepaling vloeigrens d.m.v. de valconus","Bepaling vloeigrens d.m.v. het apparaat van Casagrande","Chemische reactie met waterstofchloride","Chemische reactie met waterstofperoxide","Laserdiffractie","Gaspyknometer","Gewichtsverlies na drogen in droogstoof","Methode volgens de norm","Methyleenblauwproef","Hydrometer met ijking Geotechniek","Hydrometer met referentiecilinder","Laserdiffractie (Optisch model Fraunhofer)","Laserdiffractie (Optisch model MIE)","Volumieke massa door weging","Zeving op massa met grootte <= 2mm (fijnkorrelige zeving)","Zeving op massa met grootte > 2 mm (grofkorrelige zeving)","Cmon staalnameprotocol","Cmon analyseprotocol","XYZ_GPS - RTK FLEPOS","Berekend - Organische C is gelijk aan Totale C min Anorganische C","Berekend - Organische C voorraad op basis van Organische C en Bulkdensiteit","Visuele waarneming (Cmon staalnameprotocol)","Drogen 105\u00b0C (Cmon analyseprotocol)","Total N by CN analyser (Cmon analyseprotocol)","Total C by CN analyser (Cmon analyseprotocol)","Inorganic C by CN analyser (Cmon analyseprotocol)","pH in KCl 1:5 (V/V) (Cmon analyseprotocol)","pH in KCl 1:10 (V/V) (Cmon analyseprotocol)","Massaprocent materiaal > 1 cm (Cmon analyseprotocol)","Bulkdensiteit bepaald op basis van Kopeckyringen en massa materiaal > 1 cm (Cmon analyseprotocol)","Bulkdensiteit bepaald op basis van Kopeckyringen en massa stenen > 1 cm (Cmon analyseprotocol)","Bulkdensiteit bepaald op basis van Kopeckyringen (Cmon analyseprotocol)","Massaprocent stenen > 1 cm (Cmon analyseprotocol 1.0)","Inorganic C niet gemeten omdat pH KCl < 6,5 (Cmon analyseprotocol)","NIRS met FOSS XDS toestel (Cmon analyseprotocol)","Zeefrest 2 mm (Cmon analyseprotocol)","Cmon staalnameprotocol obstakel geroerd monster","Cmon staalnameprotocol obstakel ongeroerd monster","TOC by CN analyser na verwijderen anorganische C","Textuurfracties volumeprocent afgeleid op basis van NIRS","NIRS met ASD Fieldspec 3 FR spectroradiometer toestel","Laserdiffractie bodem (Cmon analyseprotocol)","Bepaling plasticiteitsindex, vloeigrens d.m.v. de valconus","Bepaling plasticiteitsindex, vloeigrens d.m.v. het apparaat van Casagrande","Bepaling van de uitrolgrens","Bezinkingsproef","Classificatie volgens de norm","Constant verval in doorlatendheidscel","Constant verval in triaxiaalcel","d.m.v. trechter","Hydrometer","Pipette","Sedigraaf","Veranderlijk verval in permeameter","Zeving","Lithologische beschrijving","Berekend - Totale N voorraad op basis van Totale N en Bulkdensiteit","Berekend - Gemiddelde van Bulkdensiteit bepaald op basis van Kopeckyringen en massa materiaal > 1 cm (Cmon analyseprotocol)","Berekend - Gemiddelde van Bulkdensiteit bepaald op basis van Kopeckyringen en massa stenen > 1 cm (Cmon analyseprotocol)","Berekend - Gemiddelde van Bulkdensiteit bepaald op basis van Kopeckyringen (Cmon analyseprotocol)","Berekend - fractie 0-6 \u00b5m op basis van Laserdiffractie bodem (Cmon analyseprotocol)","Berekend - fractie 6-63 \u00b5m op basis van Laserdiffractie bodem (Cmon analyseprotocol)","Berekend - fractie 63-2000 \u00b5m op basis van Laserdiffractie bodem (Cmon analyseprotocol)","Berekend - Organische C voorraad op basis van Organische C en Massa","Berekend - Totale N voorraad op basis van Totale N en Massa"]}
@@ -3632,17 +3633,11 @@
 					"description": "\n   Not the real urType, but as close an approximation as we can\n   get in the XML representation\n",
 					"constraints": {
 						"abstract": false,
-						"augmented-value": false,
 						"binding": "java.lang.Object",
 						"display-name": "AbstractObject",
 						"enumeration": {
 							"@type": "properties",
 							"@value": {"allowOthers":true}
-
-						},
-						"geometry-metadata": {
-							"@type": "properties",
-							"@value": {"dimension":0}
 
 						},
 						"has-value": true,
@@ -4336,6 +4331,7 @@
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"description": "lijst van betrouwbaarheden\n",
 					"constraints": {
+						"binding": "java.lang.String",
 						"enumeration": {
 							"@type": "properties",
 							"@value": {"allowOthers":false,"values":["goed","onbekend","twijfelachtig"]}
@@ -4388,6 +4384,7 @@
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"description": "lijst van types document voor een bijlage\n",
 					"constraints": {
+						"binding": "java.lang.String",
 						"enumeration": {
 							"@type": "properties",
 							"@value": {"allowOthers":false,"values":["edov","detailplan","andere","foto","lithoprofiel","korrelverdeling","geologisch profiel","stijghoogtereeks","grondwater kwaliteitsanalyse","onttrekking-reeks","boorgatmeting","attest opvulling put","IMJV","liggingsplan putten","boorrapport","putschema","vergunning","UG-Biblio","statusmotivatie","UG-Lib","kwaliteitscontrole XYZ","Data aardkundig profiel","Andere archeologie","foto bodem omgeving","foto bodem profiel zonder nummering","foto bodem profiel met nummering","archeologische prospectie","archeologische opgraving","bodemprofielbeschrijving","bodemobservaties","foto bodem overzicht","foto bodem detail","foto bodem horizontale coupe","bodemexcursiegids","rapport","sondeerrapport","CTE-vooronderzoek","CTE-probleemanalyse","CTE-oppervlaktedetectie","CTE-dieptedetectie","CTE-opsporen van CTE","CTE-toevalsvondsten","CTE-pers","Bemalingsstudie","BGD-scan","BGD-txt","fiche herstellingen put/filter","GEF bestand","Grondwater - advies","Grondwater onttrekking-reeks","Laboverslag","Ontginning - adviezen","Ontginning - besluiten","Ontginning - schouwingsverslagen","Ontginning \u2013 werkplan","toegangsplan","vergunningsbesluit"]}
@@ -4428,7 +4425,8 @@
 							"description": "titel/naam van de bijlage\n",
 							"constraints": {
 								"cardinality": "1..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 441
@@ -4439,7 +4437,8 @@
 							"description": "naam of namen van de auteur(s) van de bijlage\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 441
@@ -4459,7 +4458,8 @@
 									"description": "datum van de bijlage\n",
 									"constraints": {
 										"cardinality": "0..1",
-										"nillable": false
+										"nillable": false,
+										"xsd_attribute": false
 									},
 									"propertyType": {
 										"ref": 103
@@ -4470,13 +4470,15 @@
 									"description": "jaar van de bijlage; een getal van 4 cijfers\n",
 									"constraints": {
 										"cardinality": "0..1",
-										"nillable": false
+										"nillable": false,
+										"xsd_attribute": false
 									},
 									"propertyType": {
 										"location": "https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/generiek/EntiteitDataTypes.xsd#0:0",
 										"name": "AnonymousType",
 										"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be/BijlageType/jaar",
 										"constraints": {
+											"binding": "java.math.BigInteger",
 											"has-value": true,
 											"validation": {
 												"@type": "validator",
@@ -4498,7 +4500,8 @@
 							"description": "Het type document van de bijlage\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 42
@@ -4509,7 +4512,8 @@
 							"description": "opmerking bij de bijlage; de lengte van de tekst is onbeperkt\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 441
@@ -4529,7 +4533,8 @@
 									"description": "naam van het bestand dat als bijlage wordt gebruikt\n",
 									"constraints": {
 										"cardinality": "1..1",
-										"nillable": false
+										"nillable": false,
+										"xsd_attribute": false
 									},
 									"propertyType": {
 										"ref": 441
@@ -4540,7 +4545,8 @@
 									"description": "url waarnaar de bijlage verwijst\n",
 									"constraints": {
 										"cardinality": "1..1",
-										"nillable": false
+										"nillable": false,
+										"xsd_attribute": false
 									},
 									"propertyType": {
 										"ref": 27
@@ -4608,6 +4614,7 @@
 					"description": "Persoonsgegevens.\n",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -5737,7 +5744,8 @@
 							"description": "observatiedatum van de bodemobservatie\n",
 							"constraints": {
 								"cardinality": "1..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 103
@@ -5748,7 +5756,8 @@
 							"description": "invoerdatum van de bodemobservatie\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 103
@@ -5759,7 +5768,8 @@
 							"description": "status toegekend aan de bodemobservatie\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 438
@@ -5803,7 +5813,8 @@
 							"description": "auteur van de bodemobservatie\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 46
@@ -5919,7 +5930,8 @@
 							"description": "unieke naam van de bodemsite\n",
 							"constraints": {
 								"cardinality": "1..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 441
@@ -5929,7 +5941,8 @@
 							"name": "dataidentifier",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 101
@@ -5940,7 +5953,8 @@
 							"description": "datum van waarneming van de bodemsite\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 103
@@ -5951,7 +5965,8 @@
 							"description": "datum van invoer van de bodemsite\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 103
@@ -5962,7 +5977,8 @@
 							"description": "beschrijving van de bodemsite\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 441
@@ -5973,7 +5989,8 @@
 							"description": "een veelhoek die de locatie van de bodemsite aangeeft. Een veelhoek wordt opgegeven via WKT syntax\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 184
@@ -5984,7 +6001,8 @@
 							"description": "status toegekend aan de bodemsite\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 438
@@ -5995,7 +6013,8 @@
 							"description": "auteur van de bodemsite\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 46
@@ -6006,7 +6025,8 @@
 							"description": "opmerkingen aan de bodemsite\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 352
@@ -6017,7 +6037,8 @@
 							"description": "Een Opdracht is een samensmelting van het huidige 'gedocumenteerd object' met informatie die gebruikt wordt om een studiegebied te kenmerken en af te bakenen. Het entiteittype bundelt gegevens die via een interne of externe opdracht in de databank ge\u00efmporteerd worden. Dit omvat eveneens ruimtelijke en niet-ruimtelijke informatie over de afbakening van bepaalde studiegebieden waarin een groep van gegevens verzameld werd.\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 349
@@ -6028,7 +6049,8 @@
 							"description": "bijlage aan de bodemsite\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 43
@@ -8571,7 +8593,6 @@
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
-						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -8772,6 +8793,7 @@
 					"namespace": "http://observatie.kern.schemas.dov.vlaanderen.be",
 					"description": "de mogelijke waarden voor de detectielimiet van de kwaliteitsmeting\n",
 					"constraints": {
+						"binding": "java.lang.String",
 						"has-value": true,
 						"mapping-relevant": false,
 						"validation": {
@@ -9313,7 +9335,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"location": "bundleresource://224.fwk1904467919/schemas/xml.xsd#0:0",
+								"location": "bundleresource://224.fwk534414401/schemas/xml.xsd#0:0",
 								"name": "AnonymousType",
 								"namespace": "http://www.w3.org/XML/1998/namespace/lang",
 								"constraints": {
@@ -10987,6 +11009,7 @@
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"description": "lijst van mogelijke types van filter\n",
 					"constraints": {
+						"binding": "java.lang.String",
 						"enumeration": {
 							"@type": "properties",
 							"@value": {"allowOthers":false,"values":["peilfilter","pompfilter","infiltratiefilter","omkeerbare filter","natuurlijke filter","installatiefilter","filtergroep"]}
@@ -11221,7 +11244,8 @@
 							"description": "verwijzing naar een bestaande grondwaterlocatie (put, ...)\n",
 							"constraints": {
 								"cardinality": "1..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 213
@@ -11232,7 +11256,8 @@
 							"description": "verwijzing naar een bestaande filter\n",
 							"constraints": {
 								"cardinality": "1..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 158
@@ -11243,7 +11268,8 @@
 							"description": "referentiepunten\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 403
@@ -11264,7 +11290,8 @@
 									"description": "peilmetingen\n",
 									"constraints": {
 										"cardinality": "0..1",
-										"nillable": false
+										"nillable": false,
+										"xsd_attribute": false
 									},
 									"propertyType": {
 										"ref": 367
@@ -11275,7 +11302,8 @@
 									"description": "Waarnemingen\n",
 									"constraints": {
 										"cardinality": "0..1",
-										"nillable": false
+										"nillable": false,
+										"xsd_attribute": false
 									},
 									"propertyType": {
 										"ref": 488
@@ -11286,7 +11314,8 @@
 									"description": "Meting onderkant peilbuis\n",
 									"constraints": {
 										"cardinality": "0..1",
-										"nillable": false
+										"nillable": false,
+										"xsd_attribute": false
 									},
 									"propertyType": {
 										"ref": 341
@@ -11299,7 +11328,8 @@
 							"description": "Gemiddelde hoogste / laagste grondwaterstanden in een hydrologisch jaar\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 224
@@ -11310,7 +11340,8 @@
 							"description": "kwaliteitsmetingen\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 489
@@ -11321,7 +11352,8 @@
 							"description": "onttrekkingen\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 342
@@ -11543,6 +11575,7 @@
 					"description": "unieke referentie van een filter\n",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -11555,7 +11588,8 @@
 							"description": "nummer van de filter, is uniek binnen zijn put.\n",
 							"constraints": {
 								"cardinality": "1..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 441
@@ -11566,7 +11600,8 @@
 							"description": "type van filter\n",
 							"constraints": {
 								"cardinality": "1..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 149
@@ -11986,14 +12021,14 @@
 					"constraints": {
 						"enumeration": {
 							"@type": "properties",
-							"@value": {"allowOthers":false,"values":["A","Aa","AaBe","AaOe","Ab","Ag","Bb","BbGe","BbHo","BbOp","Bc","BcAn","BcEd","BcKi","BcZo","Be","Bi","BiBe","BiKe","BiKs","Bm","BmBt","BmBw","BmPu","BmTe","Bo","BoBt","BoHe","BoKe","BoOb","Br","BrAr","BrBh","BrCg","BrDi","BrKr","BrNe","Bs","BsAk","BsHd","BsSv","BsVs","Ca","CaDi","CaNa","CaWe","Ci","Cm","De","Di","DiDe","DiDn","Eg","El","FX","G","Ge","GeAb","GeHo","GeKw","GeMe","GePi","GeVl","Gm","Gt","GtAb","GtDi","GtDp","GtOg","GtTi","Ha","Hn","HnBe","HnCh","HnGr","HnHa","HnLi","HnWa","Ho","HP","Hs","HsGe","HsMa","HsOr","Hy","HyBo","HyEg","HyMo","Hz","IE","Kd","Ke","Kh","Kl","Ko","KoAa","KoMh","KoMo","KoMp","KoOl","KoOm","KoOr","KoOu","KoRo","KoSm","KoZo","KRWe","Kz","KzB1","KzB2","KzBr","KzJa","KzPe","KzWb","KzX","LA","Ld","Li","LiKr","LiLu","LiMe","LiOo","LiX","LiZa","Lk","Ln","Ma","MA","MAa","MaAs","MaBu","MAk","MAkAa","MAkHe","MaOd","MaOn","MaUr","MaWe","MaZo","Mb","MBe","MBu","MBuBr","MBuBu","MBuGr","MDo","MDoB1","MDoB2","MDoOv","MDoZe","Me","ME","MeB","MEs","MGu","MGuBe","MGuLa","MGuLi","MGuVi","MGuZe","MHa","MJU","MKe","MKR","MKu","Ml","MlDo","MlMa","MlMh","MlRe","MlRu","MMa","MMaKu","MMaVa","MMs","MMu","MMuAn","MMuHa","MMuWe","MNe","MNeSt","MNeWa","Mo","Mp","MRo","MSl","MVa","MVaBG","MVaOG","MVg","Mx","My","Ne","Op","OpEi","OpMa","OpOp","Or","Ot","Ow","P","P1","P2","Pa","PAi","PAl","PAn","PAt","PAtGa","PAtWa","PAv","PBe","PBg","PBi","PBl","PBn","PBnXa","PBnXb","PBnXc","PBo","PBp","PBr","PBv","PC","PCa","PCaFl","PCaRa","PCe","PCh","PChAs","PChEi","PChMo","PCo","PCoBo","PCoTr","PCr","Pd","PDe","PdHe","PEt","PEv","PF","PFa","PFf","PFi","PFiPi","PFiXa","PFiXb","PFiXc","PFiXd","PFiXe","PFl","PFlMe","PFlNe","PFlWa","PFq","PFr","PFu","PG","PGe","PGo","PHe","PHeH1","PHeH2","PHeH3","PHeH4","PHeH5","PHi","PHo","PHs","PHu","PIt","PJo","PK","PKe","PLa","PLm","PLo","PLs","PLt","PLu","PMa","PMd","PMdXa","PMdXb","PMdXc","PMdXd","PMdXe","PMdXf","PMdXg","PMn","PMo","PMoFr","PMoTa","PMoXx","PMu","PNe","POD","POr","POs","POsAs","POsRi","PPe","PPo","PPr","PPt","PRh","PRi","PRk","PRn","PSa","PSaBo","PSaFe","PSaMe","PSe","PSo","PSt","PTo","PToAl","PToCr","PToPo","PToPr","PToVa","PToVi","PTr","PTu","PTuFo","PTuRo","PTuXx","PVa","PVc","PVe","PVi","PVl","PVs","Q","QH","QP","Rb","RO","RU","S","SC","Sh","ShGr","ShNe","Si","Sk","St","StBo","StHa","StLo","T","Ti","TiDo","TiEr","TiKn","TiLo","TO","TR","Tt","TtEg","TtEk","TtKo","U","Ve","Vl","VlCa","VlDh","VlDu","Vo","VoSo","VoVe","VoVo","We","Zd","ZE","Zz","ZzBa","ZzRu","ZzWa"]}
+							"@value": {"allowOthers":false,"values":["A","Aa","AaBe","AaOe","Ab","AbRs","AbWi","AbX","Ag","Bb","BbGe","BbHo","BbOp","Bc","BcAn","BcEd","BcKi","BcZo","Be","Bi","BiBe","BiKe","BiKs","Bm","BmBt","BmBw","BmPu","BmTe","Bo","BoBt","BoHe","BoKe","BoOb","Br","BrAr","BrBh","BrCg","BrDi","BrKr","BrMa","BrBi","BrNe","Bs","BsAk","BsHd","BsSv","BsVs","Ca","CaDi","CaNa","CaWe","Ci","Cm","De","Di","DiDe","DiDn","Eg","El","FX","G","Ge","GeAb","GeHo","GeKw","GeMe","GePi","GeVl","Gm","Gt","GtAb","GtDi","GtDp","GtOg","GtTi","Ha","Hn","HnBe","HnCh","HnGr","HnHa","HnLi","HnWa","Ho","HP","Hs","HsGe","HsMa","HsOr","Hy","HyBo","HyEg","HyMo","Hz","IE","Kd","Ke","Kh","Kl","Ko","KoAa","KoMh","KoMo","KoMp","KoOl","KoOm","KoOr","KoOu","KoRo","KoSm","KoZo","KRWe","Kz","KzB1","KzB2","KzBr","KzJa","KzPe","KzWb","KzX","LA","Ld","Li","LiKr","LiLu","LiMe","LiOo","LiX","LiZa","Lk","Ln","Ma","MA","MAa","MaAs","MaBu","MAk","MAkAa","MAkHe","MaOd","MaOn","MaUr","MaWe","MaZo","Mb","MBe","MBu","MBuBr","MBuBu","MBuGr","MDo","MDoB1","MDoB2","MDoOv","MDoZe","Me","ME","MeB","MEs","MGu","MGuBe","MGuLa","MGuLi","MGuVi","MGuZe","MHa","MJU","MKe","MKR","MKu","Ml","MlDo","MlMa","MlMh","MlRe","MlRu","MMa","MMaKu","MMaVa","MMs","MMu","MMuAn","MMuHa","MMuWe","MNe","MNeSt","MNeWa","Mo","Mp","MRo","MSl","MVa","MVaBG","MVaOG","MVg","Mx","My","Ne","Op","OpEi","OpMa","OpOp","Or","Ot","Ow","P","P1","P2","Pa","PAi","PAl","PAn","PAt","PAtGa","PAtWa","PAv","PBe","PBg","PBi","PBl","PBn","PBnXa","PBnXb","PBnXc","PBo","PBp","PBr","PBv","PC","PCa","PCaFl","PCaRa","PCe","PCh","PChAs","PChEi","PChMo","PCo","PCoBo","PCoTr","PCr","Pd","PDe","PdHe","PEt","PEv","PF","PFa","PFf","PFi","PFiPi","PFiXa","PFiXb","PFiXc","PFiXd","PFiXe","PFl","PFlMe","PFlNe","PFlWa","PFq","PFr","PFu","PG","PGe","PGo","PHe","PHeH1","PHeH2","PHeH3","PHeH4","PHeH5","PHi","PHo","PHs","PHu","PIt","PJo","PK","PKe","PLa","PLm","PLo","PLs","PLt","PLu","PMa","PMd","PMdXa","PMdXb","PMdXc","PMdXd","PMdXe","PMdXf","PMdXg","PMn","PMo","PMoFr","PMoTa","PMoXx","PMu","PNe","POD","POr","POs","POsAs","POsRi","PPe","PPo","PPr","PPt","PRh","PRi","PRk","PRn","PSa","PSaBo","PSaFe","PSaMe","PSe","PSo","PSt","PTo","PToAl","PToCr","PToPo","PToPr","PToVa","PToVi","PTr","PTu","PTuFo","PTuRo","PTuXx","PVa","PVc","PVe","PVi","PVl","PVs","Q","QH","QP","Rb","RO","RU","S","SC","Sh","ShGr","ShNe","Si","Sk","St","StBo","StHa","StLo","T","Ti","TiDo","TiEr","TiKn","TiLo","TO","TR","Tt","TtEg","TtEk","TtKo","U","Ve","Vl","VlCa","VlDh","VlDu","Vo","VoSo","VoVe","VoVo","We","Zd","ZE","Zz","ZzBa","ZzRu","ZzWa","WeRv","DiKe","DiHa","DiBo","KlHa","LiPd","VdWi","Mn","WeBs","Vh","KlLi","KlHe","KlBe","Vd","VdVo","VdSo","WeTu","Wu","In","MlRt"]}
 
 						},
 						"has-value": true,
 						"mapping-relevant": false,
 						"validation": {
 							"@type": "validator",
-							"@value": {"type":"and","config":[{"@type":"validator","@value":{"type":"enumeration","config":["A","Aa","AaBe","AaOe","Ab","Ag","Bb","BbGe","BbHo","BbOp","Bc","BcAn","BcEd","BcKi","BcZo","Be","Bi","BiBe","BiKe","BiKs","Bm","BmBt","BmBw","BmPu","BmTe","Bo","BoBt","BoHe","BoKe","BoOb","Br","BrAr","BrBh","BrCg","BrDi","BrKr","BrNe","Bs","BsAk","BsHd","BsSv","BsVs","Ca","CaDi","CaNa","CaWe","Ci","Cm","De","Di","DiDe","DiDn","Eg","El","FX","G","Ge","GeAb","GeHo","GeKw","GeMe","GePi","GeVl","Gm","Gt","GtAb","GtDi","GtDp","GtOg","GtTi","Ha","Hn","HnBe","HnCh","HnGr","HnHa","HnLi","HnWa","Ho","HP","Hs","HsGe","HsMa","HsOr","Hy","HyBo","HyEg","HyMo","Hz","IE","Kd","Ke","Kh","Kl","Ko","KoAa","KoMh","KoMo","KoMp","KoOl","KoOm","KoOr","KoOu","KoRo","KoSm","KoZo","KRWe","Kz","KzB1","KzB2","KzBr","KzJa","KzPe","KzWb","KzX","LA","Ld","Li","LiKr","LiLu","LiMe","LiOo","LiX","LiZa","Lk","Ln","Ma","MA","MAa","MaAs","MaBu","MAk","MAkAa","MAkHe","MaOd","MaOn","MaUr","MaWe","MaZo","Mb","MBe","MBu","MBuBr","MBuBu","MBuGr","MDo","MDoB1","MDoB2","MDoOv","MDoZe","Me","ME","MeB","MEs","MGu","MGuBe","MGuLa","MGuLi","MGuVi","MGuZe","MHa","MJU","MKe","MKR","MKu","Ml","MlDo","MlMa","MlMh","MlRe","MlRu","MMa","MMaKu","MMaVa","MMs","MMu","MMuAn","MMuHa","MMuWe","MNe","MNeSt","MNeWa","Mo","Mp","MRo","MSl","MVa","MVaBG","MVaOG","MVg","Mx","My","Ne","Op","OpEi","OpMa","OpOp","Or","Ot","Ow","P","P1","P2","Pa","PAi","PAl","PAn","PAt","PAtGa","PAtWa","PAv","PBe","PBg","PBi","PBl","PBn","PBnXa","PBnXb","PBnXc","PBo","PBp","PBr","PBv","PC","PCa","PCaFl","PCaRa","PCe","PCh","PChAs","PChEi","PChMo","PCo","PCoBo","PCoTr","PCr","Pd","PDe","PdHe","PEt","PEv","PF","PFa","PFf","PFi","PFiPi","PFiXa","PFiXb","PFiXc","PFiXd","PFiXe","PFl","PFlMe","PFlNe","PFlWa","PFq","PFr","PFu","PG","PGe","PGo","PHe","PHeH1","PHeH2","PHeH3","PHeH4","PHeH5","PHi","PHo","PHs","PHu","PIt","PJo","PK","PKe","PLa","PLm","PLo","PLs","PLt","PLu","PMa","PMd","PMdXa","PMdXb","PMdXc","PMdXd","PMdXe","PMdXf","PMdXg","PMn","PMo","PMoFr","PMoTa","PMoXx","PMu","PNe","POD","POr","POs","POsAs","POsRi","PPe","PPo","PPr","PPt","PRh","PRi","PRk","PRn","PSa","PSaBo","PSaFe","PSaMe","PSe","PSo","PSt","PTo","PToAl","PToCr","PToPo","PToPr","PToVa","PToVi","PTr","PTu","PTuFo","PTuRo","PTuXx","PVa","PVc","PVe","PVi","PVl","PVs","Q","QH","QP","Rb","RO","RU","S","SC","Sh","ShGr","ShNe","Si","Sk","St","StBo","StHa","StLo","T","Ti","TiDo","TiEr","TiKn","TiLo","TO","TR","Tt","TtEg","TtEk","TtKo","U","Ve","Vl","VlCa","VlDh","VlDu","Vo","VoSo","VoVe","VoVo","We","Zd","ZE","Zz","ZzBa","ZzRu","ZzWa"]}}]}
+							"@value": {"type":"and","config":[{"@type":"validator","@value":{"type":"enumeration","config":["A","Aa","AaBe","AaOe","Ab","AbRs","AbWi","AbX","Ag","Bb","BbGe","BbHo","BbOp","Bc","BcAn","BcEd","BcKi","BcZo","Be","Bi","BiBe","BiKe","BiKs","Bm","BmBt","BmBw","BmPu","BmTe","Bo","BoBt","BoHe","BoKe","BoOb","Br","BrAr","BrBh","BrCg","BrDi","BrKr","BrMa","BrBi","BrNe","Bs","BsAk","BsHd","BsSv","BsVs","Ca","CaDi","CaNa","CaWe","Ci","Cm","De","Di","DiDe","DiDn","Eg","El","FX","G","Ge","GeAb","GeHo","GeKw","GeMe","GePi","GeVl","Gm","Gt","GtAb","GtDi","GtDp","GtOg","GtTi","Ha","Hn","HnBe","HnCh","HnGr","HnHa","HnLi","HnWa","Ho","HP","Hs","HsGe","HsMa","HsOr","Hy","HyBo","HyEg","HyMo","Hz","IE","Kd","Ke","Kh","Kl","Ko","KoAa","KoMh","KoMo","KoMp","KoOl","KoOm","KoOr","KoOu","KoRo","KoSm","KoZo","KRWe","Kz","KzB1","KzB2","KzBr","KzJa","KzPe","KzWb","KzX","LA","Ld","Li","LiKr","LiLu","LiMe","LiOo","LiX","LiZa","Lk","Ln","Ma","MA","MAa","MaAs","MaBu","MAk","MAkAa","MAkHe","MaOd","MaOn","MaUr","MaWe","MaZo","Mb","MBe","MBu","MBuBr","MBuBu","MBuGr","MDo","MDoB1","MDoB2","MDoOv","MDoZe","Me","ME","MeB","MEs","MGu","MGuBe","MGuLa","MGuLi","MGuVi","MGuZe","MHa","MJU","MKe","MKR","MKu","Ml","MlDo","MlMa","MlMh","MlRe","MlRu","MMa","MMaKu","MMaVa","MMs","MMu","MMuAn","MMuHa","MMuWe","MNe","MNeSt","MNeWa","Mo","Mp","MRo","MSl","MVa","MVaBG","MVaOG","MVg","Mx","My","Ne","Op","OpEi","OpMa","OpOp","Or","Ot","Ow","P","P1","P2","Pa","PAi","PAl","PAn","PAt","PAtGa","PAtWa","PAv","PBe","PBg","PBi","PBl","PBn","PBnXa","PBnXb","PBnXc","PBo","PBp","PBr","PBv","PC","PCa","PCaFl","PCaRa","PCe","PCh","PChAs","PChEi","PChMo","PCo","PCoBo","PCoTr","PCr","Pd","PDe","PdHe","PEt","PEv","PF","PFa","PFf","PFi","PFiPi","PFiXa","PFiXb","PFiXc","PFiXd","PFiXe","PFl","PFlMe","PFlNe","PFlWa","PFq","PFr","PFu","PG","PGe","PGo","PHe","PHeH1","PHeH2","PHeH3","PHeH4","PHeH5","PHi","PHo","PHs","PHu","PIt","PJo","PK","PKe","PLa","PLm","PLo","PLs","PLt","PLu","PMa","PMd","PMdXa","PMdXb","PMdXc","PMdXd","PMdXe","PMdXf","PMdXg","PMn","PMo","PMoFr","PMoTa","PMoXx","PMu","PNe","POD","POr","POs","POsAs","POsRi","PPe","PPo","PPr","PPt","PRh","PRi","PRk","PRn","PSa","PSaBo","PSaFe","PSaMe","PSe","PSo","PSt","PTo","PToAl","PToCr","PToPo","PToPr","PToVa","PToVi","PTr","PTu","PTuFo","PTuRo","PTuXx","PVa","PVc","PVe","PVi","PVl","PVs","Q","QH","QP","Rb","RO","RU","S","SC","Sh","ShGr","ShNe","Si","Sk","St","StBo","StHa","StLo","T","Ti","TiDo","TiEr","TiKn","TiLo","TO","TR","Tt","TtEg","TtEk","TtKo","U","Ve","Vl","VlCa","VlDh","VlDu","Vo","VoSo","VoVe","VoVo","We","Zd","ZE","Zz","ZzBa","ZzRu","ZzWa","WeRv","DiKe","DiHa","DiBo","KlHa","LiPd","VdWi","Mn","WeBs","Vh","KlLi","KlHe","KlBe","Vd","VdVo","VdSo","WeTu","Wu","In","MlRt"]}}]}
 
 						},
 						"xsd_elements": [],
@@ -13972,6 +14007,7 @@
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"description": "unieke referentie van een grondwaterlocatie\n",
 					"constraints": {
+						"binding": "java.lang.String",
 						"has-value": true,
 						"mapping-relevant": false,
 						"validation": {
@@ -14796,6 +14832,7 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -14896,6 +14933,8 @@
 					"description": "herhalingen van een observatie\n",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -16581,7 +16620,6 @@
 					"name": "KBONummerType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
-						"binding": "java.lang.String",
 						"has-value": true,
 						"mapping-relevant": false,
 						"validation": {
@@ -16805,12 +16843,10 @@
 					"description": "Beoordeling van de kwaliteit van het entiteittype\n",
 					"constraints": {
 						"abstract": false,
-						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
-						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -16836,12 +16872,10 @@
 					"namespace": "http://opdracht.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
-						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
-						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -18287,16 +18321,17 @@
 					"namespace": "http://observatie.kern.schemas.dov.vlaanderen.be",
 					"description": "de mogelijke waarden voor de meeteenheid van de opgemeten kwaliteitsparameter\n            \n",
 					"constraints": {
+						"binding": "java.lang.String",
 						"enumeration": {
 							"@type": "properties",
-							"@value": {"allowOthers":false,"values":["-","%","/100ml","/250ml","/50ml","cm","cmol(+)/kg","\u00b0D","dH\u00b0","\u00b0F","fH\u00b0","g/100g","g/cm3","g/kg","g MB/100g droog monster","\u00b0C","Fr. \u00b0","helder","hPa","K","m","\u00b5m","M","m3/m3","mEq/100mL","meq/l","mg CaCO3/l","mg/kg","mg/l Pt-Co","mg N/l","mg O2/l","mg P/l","mg Pt/L","mg S/L","\u00b5g/l","\u00b5g/kg ds","\u00b5S/cm","mm/l","mg/l","mmol/l","mV","/ml","mmol/kg","m/s","mS/cm (20\u00b0C)","mS/cm (25\u00b0C)","ng/l","normaal","Onbekend","ppb","ppm","\u00b5S/cm(20\u00b0C)","\u00b5S/cm (25\u00b0C)","\u00b5S/cm bij 20\u00b0C","S\u00f6rensen","\u00b0B","\u00b0E","t/ha","t/m\u00b3","V","meq/100g","g","nm"]}
+							"@value": {"allowOthers":false,"values":["-","%","/100ml","/250ml","/50ml","cm","cmol(+)/kg","\u00b0D","dH\u00b0","\u00b0F","fH\u00b0","g/100g","g/cm3","g/kg","g MB/100g droog monster","g MB/1000g droog monster","\u00b0C","Fr. \u00b0","helder","hPa","K","m","\u00b5m","M","m3/m3","mEq/100mL","meq/l","mg CaCO3/l","mg/kg","mg/l Pt-Co","mg N/l","mg O2/l","mg P/l","mg Pt/L","mg S/L","\u00b5g/l","\u00b5g/kg ds","\u00b5S/cm","mm/l","mg/l","mmol/l","mV","/ml","mmol/kg","m/s","mS/cm (20\u00b0C)","mS/cm (25\u00b0C)","ng/l","normaal","Onbekend","ppb","ppm","\u00b5S/cm(20\u00b0C)","\u00b5S/cm (25\u00b0C)","\u00b5S/cm bij 20\u00b0C","S\u00f6rensen","\u00b0B","\u00b0E","t/ha","t/m\u00b3","V","meq/100g","g","nm"]}
 
 						},
 						"has-value": true,
 						"mapping-relevant": false,
 						"validation": {
 							"@type": "validator",
-							"@value": {"type":"and","config":[{"@type":"validator","@value":{"type":"enumeration","config":["-","%","/100ml","/250ml","/50ml","cm","cmol(+)/kg","\u00b0D","dH\u00b0","\u00b0F","fH\u00b0","g/100g","g/cm3","g/kg","g MB/100g droog monster","\u00b0C","Fr. \u00b0","helder","hPa","K","m","\u00b5m","M","m3/m3","mEq/100mL","meq/l","mg CaCO3/l","mg/kg","mg/l Pt-Co","mg N/l","mg O2/l","mg P/l","mg Pt/L","mg S/L","\u00b5g/l","\u00b5g/kg ds","\u00b5S/cm","mm/l","mg/l","mmol/l","mV","/ml","mmol/kg","m/s","mS/cm (20\u00b0C)","mS/cm (25\u00b0C)","ng/l","normaal","Onbekend","ppb","ppm","\u00b5S/cm(20\u00b0C)","\u00b5S/cm (25\u00b0C)","\u00b5S/cm bij 20\u00b0C","S\u00f6rensen","\u00b0B","\u00b0E","t/ha","t/m\u00b3","V","meq/100g","g","nm"]}}]}
+							"@value": {"type":"and","config":[{"@type":"validator","@value":{"type":"enumeration","config":["-","%","/100ml","/250ml","/50ml","cm","cmol(+)/kg","\u00b0D","dH\u00b0","\u00b0F","fH\u00b0","g/100g","g/cm3","g/kg","g MB/100g droog monster","g MB/1000g droog monster","\u00b0C","Fr. \u00b0","helder","hPa","K","m","\u00b5m","M","m3/m3","mEq/100mL","meq/l","mg CaCO3/l","mg/kg","mg/l Pt-Co","mg N/l","mg O2/l","mg P/l","mg Pt/L","mg S/L","\u00b5g/l","\u00b5g/kg ds","\u00b5S/cm","mm/l","mg/l","mmol/l","mV","/ml","mmol/kg","m/s","mS/cm (20\u00b0C)","mS/cm (25\u00b0C)","ng/l","normaal","Onbekend","ppb","ppm","\u00b5S/cm(20\u00b0C)","\u00b5S/cm (25\u00b0C)","\u00b5S/cm bij 20\u00b0C","S\u00f6rensen","\u00b0B","\u00b0E","t/ha","t/m\u00b3","V","meq/100g","g","nm"]}}]}
 
 						},
 						"xsd_elements": [],
@@ -18608,6 +18643,7 @@
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"description": "lijst van methodes voor het opmeten van de z coordinaten\n",
 					"constraints": {
+						"binding": "java.lang.String",
 						"enumeration": {
 							"@type": "properties",
 							"@value": {"allowOthers":false,"values":["afgeleid van topokaart","berekend op basis van hoogteverschil met maaiveld","DHM_v1 100m*100m","DHM_v1 25m*25m","DHM_v1 5m*5m","DHM_v2","gedigitaliseerd in Google Earth","GPS - RTK FLEPOS","GPS - RTK FLEPOS (model hBG03)","GPS - RTK FLEPOS (model hBG18)","GPS","GPS statische fasemeting","methode onbekend","topografisch ingemeten","totaalstation","uit dossier","niet te achterhalen"]}
@@ -18746,6 +18782,7 @@
 					"namespace": "http://observatie.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -20182,7 +20219,8 @@
 							"description": "eenheid waarin de kwaliteitsparameter opgemeten werd\n",
 							"constraints": {
 								"cardinality": "1..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 295
@@ -20193,7 +20231,8 @@
 							"description": "de mogelijke waarden voor de detectielimiet van de kwaliteitsmeting\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 109
@@ -20203,7 +20242,8 @@
 							"name": "ondergrens",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 122
@@ -20213,7 +20253,8 @@
 							"name": "bovengrens",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 122
@@ -20224,7 +20265,8 @@
 							"description": "methode waarmee de parameter gemeten werd\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 18
@@ -20235,7 +20277,8 @@
 							"description": "methode waarmee de parameter gemeten werd (in te vullen als methode niet voorzien is in de voorgedefinieerde waarden\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 441
@@ -20246,7 +20289,8 @@
 							"description": "betrouwbaarheid van de meting\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 40
@@ -20257,13 +20301,15 @@
 							"description": "observatie in het labo of op het veld\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"location": "https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/observatie/ObservatieDataTypes.xsd#0:0",
 								"name": "AnonymousType",
 								"namespace": "null/veld_labo",
 								"constraints": {
+									"binding": "java.lang.String",
 									"enumeration": {
 										"@type": "properties",
 										"@value": {"allowOthers":false,"values":["LABO","VELD"]}
@@ -20288,7 +20334,8 @@
 							"description": "datastatistieken van herhalingen van de observatie\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 227
@@ -20299,7 +20346,8 @@
 							"description": "secundaire parameter bij de observatie\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 411
@@ -20342,7 +20390,8 @@
 							"description": "(verkorte) naam van de parameter\n",
 							"constraints": {
 								"cardinality": "1..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 363
@@ -20353,7 +20402,8 @@
 							"description": "indeling van de parameter naar groep, bvb anionen, kationen, .... Is indicatief.\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 441
@@ -20396,7 +20446,8 @@
 							"description": "eenheid waarin de kwaliteitsparameter opgemeten werd\n",
 							"constraints": {
 								"cardinality": "1..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 295
@@ -20407,7 +20458,8 @@
 							"description": "de mogelijke waarden voor de detectielimiet van de kwaliteitsmeting\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 109
@@ -20417,7 +20469,8 @@
 							"name": "ondergrens",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 122
@@ -20427,7 +20480,8 @@
 							"name": "bovengrens",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 122
@@ -20438,7 +20492,8 @@
 							"description": "methode waarmee de parameter gemeten werd\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 18
@@ -20449,7 +20504,8 @@
 							"description": "methode waarmee de parameter gemeten werd (in te vullen als methode niet voorzien is in de voorgedefinieerde waarden\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 441
@@ -20460,7 +20516,8 @@
 							"description": "betrouwbaarheid van de meting\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 40
@@ -20471,13 +20528,15 @@
 							"description": "observatie in het labo of op het veld\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"location": "https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/observatie/ObservatieDataTypes.xsd#0:0",
 								"name": "AnonymousType",
 								"namespace": "null/veld_labo",
 								"constraints": {
+									"binding": "java.lang.String",
 									"enumeration": {
 										"@type": "properties",
 										"@value": {"allowOthers":false,"values":["LABO","VELD"]}
@@ -20502,7 +20561,8 @@
 							"description": "datastatistieken van herhalingen van de observatie\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 227
@@ -20513,7 +20573,8 @@
 							"description": "secundaire parameter bij de observatie\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 411
@@ -20524,7 +20585,8 @@
 							"description": "opmerking(en) bij deze analyse\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 352
@@ -20535,7 +20597,8 @@
 							"description": "Een Opdracht is een samensmelting van het huidige 'gedocumenteerd object' met informatie die gebruikt wordt om een studiegebied te kenmerken en af te bakenen. Het entiteittype bundelt gegevens die via een interne of externe opdracht in de databank ge\u00efmporteerd worden. Dit omvat eveneens ruimtelijke en niet-ruimtelijke informatie over de afbakening van bepaalde studiegebieden waarin een groep van gegevens verzameld werd.\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 349
@@ -20545,7 +20608,8 @@
 							"name": "dataidentifier",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 101
@@ -20556,7 +20620,8 @@
 							"description": "start diepte van de observatie in m\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 122
@@ -20567,7 +20632,8 @@
 							"description": "eind diepte van de observatie in m\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 122
@@ -20631,6 +20697,7 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -20793,6 +20860,7 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -21004,18 +21072,6 @@
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
-						"augmented-value": false,
-						"binding": "java.lang.Object",
-						"enumeration": {
-							"@type": "properties",
-							"@value": {"allowOthers":true}
-
-						},
-						"geometry-metadata": {
-							"@type": "properties",
-							"@value": {"dimension":0}
-
-						},
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -21034,23 +21090,10 @@
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
-						"augmented-value": false,
-						"binding": "java.lang.Object",
-						"enumeration": {
-							"@type": "properties",
-							"@value": {"allowOthers":true}
-
-						},
-						"geometry-metadata": {
-							"@type": "properties",
-							"@value": {"dimension":0}
-
-						},
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
-						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"superType": {
@@ -21125,8 +21168,7 @@
 							"description": "unieke identificatie van de opdracht\n",
 							"constraints": {
 								"cardinality": "1..1",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 442
@@ -21136,8 +21178,7 @@
 							"name": "dataidentifier",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 101
@@ -21148,8 +21189,7 @@
 							"description": "korte beschrijving van de inhoud van de opdracht\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 445
@@ -21160,8 +21200,7 @@
 							"description": "de opdrachtgever\n",
 							"constraints": {
 								"cardinality": "1..1",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 346
@@ -21172,8 +21211,7 @@
 							"description": "de opdrachtnemer\n",
 							"constraints": {
 								"cardinality": "1..1",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 347
@@ -21184,8 +21222,7 @@
 							"description": "een dataleverancier is de organisatie die de data aangeleverd heeft\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 102
@@ -21196,8 +21233,7 @@
 							"description": "datum dat de opdracht werd opgestart\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": true,
-								"xsd_attribute": false
+								"nillable": true
 							},
 							"propertyType": {
 								"ref": 103
@@ -21208,8 +21244,7 @@
 							"description": "datum dat de opdracht afgesloten werd\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": true,
-								"xsd_attribute": false
+								"nillable": true
 							},
 							"propertyType": {
 								"ref": 103
@@ -21220,8 +21255,7 @@
 							"description": "een veelhoek die de locatie van de opdracht aangeeft. Een veelhoek wordt opgegeven via WKT syntax\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 184
@@ -21232,8 +21266,7 @@
 							"description": "status van de opdracht\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 438
@@ -21244,8 +21277,7 @@
 							"description": "Gegevens in verband met de kwaliteit van de opdracht in DOV\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 268
@@ -21256,8 +21288,7 @@
 							"description": "een opdracht kan gekoppeld worden aan 1 of meerdere andere opdrachten\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 349
@@ -21268,8 +21299,7 @@
 							"description": "opmerkingen aan een opdracht\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 352
@@ -21280,8 +21310,7 @@
 							"description": "bijlage horende bij de boring\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 43
@@ -21559,18 +21588,6 @@
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
-						"augmented-value": false,
-						"binding": "java.lang.Object",
-						"enumeration": {
-							"@type": "properties",
-							"@value": {"allowOthers":true}
-
-						},
-						"geometry-metadata": {
-							"@type": "properties",
-							"@value": {"dimension":0}
-
-						},
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -21593,8 +21610,7 @@
 									"description": "Naam van de organisatie. Indien uw organisatie over een KBO-nr beschikt, gelieve de overeenkomstige naam in te vullen.\n",
 									"constraints": {
 										"cardinality": "1..1",
-										"nillable": false,
-										"xsd_attribute": false
+										"nillable": false
 									},
 									"propertyType": {
 										"ref": 406
@@ -21613,8 +21629,7 @@
 											"description": "identificatienummer van een organisatie aan de hand van het KruispuntBank van Ondernemingen (KBO) nummer.\n",
 											"constraints": {
 												"cardinality": "1..1",
-												"nillable": false,
-												"xsd_attribute": false
+												"nillable": false
 											},
 											"propertyType": {
 												"ref": 262
@@ -21625,8 +21640,7 @@
 											"description": "naam van de organisatie (indien het KBO-nummer voor meerdere organisaties gebruikt wordt)\n",
 											"constraints": {
 												"cardinality": "0..1",
-												"nillable": false,
-												"xsd_attribute": false
+												"nillable": false
 											},
 											"propertyType": {
 												"ref": 445
@@ -21637,8 +21651,7 @@
 											"description": "identificatienummer van een organisatie aan de hand van het Vestigingsnummer uit de KruispuntBank van Ondernemingen\n",
 											"constraints": {
 												"cardinality": "0..1",
-												"nillable": false,
-												"xsd_attribute": false
+												"nillable": false
 											},
 											"propertyType": {
 												"ref": 475
@@ -21653,8 +21666,7 @@
 							"description": "naam van een persoon (bvb contactpersoon)\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 374
@@ -21719,14 +21731,14 @@
 						"binding": "java.lang.String",
 						"enumeration": {
 							"@type": "properties",
-							"@value": {"allowOthers":false,"values":["AREOMETER","ASGEHALTE","ASTM_CODE","ASTM_NAAM","BGGG","CHEM_AL","CHEM_CR","CHEM_CU","CHEM_FE","CHEM_HG","CHEM_K","CHEM_NI","CHEM_PB","CHEM_S","CHEM_AS","CHEM_CD","CHEM_ZN","GLAUCONIET_GT500","GLAUCONIET_KL63","GLAUCONIET_GT63","GLAUCONIET_TOTAAL","GLAUCONIET_TSS","HUMUSGEHALTE","KALKGEHALTE","KORRELVOLUMEMASSA","LASER","METHYLEENBLAUW","CHEM_MINOLIE","CHEM_NAFT","CHEM_BENZOAP","CHEM_BENZOAA","CHEM_FENAN","CHEM_FLUOR","CHEM_CHRYS","CHEM_BENZOBF","CHEM_BENZOKF","CHEM_BENZOGHIP","CHEM_INDENO","REFLECTIVITEIT","TOLUEEN","UITROLGRENS","VLOEIGRENS","VLUCHT_BESTAND","VOLUMEMASSA","WATEROPL_CHLORIDEN","WATERGEHALTE","ZEEFPROEF","ZWAVELGEHALTE","1112TCA","111TCA","1122TCA","112TCA","11DCA","11DCE","11DCPE","123TCB","123TCPA","123TMB","124TCB","124TMB","12DCA","12DCE_c","12DCE_t","12DCPA","135TCB","135TMB","13DCPA","13DCPE_cis","13DCPE_trans","1H-benzotriazole","22DCPA","245t","24d","24db","2-hydroxy-atrazine","3-ethyltolueen","4CPA","4-ethyltolueen","5ClB","5ClFenol","5-methyl-1H-benzotriazole","acenafteen","acenaftyleen","Acetamiprid","acetochlor-ESA","acetochlor-OA","aclonifen","Acrylam","Advanced Triaxiaal testing","Aeromon","%AfwijkBalans","Ag","ahch","Al","Ala","alachlor-ESA","alachlor-OA","aldrin","alkaliniteit t.o.v. fenolftaleine","alkaliniteit t.o.v. methyloranje","alox","AMETRYN","AMPA","an det","anorganische_c_perc","antraceen","AOX","Areometer","As","Asgehalte","ASTM_code","ASTM_naam","atenolol","atraton","Atraz","atr_des","Atr_desisoprop","Au","azinfos-ethyl","azinfos-methyl","azoxystrobin","B","Ba","BAM","Ban. Schim.","Be","Benfluralin","Bentaz","Benthiavalicarb-isopropyl","Benzo(a)","benzo(a)antraceen","Benzo(a)p","benzo(a)pyreen","Benzo(b)","benzo(b)fluoranteen","Benzo(ghi)","benzo(ghi)peryleen","Benzo(k)","benzo(k)fluoranteen","beworteling_diepte","Bezafibraat","bhch","bijmenging","Bixafen","BOD","bodemgebruik","bodemgebruik_aardewerk","bodemtoestand","bodemverstoring","boor_diameter","boor_techniek","boor_type","Borneff_4","Borneff_6","Boscalid","Br","BrB","Br-CH2CH2-Br","BrO3","brom","bromofos-ethyl","bromofos-methyl","Bromoxynil","bufcap.( pH=4,4)","bufcap.( pH=8,3)","bulkdensiteit_totaal_gemeten","C6H5Cl","C6H5OH","C6H6","C7H8","Ca","caco3_gehalte","cadmium","Ca na koken","Carbamazepine","Carben","Carbet","Carbof","carbophenothion","CBrCl3","CC14 extractie","CCl4","Cd","cec_totaal","CH2Br2","CH2ClBr","CH3Br","chazr","CHBr3","CHCl2Br","CHClBr2","c_heptachloorepoxide","Chloorbromuron","Chloorethaan","Chlorantraniliprole","chlorfenvinfos-E","chlorfenvinfos-Z","Chloridaz","Chlormequat","chloroform","Chloroxur","chlorpyrifos-ethyl","chlorpyrifos-methyl","Chlortol","Chrys","chryseen","cis 1,2-dichloorethaan","cis_chlor","Cl","Clindamycine","ClO3","ClO4-","Clomazone","Clopyralid","Clostridia","Clostr per","Clostr. Sporen","Clothianidin","Clozapine","Clproph","CN","cn_ratio","Co","CO2","CO2(ag)","CO2(vrij)","CO3","COD","Col.","Colibact 44","compacte_laag","consistentie","consistentie_kleverigheid","consistentie_plasticiteit","coordinaat_bonne_e","coordinaat_bonne_n","coordinaat_bonne_s","coordinaat_bonne_w","couma","Cr","CRS","Cu","Cyana","cyclohexaan","Cyflufenamide","Cyproconazole","Cyprodinil","Cyromazin","Dchdzn","DEET","demeton-S","DESMETRYN","dhch","Diatrizoaat","diazinon","Dibenzo(ah)antraceen","dibenz(sh)antraceen","dibrclprop","Dibroommethaan","Dicam","dichlob","dichloormethaan","dichlorobenzophenone","Dichlorpr","dichlorvos","Diclofenac","dield","Difenoconazole","diflufenican","Dimethenamid","Dimethenamid-ESA","Dimethenamid-OA","dimethoate","dimethomorph-E","dimethomorph-Z","Dimetridazole","Dimoxystrobin","disulfoton","Diur","DMS","DNOC","DOC","Doorlatendheid","Doorlatendheid CV","Doorlatendheid in tx cel","Doorlatendheid VVH","Doorlatendheid VVV","drainage_aanwezig","drainage_aardewerk_doorlaatbaarheid","drainage_aardewerk_intern","drainage_aardewerk_klasse","drainage_aardewerk_oppervlakkig","droogrest","EC","EC(Lab.)","EC(Veld)","Eh\u00b0","endosulfan_I","endosulfan_II","endosulfan_sulfaat","Endrin","Entero","EpiChlo","epoxiconazole","Escherichia Coli","Ethion","Ethofum","ethoprofos","ethylbenzeen","etrimfos","exch_ca","exch_k","exch_mg","F","Fe","Fe2+","fe2o3","Fe3+","Feac.Col.","Feac.Str.","Fenan","fenantreen","Fenazon","fenitrothion","Fenoprop","Fenpropidin","Fenpropimorph","fenthion","FENURON","feox","Fe(Tot.)","flufe","Flufenacet-ESA","Flufenacet-OA","fluopicolide","Fluopyram","Fluor","fluoranteen","fluoreen","Fluoxastrobin","Fluoxetine","Fluroxypyr","flusilasole","flutolanil","flutriafol","Fluxapyroxad","fonofos","Fosthiazate","Fractie > 500 \u00b5m","Fractie <500\u00b5m & > 63\u00b5m","Fractie < 63\u00b5m","G 25\u00b0C","Gabapentine","geologische_aard_afzettingswijze_laag1","geologische_aard_afzettingswijze_laag2","geologische_aard_afzettingswijze_laag3","geologische_aard_afzettingswijze_laag4","geologische_aard_andere_kenmerken_laag1","geologische_aard_andere_kenmerken_laag2","geologische_aard_andere_kenmerken_laag3","geologische_aard_andere_kenmerken_laag4","geologische_aard_bovenliggend_laag1","geologische_aard_bovenliggend_laag2","geologische_aard_bovenliggend_laag3","geologische_aard_bovenliggend_laag4","geologische_aard_bovenliggend_laag5","geologische_aard_bovenliggend_laag6","geologische_aard_lithologie_laag1","geologische_aard_lithologie_laag2","geologische_aard_lithologie_laag3","geologische_aard_lithologie_laag4","geologische_aard_lithologie_laag5","geologische_aard_lithologie_laag6","geologische_aard_tijdperk_laag1","geologische_aard_tijdperk_laag2","geologische_aard_tijdperk_laag3","geologische_aard_tijdperk_laag4","geologische_aard_tijdperk_laag5","geologische_aard_tijdperk_laag6","ghch","Glauconiet totaal","gley_diepte","gley_roest_aantal","gley_roest_begrenzing","gley_roest_contrast","gley_roest_grootte","gley_roest_kleur_munsell_chroma","gley_roest_kleur_munsell_hue_getal","gley_roest_kleur_munsell_hue_letters","gley_roest_kleur_munsell_value","gley_roest_kleur_omschrijving","gley_roest_vorm","Glyfos","Grondsoort BGGG","Grondsoort GEO","Grondsoort uit beschrijving","H (berekend)","H (blijvende)","HCB","HCO3","Heptachloor","heptenofos","hexachloorbutadieen","Hexaz","Hg","H (HCO3)","H(tmp)","H(tot)","Hymexazole","Ibuprofen","ijzeroerlaag","Imazalil","Imazamox","Imida","Indeno","indeno(1,2,3-cd)pyreen","Iomeprol","Iopamidol","Iopromide","Ioxynil","iPB","iprodione","iP_T","Irbesartan","Isodrin","Isoprot","Isoxaben","K","kalkgehalte_beschrijvend","kalkreactie_hcl","kat det","Ketoprofen","Kiem(22\u00b0C)","Kiem(37\u00b0C)","Kleur","kleur_munsell","kleur_munsell_chroma_1","kleur_munsell_chroma_2","kleur_munsell_chroma_3","kleur_munsell_hue_getal_1","kleur_munsell_hue_getal_2","kleur_munsell_hue_getal_3","kleur_munsell_hue_letters_1","kleur_munsell_hue_letters_2","kleur_munsell_hue_letters_3","kleur_munsell_value_1","kleur_munsell_value_2","kleur_munsell_value_3","kleur_omschrijving","korrelvolumemassa","Kresoxim-methyl","ksat","lambda-cyhalothrin-B","Laserdiffractie","lenacil","Lidocaine","Lincomycine","Linur","Linur_mono","malathion","Mandipropamid","mcpa","mcpb","mcpp","m_DCB","Mecopr","medesfenylchloridaz","Meest losse pakking","Mesotri","meta11","meta4","meta8","meta9","METABENZ","metalaxyl","Metaldehyde","Metami","Metaza","Metconazole","Metformine","Methabenz","methidathion","Methyleenblauw","Metobro","metola","metola-ESA","metola-OA","metola-S","Metola-S-ESA","Metoprolol","Metox","metoxychlor","metribuzin","mevinphos","Mg","Mg na koken","mineralen_andere","mineralen_glauconiet","mineralen_kwarts","mineralen_mica_glimm","mineralen_opaal","mineralen_rk","mineralen_schisten","mineralen_veldspaat","Minerale Olie","Minolie","Mn","Mo","mp_x","MTBE","Na","NaCl","Naft","naftaleen","Naproxen","nB_B","NH4","Ni","Nicosulfuron","niet ion. detergenten","N(Kj)","NN","NO2","NO3","nP_B","NPOC","N-totaal","NTU","O2","o_ClT","o_DCB","OH","op_DDD","op_DDE","op_DDT","organische_c_perc","organische_c_voorraad","organische_stof","o_X","oxadia","Oxamyl","Oxyd. (O2)","P","P2O5","PAK-tot","Paracetamol","parathion-ethyl","parathion-methyl","Path.Staph.","Pb","PCB 101","PCB 118","PCB 138","PCB 153","PCB 180","PCB 28","PCB 52","p_ClT","p_DCB","PE","pendimethalin","Pentoxifylline","Per","pest-tot","Pethoxamide","pH","ph_cacl2","ph_h2o","pH in situ","ph_kcl","pH(Lab.)","pHs","pH(Veld)","pirimicarb","pirimiphos-methyl","p-isopropyltolueen","PO4","PO4(Tot.)","pp_DDD","pp_DDE","pp_DDT","proefvlak_diepte","Prometr","Propachlor-ESA","PropaCl","Propamocarb","Propan","Propaz","propham","Propranolol","Propyzamide","prosulfocarb","pseudomonas aeruginosa","P-totaal","Pymetrozine","Pyraclostrobin","pyreen","pyrimethanil","Quinmerac","quintozene","reductie","Reflectiviteit","relief_aard","relief_expositie","relief_helling_enkelvoudig","relief_helling_lengte_geschat","relief_helling_meervoudig","relief_helling_vorm","relief_landvorm","relief_microrelief","relief_situering","Reuk","roest","S","Samendrukking","Saturatie Index","Sb","sB_B","schelpresten","Schuifweerstand","Schuifweerstand CD","Schuifweerstand CU","Schuifweerstand UU","Vrije prismaproef","Se","Sebu","Si","Simaz","SiO2","Smaak","Sn","SO4","SomAN","SomIONEN","SomKAT","sorptie_min_fractie","sorptie_org_fractie","sorptie_totaal","sorptie_totaal_hcl","sorptie_totaal_nh4cl","sorptie_verzadigingsgraad","Sotalol","Spiroxamine","Sr","ssra","Standaard proctorproef","StartTemperatuur","stenen","structuur_gradatie_aardewerk","structuur_gradatie_fao","structuur_grootteklasse_aardewerk","structuur_grootteklasse_fao","structuur_type_aardewerk","structuur_type_fao","styreen","Sulcotrione","Sulfamethoxazole","T","TA","TAC","TAM","TAP","tB_B","TCB-tot","t_chlordaan","TDS","tebuconazole","Tecnazene","telodrin","Temp.","Temperatuur","temp_bodem","temp_corr","Temp(lucht)","TempTP-Geleidbaarh","TempTP-O2","TempTP-pH","temp_water","Terbu","Terbu_des","terbufos","Terbutryn","tetrachloormethaan","Tetrahydrofuraan","textuur_fractie_groter_dan_2000","textuur_granulometrisch_bodemkaart","textuur_granulometrisch_bodemkartering_met_Zg","textuur_granulometrisch_gedetailleerd","textuur_mediaan","textuurmeting","textuur_palpatie_bodemkartering","textuur_palpatie_fout_groter_dan_5_procent","textuur_palpatie_gedetailleerd","textuur_palpatie_mtr","textuur_procent_org_mat_h2o2","textuur_type_zand","Tha","t_heptachloorepoxide","Thiabendazole","Thiacloprid","Thiamethoxam","Thiophanate-methyl","THM-tot","Ti","TOC","tolchlophos-methyl","Topramezone","totaal BTEX","totale_c_perc","totale_n_perc","Tramadol","Tri","Triallate","triazoph","trichlorpyr","tri en tetra","Triflox","trifluralin","Trimethoprim","Troebelheid","ttc","Consistentiegrenzen - Uitrolgrens","V","VC","vegetatie","Verassingresten/600","Verdampingsresten/105","Versterkte proctorproef","Vinproef","VIS","Consistentiegrenzen - Vloeigrens","Vluchtige bestanddelen","VOC1","vocht_gradatie","vocht_gradatie_archeologie","vocht_gravimetrisch","vocht_luchtdroge_grond","Vochtspanning","vocht_volumetrisch","volumemassa nat","Volumetrisch vochtgehalte","vrij cyanide","vrije Clresten","warme KMnO4","watergehalte","watertafel","watertafel_aanwezig","watertafel_ghg","watertafel_glg","weersomstandigheden","weersomstandigheden_huidig_fao","weersomstandigheden_verleden_fao","wormgang_diepte","xylenen","Zeving","Zn","Zwavelgehalte","Zwelproef","Zwevende stoffen/105","Zwevende stoffen/600","U","La","10:2 FTS","4:2 FTS","6:2/8:2 diPAP","6:2 diPAP","6:2 FTS","8:2 diPAP","8:2 FTS","EtPFOSA","EtPFOSAA","MePFOSA","MePFOSAA","PFBA","PFBS","PFDA","PFECHS","PFHpA","PFHpS","PFHxA","PFHxDA","PFHxS","PFNA","PFNS","PFOA","PFODA","PFOS","PFOSAA","PFPeA","PFPeS","totale colibacteri\u00ebn","fecale colibacteri\u00ebn","intestinale enterokokken","landgebruikscategorie_cmon","weersomstandigheden_huidig","weersomstandigheden_verleden","bodembemonstering_instrument","bewaard_bodemmonster_opslaglocatie","bewaard_bodemmonster_type_bewaring_vooraf","bewaard_bodemmonster_voorbereiding_type_droging","bodemmonster_type_verstoring","mengmonster_aantal_steken","mengmonster_staalnamepatroon","mengmonster_steek_id","mengmonster_steek_locatie","mengmonster_steken_locaties","grind_perc_steken","schelpresten_perc_steken","antropogeen_perc_steken","antropogeen_specificatie","compacte_laag_perc_steken","ijzeroerlaag_perc_steken","roest_perc_steken","landgebruik_vlaanderen","landgebruik_eunis","wetland","insporing_vertrappeling","oogstresten","begrazing","bodembedekking_landgebruiksbestand","bodembemonstering_cmon_steken_ander_landgebruik","relief_helling_aanwezigheid","relief_helling_type","relief_helling_positie","grachten","bodembemonstering_steek_niet_uitgevoerd_reden","bodembemonstering_steek_niet_uitgevoerd_locatie","bodembemonstering_steken_niet_uitgevoerd","houtskool_perc_steken","veen_perc_steken","bodembemonstering_obstakel_type","bodembemonstering_obstakel_diepte","bodembemonstering_obstakels","horizont_Ah_Ap_dikte","strooisellaag_viltlaag_dikte","strooisellaag_viltlaag_massa","watertafel_aanwezig_perc_steken","textuurmeting_laser_volumeprocent","bodemmonster_type_matrix","Gehalte wateroplosbare Chloriden","Korrelverdeling d.m.v. laserdiffractie","Korrelverdeling d.m.v. zeefproef","Korrelverdeling d.m.v. hydrometer/areometer","Grondsoort bepaald op zicht","BGGG met detail grind","BGGG zonder detail grind","Glauconietgehalte in fractie < 63\u00b5m","Glauconietgehalte in fractie > 63 \u00b5m","Glauconietgehalte in fractie 63 \u00b5m - 500 \u00b5m","Glauconietgehalte in fractie > 500 \u00b5m","Gehalte Organische stoffen","Gehalte Kalkachtige stoffen","Bepaling kleihoudendheid","Totale koolstof","Inorganische koolstof","Organische koolstof","textuur_fractie_groter_dan_2000_volumeprocent","Carba","Sulmethox","Amidotriz","Clarid","Clopi","Crota","Erytro","Ibupr","Primd","Sotal","Suldiaz","6:2 PAP","8:2 PAP","DONA","PFUnDA","PFDoDA","PFTeDA","PFTrDA","PFDoDS","HFPO-DA","PFOSA","PFDS","PFMOPrA","PFMOAA","11Cl-PF3ONS","8:2 FTUCA","PFHxSA","4H-PFUnDA","MePFBSAA","Capstone A (DPOSA)","PFUnDS","P37DMOA","PFMOBA","PFTrDS","PFOSbranched","H4PFOS","PFOStotal","PFOAbranched","PFO3OA","PFO4DA","PFOSAtotal","HPFHpA","Capstone B (CDPOS)","PFPeDA","PFOSAbranched","PFBSA","PFO2HxA","9Cl-PF3ONS","PFOAtotal","MePFBSA","11Cl-PF3OUnDS","enkelvoudig_monster_locatie","bulkdensiteit_2mm_vs_totale_volume_gemeten","materiaal_groter_dan_1cm_massaprocent","stenen_groter_dan_1000_volumeprocent","bewaard_bodemmonster_voorbereiding_type_breken","bewaard_bodemmonster_voorbereiding_type_zeven","bewaard_bodemmonster_voorbereiding_type_malen","golflengte","nir_spectrale_absorptie","nirs","strooisellaag_viltlaag_totale_c_perc","strooisellaag_viltlaag_totale_n_perc","bodemmonster_zeefrest_2mm","meta12","Consistentiegrenzen - Plasticiteitsindex","Korrelverdeling d.m.v. bezinkingsproef","Korrelverdeling d.m.v. pipette methode","Korrelverdeling d.m.v. sedigraaf","totale_n_voorraad","strooisellaag_viltlaag_organische_c_voorraad","strooisellaag_viltlaag_totale_n_voorraad","bulkdensiteit_2mm_vs_totale_volume_gemeten_average","bulkdensiteit_totaal_gemeten_average","textuur_fractie_klei","textuur_fractie_leem","textuur_fractie_zand","PFAS (EFSA-4)","PFAS (EU DWRL-20)","EtPFOSAtotal","EtPFOSAbranched","MePFOSAtotal","MePFOSAbranched","PFHxStotal","PFHxSbranched","resultaattijd","voorbehandeling_observatie_type_bewaring","voorbehandeling_observatie_type_droging","voorbehandeling_observatie_type_breken","voorbehandeling_observatie_type_zeven","voorbehandeling_observatie_type_malen"]}
+							"@value": {"allowOthers":false,"values":["AREOMETER","ASGEHALTE","ASTM_CODE","ASTM_NAAM","BGGG","CHEM_AL","CHEM_CR","CHEM_CU","CHEM_FE","CHEM_HG","CHEM_K","CHEM_NI","CHEM_PB","CHEM_S","CHEM_AS","CHEM_CD","CHEM_ZN","GLAUCONIET_GT500","GLAUCONIET_KL63","GLAUCONIET_GT63","GLAUCONIET_TOTAAL","GLAUCONIET_TSS","HUMUSGEHALTE","KALKGEHALTE","KORRELVOLUMEMASSA","LASER","METHYLEENBLAUW","CHEM_MINOLIE","CHEM_NAFT","CHEM_BENZOAP","CHEM_BENZOAA","CHEM_FENAN","CHEM_FLUOR","CHEM_CHRYS","CHEM_BENZOBF","CHEM_BENZOKF","CHEM_BENZOGHIP","CHEM_INDENO","REFLECTIVITEIT","TOLUEEN","UITROLGRENS","VLOEIGRENS","VLUCHT_BESTAND","VOLUMEMASSA","WATEROPL_CHLORIDEN","WATERGEHALTE","ZEEFPROEF","ZWAVELGEHALTE","1112TCA","111TCA","1122TCA","112TCA","11DCA","11DCE","11DCPE","123TCB","123TCPA","123TMB","124TCB","124TMB","12DCA","12DCE_c","12DCE_t","12DCPA","135TCB","135TMB","13DCPA","13DCPE_cis","13DCPE_trans","1H-benzotriazole","22DCPA","245t","24d","24db","2-hydroxy-atrazine","3-ethyltolueen","4CPA","4-ethyltolueen","5ClB","5ClFenol","5-methyl-1H-benzotriazole","acenafteen","acenaftyleen","Acetamiprid","acetochlor-ESA","acetochlor-OA","aclonifen","Acrylam","Advanced Triaxiaal testing","Aeromon","%AfwijkBalans","Ag","ahch","Al","Ala","alachlor-ESA","alachlor-OA","aldrin","alkaliniteit t.o.v. fenolftaleine","alkaliniteit t.o.v. methyloranje","alox","AMETRYN","AMPA","an det","anorganische_c_perc","antraceen","AOX","Areometer","As","Asgehalte","ASTM_code","ASTM_naam","atenolol","atraton","Atraz","atr_des","Atr_desisoprop","Au","azinfos-ethyl","azinfos-methyl","azoxystrobin","B","Ba","BAM","Ban. Schim.","Be","Benfluralin","Bentaz","Benthiavalicarb-isopropyl","Benzo(a)","benzo(a)antraceen","Benzo(a)p","benzo(a)pyreen","Benzo(b)","benzo(b)fluoranteen","Benzo(ghi)","benzo(ghi)peryleen","Benzo(k)","benzo(k)fluoranteen","beworteling_diepte","Bezafibraat","bhch","bijmenging","Bixafen","BOD","bodemgebruik","bodemgebruik_aardewerk","bodemtoestand","bodemverstoring","boor_diameter","boor_techniek","boor_type","Borneff_4","Borneff_6","Boscalid","Br","BrB","Br-CH2CH2-Br","BrO3","brom","bromofos-ethyl","bromofos-methyl","Bromoxynil","bufcap.( pH=4,4)","bufcap.( pH=8,3)","bulkdensiteit_totaal_gemeten","C6H5Cl","C6H5OH","C6H6","C7H8","Ca","caco3_gehalte","cadmium","Ca na koken","Carbamazepine","Carben","Carbet","Carbof","carbophenothion","CBrCl3","CC14 extractie","CCl4","Cd","cec_totaal","CH2Br2","CH2ClBr","CH3Br","chazr","CHBr3","CHCl2Br","CHClBr2","c_heptachloorepoxide","Chloorbromuron","Chloorethaan","Chlorantraniliprole","chlorfenvinfos-E","chlorfenvinfos-Z","Chloridaz","Chlormequat","chloroform","Chloroxur","chlorpyrifos-ethyl","chlorpyrifos-methyl","Chlortol","Chrys","chryseen","cis 1,2-dichloorethaan","cis_chlor","Cl","Clindamycine","ClO3","ClO4-","Clomazone","Clopyralid","Clostridia","Clostr per","Clostr. Sporen","Clothianidin","Clozapine","Clproph","CN","cn_ratio","Co","CO2","CO2(ag)","CO2(vrij)","CO3","COD","Col.","Colibact 44","compacte_laag","consistentie","consistentie_kleverigheid","consistentie_plasticiteit","coordinaat_bonne_e","coordinaat_bonne_n","coordinaat_bonne_s","coordinaat_bonne_w","couma","Cr","CRS","Cu","Cyana","cyclohexaan","Cyflufenamide","Cyproconazole","Cyprodinil","Cyromazin","Dchdzn","DEET","demeton-S","DESMETRYN","dhch","Diatrizoaat","diazinon","Dibenzo(ah)antraceen","dibenz(sh)antraceen","dibrclprop","Dibroommethaan","Dicam","dichlob","dichloormethaan","dichlorobenzophenone","Dichlorpr","dichlorvos","Diclofenac","dield","Difenoconazole","diflufenican","Dimethenamid","Dimethenamid-ESA","Dimethenamid-OA","dimethoate","dimethomorph-E","dimethomorph-Z","Dimetridazole","Dimoxystrobin","disulfoton","Diur","DMS","DNOC","DOC","Doorlatendheid","Doorlatendheid CV","Doorlatendheid in tx cel","Doorlatendheid VVH","Doorlatendheid VVV","drainage_aanwezig","drainage_aardewerk_doorlaatbaarheid","drainage_aardewerk_intern","drainage_aardewerk_klasse","drainage_aardewerk_oppervlakkig","droogrest","EC","EC(Lab.)","EC(Veld)","Eh\u00b0","endosulfan_I","endosulfan_II","endosulfan_sulfaat","Endrin","Entero","EpiChlo","epoxiconazole","Escherichia Coli","Ethion","Ethofum","ethoprofos","ethylbenzeen","etrimfos","exch_ca","exch_k","exch_mg","F","Fe","Fe2+","fe2o3","Fe3+","Feac.Col.","Feac.Str.","Fenan","fenantreen","Fenazon","fenitrothion","Fenoprop","Fenpropidin","Fenpropimorph","fenthion","FENURON","feox","Fe(Tot.)","flufe","Flufenacet-ESA","Flufenacet-OA","fluopicolide","Fluopyram","Fluor","fluoranteen","fluoreen","Fluoxastrobin","Fluoxetine","Fluroxypyr","flusilasole","flutolanil","flutriafol","Fluxapyroxad","fonofos","Fosthiazate","Fractie > 500 \u00b5m","Fractie <500\u00b5m & > 63\u00b5m","Fractie < 63\u00b5m","G 25\u00b0C","Gabapentine","geologische_aard_afzettingswijze_laag1","geologische_aard_afzettingswijze_laag2","geologische_aard_afzettingswijze_laag3","geologische_aard_afzettingswijze_laag4","geologische_aard_andere_kenmerken_laag1","geologische_aard_andere_kenmerken_laag2","geologische_aard_andere_kenmerken_laag3","geologische_aard_andere_kenmerken_laag4","geologische_aard_bovenliggend_laag1","geologische_aard_bovenliggend_laag2","geologische_aard_bovenliggend_laag3","geologische_aard_bovenliggend_laag4","geologische_aard_bovenliggend_laag5","geologische_aard_bovenliggend_laag6","geologische_aard_lithologie_laag1","geologische_aard_lithologie_laag2","geologische_aard_lithologie_laag3","geologische_aard_lithologie_laag4","geologische_aard_lithologie_laag5","geologische_aard_lithologie_laag6","geologische_aard_tijdperk_laag1","geologische_aard_tijdperk_laag2","geologische_aard_tijdperk_laag3","geologische_aard_tijdperk_laag4","geologische_aard_tijdperk_laag5","geologische_aard_tijdperk_laag6","ghch","Glauconiet totaal","gley_diepte","gley_roest_aantal","gley_roest_begrenzing","gley_roest_contrast","gley_roest_grootte","gley_roest_kleur_munsell_chroma","gley_roest_kleur_munsell_hue_getal","gley_roest_kleur_munsell_hue_letters","gley_roest_kleur_munsell_value","gley_roest_kleur_omschrijving","gley_roest_vorm","Glyfos","Grondsoort BGGG","Grondsoort GEO","Grondsoort uit beschrijving","H (berekend)","H (blijvende)","HCB","HCO3","Heptachloor","heptenofos","hexachloorbutadieen","Hexaz","Hg","H (HCO3)","H(tmp)","H(tot)","Hymexazole","Ibuprofen","ijzeroerlaag","Imazalil","Imazamox","Imida","Indeno","indeno(1,2,3-cd)pyreen","Iomeprol","Iopamidol","Iopromide","Ioxynil","iPB","iprodione","iP_T","Irbesartan","Isodrin","Isoprot","Isoxaben","K","kalkgehalte_beschrijvend","kalkreactie_hcl","kat det","Ketoprofen","Kiem(22\u00b0C)","Kiem(37\u00b0C)","Kleur","kleur_munsell","kleur_munsell_chroma_1","kleur_munsell_chroma_2","kleur_munsell_chroma_3","kleur_munsell_hue_getal_1","kleur_munsell_hue_getal_2","kleur_munsell_hue_getal_3","kleur_munsell_hue_letters_1","kleur_munsell_hue_letters_2","kleur_munsell_hue_letters_3","kleur_munsell_value_1","kleur_munsell_value_2","kleur_munsell_value_3","kleur_omschrijving","korrelvolumemassa","Kresoxim-methyl","ksat","lambda-cyhalothrin-B","Laserdiffractie","lenacil","Lidocaine","Lincomycine","Linur","Linur_mono","malathion","Mandipropamid","mcpa","mcpb","mcpp","m_DCB","Mecopr","medesfenylchloridaz","Meest losse pakking","Mesotri","meta11","meta4","meta8","meta9","METABENZ","metalaxyl","Metaldehyde","Metami","Metaza","Metconazole","Metformine","Methabenz","methidathion","Methyleenblauw","Metobro","metola","metola-ESA","metola-OA","metola-S","Metola-S-ESA","Metoprolol","Metox","metoxychlor","metribuzin","mevinphos","Mg","Mg na koken","mineralen_andere","mineralen_glauconiet","mineralen_kwarts","mineralen_mica_glimm","mineralen_opaal","mineralen_rk","mineralen_schisten","mineralen_veldspaat","Minerale Olie","Minolie","Mn","Mo","mp_x","MTBE","Na","NaCl","Naft","naftaleen","Naproxen","nB_B","NH4","Ni","Nicosulfuron","niet ion. detergenten","N(Kj)","NN","NO2","NO3","nP_B","NPOC","N-totaal","NTU","O2","o_ClT","o_DCB","OH","op_DDD","op_DDE","op_DDT","organische_c_perc","organische_c_voorraad","organische_stof","o_X","oxadia","Oxamyl","Oxyd. (O2)","P","P2O5","PAK-tot","Paracetamol","parathion-ethyl","parathion-methyl","Path.Staph.","Pb","PCB 101","PCB 118","PCB 138","PCB 153","PCB 180","PCB 28","PCB 52","p_ClT","p_DCB","PE","pendimethalin","Pentoxifylline","Per","pest-tot","Pethoxamide","pH","ph_cacl2","ph_h2o","pH in situ","ph_kcl","pH(Lab.)","pHs","pH(Veld)","pirimicarb","pirimiphos-methyl","p-isopropyltolueen","PO4","PO4(Tot.)","pp_DDD","pp_DDE","pp_DDT","proefvlak_diepte","Prometr","Propachlor-ESA","PropaCl","Propamocarb","Propan","Propaz","propham","Propranolol","Propyzamide","prosulfocarb","pseudomonas aeruginosa","P-totaal","Pymetrozine","Pyraclostrobin","pyreen","pyrimethanil","Quinmerac","quintozene","reductie","Reflectiviteit","relief_aard","relief_expositie","relief_helling_enkelvoudig","relief_helling_lengte_geschat","relief_helling_meervoudig","relief_helling_vorm","relief_landvorm","relief_microrelief","relief_situering","Reuk","roest","S","Samendrukking","Saturatie Index","Sb","sB_B","schelpresten","Schuifweerstand","Schuifweerstand CD","Schuifweerstand CU","Schuifweerstand UU","Vrije prismaproef","Se","Sebu","Si","Simaz","SiO2","Smaak","Sn","SO4","SomAN","SomIONEN","SomKAT","sorptie_min_fractie","sorptie_org_fractie","sorptie_totaal","sorptie_totaal_hcl","sorptie_totaal_nh4cl","sorptie_verzadigingsgraad","Sotalol","Spiroxamine","Sr","ssra","Standaard proctorproef","StartTemperatuur","stenen","structuur_gradatie_aardewerk","structuur_gradatie_fao","structuur_grootteklasse_aardewerk","structuur_grootteklasse_fao","structuur_type_aardewerk","structuur_type_fao","styreen","Sulcotrione","Sulfamethoxazole","T","TA","TAC","TAM","TAP","tB_B","TCB-tot","t_chlordaan","TDS","tebuconazole","Tecnazene","telodrin","Temp.","Temperatuur","temp_bodem","temp_corr","Temp(lucht)","TempTP-Geleidbaarh","TempTP-O2","TempTP-pH","temp_water","Terbu","Terbu_des","terbufos","Terbutryn","tetrachloormethaan","Tetrahydrofuraan","textuur_fractie_groter_dan_2000","textuur_granulometrisch_bodemkaart","textuur_granulometrisch_bodemkartering_met_Zg","textuur_granulometrisch_gedetailleerd","textuur_mediaan","textuurmeting","textuur_palpatie_bodemkartering","textuur_palpatie_fout_groter_dan_5_procent","textuur_palpatie_gedetailleerd","textuur_palpatie_mtr","textuur_procent_org_mat_h2o2","textuur_type_zand","Tha","t_heptachloorepoxide","Thiabendazole","Thiacloprid","Thiamethoxam","Thiophanate-methyl","THM-tot","Ti","TOC","tolchlophos-methyl","Topramezone","totaal BTEX","totale_c_perc","totale_n_perc","Tramadol","Tri","Triallate","triazoph","trichlorpyr","tri en tetra","Triflox","trifluralin","Trimethoprim","Troebelheid","ttc","Consistentiegrenzen - Uitrolgrens","V","VC","vegetatie","Verassingresten/600","Verdampingsresten/105","Versterkte proctorproef","Vinproef","VIS","Consistentiegrenzen - Vloeigrens","Vluchtige bestanddelen","VOC1","vocht_gradatie","vocht_gradatie_archeologie","vocht_gravimetrisch","vocht_luchtdroge_grond","Vochtspanning","vocht_volumetrisch","volumemassa nat","Volumetrisch vochtgehalte","vrij cyanide","vrije Clresten","warme KMnO4","watergehalte","watertafel","watertafel_aanwezig","watertafel_ghg","watertafel_glg","weersomstandigheden","weersomstandigheden_huidig_fao","weersomstandigheden_verleden_fao","wormgang_diepte","xylenen","Zeving","Zn","Zwavelgehalte","Zwelproef","Zwevende stoffen/105","Zwevende stoffen/600","U","La","10:2 FTS","4:2 FTS","6:2/8:2 diPAP","6:2 diPAP","6:2 FTS","8:2 diPAP","8:2 FTS","EtPFOSA","EtPFOSAA","MePFOSA","MePFOSAA","PFBA","PFBS","PFDA","PFECHS","PFHpA","PFHpS","PFHxA","PFHxDA","PFHxS","PFNA","PFNS","PFOA","PFODA","PFOS","PFOSAA","PFPeA","PFPeS","totale colibacteri\u00ebn","fecale colibacteri\u00ebn","intestinale enterokokken","landgebruikscategorie_cmon","weersomstandigheden_huidig","weersomstandigheden_verleden","bodembemonstering_instrument","bewaard_bodemmonster_opslaglocatie","bewaard_bodemmonster_type_bewaring_vooraf","bewaard_bodemmonster_voorbereiding_type_droging","bodemmonster_type_verstoring","mengmonster_aantal_steken","mengmonster_staalnamepatroon","mengmonster_steek_id","mengmonster_steek_locatie","mengmonster_steken_locaties","grind_perc_steken","schelpresten_perc_steken","antropogeen_perc_steken","antropogeen_specificatie","compacte_laag_perc_steken","ijzeroerlaag_perc_steken","roest_perc_steken","landgebruik_vlaanderen","landgebruik_eunis","wetland","insporing_vertrappeling","oogstresten","begrazing","bodembedekking_landgebruiksbestand","bodembemonstering_cmon_steken_ander_landgebruik","relief_helling_aanwezigheid","relief_helling_type","relief_helling_positie","grachten","bodembemonstering_steek_niet_uitgevoerd_reden","bodembemonstering_steek_niet_uitgevoerd_locatie","bodembemonstering_steken_niet_uitgevoerd","houtskool_perc_steken","veen_perc_steken","bodembemonstering_obstakel_type","bodembemonstering_obstakel_diepte","bodembemonstering_obstakels","horizont_Ah_Ap_dikte","strooisellaag_viltlaag_dikte","strooisellaag_viltlaag_massa","watertafel_aanwezig_perc_steken","textuurmeting_laser_volumeprocent","bodemmonster_type_matrix","Gehalte wateroplosbare Chloriden","Korrelverdeling d.m.v. laserdiffractie","Korrelverdeling d.m.v. zeefproef","Korrelverdeling d.m.v. hydrometer/areometer","Grondsoort bepaald op zicht","BGGG met detail grind","BGGG zonder detail grind","Glauconietgehalte in fractie < 63\u00b5m","Glauconietgehalte in fractie > 63 \u00b5m","Glauconietgehalte in fractie 63 \u00b5m - 500 \u00b5m","Glauconietgehalte in fractie > 500 \u00b5m","Gehalte Organische stoffen","Gehalte Kalkachtige stoffen","Bepaling kleihoudendheid","Totale koolstof","Inorganische koolstof","Organische koolstof","textuur_fractie_groter_dan_2000_volumeprocent","Carba","Sulmethox","Amidotriz","Clarid","Clopi","Crota","Erytro","Ibupr","Primd","Sotal","Suldiaz","6:2 PAP","8:2 PAP","DONA","PFUnDA","PFDoDA","PFTeDA","PFTrDA","PFDoDS","HFPO-DA","PFOSA","PFDS","PFMOPrA","PFMOAA","11Cl-PF3ONS","8:2 FTUCA","PFHxSA","4H-PFUnDA","MePFBSAA","Capstone A (DPOSA)","PFUnDS","P37DMOA","PFMOBA","PFTrDS","PFOSbranched","H4PFOS","PFOStotal","PFOAbranched","PFO3OA","PFO4DA","PFOSAtotal","HPFHpA","Capstone B (CDPOS)","PFPeDA","PFOSAbranched","PFBSA","PFO2HxA","9Cl-PF3ONS","PFOAtotal","MePFBSA","11Cl-PF3OUnDS","enkelvoudig_monster_locatie","bulkdensiteit_2mm_vs_totale_volume_gemeten","materiaal_groter_dan_1cm_massaprocent","stenen_groter_dan_1000_volumeprocent","bewaard_bodemmonster_voorbereiding_type_breken","bewaard_bodemmonster_voorbereiding_type_zeven","bewaard_bodemmonster_voorbereiding_type_malen","golflengte","nir_spectrale_absorptie","nirs","strooisellaag_viltlaag_totale_c_perc","strooisellaag_viltlaag_totale_n_perc","bodemmonster_zeefrest_2mm","meta12","Consistentiegrenzen - Plasticiteitsindex","Korrelverdeling d.m.v. bezinkingsproef","Korrelverdeling d.m.v. pipette methode","Korrelverdeling d.m.v. sedigraaf","totale_n_voorraad","strooisellaag_viltlaag_organische_c_voorraad","strooisellaag_viltlaag_totale_n_voorraad","bulkdensiteit_2mm_vs_totale_volume_gemeten_average","bulkdensiteit_totaal_gemeten_average","textuur_fractie_klei","textuur_fractie_leem","textuur_fractie_zand","PFAS (EFSA-4)","PFAS (EU DWRL-20)","EtPFOSAtotal","EtPFOSAbranched","MePFOSAtotal","MePFOSAbranched","PFHxStotal","PFHxSbranched","Bepaling kleihoudendheid in fractie 0-0.125 mm","Bepaling kleihoudendheid in fractie 0-2 mm","Grondsoort RIG","resultaattijd","voorbehandeling_observatie_type_bewaring","voorbehandeling_observatie_type_droging","voorbehandeling_observatie_type_breken","voorbehandeling_observatie_type_zeven","voorbehandeling_observatie_type_malen"]}
 
 						},
 						"has-value": true,
 						"mapping-relevant": false,
 						"validation": {
 							"@type": "validator",
-							"@value": {"type":"or","config":[{"@type":"validator","@value":{"type":"and","config":[{"@type":"validator","@value":{"type":"enumeration","config":["AREOMETER","ASGEHALTE","ASTM_CODE","ASTM_NAAM","BGGG","CHEM_AL","CHEM_CR","CHEM_CU","CHEM_FE","CHEM_HG","CHEM_K","CHEM_NI","CHEM_PB","CHEM_S","CHEM_AS","CHEM_CD","CHEM_ZN","GLAUCONIET_GT500","GLAUCONIET_KL63","GLAUCONIET_GT63","GLAUCONIET_TOTAAL","GLAUCONIET_TSS","HUMUSGEHALTE","KALKGEHALTE","KORRELVOLUMEMASSA","LASER","METHYLEENBLAUW","CHEM_MINOLIE","CHEM_NAFT","CHEM_BENZOAP","CHEM_BENZOAA","CHEM_FENAN","CHEM_FLUOR","CHEM_CHRYS","CHEM_BENZOBF","CHEM_BENZOKF","CHEM_BENZOGHIP","CHEM_INDENO","REFLECTIVITEIT","TOLUEEN","UITROLGRENS","VLOEIGRENS","VLUCHT_BESTAND","VOLUMEMASSA","WATEROPL_CHLORIDEN","WATERGEHALTE","ZEEFPROEF","ZWAVELGEHALTE"]}}]}},{"@type":"validator","@value":{"type":"and","config":[{"@type":"validator","@value":{"type":"enumeration","config":["1112TCA","111TCA","1122TCA","112TCA","11DCA","11DCE","11DCPE","123TCB","123TCPA","123TMB","124TCB","124TMB","12DCA","12DCE_c","12DCE_t","12DCPA","135TCB","135TMB","13DCPA","13DCPE_cis","13DCPE_trans","1H-benzotriazole","22DCPA","245t","24d","24db","2-hydroxy-atrazine","3-ethyltolueen","4CPA","4-ethyltolueen","5ClB","5ClFenol","5-methyl-1H-benzotriazole","acenafteen","acenaftyleen","Acetamiprid","acetochlor-ESA","acetochlor-OA","aclonifen","Acrylam","Advanced Triaxiaal testing","Aeromon","%AfwijkBalans","Ag","ahch","Al","Al","Ala","alachlor-ESA","alachlor-OA","aldrin","alkaliniteit t.o.v. fenolftaleine","alkaliniteit t.o.v. methyloranje","alox","AMETRYN","AMPA","an det","anorganische_c_perc","antraceen","AOX","Areometer","As","As","Asgehalte","ASTM_code","ASTM_naam","atenolol","atraton","Atraz","atr_des","Atr_desisoprop","Au","azinfos-ethyl","azinfos-methyl","azoxystrobin","B","Ba","BAM","Ban. Schim.","Be","Benfluralin","Bentaz","Benthiavalicarb-isopropyl","Benzo(a)","benzo(a)antraceen","Benzo(a)p","benzo(a)pyreen","Benzo(b)","benzo(b)fluoranteen","Benzo(ghi)","benzo(ghi)peryleen","Benzo(k)","benzo(k)fluoranteen","beworteling_diepte","Bezafibraat","bhch","bijmenging","Bixafen","BOD","bodemgebruik","bodemgebruik_aardewerk","bodemtoestand","bodemverstoring","boor_diameter","boor_techniek","boor_type","Borneff_4","Borneff_6","Boscalid","Br","BrB","Br-CH2CH2-Br","BrO3","brom","bromofos-ethyl","bromofos-methyl","Bromoxynil","bufcap.( pH=4,4)","bufcap.( pH=8,3)","bulkdensiteit_totaal_gemeten","C6H5Cl","C6H5OH","C6H6","C7H8","Ca","caco3_gehalte","cadmium","Ca na koken","Carbamazepine","Carben","Carbet","Carbof","carbophenothion","CBrCl3","CC14 extractie","CCl4","Cd","Cd","cec_totaal","CH2Br2","CH2ClBr","CH3Br","chazr","CHBr3","CHCl2Br","CHClBr2","c_heptachloorepoxide","Chloorbromuron","Chloorethaan","Chlorantraniliprole","chlorfenvinfos-E","chlorfenvinfos-Z","Chloridaz","Chlormequat","chloroform","Chloroxur","chlorpyrifos-ethyl","chlorpyrifos-methyl","Chlortol","Chrys","chryseen","cis 1,2-dichloorethaan","cis_chlor","Cl","Clindamycine","ClO3","ClO4-","Clomazone","Clopyralid","Clostridia","Clostr per","Clostr. Sporen","Clothianidin","Clozapine","Clproph","CN","cn_ratio","Co","CO2","CO2(ag)","CO2(vrij)","CO3","COD","Col.","Colibact 44","compacte_laag","consistentie","consistentie_kleverigheid","consistentie_plasticiteit","coordinaat_bonne_e","coordinaat_bonne_n","coordinaat_bonne_s","coordinaat_bonne_w","couma","Cr","Cr","CRS","Cu","Cu","Cyana","cyclohexaan","Cyflufenamide","Cyproconazole","Cyprodinil","Cyromazin","Dchdzn","DEET","demeton-S","DESMETRYN","dhch","Diatrizoaat","diazinon","Dibenzo(ah)antraceen","dibenz(sh)antraceen","dibrclprop","Dibroommethaan","Dicam","dichlob","dichloormethaan","dichlorobenzophenone","Dichlorpr","dichlorvos","Diclofenac","dield","Difenoconazole","diflufenican","Dimethenamid","Dimethenamid-ESA","Dimethenamid-OA","dimethoate","dimethomorph-E","dimethomorph-Z","Dimetridazole","Dimoxystrobin","disulfoton","Diur","DMS","DNOC","DOC","Doorlatendheid","Doorlatendheid CV","Doorlatendheid in tx cel","Doorlatendheid VVH","Doorlatendheid VVV","drainage_aanwezig","drainage_aardewerk_doorlaatbaarheid","drainage_aardewerk_intern","drainage_aardewerk_klasse","drainage_aardewerk_oppervlakkig","droogrest","EC","EC(Lab.)","EC(Veld)","Eh\u00b0","endosulfan_I","endosulfan_II","endosulfan_sulfaat","Endrin","Entero","EpiChlo","epoxiconazole","Escherichia Coli","Ethion","Ethofum","ethoprofos","ethylbenzeen","etrimfos","exch_ca","exch_k","exch_mg","F","Fe","Fe","Fe2+","fe2o3","Fe3+","Feac.Col.","Feac.Str.","Fenan","fenantreen","Fenazon","fenitrothion","Fenoprop","Fenpropidin","Fenpropimorph","fenthion","FENURON","feox","Fe(Tot.)","flufe","Flufenacet-ESA","Flufenacet-OA","fluopicolide","Fluopyram","Fluor","fluoranteen","fluoreen","Fluoxastrobin","Fluoxetine","Fluroxypyr","flusilasole","flutolanil","flutriafol","Fluxapyroxad","fonofos","Fosthiazate","Fractie > 500 \u00b5m","Fractie <500\u00b5m & > 63\u00b5m","Fractie < 63\u00b5m","G 25\u00b0C","Gabapentine","geologische_aard_afzettingswijze_laag1","geologische_aard_afzettingswijze_laag2","geologische_aard_afzettingswijze_laag3","geologische_aard_afzettingswijze_laag4","geologische_aard_andere_kenmerken_laag1","geologische_aard_andere_kenmerken_laag2","geologische_aard_andere_kenmerken_laag3","geologische_aard_andere_kenmerken_laag4","geologische_aard_bovenliggend_laag1","geologische_aard_bovenliggend_laag2","geologische_aard_bovenliggend_laag3","geologische_aard_bovenliggend_laag4","geologische_aard_bovenliggend_laag5","geologische_aard_bovenliggend_laag6","geologische_aard_lithologie_laag1","geologische_aard_lithologie_laag2","geologische_aard_lithologie_laag3","geologische_aard_lithologie_laag4","geologische_aard_lithologie_laag5","geologische_aard_lithologie_laag6","geologische_aard_tijdperk_laag1","geologische_aard_tijdperk_laag2","geologische_aard_tijdperk_laag3","geologische_aard_tijdperk_laag4","geologische_aard_tijdperk_laag5","geologische_aard_tijdperk_laag6","ghch","Glauconiet totaal","gley_diepte","gley_roest_aantal","gley_roest_begrenzing","gley_roest_contrast","gley_roest_grootte","gley_roest_kleur_munsell_chroma","gley_roest_kleur_munsell_hue_getal","gley_roest_kleur_munsell_hue_letters","gley_roest_kleur_munsell_value","gley_roest_kleur_omschrijving","gley_roest_vorm","Glyfos","Grondsoort BGGG","Grondsoort GEO","Grondsoort uit beschrijving","H (berekend)","H (blijvende)","HCB","HCO3","Heptachloor","heptenofos","hexachloorbutadieen","Hexaz","Hg","Hg","H (HCO3)","H(tmp)","H(tot)","Hymexazole","Ibuprofen","ijzeroerlaag","Imazalil","Imazamox","Imida","Indeno","indeno(1,2,3-cd)pyreen","Iomeprol","Iopamidol","Iopromide","Ioxynil","iPB","iprodione","iP_T","Irbesartan","Isodrin","Isoprot","Isoxaben","K","K","kalkgehalte_beschrijvend","kalkreactie_hcl","kat det","Ketoprofen","Kiem(22\u00b0C)","Kiem(37\u00b0C)","Kleur","kleur_munsell","kleur_munsell_chroma_1","kleur_munsell_chroma_2","kleur_munsell_chroma_3","kleur_munsell_hue_getal_1","kleur_munsell_hue_getal_2","kleur_munsell_hue_getal_3","kleur_munsell_hue_letters_1","kleur_munsell_hue_letters_2","kleur_munsell_hue_letters_3","kleur_munsell_value_1","kleur_munsell_value_2","kleur_munsell_value_3","kleur_omschrijving","korrelvolumemassa","Kresoxim-methyl","ksat","lambda-cyhalothrin-B","Laserdiffractie","lenacil","Lidocaine","Lincomycine","Linur","Linur_mono","malathion","Mandipropamid","mcpa","mcpb","mcpp","m_DCB","Mecopr","medesfenylchloridaz","Meest losse pakking","Mesotri","meta11","meta4","meta8","meta9","METABENZ","metalaxyl","Metaldehyde","Metami","Metaza","Metconazole","Metformine","Methabenz","methidathion","Methyleenblauw","Metobro","metola","metola-ESA","metola-OA","metola-S","Metola-S-ESA","Metoprolol","Metox","metoxychlor","metribuzin","mevinphos","Mg","Mg na koken","mineralen_andere","mineralen_glauconiet","mineralen_kwarts","mineralen_mica_glimm","mineralen_opaal","mineralen_rk","mineralen_schisten","mineralen_veldspaat","Minerale Olie","Minolie","Mn","Mo","mp_x","MTBE","Na","NaCl","Naft","naftaleen","Naproxen","nB_B","NH4","Ni","Ni","Nicosulfuron","niet ion. detergenten","N(Kj)","NN","NO2","NO3","nP_B","NPOC","N-totaal","NTU","O2","o_ClT","o_DCB","OH","op_DDD","op_DDE","op_DDT","organische_c_perc","organische_c_voorraad","organische_stof","o_X","oxadia","Oxamyl","Oxyd. (O2)","P","P2O5","PAK-tot","Paracetamol","parathion-ethyl","parathion-methyl","Path.Staph.","Pb","Pb","PCB 101","PCB 118","PCB 138","PCB 153","PCB 180","PCB 28","PCB 52","p_ClT","p_DCB","PE","pendimethalin","Pentoxifylline","Per","pest-tot","Pethoxamide","pH","ph_cacl2","ph_h2o","pH in situ","ph_kcl","pH(Lab.)","pHs","pH(Veld)","pirimicarb","pirimiphos-methyl","p-isopropyltolueen","PO4","PO4(Tot.)","pp_DDD","pp_DDE","pp_DDT","proefvlak_diepte","Prometr","Propachlor-ESA","PropaCl","Propamocarb","Propan","Propaz","propham","Propranolol","Propyzamide","prosulfocarb","pseudomonas aeruginosa","P-totaal","Pymetrozine","Pyraclostrobin","pyreen","pyrimethanil","Quinmerac","quintozene","reductie","Reflectiviteit","relief_aard","relief_expositie","relief_helling_enkelvoudig","relief_helling_lengte_geschat","relief_helling_meervoudig","relief_helling_vorm","relief_landvorm","relief_microrelief","relief_situering","Reuk","roest","S","Samendrukking","Saturatie Index","Sb","sB_B","schelpresten","Schuifweerstand","Schuifweerstand CD","Schuifweerstand CU","Schuifweerstand UU","Schuifweerstand UU","Vrije prismaproef","Se","Sebu","Si","Simaz","SiO2","Smaak","Sn","SO4","SomAN","SomIONEN","SomKAT","sorptie_min_fractie","sorptie_org_fractie","sorptie_totaal","sorptie_totaal_hcl","sorptie_totaal_nh4cl","sorptie_verzadigingsgraad","Sotalol","Spiroxamine","Sr","ssra","Standaard proctorproef","StartTemperatuur","stenen","structuur_gradatie_aardewerk","structuur_gradatie_fao","structuur_grootteklasse_aardewerk","structuur_grootteklasse_fao","structuur_type_aardewerk","structuur_type_fao","styreen","Sulcotrione","Sulfamethoxazole","T","TA","TAC","TAM","TAP","tB_B","TCB-tot","t_chlordaan","TDS","tebuconazole","Tecnazene","telodrin","Temp.","Temperatuur","temp_bodem","temp_corr","Temp(lucht)","TempTP-Geleidbaarh","TempTP-O2","TempTP-pH","temp_water","Terbu","Terbu_des","terbufos","Terbutryn","tetrachloormethaan","Tetrahydrofuraan","textuur_fractie_groter_dan_2000","textuur_granulometrisch_bodemkaart","textuur_granulometrisch_bodemkartering_met_Zg","textuur_granulometrisch_gedetailleerd","textuur_mediaan","textuurmeting","textuur_palpatie_bodemkartering","textuur_palpatie_fout_groter_dan_5_procent","textuur_palpatie_gedetailleerd","textuur_palpatie_mtr","textuur_procent_org_mat_h2o2","textuur_type_zand","Tha","t_heptachloorepoxide","Thiabendazole","Thiacloprid","Thiamethoxam","Thiophanate-methyl","THM-tot","Ti","TOC","tolchlophos-methyl","Topramezone","totaal BTEX","totale_c_perc","totale_n_perc","Tramadol","Tri","Triallate","triazoph","trichlorpyr","tri en tetra","Triflox","trifluralin","Trimethoprim","Troebelheid","ttc","Consistentiegrenzen - Uitrolgrens","V","VC","vegetatie","vegetatie","Verassingresten/600","Verdampingsresten/105","Versterkte proctorproef","Vinproef","VIS","Consistentiegrenzen - Vloeigrens","Vluchtige bestanddelen","VOC1","vocht_gradatie","vocht_gradatie_archeologie","vocht_gravimetrisch","vocht_luchtdroge_grond","Vochtspanning","vocht_volumetrisch","volumemassa nat","Volumetrisch vochtgehalte","vrij cyanide","vrije Clresten","warme KMnO4","watergehalte","watertafel","watertafel_aanwezig","watertafel_ghg","watertafel_glg","weersomstandigheden","weersomstandigheden_huidig_fao","weersomstandigheden_verleden_fao","wormgang_diepte","xylenen","Zeving","Zn","Zn","Zwavelgehalte","Zwelproef","Zwevende stoffen/105","Zwevende stoffen/600","U","La","10:2 FTS","4:2 FTS","6:2/8:2 diPAP","6:2 diPAP","6:2 FTS","8:2 diPAP","8:2 FTS","EtPFOSA","EtPFOSAA","MePFOSA","MePFOSAA","PFBA","PFBS","PFDA","PFECHS","PFHpA","PFHpS","PFHxA","PFHxDA","PFHxS","PFNA","PFNS","PFOA","PFODA","PFOS","PFOSAA","PFPeA","PFPeS","totale colibacteri\u00ebn","fecale colibacteri\u00ebn","intestinale enterokokken","bodemtoestand","landgebruikscategorie_cmon","weersomstandigheden_huidig","weersomstandigheden_verleden","bodembemonstering_instrument","bewaard_bodemmonster_opslaglocatie","bewaard_bodemmonster_type_bewaring_vooraf","bewaard_bodemmonster_voorbereiding_type_droging","bodemmonster_type_verstoring","mengmonster_aantal_steken","mengmonster_staalnamepatroon","mengmonster_steek_id","mengmonster_steek_locatie","mengmonster_steken_locaties","grind_perc_steken","schelpresten_perc_steken","antropogeen_perc_steken","antropogeen_specificatie","compacte_laag_perc_steken","ijzeroerlaag_perc_steken","roest_perc_steken","landgebruik_vlaanderen","landgebruik_eunis","wetland","insporing_vertrappeling","oogstresten","begrazing","bodembedekking_landgebruiksbestand","bodembemonstering_cmon_steken_ander_landgebruik","relief_helling_aanwezigheid","relief_helling_type","relief_helling_positie","grachten","bodembemonstering_steek_niet_uitgevoerd_reden","bodembemonstering_steek_niet_uitgevoerd_locatie","bodembemonstering_steken_niet_uitgevoerd","houtskool_perc_steken","veen_perc_steken","bodembemonstering_obstakel_type","bodembemonstering_obstakel_diepte","bodembemonstering_obstakels","horizont_Ah_Ap_dikte","strooisellaag_viltlaag_dikte","strooisellaag_viltlaag_massa","watertafel_aanwezig_perc_steken","textuurmeting_laser_volumeprocent","bodemmonster_type_matrix","Gehalte wateroplosbare Chloriden","Korrelverdeling d.m.v. laserdiffractie","Korrelverdeling d.m.v. zeefproef","Korrelverdeling d.m.v. hydrometer/areometer","Grondsoort bepaald op zicht","BGGG met detail grind","BGGG zonder detail grind","Glauconietgehalte in fractie < 63\u00b5m","Glauconietgehalte in fractie > 63 \u00b5m","Glauconietgehalte in fractie 63 \u00b5m - 500 \u00b5m","Glauconietgehalte in fractie > 500 \u00b5m","Gehalte Organische stoffen","Gehalte Kalkachtige stoffen","Bepaling kleihoudendheid","Totale koolstof","Inorganische koolstof","Organische koolstof","textuur_fractie_groter_dan_2000_volumeprocent","Carba","Sulmethox","Amidotriz","Clarid","Clopi","Crota","Erytro","Ibupr","Primd","Sotal","Suldiaz","6:2 PAP","8:2 PAP","DONA","PFUnDA","PFDoDA","PFTeDA","PFTrDA","PFDoDS","HFPO-DA","PFOSA","PFDS","PFMOPrA","PFMOAA","11Cl-PF3ONS","8:2 FTUCA","PFHxSA","4H-PFUnDA","MePFBSAA","Capstone A (DPOSA)","PFUnDS","P37DMOA","PFMOBA","PFTrDS","PFOSbranched","H4PFOS","PFOStotal","PFOAbranched","PFO3OA","PFO4DA","PFOSAtotal","HPFHpA","Capstone B (CDPOS)","PFPeDA","PFOSAbranched","PFBSA","PFO2HxA","9Cl-PF3ONS","PFOAtotal","MePFBSA","11Cl-PF3OUnDS","enkelvoudig_monster_locatie","bulkdensiteit_2mm_vs_totale_volume_gemeten","materiaal_groter_dan_1cm_massaprocent","stenen_groter_dan_1000_volumeprocent","textuurmeting_laser_volumeprocent","bewaard_bodemmonster_voorbereiding_type_breken","bewaard_bodemmonster_voorbereiding_type_zeven","bewaard_bodemmonster_voorbereiding_type_malen","golflengte","nir_spectrale_absorptie","nirs","strooisellaag_viltlaag_totale_c_perc","strooisellaag_viltlaag_totale_n_perc","bodemmonster_zeefrest_2mm","meta12","Consistentiegrenzen - Plasticiteitsindex","Korrelverdeling d.m.v. bezinkingsproef","Korrelverdeling d.m.v. pipette methode","Korrelverdeling d.m.v. sedigraaf","totale_n_voorraad","strooisellaag_viltlaag_organische_c_voorraad","strooisellaag_viltlaag_totale_n_voorraad","bulkdensiteit_2mm_vs_totale_volume_gemeten_average","bulkdensiteit_totaal_gemeten_average","textuur_fractie_klei","textuur_fractie_leem","textuur_fractie_zand","PFAS (EFSA-4)","PFAS (EU DWRL-20)","EtPFOSAtotal","EtPFOSAbranched","MePFOSAtotal","MePFOSAbranched","PFHxStotal","PFHxSbranched","resultaattijd","voorbehandeling_observatie_type_bewaring","voorbehandeling_observatie_type_droging","voorbehandeling_observatie_type_breken","voorbehandeling_observatie_type_zeven","voorbehandeling_observatie_type_malen"]}}]}}]}
+							"@value": {"type":"or","config":[{"@type":"validator","@value":{"type":"and","config":[{"@type":"validator","@value":{"type":"enumeration","config":["AREOMETER","ASGEHALTE","ASTM_CODE","ASTM_NAAM","BGGG","CHEM_AL","CHEM_CR","CHEM_CU","CHEM_FE","CHEM_HG","CHEM_K","CHEM_NI","CHEM_PB","CHEM_S","CHEM_AS","CHEM_CD","CHEM_ZN","GLAUCONIET_GT500","GLAUCONIET_KL63","GLAUCONIET_GT63","GLAUCONIET_TOTAAL","GLAUCONIET_TSS","HUMUSGEHALTE","KALKGEHALTE","KORRELVOLUMEMASSA","LASER","METHYLEENBLAUW","CHEM_MINOLIE","CHEM_NAFT","CHEM_BENZOAP","CHEM_BENZOAA","CHEM_FENAN","CHEM_FLUOR","CHEM_CHRYS","CHEM_BENZOBF","CHEM_BENZOKF","CHEM_BENZOGHIP","CHEM_INDENO","REFLECTIVITEIT","TOLUEEN","UITROLGRENS","VLOEIGRENS","VLUCHT_BESTAND","VOLUMEMASSA","WATEROPL_CHLORIDEN","WATERGEHALTE","ZEEFPROEF","ZWAVELGEHALTE"]}}]}},{"@type":"validator","@value":{"type":"and","config":[{"@type":"validator","@value":{"type":"enumeration","config":["1112TCA","111TCA","1122TCA","112TCA","11DCA","11DCE","11DCPE","123TCB","123TCPA","123TMB","124TCB","124TMB","12DCA","12DCE_c","12DCE_t","12DCPA","135TCB","135TMB","13DCPA","13DCPE_cis","13DCPE_trans","1H-benzotriazole","22DCPA","245t","24d","24db","2-hydroxy-atrazine","3-ethyltolueen","4CPA","4-ethyltolueen","5ClB","5ClFenol","5-methyl-1H-benzotriazole","acenafteen","acenaftyleen","Acetamiprid","acetochlor-ESA","acetochlor-OA","aclonifen","Acrylam","Advanced Triaxiaal testing","Aeromon","%AfwijkBalans","Ag","ahch","Al","Al","Ala","alachlor-ESA","alachlor-OA","aldrin","alkaliniteit t.o.v. fenolftaleine","alkaliniteit t.o.v. methyloranje","alox","AMETRYN","AMPA","an det","anorganische_c_perc","antraceen","AOX","Areometer","As","As","Asgehalte","ASTM_code","ASTM_naam","atenolol","atraton","Atraz","atr_des","Atr_desisoprop","Au","azinfos-ethyl","azinfos-methyl","azoxystrobin","B","Ba","BAM","Ban. Schim.","Be","Benfluralin","Bentaz","Benthiavalicarb-isopropyl","Benzo(a)","benzo(a)antraceen","Benzo(a)p","benzo(a)pyreen","Benzo(b)","benzo(b)fluoranteen","Benzo(ghi)","benzo(ghi)peryleen","Benzo(k)","benzo(k)fluoranteen","beworteling_diepte","Bezafibraat","bhch","bijmenging","Bixafen","BOD","bodemgebruik","bodemgebruik_aardewerk","bodemtoestand","bodemverstoring","boor_diameter","boor_techniek","boor_type","Borneff_4","Borneff_6","Boscalid","Br","BrB","Br-CH2CH2-Br","BrO3","brom","bromofos-ethyl","bromofos-methyl","Bromoxynil","bufcap.( pH=4,4)","bufcap.( pH=8,3)","bulkdensiteit_totaal_gemeten","C6H5Cl","C6H5OH","C6H6","C7H8","Ca","caco3_gehalte","cadmium","Ca na koken","Carbamazepine","Carben","Carbet","Carbof","carbophenothion","CBrCl3","CC14 extractie","CCl4","Cd","Cd","cec_totaal","CH2Br2","CH2ClBr","CH3Br","chazr","CHBr3","CHCl2Br","CHClBr2","c_heptachloorepoxide","Chloorbromuron","Chloorethaan","Chlorantraniliprole","chlorfenvinfos-E","chlorfenvinfos-Z","Chloridaz","Chlormequat","chloroform","Chloroxur","chlorpyrifos-ethyl","chlorpyrifos-methyl","Chlortol","Chrys","chryseen","cis 1,2-dichloorethaan","cis_chlor","Cl","Clindamycine","ClO3","ClO4-","Clomazone","Clopyralid","Clostridia","Clostr per","Clostr. Sporen","Clothianidin","Clozapine","Clproph","CN","cn_ratio","Co","CO2","CO2(ag)","CO2(vrij)","CO3","COD","Col.","Colibact 44","compacte_laag","consistentie","consistentie_kleverigheid","consistentie_plasticiteit","coordinaat_bonne_e","coordinaat_bonne_n","coordinaat_bonne_s","coordinaat_bonne_w","couma","Cr","Cr","CRS","Cu","Cu","Cyana","cyclohexaan","Cyflufenamide","Cyproconazole","Cyprodinil","Cyromazin","Dchdzn","DEET","demeton-S","DESMETRYN","dhch","Diatrizoaat","diazinon","Dibenzo(ah)antraceen","dibenz(sh)antraceen","dibrclprop","Dibroommethaan","Dicam","dichlob","dichloormethaan","dichlorobenzophenone","Dichlorpr","dichlorvos","Diclofenac","dield","Difenoconazole","diflufenican","Dimethenamid","Dimethenamid-ESA","Dimethenamid-OA","dimethoate","dimethomorph-E","dimethomorph-Z","Dimetridazole","Dimoxystrobin","disulfoton","Diur","DMS","DNOC","DOC","Doorlatendheid","Doorlatendheid CV","Doorlatendheid in tx cel","Doorlatendheid VVH","Doorlatendheid VVV","drainage_aanwezig","drainage_aardewerk_doorlaatbaarheid","drainage_aardewerk_intern","drainage_aardewerk_klasse","drainage_aardewerk_oppervlakkig","droogrest","EC","EC(Lab.)","EC(Veld)","Eh\u00b0","endosulfan_I","endosulfan_II","endosulfan_sulfaat","Endrin","Entero","EpiChlo","epoxiconazole","Escherichia Coli","Ethion","Ethofum","ethoprofos","ethylbenzeen","etrimfos","exch_ca","exch_k","exch_mg","F","Fe","Fe","Fe2+","fe2o3","Fe3+","Feac.Col.","Feac.Str.","Fenan","fenantreen","Fenazon","fenitrothion","Fenoprop","Fenpropidin","Fenpropimorph","fenthion","FENURON","feox","Fe(Tot.)","flufe","Flufenacet-ESA","Flufenacet-OA","fluopicolide","Fluopyram","Fluor","fluoranteen","fluoreen","Fluoxastrobin","Fluoxetine","Fluroxypyr","flusilasole","flutolanil","flutriafol","Fluxapyroxad","fonofos","Fosthiazate","Fractie > 500 \u00b5m","Fractie <500\u00b5m & > 63\u00b5m","Fractie < 63\u00b5m","G 25\u00b0C","Gabapentine","geologische_aard_afzettingswijze_laag1","geologische_aard_afzettingswijze_laag2","geologische_aard_afzettingswijze_laag3","geologische_aard_afzettingswijze_laag4","geologische_aard_andere_kenmerken_laag1","geologische_aard_andere_kenmerken_laag2","geologische_aard_andere_kenmerken_laag3","geologische_aard_andere_kenmerken_laag4","geologische_aard_bovenliggend_laag1","geologische_aard_bovenliggend_laag2","geologische_aard_bovenliggend_laag3","geologische_aard_bovenliggend_laag4","geologische_aard_bovenliggend_laag5","geologische_aard_bovenliggend_laag6","geologische_aard_lithologie_laag1","geologische_aard_lithologie_laag2","geologische_aard_lithologie_laag3","geologische_aard_lithologie_laag4","geologische_aard_lithologie_laag5","geologische_aard_lithologie_laag6","geologische_aard_tijdperk_laag1","geologische_aard_tijdperk_laag2","geologische_aard_tijdperk_laag3","geologische_aard_tijdperk_laag4","geologische_aard_tijdperk_laag5","geologische_aard_tijdperk_laag6","ghch","Glauconiet totaal","gley_diepte","gley_roest_aantal","gley_roest_begrenzing","gley_roest_contrast","gley_roest_grootte","gley_roest_kleur_munsell_chroma","gley_roest_kleur_munsell_hue_getal","gley_roest_kleur_munsell_hue_letters","gley_roest_kleur_munsell_value","gley_roest_kleur_omschrijving","gley_roest_vorm","Glyfos","Grondsoort BGGG","Grondsoort GEO","Grondsoort uit beschrijving","H (berekend)","H (blijvende)","HCB","HCO3","Heptachloor","heptenofos","hexachloorbutadieen","Hexaz","Hg","Hg","H (HCO3)","H(tmp)","H(tot)","Hymexazole","Ibuprofen","ijzeroerlaag","Imazalil","Imazamox","Imida","Indeno","indeno(1,2,3-cd)pyreen","Iomeprol","Iopamidol","Iopromide","Ioxynil","iPB","iprodione","iP_T","Irbesartan","Isodrin","Isoprot","Isoxaben","K","K","kalkgehalte_beschrijvend","kalkreactie_hcl","kat det","Ketoprofen","Kiem(22\u00b0C)","Kiem(37\u00b0C)","Kleur","kleur_munsell","kleur_munsell_chroma_1","kleur_munsell_chroma_2","kleur_munsell_chroma_3","kleur_munsell_hue_getal_1","kleur_munsell_hue_getal_2","kleur_munsell_hue_getal_3","kleur_munsell_hue_letters_1","kleur_munsell_hue_letters_2","kleur_munsell_hue_letters_3","kleur_munsell_value_1","kleur_munsell_value_2","kleur_munsell_value_3","kleur_omschrijving","korrelvolumemassa","Kresoxim-methyl","ksat","lambda-cyhalothrin-B","Laserdiffractie","lenacil","Lidocaine","Lincomycine","Linur","Linur_mono","malathion","Mandipropamid","mcpa","mcpb","mcpp","m_DCB","Mecopr","medesfenylchloridaz","Meest losse pakking","Mesotri","meta11","meta4","meta8","meta9","METABENZ","metalaxyl","Metaldehyde","Metami","Metaza","Metconazole","Metformine","Methabenz","methidathion","Methyleenblauw","Metobro","metola","metola-ESA","metola-OA","metola-S","Metola-S-ESA","Metoprolol","Metox","metoxychlor","metribuzin","mevinphos","Mg","Mg na koken","mineralen_andere","mineralen_glauconiet","mineralen_kwarts","mineralen_mica_glimm","mineralen_opaal","mineralen_rk","mineralen_schisten","mineralen_veldspaat","Minerale Olie","Minolie","Mn","Mo","mp_x","MTBE","Na","NaCl","Naft","naftaleen","Naproxen","nB_B","NH4","Ni","Ni","Nicosulfuron","niet ion. detergenten","N(Kj)","NN","NO2","NO3","nP_B","NPOC","N-totaal","NTU","O2","o_ClT","o_DCB","OH","op_DDD","op_DDE","op_DDT","organische_c_perc","organische_c_voorraad","organische_stof","o_X","oxadia","Oxamyl","Oxyd. (O2)","P","P2O5","PAK-tot","Paracetamol","parathion-ethyl","parathion-methyl","Path.Staph.","Pb","Pb","PCB 101","PCB 118","PCB 138","PCB 153","PCB 180","PCB 28","PCB 52","p_ClT","p_DCB","PE","pendimethalin","Pentoxifylline","Per","pest-tot","Pethoxamide","pH","ph_cacl2","ph_h2o","pH in situ","ph_kcl","pH(Lab.)","pHs","pH(Veld)","pirimicarb","pirimiphos-methyl","p-isopropyltolueen","PO4","PO4(Tot.)","pp_DDD","pp_DDE","pp_DDT","proefvlak_diepte","Prometr","Propachlor-ESA","PropaCl","Propamocarb","Propan","Propaz","propham","Propranolol","Propyzamide","prosulfocarb","pseudomonas aeruginosa","P-totaal","Pymetrozine","Pyraclostrobin","pyreen","pyrimethanil","Quinmerac","quintozene","reductie","Reflectiviteit","relief_aard","relief_expositie","relief_helling_enkelvoudig","relief_helling_lengte_geschat","relief_helling_meervoudig","relief_helling_vorm","relief_landvorm","relief_microrelief","relief_situering","Reuk","roest","S","Samendrukking","Saturatie Index","Sb","sB_B","schelpresten","Schuifweerstand","Schuifweerstand CD","Schuifweerstand CU","Schuifweerstand UU","Schuifweerstand UU","Vrije prismaproef","Se","Sebu","Si","Simaz","SiO2","Smaak","Sn","SO4","SomAN","SomIONEN","SomKAT","sorptie_min_fractie","sorptie_org_fractie","sorptie_totaal","sorptie_totaal_hcl","sorptie_totaal_nh4cl","sorptie_verzadigingsgraad","Sotalol","Spiroxamine","Sr","ssra","Standaard proctorproef","StartTemperatuur","stenen","structuur_gradatie_aardewerk","structuur_gradatie_fao","structuur_grootteklasse_aardewerk","structuur_grootteklasse_fao","structuur_type_aardewerk","structuur_type_fao","styreen","Sulcotrione","Sulfamethoxazole","T","TA","TAC","TAM","TAP","tB_B","TCB-tot","t_chlordaan","TDS","tebuconazole","Tecnazene","telodrin","Temp.","Temperatuur","temp_bodem","temp_corr","Temp(lucht)","TempTP-Geleidbaarh","TempTP-O2","TempTP-pH","temp_water","Terbu","Terbu_des","terbufos","Terbutryn","tetrachloormethaan","Tetrahydrofuraan","textuur_fractie_groter_dan_2000","textuur_granulometrisch_bodemkaart","textuur_granulometrisch_bodemkartering_met_Zg","textuur_granulometrisch_gedetailleerd","textuur_mediaan","textuurmeting","textuur_palpatie_bodemkartering","textuur_palpatie_fout_groter_dan_5_procent","textuur_palpatie_gedetailleerd","textuur_palpatie_mtr","textuur_procent_org_mat_h2o2","textuur_type_zand","Tha","t_heptachloorepoxide","Thiabendazole","Thiacloprid","Thiamethoxam","Thiophanate-methyl","THM-tot","Ti","TOC","tolchlophos-methyl","Topramezone","totaal BTEX","totale_c_perc","totale_n_perc","Tramadol","Tri","Triallate","triazoph","trichlorpyr","tri en tetra","Triflox","trifluralin","Trimethoprim","Troebelheid","ttc","Consistentiegrenzen - Uitrolgrens","V","VC","vegetatie","vegetatie","Verassingresten/600","Verdampingsresten/105","Versterkte proctorproef","Vinproef","VIS","Consistentiegrenzen - Vloeigrens","Vluchtige bestanddelen","VOC1","vocht_gradatie","vocht_gradatie_archeologie","vocht_gravimetrisch","vocht_luchtdroge_grond","Vochtspanning","vocht_volumetrisch","volumemassa nat","Volumetrisch vochtgehalte","vrij cyanide","vrije Clresten","warme KMnO4","watergehalte","watertafel","watertafel_aanwezig","watertafel_ghg","watertafel_glg","weersomstandigheden","weersomstandigheden_huidig_fao","weersomstandigheden_verleden_fao","wormgang_diepte","xylenen","Zeving","Zn","Zn","Zwavelgehalte","Zwelproef","Zwevende stoffen/105","Zwevende stoffen/600","U","La","10:2 FTS","4:2 FTS","6:2/8:2 diPAP","6:2 diPAP","6:2 FTS","8:2 diPAP","8:2 FTS","EtPFOSA","EtPFOSAA","MePFOSA","MePFOSAA","PFBA","PFBS","PFDA","PFECHS","PFHpA","PFHpS","PFHxA","PFHxDA","PFHxS","PFNA","PFNS","PFOA","PFODA","PFOS","PFOSAA","PFPeA","PFPeS","totale colibacteri\u00ebn","fecale colibacteri\u00ebn","intestinale enterokokken","bodemtoestand","landgebruikscategorie_cmon","weersomstandigheden_huidig","weersomstandigheden_verleden","bodembemonstering_instrument","bewaard_bodemmonster_opslaglocatie","bewaard_bodemmonster_type_bewaring_vooraf","bewaard_bodemmonster_voorbereiding_type_droging","bodemmonster_type_verstoring","mengmonster_aantal_steken","mengmonster_staalnamepatroon","mengmonster_steek_id","mengmonster_steek_locatie","mengmonster_steken_locaties","grind_perc_steken","schelpresten_perc_steken","antropogeen_perc_steken","antropogeen_specificatie","compacte_laag_perc_steken","ijzeroerlaag_perc_steken","roest_perc_steken","landgebruik_vlaanderen","landgebruik_eunis","wetland","insporing_vertrappeling","oogstresten","begrazing","bodembedekking_landgebruiksbestand","bodembemonstering_cmon_steken_ander_landgebruik","relief_helling_aanwezigheid","relief_helling_type","relief_helling_positie","grachten","bodembemonstering_steek_niet_uitgevoerd_reden","bodembemonstering_steek_niet_uitgevoerd_locatie","bodembemonstering_steken_niet_uitgevoerd","houtskool_perc_steken","veen_perc_steken","bodembemonstering_obstakel_type","bodembemonstering_obstakel_diepte","bodembemonstering_obstakels","horizont_Ah_Ap_dikte","strooisellaag_viltlaag_dikte","strooisellaag_viltlaag_massa","watertafel_aanwezig_perc_steken","textuurmeting_laser_volumeprocent","bodemmonster_type_matrix","Gehalte wateroplosbare Chloriden","Korrelverdeling d.m.v. laserdiffractie","Korrelverdeling d.m.v. zeefproef","Korrelverdeling d.m.v. hydrometer/areometer","Grondsoort bepaald op zicht","BGGG met detail grind","BGGG zonder detail grind","Glauconietgehalte in fractie < 63\u00b5m","Glauconietgehalte in fractie > 63 \u00b5m","Glauconietgehalte in fractie 63 \u00b5m - 500 \u00b5m","Glauconietgehalte in fractie > 500 \u00b5m","Gehalte Organische stoffen","Gehalte Kalkachtige stoffen","Bepaling kleihoudendheid","Totale koolstof","Inorganische koolstof","Organische koolstof","textuur_fractie_groter_dan_2000_volumeprocent","Carba","Sulmethox","Amidotriz","Clarid","Clopi","Crota","Erytro","Ibupr","Primd","Sotal","Suldiaz","6:2 PAP","8:2 PAP","DONA","PFUnDA","PFDoDA","PFTeDA","PFTrDA","PFDoDS","HFPO-DA","PFOSA","PFDS","PFMOPrA","PFMOAA","11Cl-PF3ONS","8:2 FTUCA","PFHxSA","4H-PFUnDA","MePFBSAA","Capstone A (DPOSA)","PFUnDS","P37DMOA","PFMOBA","PFTrDS","PFOSbranched","H4PFOS","PFOStotal","PFOAbranched","PFO3OA","PFO4DA","PFOSAtotal","HPFHpA","Capstone B (CDPOS)","PFPeDA","PFOSAbranched","PFBSA","PFO2HxA","9Cl-PF3ONS","PFOAtotal","MePFBSA","11Cl-PF3OUnDS","enkelvoudig_monster_locatie","bulkdensiteit_2mm_vs_totale_volume_gemeten","materiaal_groter_dan_1cm_massaprocent","stenen_groter_dan_1000_volumeprocent","textuurmeting_laser_volumeprocent","bewaard_bodemmonster_voorbereiding_type_breken","bewaard_bodemmonster_voorbereiding_type_zeven","bewaard_bodemmonster_voorbereiding_type_malen","golflengte","nir_spectrale_absorptie","nirs","strooisellaag_viltlaag_totale_c_perc","strooisellaag_viltlaag_totale_n_perc","bodemmonster_zeefrest_2mm","meta12","Consistentiegrenzen - Plasticiteitsindex","Korrelverdeling d.m.v. bezinkingsproef","Korrelverdeling d.m.v. pipette methode","Korrelverdeling d.m.v. sedigraaf","totale_n_voorraad","strooisellaag_viltlaag_organische_c_voorraad","strooisellaag_viltlaag_totale_n_voorraad","bulkdensiteit_2mm_vs_totale_volume_gemeten_average","bulkdensiteit_totaal_gemeten_average","textuur_fractie_klei","textuur_fractie_leem","textuur_fractie_zand","PFAS (EFSA-4)","PFAS (EU DWRL-20)","EtPFOSAtotal","EtPFOSAbranched","MePFOSAtotal","MePFOSAbranched","PFHxStotal","PFHxSbranched","Bepaling kleihoudendheid in fractie 0-0.125 mm","Bepaling kleihoudendheid in fractie 0-2 mm","Grondsoort RIG","resultaattijd","voorbehandeling_observatie_type_bewaring","voorbehandeling_observatie_type_droging","voorbehandeling_observatie_type_breken","voorbehandeling_observatie_type_zeven","voorbehandeling_observatie_type_malen"]}}]}}]}
 
 						},
 						"xsd_elements": []
@@ -21745,14 +21757,14 @@
 						"binding": "java.lang.String",
 						"enumeration": {
 							"@type": "properties",
-							"@value": {"allowOthers":false,"values":["1112TCA","111TCA","1122TCA","112TCA","11DCA","11DCE","11DCPE","123TCB","123TCPA","123TMB","124TCB","124TMB","12DCA","12DCE_c","12DCE_t","12DCPA","135TCB","135TMB","13DCPA","13DCPE_cis","13DCPE_trans","1H-benzotriazole","22DCPA","245t","24d","24db","2-hydroxy-atrazine","3-ethyltolueen","4CPA","4-ethyltolueen","5ClB","5ClFenol","5-methyl-1H-benzotriazole","acenafteen","acenaftyleen","Acetamiprid","acetochlor-ESA","acetochlor-OA","aclonifen","Acrylam","Advanced Triaxiaal testing","Aeromon","%AfwijkBalans","Ag","ahch","Al","Al","Ala","alachlor-ESA","alachlor-OA","aldrin","alkaliniteit t.o.v. fenolftaleine","alkaliniteit t.o.v. methyloranje","alox","AMETRYN","AMPA","an det","anorganische_c_perc","antraceen","AOX","Areometer","As","As","Asgehalte","ASTM_code","ASTM_naam","atenolol","atraton","Atraz","atr_des","Atr_desisoprop","Au","azinfos-ethyl","azinfos-methyl","azoxystrobin","B","Ba","BAM","Ban. Schim.","Be","Benfluralin","Bentaz","Benthiavalicarb-isopropyl","Benzo(a)","benzo(a)antraceen","Benzo(a)p","benzo(a)pyreen","Benzo(b)","benzo(b)fluoranteen","Benzo(ghi)","benzo(ghi)peryleen","Benzo(k)","benzo(k)fluoranteen","beworteling_diepte","Bezafibraat","bhch","bijmenging","Bixafen","BOD","bodemgebruik","bodemgebruik_aardewerk","bodemtoestand","bodemverstoring","boor_diameter","boor_techniek","boor_type","Borneff_4","Borneff_6","Boscalid","Br","BrB","Br-CH2CH2-Br","BrO3","brom","bromofos-ethyl","bromofos-methyl","Bromoxynil","bufcap.( pH=4,4)","bufcap.( pH=8,3)","bulkdensiteit_totaal_gemeten","C6H5Cl","C6H5OH","C6H6","C7H8","Ca","caco3_gehalte","cadmium","Ca na koken","Carbamazepine","Carben","Carbet","Carbof","carbophenothion","CBrCl3","CC14 extractie","CCl4","Cd","Cd","cec_totaal","CH2Br2","CH2ClBr","CH3Br","chazr","CHBr3","CHCl2Br","CHClBr2","c_heptachloorepoxide","Chloorbromuron","Chloorethaan","Chlorantraniliprole","chlorfenvinfos-E","chlorfenvinfos-Z","Chloridaz","Chlormequat","chloroform","Chloroxur","chlorpyrifos-ethyl","chlorpyrifos-methyl","Chlortol","Chrys","chryseen","cis 1,2-dichloorethaan","cis_chlor","Cl","Clindamycine","ClO3","ClO4-","Clomazone","Clopyralid","Clostridia","Clostr per","Clostr. Sporen","Clothianidin","Clozapine","Clproph","CN","cn_ratio","Co","CO2","CO2(ag)","CO2(vrij)","CO3","COD","Col.","Colibact 44","compacte_laag","consistentie","consistentie_kleverigheid","consistentie_plasticiteit","coordinaat_bonne_e","coordinaat_bonne_n","coordinaat_bonne_s","coordinaat_bonne_w","couma","Cr","Cr","CRS","Cu","Cu","Cyana","cyclohexaan","Cyflufenamide","Cyproconazole","Cyprodinil","Cyromazin","Dchdzn","DEET","demeton-S","DESMETRYN","dhch","Diatrizoaat","diazinon","Dibenzo(ah)antraceen","dibenz(sh)antraceen","dibrclprop","Dibroommethaan","Dicam","dichlob","dichloormethaan","dichlorobenzophenone","Dichlorpr","dichlorvos","Diclofenac","dield","Difenoconazole","diflufenican","Dimethenamid","Dimethenamid-ESA","Dimethenamid-OA","dimethoate","dimethomorph-E","dimethomorph-Z","Dimetridazole","Dimoxystrobin","disulfoton","Diur","DMS","DNOC","DOC","Doorlatendheid","Doorlatendheid CV","Doorlatendheid in tx cel","Doorlatendheid VVH","Doorlatendheid VVV","drainage_aanwezig","drainage_aardewerk_doorlaatbaarheid","drainage_aardewerk_intern","drainage_aardewerk_klasse","drainage_aardewerk_oppervlakkig","droogrest","EC","EC(Lab.)","EC(Veld)","Eh\u00b0","endosulfan_I","endosulfan_II","endosulfan_sulfaat","Endrin","Entero","EpiChlo","epoxiconazole","Escherichia Coli","Ethion","Ethofum","ethoprofos","ethylbenzeen","etrimfos","exch_ca","exch_k","exch_mg","F","Fe","Fe","Fe2+","fe2o3","Fe3+","Feac.Col.","Feac.Str.","Fenan","fenantreen","Fenazon","fenitrothion","Fenoprop","Fenpropidin","Fenpropimorph","fenthion","FENURON","feox","Fe(Tot.)","flufe","Flufenacet-ESA","Flufenacet-OA","fluopicolide","Fluopyram","Fluor","fluoranteen","fluoreen","Fluoxastrobin","Fluoxetine","Fluroxypyr","flusilasole","flutolanil","flutriafol","Fluxapyroxad","fonofos","Fosthiazate","Fractie > 500 \u00b5m","Fractie <500\u00b5m & > 63\u00b5m","Fractie < 63\u00b5m","G 25\u00b0C","Gabapentine","geologische_aard_afzettingswijze_laag1","geologische_aard_afzettingswijze_laag2","geologische_aard_afzettingswijze_laag3","geologische_aard_afzettingswijze_laag4","geologische_aard_andere_kenmerken_laag1","geologische_aard_andere_kenmerken_laag2","geologische_aard_andere_kenmerken_laag3","geologische_aard_andere_kenmerken_laag4","geologische_aard_bovenliggend_laag1","geologische_aard_bovenliggend_laag2","geologische_aard_bovenliggend_laag3","geologische_aard_bovenliggend_laag4","geologische_aard_bovenliggend_laag5","geologische_aard_bovenliggend_laag6","geologische_aard_lithologie_laag1","geologische_aard_lithologie_laag2","geologische_aard_lithologie_laag3","geologische_aard_lithologie_laag4","geologische_aard_lithologie_laag5","geologische_aard_lithologie_laag6","geologische_aard_tijdperk_laag1","geologische_aard_tijdperk_laag2","geologische_aard_tijdperk_laag3","geologische_aard_tijdperk_laag4","geologische_aard_tijdperk_laag5","geologische_aard_tijdperk_laag6","ghch","Glauconiet totaal","gley_diepte","gley_roest_aantal","gley_roest_begrenzing","gley_roest_contrast","gley_roest_grootte","gley_roest_kleur_munsell_chroma","gley_roest_kleur_munsell_hue_getal","gley_roest_kleur_munsell_hue_letters","gley_roest_kleur_munsell_value","gley_roest_kleur_omschrijving","gley_roest_vorm","Glyfos","Grondsoort BGGG","Grondsoort GEO","Grondsoort uit beschrijving","H (berekend)","H (blijvende)","HCB","HCO3","Heptachloor","heptenofos","hexachloorbutadieen","Hexaz","Hg","Hg","H (HCO3)","H(tmp)","H(tot)","Hymexazole","Ibuprofen","ijzeroerlaag","Imazalil","Imazamox","Imida","Indeno","indeno(1,2,3-cd)pyreen","Iomeprol","Iopamidol","Iopromide","Ioxynil","iPB","iprodione","iP_T","Irbesartan","Isodrin","Isoprot","Isoxaben","K","K","kalkgehalte_beschrijvend","kalkreactie_hcl","kat det","Ketoprofen","Kiem(22\u00b0C)","Kiem(37\u00b0C)","Kleur","kleur_munsell","kleur_munsell_chroma_1","kleur_munsell_chroma_2","kleur_munsell_chroma_3","kleur_munsell_hue_getal_1","kleur_munsell_hue_getal_2","kleur_munsell_hue_getal_3","kleur_munsell_hue_letters_1","kleur_munsell_hue_letters_2","kleur_munsell_hue_letters_3","kleur_munsell_value_1","kleur_munsell_value_2","kleur_munsell_value_3","kleur_omschrijving","korrelvolumemassa","Kresoxim-methyl","ksat","lambda-cyhalothrin-B","Laserdiffractie","lenacil","Lidocaine","Lincomycine","Linur","Linur_mono","malathion","Mandipropamid","mcpa","mcpb","mcpp","m_DCB","Mecopr","medesfenylchloridaz","Meest losse pakking","Mesotri","meta11","meta4","meta8","meta9","METABENZ","metalaxyl","Metaldehyde","Metami","Metaza","Metconazole","Metformine","Methabenz","methidathion","Methyleenblauw","Metobro","metola","metola-ESA","metola-OA","metola-S","Metola-S-ESA","Metoprolol","Metox","metoxychlor","metribuzin","mevinphos","Mg","Mg na koken","mineralen_andere","mineralen_glauconiet","mineralen_kwarts","mineralen_mica_glimm","mineralen_opaal","mineralen_rk","mineralen_schisten","mineralen_veldspaat","Minerale Olie","Minolie","Mn","Mo","mp_x","MTBE","Na","NaCl","Naft","naftaleen","Naproxen","nB_B","NH4","Ni","Ni","Nicosulfuron","niet ion. detergenten","N(Kj)","NN","NO2","NO3","nP_B","NPOC","N-totaal","NTU","O2","o_ClT","o_DCB","OH","op_DDD","op_DDE","op_DDT","organische_c_perc","organische_c_voorraad","organische_stof","o_X","oxadia","Oxamyl","Oxyd. (O2)","P","P2O5","PAK-tot","Paracetamol","parathion-ethyl","parathion-methyl","Path.Staph.","Pb","Pb","PCB 101","PCB 118","PCB 138","PCB 153","PCB 180","PCB 28","PCB 52","p_ClT","p_DCB","PE","pendimethalin","Pentoxifylline","Per","pest-tot","Pethoxamide","pH","ph_cacl2","ph_h2o","pH in situ","ph_kcl","pH(Lab.)","pHs","pH(Veld)","pirimicarb","pirimiphos-methyl","p-isopropyltolueen","PO4","PO4(Tot.)","pp_DDD","pp_DDE","pp_DDT","proefvlak_diepte","Prometr","Propachlor-ESA","PropaCl","Propamocarb","Propan","Propaz","propham","Propranolol","Propyzamide","prosulfocarb","pseudomonas aeruginosa","P-totaal","Pymetrozine","Pyraclostrobin","pyreen","pyrimethanil","Quinmerac","quintozene","reductie","Reflectiviteit","relief_aard","relief_expositie","relief_helling_enkelvoudig","relief_helling_lengte_geschat","relief_helling_meervoudig","relief_helling_vorm","relief_landvorm","relief_microrelief","relief_situering","Reuk","roest","S","Samendrukking","Saturatie Index","Sb","sB_B","schelpresten","Schuifweerstand","Schuifweerstand CD","Schuifweerstand CU","Schuifweerstand UU","Schuifweerstand UU","Vrije prismaproef","Se","Sebu","Si","Simaz","SiO2","Smaak","Sn","SO4","SomAN","SomIONEN","SomKAT","sorptie_min_fractie","sorptie_org_fractie","sorptie_totaal","sorptie_totaal_hcl","sorptie_totaal_nh4cl","sorptie_verzadigingsgraad","Sotalol","Spiroxamine","Sr","ssra","Standaard proctorproef","StartTemperatuur","stenen","structuur_gradatie_aardewerk","structuur_gradatie_fao","structuur_grootteklasse_aardewerk","structuur_grootteklasse_fao","structuur_type_aardewerk","structuur_type_fao","styreen","Sulcotrione","Sulfamethoxazole","T","TA","TAC","TAM","TAP","tB_B","TCB-tot","t_chlordaan","TDS","tebuconazole","Tecnazene","telodrin","Temp.","Temperatuur","temp_bodem","temp_corr","Temp(lucht)","TempTP-Geleidbaarh","TempTP-O2","TempTP-pH","temp_water","Terbu","Terbu_des","terbufos","Terbutryn","tetrachloormethaan","Tetrahydrofuraan","textuur_fractie_groter_dan_2000","textuur_granulometrisch_bodemkaart","textuur_granulometrisch_bodemkartering_met_Zg","textuur_granulometrisch_gedetailleerd","textuur_mediaan","textuurmeting","textuur_palpatie_bodemkartering","textuur_palpatie_fout_groter_dan_5_procent","textuur_palpatie_gedetailleerd","textuur_palpatie_mtr","textuur_procent_org_mat_h2o2","textuur_type_zand","Tha","t_heptachloorepoxide","Thiabendazole","Thiacloprid","Thiamethoxam","Thiophanate-methyl","THM-tot","Ti","TOC","tolchlophos-methyl","Topramezone","totaal BTEX","totale_c_perc","totale_n_perc","Tramadol","Tri","Triallate","triazoph","trichlorpyr","tri en tetra","Triflox","trifluralin","Trimethoprim","Troebelheid","ttc","Consistentiegrenzen - Uitrolgrens","V","VC","vegetatie","vegetatie","Verassingresten/600","Verdampingsresten/105","Versterkte proctorproef","Vinproef","VIS","Consistentiegrenzen - Vloeigrens","Vluchtige bestanddelen","VOC1","vocht_gradatie","vocht_gradatie_archeologie","vocht_gravimetrisch","vocht_luchtdroge_grond","Vochtspanning","vocht_volumetrisch","volumemassa nat","Volumetrisch vochtgehalte","vrij cyanide","vrije Clresten","warme KMnO4","watergehalte","watertafel","watertafel_aanwezig","watertafel_ghg","watertafel_glg","weersomstandigheden","weersomstandigheden_huidig_fao","weersomstandigheden_verleden_fao","wormgang_diepte","xylenen","Zeving","Zn","Zn","Zwavelgehalte","Zwelproef","Zwevende stoffen/105","Zwevende stoffen/600","U","La","10:2 FTS","4:2 FTS","6:2/8:2 diPAP","6:2 diPAP","6:2 FTS","8:2 diPAP","8:2 FTS","EtPFOSA","EtPFOSAA","MePFOSA","MePFOSAA","PFBA","PFBS","PFDA","PFECHS","PFHpA","PFHpS","PFHxA","PFHxDA","PFHxS","PFNA","PFNS","PFOA","PFODA","PFOS","PFOSAA","PFPeA","PFPeS","totale colibacteri\u00ebn","fecale colibacteri\u00ebn","intestinale enterokokken","bodemtoestand","landgebruikscategorie_cmon","weersomstandigheden_huidig","weersomstandigheden_verleden","bodembemonstering_instrument","bewaard_bodemmonster_opslaglocatie","bewaard_bodemmonster_type_bewaring_vooraf","bewaard_bodemmonster_voorbereiding_type_droging","bodemmonster_type_verstoring","mengmonster_aantal_steken","mengmonster_staalnamepatroon","mengmonster_steek_id","mengmonster_steek_locatie","mengmonster_steken_locaties","grind_perc_steken","schelpresten_perc_steken","antropogeen_perc_steken","antropogeen_specificatie","compacte_laag_perc_steken","ijzeroerlaag_perc_steken","roest_perc_steken","landgebruik_vlaanderen","landgebruik_eunis","wetland","insporing_vertrappeling","oogstresten","begrazing","bodembedekking_landgebruiksbestand","bodembemonstering_cmon_steken_ander_landgebruik","relief_helling_aanwezigheid","relief_helling_type","relief_helling_positie","grachten","bodembemonstering_steek_niet_uitgevoerd_reden","bodembemonstering_steek_niet_uitgevoerd_locatie","bodembemonstering_steken_niet_uitgevoerd","houtskool_perc_steken","veen_perc_steken","bodembemonstering_obstakel_type","bodembemonstering_obstakel_diepte","bodembemonstering_obstakels","horizont_Ah_Ap_dikte","strooisellaag_viltlaag_dikte","strooisellaag_viltlaag_massa","watertafel_aanwezig_perc_steken","textuurmeting_laser_volumeprocent","bodemmonster_type_matrix","Gehalte wateroplosbare Chloriden","Korrelverdeling d.m.v. laserdiffractie","Korrelverdeling d.m.v. zeefproef","Korrelverdeling d.m.v. hydrometer/areometer","Grondsoort bepaald op zicht","BGGG met detail grind","BGGG zonder detail grind","Glauconietgehalte in fractie < 63\u00b5m","Glauconietgehalte in fractie > 63 \u00b5m","Glauconietgehalte in fractie 63 \u00b5m - 500 \u00b5m","Glauconietgehalte in fractie > 500 \u00b5m","Gehalte Organische stoffen","Gehalte Kalkachtige stoffen","Bepaling kleihoudendheid","Totale koolstof","Inorganische koolstof","Organische koolstof","textuur_fractie_groter_dan_2000_volumeprocent","Carba","Sulmethox","Amidotriz","Clarid","Clopi","Crota","Erytro","Ibupr","Primd","Sotal","Suldiaz","6:2 PAP","8:2 PAP","DONA","PFUnDA","PFDoDA","PFTeDA","PFTrDA","PFDoDS","HFPO-DA","PFOSA","PFDS","PFMOPrA","PFMOAA","11Cl-PF3ONS","8:2 FTUCA","PFHxSA","4H-PFUnDA","MePFBSAA","Capstone A (DPOSA)","PFUnDS","P37DMOA","PFMOBA","PFTrDS","PFOSbranched","H4PFOS","PFOStotal","PFOAbranched","PFO3OA","PFO4DA","PFOSAtotal","HPFHpA","Capstone B (CDPOS)","PFPeDA","PFOSAbranched","PFBSA","PFO2HxA","9Cl-PF3ONS","PFOAtotal","MePFBSA","11Cl-PF3OUnDS","enkelvoudig_monster_locatie","bulkdensiteit_2mm_vs_totale_volume_gemeten","materiaal_groter_dan_1cm_massaprocent","stenen_groter_dan_1000_volumeprocent","textuurmeting_laser_volumeprocent","bewaard_bodemmonster_voorbereiding_type_breken","bewaard_bodemmonster_voorbereiding_type_zeven","bewaard_bodemmonster_voorbereiding_type_malen","golflengte","nir_spectrale_absorptie","nirs","strooisellaag_viltlaag_totale_c_perc","strooisellaag_viltlaag_totale_n_perc","bodemmonster_zeefrest_2mm","meta12","Consistentiegrenzen - Plasticiteitsindex","Korrelverdeling d.m.v. bezinkingsproef","Korrelverdeling d.m.v. pipette methode","Korrelverdeling d.m.v. sedigraaf","totale_n_voorraad","strooisellaag_viltlaag_organische_c_voorraad","strooisellaag_viltlaag_totale_n_voorraad","bulkdensiteit_2mm_vs_totale_volume_gemeten_average","bulkdensiteit_totaal_gemeten_average","textuur_fractie_klei","textuur_fractie_leem","textuur_fractie_zand","PFAS (EFSA-4)","PFAS (EU DWRL-20)","EtPFOSAtotal","EtPFOSAbranched","MePFOSAtotal","MePFOSAbranched","PFHxStotal","PFHxSbranched","resultaattijd","voorbehandeling_observatie_type_bewaring","voorbehandeling_observatie_type_droging","voorbehandeling_observatie_type_breken","voorbehandeling_observatie_type_zeven","voorbehandeling_observatie_type_malen"]}
+							"@value": {"allowOthers":false,"values":["1112TCA","111TCA","1122TCA","112TCA","11DCA","11DCE","11DCPE","123TCB","123TCPA","123TMB","124TCB","124TMB","12DCA","12DCE_c","12DCE_t","12DCPA","135TCB","135TMB","13DCPA","13DCPE_cis","13DCPE_trans","1H-benzotriazole","22DCPA","245t","24d","24db","2-hydroxy-atrazine","3-ethyltolueen","4CPA","4-ethyltolueen","5ClB","5ClFenol","5-methyl-1H-benzotriazole","acenafteen","acenaftyleen","Acetamiprid","acetochlor-ESA","acetochlor-OA","aclonifen","Acrylam","Advanced Triaxiaal testing","Aeromon","%AfwijkBalans","Ag","ahch","Al","Al","Ala","alachlor-ESA","alachlor-OA","aldrin","alkaliniteit t.o.v. fenolftaleine","alkaliniteit t.o.v. methyloranje","alox","AMETRYN","AMPA","an det","anorganische_c_perc","antraceen","AOX","Areometer","As","As","Asgehalte","ASTM_code","ASTM_naam","atenolol","atraton","Atraz","atr_des","Atr_desisoprop","Au","azinfos-ethyl","azinfos-methyl","azoxystrobin","B","Ba","BAM","Ban. Schim.","Be","Benfluralin","Bentaz","Benthiavalicarb-isopropyl","Benzo(a)","benzo(a)antraceen","Benzo(a)p","benzo(a)pyreen","Benzo(b)","benzo(b)fluoranteen","Benzo(ghi)","benzo(ghi)peryleen","Benzo(k)","benzo(k)fluoranteen","beworteling_diepte","Bezafibraat","bhch","bijmenging","Bixafen","BOD","bodemgebruik","bodemgebruik_aardewerk","bodemtoestand","bodemverstoring","boor_diameter","boor_techniek","boor_type","Borneff_4","Borneff_6","Boscalid","Br","BrB","Br-CH2CH2-Br","BrO3","brom","bromofos-ethyl","bromofos-methyl","Bromoxynil","bufcap.( pH=4,4)","bufcap.( pH=8,3)","bulkdensiteit_totaal_gemeten","C6H5Cl","C6H5OH","C6H6","C7H8","Ca","caco3_gehalte","cadmium","Ca na koken","Carbamazepine","Carben","Carbet","Carbof","carbophenothion","CBrCl3","CC14 extractie","CCl4","Cd","Cd","cec_totaal","CH2Br2","CH2ClBr","CH3Br","chazr","CHBr3","CHCl2Br","CHClBr2","c_heptachloorepoxide","Chloorbromuron","Chloorethaan","Chlorantraniliprole","chlorfenvinfos-E","chlorfenvinfos-Z","Chloridaz","Chlormequat","chloroform","Chloroxur","chlorpyrifos-ethyl","chlorpyrifos-methyl","Chlortol","Chrys","chryseen","cis 1,2-dichloorethaan","cis_chlor","Cl","Clindamycine","ClO3","ClO4-","Clomazone","Clopyralid","Clostridia","Clostr per","Clostr. Sporen","Clothianidin","Clozapine","Clproph","CN","cn_ratio","Co","CO2","CO2(ag)","CO2(vrij)","CO3","COD","Col.","Colibact 44","compacte_laag","consistentie","consistentie_kleverigheid","consistentie_plasticiteit","coordinaat_bonne_e","coordinaat_bonne_n","coordinaat_bonne_s","coordinaat_bonne_w","couma","Cr","Cr","CRS","Cu","Cu","Cyana","cyclohexaan","Cyflufenamide","Cyproconazole","Cyprodinil","Cyromazin","Dchdzn","DEET","demeton-S","DESMETRYN","dhch","Diatrizoaat","diazinon","Dibenzo(ah)antraceen","dibenz(sh)antraceen","dibrclprop","Dibroommethaan","Dicam","dichlob","dichloormethaan","dichlorobenzophenone","Dichlorpr","dichlorvos","Diclofenac","dield","Difenoconazole","diflufenican","Dimethenamid","Dimethenamid-ESA","Dimethenamid-OA","dimethoate","dimethomorph-E","dimethomorph-Z","Dimetridazole","Dimoxystrobin","disulfoton","Diur","DMS","DNOC","DOC","Doorlatendheid","Doorlatendheid CV","Doorlatendheid in tx cel","Doorlatendheid VVH","Doorlatendheid VVV","drainage_aanwezig","drainage_aardewerk_doorlaatbaarheid","drainage_aardewerk_intern","drainage_aardewerk_klasse","drainage_aardewerk_oppervlakkig","droogrest","EC","EC(Lab.)","EC(Veld)","Eh\u00b0","endosulfan_I","endosulfan_II","endosulfan_sulfaat","Endrin","Entero","EpiChlo","epoxiconazole","Escherichia Coli","Ethion","Ethofum","ethoprofos","ethylbenzeen","etrimfos","exch_ca","exch_k","exch_mg","F","Fe","Fe","Fe2+","fe2o3","Fe3+","Feac.Col.","Feac.Str.","Fenan","fenantreen","Fenazon","fenitrothion","Fenoprop","Fenpropidin","Fenpropimorph","fenthion","FENURON","feox","Fe(Tot.)","flufe","Flufenacet-ESA","Flufenacet-OA","fluopicolide","Fluopyram","Fluor","fluoranteen","fluoreen","Fluoxastrobin","Fluoxetine","Fluroxypyr","flusilasole","flutolanil","flutriafol","Fluxapyroxad","fonofos","Fosthiazate","Fractie > 500 \u00b5m","Fractie <500\u00b5m & > 63\u00b5m","Fractie < 63\u00b5m","G 25\u00b0C","Gabapentine","geologische_aard_afzettingswijze_laag1","geologische_aard_afzettingswijze_laag2","geologische_aard_afzettingswijze_laag3","geologische_aard_afzettingswijze_laag4","geologische_aard_andere_kenmerken_laag1","geologische_aard_andere_kenmerken_laag2","geologische_aard_andere_kenmerken_laag3","geologische_aard_andere_kenmerken_laag4","geologische_aard_bovenliggend_laag1","geologische_aard_bovenliggend_laag2","geologische_aard_bovenliggend_laag3","geologische_aard_bovenliggend_laag4","geologische_aard_bovenliggend_laag5","geologische_aard_bovenliggend_laag6","geologische_aard_lithologie_laag1","geologische_aard_lithologie_laag2","geologische_aard_lithologie_laag3","geologische_aard_lithologie_laag4","geologische_aard_lithologie_laag5","geologische_aard_lithologie_laag6","geologische_aard_tijdperk_laag1","geologische_aard_tijdperk_laag2","geologische_aard_tijdperk_laag3","geologische_aard_tijdperk_laag4","geologische_aard_tijdperk_laag5","geologische_aard_tijdperk_laag6","ghch","Glauconiet totaal","gley_diepte","gley_roest_aantal","gley_roest_begrenzing","gley_roest_contrast","gley_roest_grootte","gley_roest_kleur_munsell_chroma","gley_roest_kleur_munsell_hue_getal","gley_roest_kleur_munsell_hue_letters","gley_roest_kleur_munsell_value","gley_roest_kleur_omschrijving","gley_roest_vorm","Glyfos","Grondsoort BGGG","Grondsoort GEO","Grondsoort uit beschrijving","H (berekend)","H (blijvende)","HCB","HCO3","Heptachloor","heptenofos","hexachloorbutadieen","Hexaz","Hg","Hg","H (HCO3)","H(tmp)","H(tot)","Hymexazole","Ibuprofen","ijzeroerlaag","Imazalil","Imazamox","Imida","Indeno","indeno(1,2,3-cd)pyreen","Iomeprol","Iopamidol","Iopromide","Ioxynil","iPB","iprodione","iP_T","Irbesartan","Isodrin","Isoprot","Isoxaben","K","K","kalkgehalte_beschrijvend","kalkreactie_hcl","kat det","Ketoprofen","Kiem(22\u00b0C)","Kiem(37\u00b0C)","Kleur","kleur_munsell","kleur_munsell_chroma_1","kleur_munsell_chroma_2","kleur_munsell_chroma_3","kleur_munsell_hue_getal_1","kleur_munsell_hue_getal_2","kleur_munsell_hue_getal_3","kleur_munsell_hue_letters_1","kleur_munsell_hue_letters_2","kleur_munsell_hue_letters_3","kleur_munsell_value_1","kleur_munsell_value_2","kleur_munsell_value_3","kleur_omschrijving","korrelvolumemassa","Kresoxim-methyl","ksat","lambda-cyhalothrin-B","Laserdiffractie","lenacil","Lidocaine","Lincomycine","Linur","Linur_mono","malathion","Mandipropamid","mcpa","mcpb","mcpp","m_DCB","Mecopr","medesfenylchloridaz","Meest losse pakking","Mesotri","meta11","meta4","meta8","meta9","METABENZ","metalaxyl","Metaldehyde","Metami","Metaza","Metconazole","Metformine","Methabenz","methidathion","Methyleenblauw","Metobro","metola","metola-ESA","metola-OA","metola-S","Metola-S-ESA","Metoprolol","Metox","metoxychlor","metribuzin","mevinphos","Mg","Mg na koken","mineralen_andere","mineralen_glauconiet","mineralen_kwarts","mineralen_mica_glimm","mineralen_opaal","mineralen_rk","mineralen_schisten","mineralen_veldspaat","Minerale Olie","Minolie","Mn","Mo","mp_x","MTBE","Na","NaCl","Naft","naftaleen","Naproxen","nB_B","NH4","Ni","Ni","Nicosulfuron","niet ion. detergenten","N(Kj)","NN","NO2","NO3","nP_B","NPOC","N-totaal","NTU","O2","o_ClT","o_DCB","OH","op_DDD","op_DDE","op_DDT","organische_c_perc","organische_c_voorraad","organische_stof","o_X","oxadia","Oxamyl","Oxyd. (O2)","P","P2O5","PAK-tot","Paracetamol","parathion-ethyl","parathion-methyl","Path.Staph.","Pb","Pb","PCB 101","PCB 118","PCB 138","PCB 153","PCB 180","PCB 28","PCB 52","p_ClT","p_DCB","PE","pendimethalin","Pentoxifylline","Per","pest-tot","Pethoxamide","pH","ph_cacl2","ph_h2o","pH in situ","ph_kcl","pH(Lab.)","pHs","pH(Veld)","pirimicarb","pirimiphos-methyl","p-isopropyltolueen","PO4","PO4(Tot.)","pp_DDD","pp_DDE","pp_DDT","proefvlak_diepte","Prometr","Propachlor-ESA","PropaCl","Propamocarb","Propan","Propaz","propham","Propranolol","Propyzamide","prosulfocarb","pseudomonas aeruginosa","P-totaal","Pymetrozine","Pyraclostrobin","pyreen","pyrimethanil","Quinmerac","quintozene","reductie","Reflectiviteit","relief_aard","relief_expositie","relief_helling_enkelvoudig","relief_helling_lengte_geschat","relief_helling_meervoudig","relief_helling_vorm","relief_landvorm","relief_microrelief","relief_situering","Reuk","roest","S","Samendrukking","Saturatie Index","Sb","sB_B","schelpresten","Schuifweerstand","Schuifweerstand CD","Schuifweerstand CU","Schuifweerstand UU","Schuifweerstand UU","Vrije prismaproef","Se","Sebu","Si","Simaz","SiO2","Smaak","Sn","SO4","SomAN","SomIONEN","SomKAT","sorptie_min_fractie","sorptie_org_fractie","sorptie_totaal","sorptie_totaal_hcl","sorptie_totaal_nh4cl","sorptie_verzadigingsgraad","Sotalol","Spiroxamine","Sr","ssra","Standaard proctorproef","StartTemperatuur","stenen","structuur_gradatie_aardewerk","structuur_gradatie_fao","structuur_grootteklasse_aardewerk","structuur_grootteklasse_fao","structuur_type_aardewerk","structuur_type_fao","styreen","Sulcotrione","Sulfamethoxazole","T","TA","TAC","TAM","TAP","tB_B","TCB-tot","t_chlordaan","TDS","tebuconazole","Tecnazene","telodrin","Temp.","Temperatuur","temp_bodem","temp_corr","Temp(lucht)","TempTP-Geleidbaarh","TempTP-O2","TempTP-pH","temp_water","Terbu","Terbu_des","terbufos","Terbutryn","tetrachloormethaan","Tetrahydrofuraan","textuur_fractie_groter_dan_2000","textuur_granulometrisch_bodemkaart","textuur_granulometrisch_bodemkartering_met_Zg","textuur_granulometrisch_gedetailleerd","textuur_mediaan","textuurmeting","textuur_palpatie_bodemkartering","textuur_palpatie_fout_groter_dan_5_procent","textuur_palpatie_gedetailleerd","textuur_palpatie_mtr","textuur_procent_org_mat_h2o2","textuur_type_zand","Tha","t_heptachloorepoxide","Thiabendazole","Thiacloprid","Thiamethoxam","Thiophanate-methyl","THM-tot","Ti","TOC","tolchlophos-methyl","Topramezone","totaal BTEX","totale_c_perc","totale_n_perc","Tramadol","Tri","Triallate","triazoph","trichlorpyr","tri en tetra","Triflox","trifluralin","Trimethoprim","Troebelheid","ttc","Consistentiegrenzen - Uitrolgrens","V","VC","vegetatie","vegetatie","Verassingresten/600","Verdampingsresten/105","Versterkte proctorproef","Vinproef","VIS","Consistentiegrenzen - Vloeigrens","Vluchtige bestanddelen","VOC1","vocht_gradatie","vocht_gradatie_archeologie","vocht_gravimetrisch","vocht_luchtdroge_grond","Vochtspanning","vocht_volumetrisch","volumemassa nat","Volumetrisch vochtgehalte","vrij cyanide","vrije Clresten","warme KMnO4","watergehalte","watertafel","watertafel_aanwezig","watertafel_ghg","watertafel_glg","weersomstandigheden","weersomstandigheden_huidig_fao","weersomstandigheden_verleden_fao","wormgang_diepte","xylenen","Zeving","Zn","Zn","Zwavelgehalte","Zwelproef","Zwevende stoffen/105","Zwevende stoffen/600","U","La","10:2 FTS","4:2 FTS","6:2/8:2 diPAP","6:2 diPAP","6:2 FTS","8:2 diPAP","8:2 FTS","EtPFOSA","EtPFOSAA","MePFOSA","MePFOSAA","PFBA","PFBS","PFDA","PFECHS","PFHpA","PFHpS","PFHxA","PFHxDA","PFHxS","PFNA","PFNS","PFOA","PFODA","PFOS","PFOSAA","PFPeA","PFPeS","totale colibacteri\u00ebn","fecale colibacteri\u00ebn","intestinale enterokokken","bodemtoestand","landgebruikscategorie_cmon","weersomstandigheden_huidig","weersomstandigheden_verleden","bodembemonstering_instrument","bewaard_bodemmonster_opslaglocatie","bewaard_bodemmonster_type_bewaring_vooraf","bewaard_bodemmonster_voorbereiding_type_droging","bodemmonster_type_verstoring","mengmonster_aantal_steken","mengmonster_staalnamepatroon","mengmonster_steek_id","mengmonster_steek_locatie","mengmonster_steken_locaties","grind_perc_steken","schelpresten_perc_steken","antropogeen_perc_steken","antropogeen_specificatie","compacte_laag_perc_steken","ijzeroerlaag_perc_steken","roest_perc_steken","landgebruik_vlaanderen","landgebruik_eunis","wetland","insporing_vertrappeling","oogstresten","begrazing","bodembedekking_landgebruiksbestand","bodembemonstering_cmon_steken_ander_landgebruik","relief_helling_aanwezigheid","relief_helling_type","relief_helling_positie","grachten","bodembemonstering_steek_niet_uitgevoerd_reden","bodembemonstering_steek_niet_uitgevoerd_locatie","bodembemonstering_steken_niet_uitgevoerd","houtskool_perc_steken","veen_perc_steken","bodembemonstering_obstakel_type","bodembemonstering_obstakel_diepte","bodembemonstering_obstakels","horizont_Ah_Ap_dikte","strooisellaag_viltlaag_dikte","strooisellaag_viltlaag_massa","watertafel_aanwezig_perc_steken","textuurmeting_laser_volumeprocent","bodemmonster_type_matrix","Gehalte wateroplosbare Chloriden","Korrelverdeling d.m.v. laserdiffractie","Korrelverdeling d.m.v. zeefproef","Korrelverdeling d.m.v. hydrometer/areometer","Grondsoort bepaald op zicht","BGGG met detail grind","BGGG zonder detail grind","Glauconietgehalte in fractie < 63\u00b5m","Glauconietgehalte in fractie > 63 \u00b5m","Glauconietgehalte in fractie 63 \u00b5m - 500 \u00b5m","Glauconietgehalte in fractie > 500 \u00b5m","Gehalte Organische stoffen","Gehalte Kalkachtige stoffen","Bepaling kleihoudendheid","Totale koolstof","Inorganische koolstof","Organische koolstof","textuur_fractie_groter_dan_2000_volumeprocent","Carba","Sulmethox","Amidotriz","Clarid","Clopi","Crota","Erytro","Ibupr","Primd","Sotal","Suldiaz","6:2 PAP","8:2 PAP","DONA","PFUnDA","PFDoDA","PFTeDA","PFTrDA","PFDoDS","HFPO-DA","PFOSA","PFDS","PFMOPrA","PFMOAA","11Cl-PF3ONS","8:2 FTUCA","PFHxSA","4H-PFUnDA","MePFBSAA","Capstone A (DPOSA)","PFUnDS","P37DMOA","PFMOBA","PFTrDS","PFOSbranched","H4PFOS","PFOStotal","PFOAbranched","PFO3OA","PFO4DA","PFOSAtotal","HPFHpA","Capstone B (CDPOS)","PFPeDA","PFOSAbranched","PFBSA","PFO2HxA","9Cl-PF3ONS","PFOAtotal","MePFBSA","11Cl-PF3OUnDS","enkelvoudig_monster_locatie","bulkdensiteit_2mm_vs_totale_volume_gemeten","materiaal_groter_dan_1cm_massaprocent","stenen_groter_dan_1000_volumeprocent","textuurmeting_laser_volumeprocent","bewaard_bodemmonster_voorbereiding_type_breken","bewaard_bodemmonster_voorbereiding_type_zeven","bewaard_bodemmonster_voorbereiding_type_malen","golflengte","nir_spectrale_absorptie","nirs","strooisellaag_viltlaag_totale_c_perc","strooisellaag_viltlaag_totale_n_perc","bodemmonster_zeefrest_2mm","meta12","Consistentiegrenzen - Plasticiteitsindex","Korrelverdeling d.m.v. bezinkingsproef","Korrelverdeling d.m.v. pipette methode","Korrelverdeling d.m.v. sedigraaf","totale_n_voorraad","strooisellaag_viltlaag_organische_c_voorraad","strooisellaag_viltlaag_totale_n_voorraad","bulkdensiteit_2mm_vs_totale_volume_gemeten_average","bulkdensiteit_totaal_gemeten_average","textuur_fractie_klei","textuur_fractie_leem","textuur_fractie_zand","PFAS (EFSA-4)","PFAS (EU DWRL-20)","EtPFOSAtotal","EtPFOSAbranched","MePFOSAtotal","MePFOSAbranched","PFHxStotal","PFHxSbranched","Bepaling kleihoudendheid in fractie 0-0.125 mm","Bepaling kleihoudendheid in fractie 0-2 mm","Grondsoort RIG","resultaattijd","voorbehandeling_observatie_type_bewaring","voorbehandeling_observatie_type_droging","voorbehandeling_observatie_type_breken","voorbehandeling_observatie_type_zeven","voorbehandeling_observatie_type_malen"]}
 
 						},
 						"has-value": true,
 						"mapping-relevant": false,
 						"validation": {
 							"@type": "validator",
-							"@value": {"type":"and","config":[{"@type":"validator","@value":{"type":"enumeration","config":["1112TCA","111TCA","1122TCA","112TCA","11DCA","11DCE","11DCPE","123TCB","123TCPA","123TMB","124TCB","124TMB","12DCA","12DCE_c","12DCE_t","12DCPA","135TCB","135TMB","13DCPA","13DCPE_cis","13DCPE_trans","1H-benzotriazole","22DCPA","245t","24d","24db","2-hydroxy-atrazine","3-ethyltolueen","4CPA","4-ethyltolueen","5ClB","5ClFenol","5-methyl-1H-benzotriazole","acenafteen","acenaftyleen","Acetamiprid","acetochlor-ESA","acetochlor-OA","aclonifen","Acrylam","Advanced Triaxiaal testing","Aeromon","%AfwijkBalans","Ag","ahch","Al","Al","Ala","alachlor-ESA","alachlor-OA","aldrin","alkaliniteit t.o.v. fenolftaleine","alkaliniteit t.o.v. methyloranje","alox","AMETRYN","AMPA","an det","anorganische_c_perc","antraceen","AOX","Areometer","As","As","Asgehalte","ASTM_code","ASTM_naam","atenolol","atraton","Atraz","atr_des","Atr_desisoprop","Au","azinfos-ethyl","azinfos-methyl","azoxystrobin","B","Ba","BAM","Ban. Schim.","Be","Benfluralin","Bentaz","Benthiavalicarb-isopropyl","Benzo(a)","benzo(a)antraceen","Benzo(a)p","benzo(a)pyreen","Benzo(b)","benzo(b)fluoranteen","Benzo(ghi)","benzo(ghi)peryleen","Benzo(k)","benzo(k)fluoranteen","beworteling_diepte","Bezafibraat","bhch","bijmenging","Bixafen","BOD","bodemgebruik","bodemgebruik_aardewerk","bodemtoestand","bodemverstoring","boor_diameter","boor_techniek","boor_type","Borneff_4","Borneff_6","Boscalid","Br","BrB","Br-CH2CH2-Br","BrO3","brom","bromofos-ethyl","bromofos-methyl","Bromoxynil","bufcap.( pH=4,4)","bufcap.( pH=8,3)","bulkdensiteit_totaal_gemeten","C6H5Cl","C6H5OH","C6H6","C7H8","Ca","caco3_gehalte","cadmium","Ca na koken","Carbamazepine","Carben","Carbet","Carbof","carbophenothion","CBrCl3","CC14 extractie","CCl4","Cd","Cd","cec_totaal","CH2Br2","CH2ClBr","CH3Br","chazr","CHBr3","CHCl2Br","CHClBr2","c_heptachloorepoxide","Chloorbromuron","Chloorethaan","Chlorantraniliprole","chlorfenvinfos-E","chlorfenvinfos-Z","Chloridaz","Chlormequat","chloroform","Chloroxur","chlorpyrifos-ethyl","chlorpyrifos-methyl","Chlortol","Chrys","chryseen","cis 1,2-dichloorethaan","cis_chlor","Cl","Clindamycine","ClO3","ClO4-","Clomazone","Clopyralid","Clostridia","Clostr per","Clostr. Sporen","Clothianidin","Clozapine","Clproph","CN","cn_ratio","Co","CO2","CO2(ag)","CO2(vrij)","CO3","COD","Col.","Colibact 44","compacte_laag","consistentie","consistentie_kleverigheid","consistentie_plasticiteit","coordinaat_bonne_e","coordinaat_bonne_n","coordinaat_bonne_s","coordinaat_bonne_w","couma","Cr","Cr","CRS","Cu","Cu","Cyana","cyclohexaan","Cyflufenamide","Cyproconazole","Cyprodinil","Cyromazin","Dchdzn","DEET","demeton-S","DESMETRYN","dhch","Diatrizoaat","diazinon","Dibenzo(ah)antraceen","dibenz(sh)antraceen","dibrclprop","Dibroommethaan","Dicam","dichlob","dichloormethaan","dichlorobenzophenone","Dichlorpr","dichlorvos","Diclofenac","dield","Difenoconazole","diflufenican","Dimethenamid","Dimethenamid-ESA","Dimethenamid-OA","dimethoate","dimethomorph-E","dimethomorph-Z","Dimetridazole","Dimoxystrobin","disulfoton","Diur","DMS","DNOC","DOC","Doorlatendheid","Doorlatendheid CV","Doorlatendheid in tx cel","Doorlatendheid VVH","Doorlatendheid VVV","drainage_aanwezig","drainage_aardewerk_doorlaatbaarheid","drainage_aardewerk_intern","drainage_aardewerk_klasse","drainage_aardewerk_oppervlakkig","droogrest","EC","EC(Lab.)","EC(Veld)","Eh\u00b0","endosulfan_I","endosulfan_II","endosulfan_sulfaat","Endrin","Entero","EpiChlo","epoxiconazole","Escherichia Coli","Ethion","Ethofum","ethoprofos","ethylbenzeen","etrimfos","exch_ca","exch_k","exch_mg","F","Fe","Fe","Fe2+","fe2o3","Fe3+","Feac.Col.","Feac.Str.","Fenan","fenantreen","Fenazon","fenitrothion","Fenoprop","Fenpropidin","Fenpropimorph","fenthion","FENURON","feox","Fe(Tot.)","flufe","Flufenacet-ESA","Flufenacet-OA","fluopicolide","Fluopyram","Fluor","fluoranteen","fluoreen","Fluoxastrobin","Fluoxetine","Fluroxypyr","flusilasole","flutolanil","flutriafol","Fluxapyroxad","fonofos","Fosthiazate","Fractie > 500 \u00b5m","Fractie <500\u00b5m & > 63\u00b5m","Fractie < 63\u00b5m","G 25\u00b0C","Gabapentine","geologische_aard_afzettingswijze_laag1","geologische_aard_afzettingswijze_laag2","geologische_aard_afzettingswijze_laag3","geologische_aard_afzettingswijze_laag4","geologische_aard_andere_kenmerken_laag1","geologische_aard_andere_kenmerken_laag2","geologische_aard_andere_kenmerken_laag3","geologische_aard_andere_kenmerken_laag4","geologische_aard_bovenliggend_laag1","geologische_aard_bovenliggend_laag2","geologische_aard_bovenliggend_laag3","geologische_aard_bovenliggend_laag4","geologische_aard_bovenliggend_laag5","geologische_aard_bovenliggend_laag6","geologische_aard_lithologie_laag1","geologische_aard_lithologie_laag2","geologische_aard_lithologie_laag3","geologische_aard_lithologie_laag4","geologische_aard_lithologie_laag5","geologische_aard_lithologie_laag6","geologische_aard_tijdperk_laag1","geologische_aard_tijdperk_laag2","geologische_aard_tijdperk_laag3","geologische_aard_tijdperk_laag4","geologische_aard_tijdperk_laag5","geologische_aard_tijdperk_laag6","ghch","Glauconiet totaal","gley_diepte","gley_roest_aantal","gley_roest_begrenzing","gley_roest_contrast","gley_roest_grootte","gley_roest_kleur_munsell_chroma","gley_roest_kleur_munsell_hue_getal","gley_roest_kleur_munsell_hue_letters","gley_roest_kleur_munsell_value","gley_roest_kleur_omschrijving","gley_roest_vorm","Glyfos","Grondsoort BGGG","Grondsoort GEO","Grondsoort uit beschrijving","H (berekend)","H (blijvende)","HCB","HCO3","Heptachloor","heptenofos","hexachloorbutadieen","Hexaz","Hg","Hg","H (HCO3)","H(tmp)","H(tot)","Hymexazole","Ibuprofen","ijzeroerlaag","Imazalil","Imazamox","Imida","Indeno","indeno(1,2,3-cd)pyreen","Iomeprol","Iopamidol","Iopromide","Ioxynil","iPB","iprodione","iP_T","Irbesartan","Isodrin","Isoprot","Isoxaben","K","K","kalkgehalte_beschrijvend","kalkreactie_hcl","kat det","Ketoprofen","Kiem(22\u00b0C)","Kiem(37\u00b0C)","Kleur","kleur_munsell","kleur_munsell_chroma_1","kleur_munsell_chroma_2","kleur_munsell_chroma_3","kleur_munsell_hue_getal_1","kleur_munsell_hue_getal_2","kleur_munsell_hue_getal_3","kleur_munsell_hue_letters_1","kleur_munsell_hue_letters_2","kleur_munsell_hue_letters_3","kleur_munsell_value_1","kleur_munsell_value_2","kleur_munsell_value_3","kleur_omschrijving","korrelvolumemassa","Kresoxim-methyl","ksat","lambda-cyhalothrin-B","Laserdiffractie","lenacil","Lidocaine","Lincomycine","Linur","Linur_mono","malathion","Mandipropamid","mcpa","mcpb","mcpp","m_DCB","Mecopr","medesfenylchloridaz","Meest losse pakking","Mesotri","meta11","meta4","meta8","meta9","METABENZ","metalaxyl","Metaldehyde","Metami","Metaza","Metconazole","Metformine","Methabenz","methidathion","Methyleenblauw","Metobro","metola","metola-ESA","metola-OA","metola-S","Metola-S-ESA","Metoprolol","Metox","metoxychlor","metribuzin","mevinphos","Mg","Mg na koken","mineralen_andere","mineralen_glauconiet","mineralen_kwarts","mineralen_mica_glimm","mineralen_opaal","mineralen_rk","mineralen_schisten","mineralen_veldspaat","Minerale Olie","Minolie","Mn","Mo","mp_x","MTBE","Na","NaCl","Naft","naftaleen","Naproxen","nB_B","NH4","Ni","Ni","Nicosulfuron","niet ion. detergenten","N(Kj)","NN","NO2","NO3","nP_B","NPOC","N-totaal","NTU","O2","o_ClT","o_DCB","OH","op_DDD","op_DDE","op_DDT","organische_c_perc","organische_c_voorraad","organische_stof","o_X","oxadia","Oxamyl","Oxyd. (O2)","P","P2O5","PAK-tot","Paracetamol","parathion-ethyl","parathion-methyl","Path.Staph.","Pb","Pb","PCB 101","PCB 118","PCB 138","PCB 153","PCB 180","PCB 28","PCB 52","p_ClT","p_DCB","PE","pendimethalin","Pentoxifylline","Per","pest-tot","Pethoxamide","pH","ph_cacl2","ph_h2o","pH in situ","ph_kcl","pH(Lab.)","pHs","pH(Veld)","pirimicarb","pirimiphos-methyl","p-isopropyltolueen","PO4","PO4(Tot.)","pp_DDD","pp_DDE","pp_DDT","proefvlak_diepte","Prometr","Propachlor-ESA","PropaCl","Propamocarb","Propan","Propaz","propham","Propranolol","Propyzamide","prosulfocarb","pseudomonas aeruginosa","P-totaal","Pymetrozine","Pyraclostrobin","pyreen","pyrimethanil","Quinmerac","quintozene","reductie","Reflectiviteit","relief_aard","relief_expositie","relief_helling_enkelvoudig","relief_helling_lengte_geschat","relief_helling_meervoudig","relief_helling_vorm","relief_landvorm","relief_microrelief","relief_situering","Reuk","roest","S","Samendrukking","Saturatie Index","Sb","sB_B","schelpresten","Schuifweerstand","Schuifweerstand CD","Schuifweerstand CU","Schuifweerstand UU","Schuifweerstand UU","Vrije prismaproef","Se","Sebu","Si","Simaz","SiO2","Smaak","Sn","SO4","SomAN","SomIONEN","SomKAT","sorptie_min_fractie","sorptie_org_fractie","sorptie_totaal","sorptie_totaal_hcl","sorptie_totaal_nh4cl","sorptie_verzadigingsgraad","Sotalol","Spiroxamine","Sr","ssra","Standaard proctorproef","StartTemperatuur","stenen","structuur_gradatie_aardewerk","structuur_gradatie_fao","structuur_grootteklasse_aardewerk","structuur_grootteklasse_fao","structuur_type_aardewerk","structuur_type_fao","styreen","Sulcotrione","Sulfamethoxazole","T","TA","TAC","TAM","TAP","tB_B","TCB-tot","t_chlordaan","TDS","tebuconazole","Tecnazene","telodrin","Temp.","Temperatuur","temp_bodem","temp_corr","Temp(lucht)","TempTP-Geleidbaarh","TempTP-O2","TempTP-pH","temp_water","Terbu","Terbu_des","terbufos","Terbutryn","tetrachloormethaan","Tetrahydrofuraan","textuur_fractie_groter_dan_2000","textuur_granulometrisch_bodemkaart","textuur_granulometrisch_bodemkartering_met_Zg","textuur_granulometrisch_gedetailleerd","textuur_mediaan","textuurmeting","textuur_palpatie_bodemkartering","textuur_palpatie_fout_groter_dan_5_procent","textuur_palpatie_gedetailleerd","textuur_palpatie_mtr","textuur_procent_org_mat_h2o2","textuur_type_zand","Tha","t_heptachloorepoxide","Thiabendazole","Thiacloprid","Thiamethoxam","Thiophanate-methyl","THM-tot","Ti","TOC","tolchlophos-methyl","Topramezone","totaal BTEX","totale_c_perc","totale_n_perc","Tramadol","Tri","Triallate","triazoph","trichlorpyr","tri en tetra","Triflox","trifluralin","Trimethoprim","Troebelheid","ttc","Consistentiegrenzen - Uitrolgrens","V","VC","vegetatie","vegetatie","Verassingresten/600","Verdampingsresten/105","Versterkte proctorproef","Vinproef","VIS","Consistentiegrenzen - Vloeigrens","Vluchtige bestanddelen","VOC1","vocht_gradatie","vocht_gradatie_archeologie","vocht_gravimetrisch","vocht_luchtdroge_grond","Vochtspanning","vocht_volumetrisch","volumemassa nat","Volumetrisch vochtgehalte","vrij cyanide","vrije Clresten","warme KMnO4","watergehalte","watertafel","watertafel_aanwezig","watertafel_ghg","watertafel_glg","weersomstandigheden","weersomstandigheden_huidig_fao","weersomstandigheden_verleden_fao","wormgang_diepte","xylenen","Zeving","Zn","Zn","Zwavelgehalte","Zwelproef","Zwevende stoffen/105","Zwevende stoffen/600","U","La","10:2 FTS","4:2 FTS","6:2/8:2 diPAP","6:2 diPAP","6:2 FTS","8:2 diPAP","8:2 FTS","EtPFOSA","EtPFOSAA","MePFOSA","MePFOSAA","PFBA","PFBS","PFDA","PFECHS","PFHpA","PFHpS","PFHxA","PFHxDA","PFHxS","PFNA","PFNS","PFOA","PFODA","PFOS","PFOSAA","PFPeA","PFPeS","totale colibacteri\u00ebn","fecale colibacteri\u00ebn","intestinale enterokokken","bodemtoestand","landgebruikscategorie_cmon","weersomstandigheden_huidig","weersomstandigheden_verleden","bodembemonstering_instrument","bewaard_bodemmonster_opslaglocatie","bewaard_bodemmonster_type_bewaring_vooraf","bewaard_bodemmonster_voorbereiding_type_droging","bodemmonster_type_verstoring","mengmonster_aantal_steken","mengmonster_staalnamepatroon","mengmonster_steek_id","mengmonster_steek_locatie","mengmonster_steken_locaties","grind_perc_steken","schelpresten_perc_steken","antropogeen_perc_steken","antropogeen_specificatie","compacte_laag_perc_steken","ijzeroerlaag_perc_steken","roest_perc_steken","landgebruik_vlaanderen","landgebruik_eunis","wetland","insporing_vertrappeling","oogstresten","begrazing","bodembedekking_landgebruiksbestand","bodembemonstering_cmon_steken_ander_landgebruik","relief_helling_aanwezigheid","relief_helling_type","relief_helling_positie","grachten","bodembemonstering_steek_niet_uitgevoerd_reden","bodembemonstering_steek_niet_uitgevoerd_locatie","bodembemonstering_steken_niet_uitgevoerd","houtskool_perc_steken","veen_perc_steken","bodembemonstering_obstakel_type","bodembemonstering_obstakel_diepte","bodembemonstering_obstakels","horizont_Ah_Ap_dikte","strooisellaag_viltlaag_dikte","strooisellaag_viltlaag_massa","watertafel_aanwezig_perc_steken","textuurmeting_laser_volumeprocent","bodemmonster_type_matrix","Gehalte wateroplosbare Chloriden","Korrelverdeling d.m.v. laserdiffractie","Korrelverdeling d.m.v. zeefproef","Korrelverdeling d.m.v. hydrometer/areometer","Grondsoort bepaald op zicht","BGGG met detail grind","BGGG zonder detail grind","Glauconietgehalte in fractie < 63\u00b5m","Glauconietgehalte in fractie > 63 \u00b5m","Glauconietgehalte in fractie 63 \u00b5m - 500 \u00b5m","Glauconietgehalte in fractie > 500 \u00b5m","Gehalte Organische stoffen","Gehalte Kalkachtige stoffen","Bepaling kleihoudendheid","Totale koolstof","Inorganische koolstof","Organische koolstof","textuur_fractie_groter_dan_2000_volumeprocent","Carba","Sulmethox","Amidotriz","Clarid","Clopi","Crota","Erytro","Ibupr","Primd","Sotal","Suldiaz","6:2 PAP","8:2 PAP","DONA","PFUnDA","PFDoDA","PFTeDA","PFTrDA","PFDoDS","HFPO-DA","PFOSA","PFDS","PFMOPrA","PFMOAA","11Cl-PF3ONS","8:2 FTUCA","PFHxSA","4H-PFUnDA","MePFBSAA","Capstone A (DPOSA)","PFUnDS","P37DMOA","PFMOBA","PFTrDS","PFOSbranched","H4PFOS","PFOStotal","PFOAbranched","PFO3OA","PFO4DA","PFOSAtotal","HPFHpA","Capstone B (CDPOS)","PFPeDA","PFOSAbranched","PFBSA","PFO2HxA","9Cl-PF3ONS","PFOAtotal","MePFBSA","11Cl-PF3OUnDS","enkelvoudig_monster_locatie","bulkdensiteit_2mm_vs_totale_volume_gemeten","materiaal_groter_dan_1cm_massaprocent","stenen_groter_dan_1000_volumeprocent","textuurmeting_laser_volumeprocent","bewaard_bodemmonster_voorbereiding_type_breken","bewaard_bodemmonster_voorbereiding_type_zeven","bewaard_bodemmonster_voorbereiding_type_malen","golflengte","nir_spectrale_absorptie","nirs","strooisellaag_viltlaag_totale_c_perc","strooisellaag_viltlaag_totale_n_perc","bodemmonster_zeefrest_2mm","meta12","Consistentiegrenzen - Plasticiteitsindex","Korrelverdeling d.m.v. bezinkingsproef","Korrelverdeling d.m.v. pipette methode","Korrelverdeling d.m.v. sedigraaf","totale_n_voorraad","strooisellaag_viltlaag_organische_c_voorraad","strooisellaag_viltlaag_totale_n_voorraad","bulkdensiteit_2mm_vs_totale_volume_gemeten_average","bulkdensiteit_totaal_gemeten_average","textuur_fractie_klei","textuur_fractie_leem","textuur_fractie_zand","PFAS (EFSA-4)","PFAS (EU DWRL-20)","EtPFOSAtotal","EtPFOSAbranched","MePFOSAtotal","MePFOSAbranched","PFHxStotal","PFHxSbranched","resultaattijd","voorbehandeling_observatie_type_bewaring","voorbehandeling_observatie_type_droging","voorbehandeling_observatie_type_breken","voorbehandeling_observatie_type_zeven","voorbehandeling_observatie_type_malen"]}}]}
+							"@value": {"type":"and","config":[{"@type":"validator","@value":{"type":"enumeration","config":["1112TCA","111TCA","1122TCA","112TCA","11DCA","11DCE","11DCPE","123TCB","123TCPA","123TMB","124TCB","124TMB","12DCA","12DCE_c","12DCE_t","12DCPA","135TCB","135TMB","13DCPA","13DCPE_cis","13DCPE_trans","1H-benzotriazole","22DCPA","245t","24d","24db","2-hydroxy-atrazine","3-ethyltolueen","4CPA","4-ethyltolueen","5ClB","5ClFenol","5-methyl-1H-benzotriazole","acenafteen","acenaftyleen","Acetamiprid","acetochlor-ESA","acetochlor-OA","aclonifen","Acrylam","Advanced Triaxiaal testing","Aeromon","%AfwijkBalans","Ag","ahch","Al","Al","Ala","alachlor-ESA","alachlor-OA","aldrin","alkaliniteit t.o.v. fenolftaleine","alkaliniteit t.o.v. methyloranje","alox","AMETRYN","AMPA","an det","anorganische_c_perc","antraceen","AOX","Areometer","As","As","Asgehalte","ASTM_code","ASTM_naam","atenolol","atraton","Atraz","atr_des","Atr_desisoprop","Au","azinfos-ethyl","azinfos-methyl","azoxystrobin","B","Ba","BAM","Ban. Schim.","Be","Benfluralin","Bentaz","Benthiavalicarb-isopropyl","Benzo(a)","benzo(a)antraceen","Benzo(a)p","benzo(a)pyreen","Benzo(b)","benzo(b)fluoranteen","Benzo(ghi)","benzo(ghi)peryleen","Benzo(k)","benzo(k)fluoranteen","beworteling_diepte","Bezafibraat","bhch","bijmenging","Bixafen","BOD","bodemgebruik","bodemgebruik_aardewerk","bodemtoestand","bodemverstoring","boor_diameter","boor_techniek","boor_type","Borneff_4","Borneff_6","Boscalid","Br","BrB","Br-CH2CH2-Br","BrO3","brom","bromofos-ethyl","bromofos-methyl","Bromoxynil","bufcap.( pH=4,4)","bufcap.( pH=8,3)","bulkdensiteit_totaal_gemeten","C6H5Cl","C6H5OH","C6H6","C7H8","Ca","caco3_gehalte","cadmium","Ca na koken","Carbamazepine","Carben","Carbet","Carbof","carbophenothion","CBrCl3","CC14 extractie","CCl4","Cd","Cd","cec_totaal","CH2Br2","CH2ClBr","CH3Br","chazr","CHBr3","CHCl2Br","CHClBr2","c_heptachloorepoxide","Chloorbromuron","Chloorethaan","Chlorantraniliprole","chlorfenvinfos-E","chlorfenvinfos-Z","Chloridaz","Chlormequat","chloroform","Chloroxur","chlorpyrifos-ethyl","chlorpyrifos-methyl","Chlortol","Chrys","chryseen","cis 1,2-dichloorethaan","cis_chlor","Cl","Clindamycine","ClO3","ClO4-","Clomazone","Clopyralid","Clostridia","Clostr per","Clostr. Sporen","Clothianidin","Clozapine","Clproph","CN","cn_ratio","Co","CO2","CO2(ag)","CO2(vrij)","CO3","COD","Col.","Colibact 44","compacte_laag","consistentie","consistentie_kleverigheid","consistentie_plasticiteit","coordinaat_bonne_e","coordinaat_bonne_n","coordinaat_bonne_s","coordinaat_bonne_w","couma","Cr","Cr","CRS","Cu","Cu","Cyana","cyclohexaan","Cyflufenamide","Cyproconazole","Cyprodinil","Cyromazin","Dchdzn","DEET","demeton-S","DESMETRYN","dhch","Diatrizoaat","diazinon","Dibenzo(ah)antraceen","dibenz(sh)antraceen","dibrclprop","Dibroommethaan","Dicam","dichlob","dichloormethaan","dichlorobenzophenone","Dichlorpr","dichlorvos","Diclofenac","dield","Difenoconazole","diflufenican","Dimethenamid","Dimethenamid-ESA","Dimethenamid-OA","dimethoate","dimethomorph-E","dimethomorph-Z","Dimetridazole","Dimoxystrobin","disulfoton","Diur","DMS","DNOC","DOC","Doorlatendheid","Doorlatendheid CV","Doorlatendheid in tx cel","Doorlatendheid VVH","Doorlatendheid VVV","drainage_aanwezig","drainage_aardewerk_doorlaatbaarheid","drainage_aardewerk_intern","drainage_aardewerk_klasse","drainage_aardewerk_oppervlakkig","droogrest","EC","EC(Lab.)","EC(Veld)","Eh\u00b0","endosulfan_I","endosulfan_II","endosulfan_sulfaat","Endrin","Entero","EpiChlo","epoxiconazole","Escherichia Coli","Ethion","Ethofum","ethoprofos","ethylbenzeen","etrimfos","exch_ca","exch_k","exch_mg","F","Fe","Fe","Fe2+","fe2o3","Fe3+","Feac.Col.","Feac.Str.","Fenan","fenantreen","Fenazon","fenitrothion","Fenoprop","Fenpropidin","Fenpropimorph","fenthion","FENURON","feox","Fe(Tot.)","flufe","Flufenacet-ESA","Flufenacet-OA","fluopicolide","Fluopyram","Fluor","fluoranteen","fluoreen","Fluoxastrobin","Fluoxetine","Fluroxypyr","flusilasole","flutolanil","flutriafol","Fluxapyroxad","fonofos","Fosthiazate","Fractie > 500 \u00b5m","Fractie <500\u00b5m & > 63\u00b5m","Fractie < 63\u00b5m","G 25\u00b0C","Gabapentine","geologische_aard_afzettingswijze_laag1","geologische_aard_afzettingswijze_laag2","geologische_aard_afzettingswijze_laag3","geologische_aard_afzettingswijze_laag4","geologische_aard_andere_kenmerken_laag1","geologische_aard_andere_kenmerken_laag2","geologische_aard_andere_kenmerken_laag3","geologische_aard_andere_kenmerken_laag4","geologische_aard_bovenliggend_laag1","geologische_aard_bovenliggend_laag2","geologische_aard_bovenliggend_laag3","geologische_aard_bovenliggend_laag4","geologische_aard_bovenliggend_laag5","geologische_aard_bovenliggend_laag6","geologische_aard_lithologie_laag1","geologische_aard_lithologie_laag2","geologische_aard_lithologie_laag3","geologische_aard_lithologie_laag4","geologische_aard_lithologie_laag5","geologische_aard_lithologie_laag6","geologische_aard_tijdperk_laag1","geologische_aard_tijdperk_laag2","geologische_aard_tijdperk_laag3","geologische_aard_tijdperk_laag4","geologische_aard_tijdperk_laag5","geologische_aard_tijdperk_laag6","ghch","Glauconiet totaal","gley_diepte","gley_roest_aantal","gley_roest_begrenzing","gley_roest_contrast","gley_roest_grootte","gley_roest_kleur_munsell_chroma","gley_roest_kleur_munsell_hue_getal","gley_roest_kleur_munsell_hue_letters","gley_roest_kleur_munsell_value","gley_roest_kleur_omschrijving","gley_roest_vorm","Glyfos","Grondsoort BGGG","Grondsoort GEO","Grondsoort uit beschrijving","H (berekend)","H (blijvende)","HCB","HCO3","Heptachloor","heptenofos","hexachloorbutadieen","Hexaz","Hg","Hg","H (HCO3)","H(tmp)","H(tot)","Hymexazole","Ibuprofen","ijzeroerlaag","Imazalil","Imazamox","Imida","Indeno","indeno(1,2,3-cd)pyreen","Iomeprol","Iopamidol","Iopromide","Ioxynil","iPB","iprodione","iP_T","Irbesartan","Isodrin","Isoprot","Isoxaben","K","K","kalkgehalte_beschrijvend","kalkreactie_hcl","kat det","Ketoprofen","Kiem(22\u00b0C)","Kiem(37\u00b0C)","Kleur","kleur_munsell","kleur_munsell_chroma_1","kleur_munsell_chroma_2","kleur_munsell_chroma_3","kleur_munsell_hue_getal_1","kleur_munsell_hue_getal_2","kleur_munsell_hue_getal_3","kleur_munsell_hue_letters_1","kleur_munsell_hue_letters_2","kleur_munsell_hue_letters_3","kleur_munsell_value_1","kleur_munsell_value_2","kleur_munsell_value_3","kleur_omschrijving","korrelvolumemassa","Kresoxim-methyl","ksat","lambda-cyhalothrin-B","Laserdiffractie","lenacil","Lidocaine","Lincomycine","Linur","Linur_mono","malathion","Mandipropamid","mcpa","mcpb","mcpp","m_DCB","Mecopr","medesfenylchloridaz","Meest losse pakking","Mesotri","meta11","meta4","meta8","meta9","METABENZ","metalaxyl","Metaldehyde","Metami","Metaza","Metconazole","Metformine","Methabenz","methidathion","Methyleenblauw","Metobro","metola","metola-ESA","metola-OA","metola-S","Metola-S-ESA","Metoprolol","Metox","metoxychlor","metribuzin","mevinphos","Mg","Mg na koken","mineralen_andere","mineralen_glauconiet","mineralen_kwarts","mineralen_mica_glimm","mineralen_opaal","mineralen_rk","mineralen_schisten","mineralen_veldspaat","Minerale Olie","Minolie","Mn","Mo","mp_x","MTBE","Na","NaCl","Naft","naftaleen","Naproxen","nB_B","NH4","Ni","Ni","Nicosulfuron","niet ion. detergenten","N(Kj)","NN","NO2","NO3","nP_B","NPOC","N-totaal","NTU","O2","o_ClT","o_DCB","OH","op_DDD","op_DDE","op_DDT","organische_c_perc","organische_c_voorraad","organische_stof","o_X","oxadia","Oxamyl","Oxyd. (O2)","P","P2O5","PAK-tot","Paracetamol","parathion-ethyl","parathion-methyl","Path.Staph.","Pb","Pb","PCB 101","PCB 118","PCB 138","PCB 153","PCB 180","PCB 28","PCB 52","p_ClT","p_DCB","PE","pendimethalin","Pentoxifylline","Per","pest-tot","Pethoxamide","pH","ph_cacl2","ph_h2o","pH in situ","ph_kcl","pH(Lab.)","pHs","pH(Veld)","pirimicarb","pirimiphos-methyl","p-isopropyltolueen","PO4","PO4(Tot.)","pp_DDD","pp_DDE","pp_DDT","proefvlak_diepte","Prometr","Propachlor-ESA","PropaCl","Propamocarb","Propan","Propaz","propham","Propranolol","Propyzamide","prosulfocarb","pseudomonas aeruginosa","P-totaal","Pymetrozine","Pyraclostrobin","pyreen","pyrimethanil","Quinmerac","quintozene","reductie","Reflectiviteit","relief_aard","relief_expositie","relief_helling_enkelvoudig","relief_helling_lengte_geschat","relief_helling_meervoudig","relief_helling_vorm","relief_landvorm","relief_microrelief","relief_situering","Reuk","roest","S","Samendrukking","Saturatie Index","Sb","sB_B","schelpresten","Schuifweerstand","Schuifweerstand CD","Schuifweerstand CU","Schuifweerstand UU","Schuifweerstand UU","Vrije prismaproef","Se","Sebu","Si","Simaz","SiO2","Smaak","Sn","SO4","SomAN","SomIONEN","SomKAT","sorptie_min_fractie","sorptie_org_fractie","sorptie_totaal","sorptie_totaal_hcl","sorptie_totaal_nh4cl","sorptie_verzadigingsgraad","Sotalol","Spiroxamine","Sr","ssra","Standaard proctorproef","StartTemperatuur","stenen","structuur_gradatie_aardewerk","structuur_gradatie_fao","structuur_grootteklasse_aardewerk","structuur_grootteklasse_fao","structuur_type_aardewerk","structuur_type_fao","styreen","Sulcotrione","Sulfamethoxazole","T","TA","TAC","TAM","TAP","tB_B","TCB-tot","t_chlordaan","TDS","tebuconazole","Tecnazene","telodrin","Temp.","Temperatuur","temp_bodem","temp_corr","Temp(lucht)","TempTP-Geleidbaarh","TempTP-O2","TempTP-pH","temp_water","Terbu","Terbu_des","terbufos","Terbutryn","tetrachloormethaan","Tetrahydrofuraan","textuur_fractie_groter_dan_2000","textuur_granulometrisch_bodemkaart","textuur_granulometrisch_bodemkartering_met_Zg","textuur_granulometrisch_gedetailleerd","textuur_mediaan","textuurmeting","textuur_palpatie_bodemkartering","textuur_palpatie_fout_groter_dan_5_procent","textuur_palpatie_gedetailleerd","textuur_palpatie_mtr","textuur_procent_org_mat_h2o2","textuur_type_zand","Tha","t_heptachloorepoxide","Thiabendazole","Thiacloprid","Thiamethoxam","Thiophanate-methyl","THM-tot","Ti","TOC","tolchlophos-methyl","Topramezone","totaal BTEX","totale_c_perc","totale_n_perc","Tramadol","Tri","Triallate","triazoph","trichlorpyr","tri en tetra","Triflox","trifluralin","Trimethoprim","Troebelheid","ttc","Consistentiegrenzen - Uitrolgrens","V","VC","vegetatie","vegetatie","Verassingresten/600","Verdampingsresten/105","Versterkte proctorproef","Vinproef","VIS","Consistentiegrenzen - Vloeigrens","Vluchtige bestanddelen","VOC1","vocht_gradatie","vocht_gradatie_archeologie","vocht_gravimetrisch","vocht_luchtdroge_grond","Vochtspanning","vocht_volumetrisch","volumemassa nat","Volumetrisch vochtgehalte","vrij cyanide","vrije Clresten","warme KMnO4","watergehalte","watertafel","watertafel_aanwezig","watertafel_ghg","watertafel_glg","weersomstandigheden","weersomstandigheden_huidig_fao","weersomstandigheden_verleden_fao","wormgang_diepte","xylenen","Zeving","Zn","Zn","Zwavelgehalte","Zwelproef","Zwevende stoffen/105","Zwevende stoffen/600","U","La","10:2 FTS","4:2 FTS","6:2/8:2 diPAP","6:2 diPAP","6:2 FTS","8:2 diPAP","8:2 FTS","EtPFOSA","EtPFOSAA","MePFOSA","MePFOSAA","PFBA","PFBS","PFDA","PFECHS","PFHpA","PFHpS","PFHxA","PFHxDA","PFHxS","PFNA","PFNS","PFOA","PFODA","PFOS","PFOSAA","PFPeA","PFPeS","totale colibacteri\u00ebn","fecale colibacteri\u00ebn","intestinale enterokokken","bodemtoestand","landgebruikscategorie_cmon","weersomstandigheden_huidig","weersomstandigheden_verleden","bodembemonstering_instrument","bewaard_bodemmonster_opslaglocatie","bewaard_bodemmonster_type_bewaring_vooraf","bewaard_bodemmonster_voorbereiding_type_droging","bodemmonster_type_verstoring","mengmonster_aantal_steken","mengmonster_staalnamepatroon","mengmonster_steek_id","mengmonster_steek_locatie","mengmonster_steken_locaties","grind_perc_steken","schelpresten_perc_steken","antropogeen_perc_steken","antropogeen_specificatie","compacte_laag_perc_steken","ijzeroerlaag_perc_steken","roest_perc_steken","landgebruik_vlaanderen","landgebruik_eunis","wetland","insporing_vertrappeling","oogstresten","begrazing","bodembedekking_landgebruiksbestand","bodembemonstering_cmon_steken_ander_landgebruik","relief_helling_aanwezigheid","relief_helling_type","relief_helling_positie","grachten","bodembemonstering_steek_niet_uitgevoerd_reden","bodembemonstering_steek_niet_uitgevoerd_locatie","bodembemonstering_steken_niet_uitgevoerd","houtskool_perc_steken","veen_perc_steken","bodembemonstering_obstakel_type","bodembemonstering_obstakel_diepte","bodembemonstering_obstakels","horizont_Ah_Ap_dikte","strooisellaag_viltlaag_dikte","strooisellaag_viltlaag_massa","watertafel_aanwezig_perc_steken","textuurmeting_laser_volumeprocent","bodemmonster_type_matrix","Gehalte wateroplosbare Chloriden","Korrelverdeling d.m.v. laserdiffractie","Korrelverdeling d.m.v. zeefproef","Korrelverdeling d.m.v. hydrometer/areometer","Grondsoort bepaald op zicht","BGGG met detail grind","BGGG zonder detail grind","Glauconietgehalte in fractie < 63\u00b5m","Glauconietgehalte in fractie > 63 \u00b5m","Glauconietgehalte in fractie 63 \u00b5m - 500 \u00b5m","Glauconietgehalte in fractie > 500 \u00b5m","Gehalte Organische stoffen","Gehalte Kalkachtige stoffen","Bepaling kleihoudendheid","Totale koolstof","Inorganische koolstof","Organische koolstof","textuur_fractie_groter_dan_2000_volumeprocent","Carba","Sulmethox","Amidotriz","Clarid","Clopi","Crota","Erytro","Ibupr","Primd","Sotal","Suldiaz","6:2 PAP","8:2 PAP","DONA","PFUnDA","PFDoDA","PFTeDA","PFTrDA","PFDoDS","HFPO-DA","PFOSA","PFDS","PFMOPrA","PFMOAA","11Cl-PF3ONS","8:2 FTUCA","PFHxSA","4H-PFUnDA","MePFBSAA","Capstone A (DPOSA)","PFUnDS","P37DMOA","PFMOBA","PFTrDS","PFOSbranched","H4PFOS","PFOStotal","PFOAbranched","PFO3OA","PFO4DA","PFOSAtotal","HPFHpA","Capstone B (CDPOS)","PFPeDA","PFOSAbranched","PFBSA","PFO2HxA","9Cl-PF3ONS","PFOAtotal","MePFBSA","11Cl-PF3OUnDS","enkelvoudig_monster_locatie","bulkdensiteit_2mm_vs_totale_volume_gemeten","materiaal_groter_dan_1cm_massaprocent","stenen_groter_dan_1000_volumeprocent","textuurmeting_laser_volumeprocent","bewaard_bodemmonster_voorbereiding_type_breken","bewaard_bodemmonster_voorbereiding_type_zeven","bewaard_bodemmonster_voorbereiding_type_malen","golflengte","nir_spectrale_absorptie","nirs","strooisellaag_viltlaag_totale_c_perc","strooisellaag_viltlaag_totale_n_perc","bodemmonster_zeefrest_2mm","meta12","Consistentiegrenzen - Plasticiteitsindex","Korrelverdeling d.m.v. bezinkingsproef","Korrelverdeling d.m.v. pipette methode","Korrelverdeling d.m.v. sedigraaf","totale_n_voorraad","strooisellaag_viltlaag_organische_c_voorraad","strooisellaag_viltlaag_totale_n_voorraad","bulkdensiteit_2mm_vs_totale_volume_gemeten_average","bulkdensiteit_totaal_gemeten_average","textuur_fractie_klei","textuur_fractie_leem","textuur_fractie_zand","PFAS (EFSA-4)","PFAS (EU DWRL-20)","EtPFOSAtotal","EtPFOSAbranched","MePFOSAtotal","MePFOSAbranched","PFHxStotal","PFHxSbranched","Bepaling kleihoudendheid in fractie 0-0.125 mm","Bepaling kleihoudendheid in fractie 0-2 mm","Grondsoort RIG","resultaattijd","voorbehandeling_observatie_type_bewaring","voorbehandeling_observatie_type_droging","voorbehandeling_observatie_type_breken","voorbehandeling_observatie_type_zeven","voorbehandeling_observatie_type_malen"]}}]}
 
 						},
 						"xsd_elements": [],
@@ -21863,6 +21875,7 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -22025,6 +22038,7 @@
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"description": "een peil is een z-waarde, uitgedrukt in mTAW, met\n\t\t\t\thoogstens 2 cijfers na het decimaal teken. De waarde kan negatief\n\t\t\t\tzijn, voor punten die lager liggen dan het zee-niveau, vandaar dat\n\t\t\t\thet min-teken als optioneel aangeduid staat.\n\t\t\t\n",
 					"constraints": {
+						"binding": "java.math.BigDecimal",
 						"has-value": true,
 						"mapping-relevant": false,
 						"validation": {
@@ -22246,18 +22260,6 @@
 					"description": "Persoonsgegevens.\n",
 					"constraints": {
 						"abstract": false,
-						"augmented-value": false,
-						"binding": "java.lang.Object",
-						"enumeration": {
-							"@type": "properties",
-							"@value": {"allowOthers":true}
-
-						},
-						"geometry-metadata": {
-							"@type": "properties",
-							"@value": {"dimension":0}
-
-						},
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -22270,8 +22272,7 @@
 							"description": "familienaam van de persoon\n",
 							"constraints": {
 								"cardinality": "1..1",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 446
@@ -22282,8 +22283,7 @@
 							"description": "voornaam van de persoon\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 446
@@ -22294,8 +22294,7 @@
 							"description": "telefoonnummer van de persoon\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 446
@@ -22306,8 +22305,7 @@
 							"description": "email adres van de persoon\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 446
@@ -22318,8 +22316,7 @@
 							"description": "GSM nummer van de persoon\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 446
@@ -23442,6 +23439,7 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"description": "de mogelijke types van referentiepunt\n",
 					"constraints": {
+						"binding": "java.lang.String",
 						"enumeration": {
 							"@type": "properties",
 							"@value": {"allowOthers":false,"values":["Maaiveld","Bovenkant van de peilbuis","Bovenkant van de beschermbuis","Andere referentiepunt","Onbekend"]}
@@ -23494,6 +23492,7 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -23506,7 +23505,8 @@
 							"description": "datum van opmeten\n",
 							"constraints": {
 								"cardinality": "1..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 103
@@ -23517,7 +23517,8 @@
 							"description": "z-waarde van het referentiepunt, uitgedrukt in mTAW\n",
 							"constraints": {
 								"cardinality": "1..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 368
@@ -23528,7 +23529,8 @@
 							"description": "methode van opmeten van het referentiepunt\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 303
@@ -23539,7 +23541,8 @@
 							"description": "de mogelijke types van referentiepunt\n",
 							"constraints": {
 								"cardinality": "1..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 401
@@ -23550,7 +23553,8 @@
 							"description": "opmerkingen bij dit referentiepunt\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 352
@@ -23620,7 +23624,6 @@
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"description": "een string255 is een string veld waarvan de maximum lengte 255 karakters is.\n",
 					"constraints": {
-						"binding": "java.lang.String",
 						"has-value": true,
 						"mapping-relevant": false,
 						"validation": {
@@ -24409,7 +24412,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"location": "bundleresource://224.fwk1904467919/schemas/xml.xsd#0:0",
+								"location": "bundleresource://224.fwk534414401/schemas/xml.xsd#0:0",
 								"name": "AnonymousType",
 								"namespace": "http://www.w3.org/XML/1998/namespace/lang",
 								"constraints": {
@@ -24462,6 +24465,7 @@
 					"description": "secundaire parameters van een observatie\n",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -26380,7 +26384,6 @@
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"description": "een string100 is een string veld waarvan de maximum lengte 100 karakters is. \n",
 					"constraints": {
-						"binding": "java.lang.String",
 						"has-value": true,
 						"mapping-relevant": false,
 						"validation": {
@@ -26444,7 +26447,6 @@
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"description": "een string255 is een string veld waarvan de maximum lengte 255 karakters is.\n",
 					"constraints": {
-						"binding": "java.lang.String",
 						"has-value": true,
 						"mapping-relevant": false,
 						"validation": {
@@ -26466,7 +26468,6 @@
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"description": "een string50 is een string veld waarvan de maximum lengte 50 is.\n",
 					"constraints": {
-						"binding": "java.lang.String",
 						"has-value": true,
 						"mapping-relevant": false,
 						"validation": {
@@ -27726,7 +27727,6 @@
 					"name": "VestigingsNummerType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
-						"binding": "java.lang.String",
 						"has-value": true,
 						"mapping-relevant": false,
 						"validation": {
@@ -28088,6 +28088,7 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -28173,6 +28174,7 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,

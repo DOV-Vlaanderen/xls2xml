@@ -1,8 +1,10 @@
-import numbers
 import unittest
-import xmlschema
 import xml.etree.ElementTree as et
 from src.read_excel import read_sheets
+import xmlschema
+import re
+
+XML_SCHEMA = xmlschema.XMLSchema('https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd')
 
 
 class ValidationNode:
@@ -12,7 +14,7 @@ class ValidationNode:
         try:
             value = float(element.text)
         except ValueError:
-            value = element.text
+            value = re.sub(r'\n( )*', ' ', element.text).strip(' ')
 
         self.value = value
 
@@ -24,17 +26,19 @@ class ValidationNode:
 
         matching, indices, other_indices = self.__compare_children__(other)
 
-        return not indices and not other_indices
+        return (not indices) and (not other_indices)
 
     def __compare_children__(self, other):
-        if any(c1.tag != c2.tag for c1, c2 in zip(self.children, other.children)):
-            return False
-
         indices = set(range(len(self.children)))
         other_indices = set(range(len(other.children)))
         matching = dict()
+
+        if any(c1.tag != c2.tag for c1, c2 in zip(self.children, other.children)):
+            return matching, indices, other_indices
+
         i = 0
-        while i < len(self.children):
+        equal = True
+        while i < len(self.children) and equal:
             match = False
             child = self.children[i]
             j = 0
@@ -47,20 +51,16 @@ class ValidationNode:
                         indices.remove(i)
                         other_indices.remove(j)
                 j += 1
+            equal = equal and match
             i += 1
         return matching, indices, other_indices
 
 
 def xls2xml_test(xls_filename, xml_filename, sheets):
     valid_xml = ValidationNode(et.parse(xml_filename).getroot())
-    generated_xml = ValidationNode(read_sheets(xls_filename, sheets))
+    generated_xml = ValidationNode(read_sheets(xls_filename, sheets, XML_SCHEMA))
 
     assert valid_xml == generated_xml
-
-
-
-
-
 
 
 class BodemTemplateTest(unittest.TestCase):
@@ -73,13 +73,32 @@ class BodemTemplateTest(unittest.TestCase):
         xls2xml_test('./data/filled_templates/bodem_template_full.xlsx',
                      './data/verification_xml/bodemsite1.xml', ['bodemsite'])
 
+    def test_bodemmonster(self):
+        xls2xml_test('./data/filled_templates/bodem_template_full.xlsx',
+                     './data/verification_xml/bodemmonster1.xml', ['bodemmonster'])
+
+    def test_bodemobservatie(self):
+        xls2xml_test('./data/filled_templates/bodem_template_full.xlsx',
+                     './data/verification_xml/bodemobservatie1.xml', ['bodemobservatie'])
+
 
 class GrondwaterTemplateTest(unittest.TestCase):
 
     def test_grondwaterlocatie(self):
-        xls2xml_test('./data/filled_templates/bodem_template_full.xlsx',
-                     './data/verification_xml/bodemlocatie1.xml', ['bodemlocatie'])
+        xls2xml_test('./data/filled_templates/grondwater_template_full.xlsx',
+                     './data/verification_xml/grondwaterlocatie1.xml', ['grondwaterlocatie'])
 
+    def test_filter(self):
+        xls2xml_test('./data/filled_templates/grondwater_template_full.xlsx',
+                     './data/verification_xml/filter1.xml', ['filter'])
+
+    def test_filtermeting(self):
+        xls2xml_test('./data/filled_templates/grondwater_template_full.xlsx',
+                     './data/verification_xml/filtermeting1.xml', ['filtermeting'])
+
+    def test_filterdebietmeter(self):
+        xls2xml_test('./data/filled_templates/grondwater_template_full.xlsx',
+                     './data/verification_xml/filterdebietmeter1.xml', ['filterdebietmeter'])
 
 
 if __name__ == '__main__':
