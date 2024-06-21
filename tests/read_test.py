@@ -85,6 +85,12 @@ class BodemTemplateTest(unittest.TestCase):
         xls2xml_test('./data/filled_templates/bodem_template_full.xlsx',
                      './data/verification_xml/bodemobservatie1.xml', ['bodemobservatie'])
 
+    def test_bodemlocatieclassificatie(self):
+        xls2xml_test('./data/filled_templates/bodem_template_full.xlsx',
+                     './data/verification_xml/bodemlocatieclassificatie1.xml', ['bodemlocatieclassificatie'])
+    def test_bodemkundigeopbouw(self):
+        xls2xml_test('./data/filled_templates/bodem_template_full.xlsx',
+                     './data/verification_xml/bodemkundigeopbouw1.xml', ['bodemkundigeopbouw'])
 
 class GrondwaterTemplateTest(unittest.TestCase):
 
