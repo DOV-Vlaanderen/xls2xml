@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns4:dov-schema xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns4="http://kern.schemas.dov.vlaanderen.be" xsi:schemaLocation="http://kern.schemas.dov.vlaanderen.be https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd">
+<ns4:dov-schema xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:ns4="http://kern.schemas.dov.vlaanderen.be"
+                xsi:schemaLocation="http://kern.schemas.dov.vlaanderen.be https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd">
     <filtermeting>
         <grondwaterlocatie>Gent-Noendries-04</grondwaterlocatie>
         <filter>
@@ -64,17 +66,6 @@
             <zoet>O</zoet>
             <betrouwbaarheid>goed</betrouwbaarheid>
         </peilmeting>
-        <onderkant_peilbuis>
-            <datum>2022-03-08</datum>
-            <diepte_tov_referentiepunt>6.09</diepte_tov_referentiepunt>
-            <peil_mtaw>3.14</peil_mtaw>
-            <methode>peillint</methode>
-            <filtertoestand>1</filtertoestand>
-            <filterstatus>onbekend</filterstatus>
-            <zoet>O</zoet>
-            <betrouwbaarheid>onbekend</betrouwbaarheid>
-            <beveiliging>publiek</beveiliging>
-        </onderkant_peilbuis>
         <peilmeting>
             <datum>2024-02-13</datum>
             <diepte_tov_referentiepunt>1.67</diepte_tov_referentiepunt>
@@ -101,12 +92,23 @@
             <zoet>O</zoet>
             <betrouwbaarheid>goed</betrouwbaarheid>
             <opmerking>
-                <tekst>Veldmeting: 170cm onder top buis.  // </tekst>
+                <tekst>Veldmeting: 170cm onder top buis. //</tekst>
                 <auteur>
                     <naam>Vincent Van De Maele</naam>
                 </auteur>
                 <datum>2024-04-11</datum>
             </opmerking>
         </peilmeting>
+        <onderkant_peilbuis>
+            <datum>2022-03-08</datum>
+            <diepte_tov_referentiepunt>6.09</diepte_tov_referentiepunt>
+            <peil_mtaw>3.14</peil_mtaw>
+            <methode>peillint</methode>
+            <filtertoestand>1</filtertoestand>
+            <filterstatus>onbekend</filterstatus>
+            <zoet>O</zoet>
+            <betrouwbaarheid>onbekend</betrouwbaarheid>
+            <beveiliging>publiek</beveiliging>
+        </onderkant_peilbuis>
     </filtermeting>
 </ns4:dov-schema>

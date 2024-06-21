@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns4:dov-schema xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns4="http://kern.schemas.dov.vlaanderen.be" xsi:schemaLocation="http://kern.schemas.dov.vlaanderen.be https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd">
+<ns4:dov-schema xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:ns4="http://kern.schemas.dov.vlaanderen.be"
+                xsi:schemaLocation="http://kern.schemas.dov.vlaanderen.be https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd">
     <bodemlocatie>
         <naam>CN_247121_2021</naam>
         <dataidentifier>
@@ -52,5 +54,169 @@
         <ref_bodemsite>
             <naam>CN_247121</naam>
         </ref_bodemsite>
+    </bodemlocatie>
+    <bodemlocatie>
+        <naam>CN_236084_2021</naam>
+        <dataidentifier>
+            <permkey>2021-033298</permkey>
+            <uri>https://www.dov.vlaanderen.be/data/bodemlocatie/2021-033298</uri>
+        </dataidentifier>
+        <type>BOR</type>
+        <waarnemingsdatum>2021-04-03</waarnemingsdatum>
+        <invoerdatum>2023-09-29</invoerdatum>
+        <doel>CHEM_FYS</doel>
+        <ligging>
+            <beginpunt>
+                <xy>
+                    <x>118635.62</x>
+                    <y>178429.49</y>
+                    <betrouwbaarheid>goed</betrouwbaarheid>
+                    <methode_opmeten>gedigitaliseerd op orthofoto</methode_opmeten>
+                    <origine_opmeten>
+                        <naam>Deelnemers citizen science project</naam>
+                    </origine_opmeten>
+                </xy>
+                <maaiveld>
+                    <waarde>36.65</waarde>
+                    <betrouwbaarheid>goed</betrouwbaarheid>
+                    <methode_opmeten>DHM_v2</methode_opmeten>
+                    <origine_opmeten>
+                        <naam>Departement Omgeving</naam>
+                    </origine_opmeten>
+                </maaiveld>
+            </beginpunt>
+            <bodemstreek>ZLS</bodemstreek>
+            <bodemdistrict>Schelde-Dender Interfluvium</bodemdistrict>
+            <landbouwstreek>Zandleemstreek</landbouwstreek>
+            <bodemkaartblad>71W</bodemkaartblad>
+            <beschrijving>Curieuzeneuzen: meetpunt (gazondolk) in een particuliere tuin</beschrijving>
+        </ligging>
+        <status>publiek</status>
+        <dataleverancier>
+            <bedrijf>
+                <naam>Universiteit Antwerpen</naam>
+            </bedrijf>
+        </dataleverancier>
+        <auteur>
+            <bedrijf>
+                <naam>Universiteit Antwerpen</naam>
+            </bedrijf>
+        </auteur>
+        <opdracht>Curieuzeneuzen in de tuin 2021</opdracht>
+        <opdracht>Curieuzeneuzen in de tuin</opdracht>
+        <ref_bodemsite>
+            <naam>CN_236084</naam>
+        </ref_bodemsite>
+    </bodemlocatie>
+    <bodemlocatie>
+        <naam>KART_OPP_085E/010</naam>
+        <dataidentifier>
+            <permkey>1972-016080</permkey>
+            <uri>https://www.dov.vlaanderen.be/data/bodemlocatie/1972-016080</uri>
+        </dataidentifier>
+        <type>BOR</type>
+        <waarnemingsdatum>1972-01-01</waarnemingsdatum>
+        <invoerdatum>2019-10-12</invoerdatum>
+        <doel>BOD_KART</doel>
+        <educatieve_waarde>OK</educatieve_waarde>
+        <ligging>
+            <beginpunt>
+                <xy>
+                    <x>111017.00</x>
+                    <y>177188.00</y>
+                    <betrouwbaarheid>goed</betrouwbaarheid>
+                    <methode_opmeten>gedigitaliseerd op POPP-kaart</methode_opmeten>
+                    <origine_opmeten>
+                        <naam>Centrum voor Grondonderzoek (C.V.G.)</naam>
+                    </origine_opmeten>
+                </xy>
+                <maaiveld>
+                    <waarde>-9999.00</waarde>
+                    <betrouwbaarheid>onbekend</betrouwbaarheid>
+                    <methode_opmeten>niet te achterhalen</methode_opmeten>
+                    <origine_opmeten>
+                        <naam>onbekend</naam>
+                    </origine_opmeten>
+                </maaiveld>
+            </beginpunt>
+            <bodemstreek>ZLS</bodemstreek>
+            <bodemdistrict>Schelde-Dender Interfluvium</bodemdistrict>
+            <landbouwstreek>Zandleemstreek</landbouwstreek>
+            <bodemkaartblad>85E</bodemkaartblad>
+        </ligging>
+        <status>publiek</status>
+        <auteur>
+            <bedrijf>
+                <naam>Centrum voor Grondonderzoek (C.V.G.)</naam>
+            </bedrijf>
+        </auteur>
+        <opdracht>Bodemkaartblad 085E Belgische bodemkartering</opdracht>
+        <opdracht>Bodemprofielen en oppervlaktemonsters Belgische bodemkartering</opdracht>
+    </bodemlocatie>
+    <bodemlocatie>
+        <naam>ARCH_2017D9_P2</naam>
+        <dataidentifier>
+            <permkey>2017-018269</permkey>
+            <uri>https://www.dov.vlaanderen.be/data/bodemlocatie/2017-018269</uri>
+        </dataidentifier>
+        <type>PROF</type>
+        <waarnemingsdatum>2017-04-21</waarnemingsdatum>
+        <invoerdatum>2022-03-02</invoerdatum>
+        <doel>ARCHPP</doel>
+        <ligging>
+            <beginpunt>
+                <xy>
+                    <x>58987.74</x>
+                    <y>185777.55</y>
+                    <betrouwbaarheid>goed</betrouwbaarheid>
+                    <methode_opmeten>GPS - RTK FLEPOS (nk 2-3cm)</methode_opmeten>
+                    <origine_opmeten>
+                        <naam>GATE</naam>
+                    </origine_opmeten>
+                </xy>
+                <maaiveld>
+                    <waarde>32.01</waarde>
+                    <betrouwbaarheid>goed</betrouwbaarheid>
+                    <methode_opmeten>GPS - RTK FLEPOS</methode_opmeten>
+                    <origine_opmeten>
+                        <naam>GATE</naam>
+                    </origine_opmeten>
+                </maaiveld>
+            </beginpunt>
+            <eindpunt>
+                <xy>
+                    <x>58988.05</x>
+                    <y>185776.38</y>
+                    <betrouwbaarheid>goed</betrouwbaarheid>
+                    <methode_opmeten>GPS - RTK FLEPOS (nk 2-3cm)</methode_opmeten>
+                    <origine_opmeten>
+                        <naam>GATE</naam>
+                    </origine_opmeten>
+                </xy>
+                <maaiveld>
+                    <waarde>31.99</waarde>
+                    <betrouwbaarheid>goed</betrouwbaarheid>
+                    <methode_opmeten>GPS - RTK FLEPOS</methode_opmeten>
+                    <origine_opmeten>
+                        <naam>GATE</naam>
+                    </origine_opmeten>
+                </maaiveld>
+            </eindpunt>
+            <bodemstreek>ZLS</bodemstreek>
+            <bodemdistrict>Polder-Leie Interfluvium</bodemdistrict>
+            <landbouwstreek>Zandleemstreek</landbouwstreek>
+            <bodemkaartblad>67E</bodemkaartblad>
+        </ligging>
+        <status>publiek</status>
+        <auteur>
+            <persoon>
+                <naam>Vergauwe</naam>
+                <voornaam>Ruben</voornaam>
+            </persoon>
+            <bedrijf>
+                <naam>GATE</naam>
+            </bedrijf>
+        </auteur>
+        <opdracht>Vooronderzoek Hooglede Hooglede Akkerstraat</opdracht>
     </bodemlocatie>
 </ns4:dov-schema>
