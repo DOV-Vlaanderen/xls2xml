@@ -24,7 +24,7 @@ class ValidationNode:
         if (self.tag != other.tag) or (self.value != other.value):
             return False
 
-        matching, indices, other_indices = self.__compare_children__(other)
+        _, indices, other_indices = self.__compare_children__(other)
 
         return (not indices) and (not other_indices)
 
