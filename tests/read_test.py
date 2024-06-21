@@ -10,6 +10,7 @@ class ValidationNode:
     def __init__(self, element):
         self.tag = element.tag
         try:
+            print(element.tag, element.text)
             value = float(element.text)
         except ValueError:
             value = element.text
@@ -101,6 +102,11 @@ class GeologieTemplateTest(unittest.TestCase):
     def test_grondmonster(self):
         xls2xml_test('./data/filled_templates/geologie_template_full.xlsx',
                      './data/verification_xml/grondmonster1.xml', ['grondmonster'])
+class OpdrachtTemplateTest(unittest.TestCase):
+
+    def test_opdracht(self):
+        xls2xml_test('./data/filled_templates/opdracht_template_full.xlsx',
+                     './data/verification_xml/opdracht1.xml', ['opdracht'])
 
 if __name__ == '__main__':
     unittest.main()
