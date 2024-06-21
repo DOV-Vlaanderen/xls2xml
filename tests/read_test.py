@@ -17,6 +17,8 @@ class ValidationNode:
             value = float(element.text)
         except ValueError:
             value = re.sub(r'\n( )*', ' ', element.text).strip(' ')
+        except TypeError:
+            value = None
 
         self.value = value
 

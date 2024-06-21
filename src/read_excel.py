@@ -73,7 +73,7 @@ def clean_data(data, schema_node):
                    'java.math.BigDecimal': lambda x: float(x),
                    'java.lang.Double': lambda x: float(x),
                    'java.lang.String': lambda x: str(x),
-                   'java.net.URI':lambda x: str(x)
+                   'java.net.URI': lambda x: str(x)
                    }
 
         bindings = [restriction['binding'] for restriction in schema_node.constraints if 'binding' in restriction]
@@ -199,6 +199,8 @@ def data_node_to_json(data_node, schema_node):
     """
 
     if not schema_node.children:
+        if data_node.data[0] == 'empty_field':
+            return [None]
         return data_node.data
     assert not (schema_node.children and data_node.data), 'Undefined behaviour!'
     json_dict = dict()

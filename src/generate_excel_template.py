@@ -246,7 +246,7 @@ def create_xls(filename, sheets, root, hide_non_priority=True, beschrijving_conf
                     worksheet.data_validation(bottom_header_index + 1, data.col_range[0], 1000000, data.col_range[0], {
                         'validate': 'date',
                         'criteria': '>',
-                        'minimum': date(1900, 1, 1)
+                        'minimum': date(1500, 1, 1)
                     })
 
                 if data.code_lijst:

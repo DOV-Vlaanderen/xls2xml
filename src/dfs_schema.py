@@ -175,7 +175,7 @@ def create_dfs_schema(node, old_node: Node = None) -> Node:
     """
 
     if not old_node:
-        if 'choice' in node['constraints'] and node['constraints']["choice"]:
+        if ('choice' in node['constraints'] and node['constraints']["choice"]) or node['name'] == 'InterpretatiesType':
             current_node = ChoiceNode()
         elif node['name'].startswith('sequence'):
             current_node = SequenceNode()
