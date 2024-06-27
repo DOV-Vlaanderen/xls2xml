@@ -101,7 +101,6 @@ def get_identifiers(node, current_lijst, identifiers):
 
     relevant_children = [c for c in node.children if c.max_amount <= 1]
 
-
     for c in relevant_children:
         current_lijst.append(c.name)
         if not c.children:
@@ -273,7 +272,7 @@ def write_xml(xml, filename):
         filename (str): Path to the output file.
     """
 
-    with open(filename, 'w') as f:
+    with open(filename, 'w', encoding="utf-8") as f:
         f.write('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n')
         f.write(xmlschema.etree_tostring(xml))
 
