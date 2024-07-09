@@ -166,6 +166,14 @@ def get_excel_format_data(xls_root):
 
 
 def initialize_config(beschrijving_config, header_config, priority_config):
+
+    global header_convertor
+    global codelijst_beschrijvingen
+    global priority_columns
+    header_convertor = configparser.ConfigParser()
+    codelijst_beschrijvingen = configparser.ConfigParser()
+    priority_columns = defaultdict(list)
+
     if beschrijving_config is not None:
         codelijst_beschrijvingen.read(beschrijving_config)
 
@@ -223,7 +231,7 @@ def create_xls(filename, sheets, root, hide_non_priority=True, beschrijving_conf
                     worksheet.set_column(data.col_range[0], data.col_range[1], len(data.data) * 2,
                                          date_format if data.data_type == "java.sql.Date" else None,
                                          {'hidden': (data.data not in priority_columns[
-                                             sheet] and not data.mandatory) and hide_non_priority})
+                                             sheet]) and hide_non_priority})
 
 
 

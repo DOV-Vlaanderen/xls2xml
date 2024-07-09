@@ -73,8 +73,8 @@ def clean_data(data, schema_node):
                    'java.math.BigDecimal': lambda x: float(x),
                    'java.lang.Double': lambda x: float(x),
                    'java.lang.String': lambda x: str(x),
-                   'java.net.URI': lambda x: str(x)
-                   }
+                   'java.net.URI': lambda x: str(x),
+                   'java.sql.Time': lambda x: x.strftime("%H:%M:%S")}
 
         bindings = [restriction['binding'] for restriction in schema_node.constraints if 'binding' in restriction]
         if bindings:
@@ -82,7 +82,9 @@ def clean_data(data, schema_node):
                 data = cleaner[bindings[0]](data)
             except KeyError:
                 print(bindings[0])
-                raise NotImplementedError
+                raise NotImplementedError(f'{data} in node {schema_node} has {bindings[0]}')
+            except AttributeError:
+                raise AttributeError(f'{data} in node {schema_node} is not {bindings[0]}')
 
         return data
 
@@ -294,4 +296,5 @@ if __name__ == '__main__':
     sheets = ["opdracht", "grondwaterlocatie", "filter", "filtermeting", "bodemlocatie", "bodemmonster",
               "bodemobservatie"]
 
-    read_to_xml('../tests/data/filled_templates/bodem_template_full.xlsx', '../dist/dev.xml', sheets)
+    # read_to_xml('../tests/data/filled_templates/bodem_template_full.xlsx', '../dist/dev.xml', sheets)
+    read_to_xml('../data_voorbeeld/template_full_tulpenhof.xlsx', '../dist/tulpenhof.xml', sheets)
