@@ -124,14 +124,11 @@ def excel_dfs(current_node, current_lijst, column, sheet_data, choices_made, is_
         header_data.data = '-'.join(current_lijst[1:])
         header_data.choices = choices_made
         header_data.mandatory = is_needed and current_node.min_amount > 0
-        data_types = [x for x in current_node.constraints if 'binding' in x]
-        if data_types:
-            header_data.data_type = data_types[0]['binding']
-        constraints = [x['enumeration']['@value']['values'] for x in current_node.constraints if
-                       'enumeration' in x and not x['enumeration']['@value']['allowOthers']]
-        if constraints:
-            assert len(constraints) <= 1, 'Unintended behaviour!'
-            header_data.code_lijst = constraints[0]
+        if current_node.binding:
+            header_data.data_type = current_node.binding
+
+        if current_node.enum:
+            header_data.code_lijst = current_node.enum
 
     data.min_occur = current_node.min_amount
     data.row_range = (len(current_lijst) - 1, len(current_lijst) - 1)
@@ -166,7 +163,6 @@ def get_excel_format_data(xls_root):
 
 
 def initialize_config(beschrijving_config, header_config, priority_config):
-
     global header_convertor
     global codelijst_beschrijvingen
     global priority_columns
@@ -187,6 +183,123 @@ def initialize_config(beschrijving_config, header_config, priority_config):
                 priority_columns[line[0]] = line[1:]
 
 
+def get_default_formats(workbook):
+    standard_format = workbook.add_format({"bold": 1, "border": 1, "align": "left", "valign": "vcenter", })
+    date_format = workbook.add_format({'num_format': 'dd/mm/yyyy'})
+    formats = defaultdict(lambda: None)
+    formats["java.sql.Date"] = date_format
+    formats["standard"] = standard_format
+
+    return formats
+
+
+def add_table_to_codelijst_sheet(workbook, data, cell_format, last_code_lijst_index):
+    codelijst_worksheet = workbook.worksheets()[0]
+    worksheet = workbook.worksheets()[-1]
+    sheet = worksheet.name
+    standard_format = workbook.add_format({"bold": 1, "border": 1, "align": "left", "valign": "vcenter", })
+    bottom_header_index = data.row_range[0]
+
+    # Toevoegen van codelijst aan Codelijsten sheet
+
+    codelijst_worksheet.merge_range(1, 2 * last_code_lijst_index, 1, 2 * last_code_lijst_index + 1,
+                                    data.data, cell_format=standard_format)
+
+    for i, code in enumerate(data.code_lijst):
+        codelijst_worksheet.write(i + 3, 2 * last_code_lijst_index, code)
+        beschrijving = '/'
+        if f'{sheet}-{data.data}' in codelijst_beschrijvingen and code in codelijst_beschrijvingen[
+            f'{sheet}-{data.data}']:
+            beschrijving = codelijst_beschrijvingen[f'{sheet}-{data.data}'][code]
+
+        codelijst_worksheet.write(i + 3, 2 * last_code_lijst_index + 1, beschrijving)
+
+    codelijst_worksheet.add_table(2, 2 * last_code_lijst_index, 2 + len(data.code_lijst),
+                                  2 * last_code_lijst_index + 1,
+                                  {'banded_columns': True, 'banded_rows': False, 'autofilter': False,
+                                   'columns': [{'header': 'Code'},
+                                               {'header': 'Beschrijving'}]
+                                   })
+
+    # Gegevensvalidatie toevoegen
+    worksheet.data_validation(bottom_header_index + 1, data.col_range[0], 1000000, data.col_range[0], {
+        'validate': 'list',
+        'source': f"='Codelijsten'!${get_nth_col_name(2 * last_code_lijst_index)}${4}:${get_nth_col_name(2 * last_code_lijst_index)}${4 - 1 + len(data.code_lijst)}"
+    })
+
+    # link toevoegen
+
+    worksheet.write_url(data.row_range[0], data.col_range[0],
+                        f"internal:'Codelijsten'!${get_nth_col_name(2 * last_code_lijst_index)}${2}",
+                        string=data.data, cell_format=cell_format)
+
+
+def get_cell_format(data, bottom_header_index):
+    formatting = {"bold": 1, "border": 1, "align": "left", "valign": "vcenter", }
+
+    if data.row_range[0] in (0, bottom_header_index):  # Top or bottom row
+        if data.mandatory:
+            rgb = hsv_to_rgb(27 / 360, 1 / (2 ** data.choices), 1)
+            _hex = rgb_to_hex(*rgb)
+            formatting["fg_color"] = _hex
+
+    elif data.min_occur > 0:
+        formatting["fg_color"] = "#FABF8F"
+
+    return formatting
+
+
+def write_cell(data, worksheet, cell_format):
+    if data.col_range[0] != data.col_range[1]:  # Merge_cell
+        worksheet.merge_range(
+            f'{get_nth_col_name(data.col_range[0])}{data.row_range[0] + 1}:{get_nth_col_name(data.col_range[1])}{data.row_range[1] + 1}',
+            data.data, cell_format)
+
+    else:
+        worksheet.write(f'{get_nth_col_name(data.col_range[0])}{data.row_range[0] + 1}', data.data, cell_format)
+
+
+def add_sheet(workbook, sheet, xls_root, formats, hide_non_priority, last_code_lijst_index):
+    first_code_lijst_index = last_code_lijst_index
+    codelijst_worksheet = workbook.worksheets()[0]
+    worksheet = workbook.add_worksheet(sheet)
+    sheet_data = get_excel_format_data(xls_root)
+    bottom_header_index = max(d.row_range[1] for d in sheet_data)
+
+    for data in sheet_data:
+        cell_format = workbook.add_format(get_cell_format(data, bottom_header_index))
+        write_cell(data, worksheet, cell_format)
+
+        if data.row_range[0] == bottom_header_index:
+            worksheet.set_column(data.col_range[0], data.col_range[1], len(data.data) * 2,
+                                 formats[data.data_type],
+                                 {'hidden': (data.data not in priority_columns[
+                                     sheet]) and hide_non_priority})
+
+            if data.data_type == 'java.sql.Date':
+                worksheet.data_validation(bottom_header_index + 1, data.col_range[0], 1000000, data.col_range[0], {
+                    'validate': 'date',
+                    'criteria': '>',
+                    'minimum': date(1500, 1, 1)
+                })
+
+            if data.code_lijst:
+                add_table_to_codelijst_sheet(workbook, data, cell_format, last_code_lijst_index)
+                last_code_lijst_index += 1
+
+    for row in range(0, bottom_header_index):  # Hide top rows
+        worksheet.set_row(row, None, None, {'hidden': True})
+
+    # Format all tables from this sheet in the codelijst_worksheet.
+    for col in range(0, 2 * last_code_lijst_index + 1):
+        codelijst_worksheet.set_column(col, col, 10)
+
+    codelijst_worksheet.merge_range(0, 2 * first_code_lijst_index, 0, 2 * last_code_lijst_index - 1, sheet,
+                                    cell_format=formats['standard'])
+
+    return last_code_lijst_index
+
+
 def create_xls(filename, sheets, root, hide_non_priority=True, beschrijving_config='./config/beschrijvingen.ini',
                header_config='./config/header_convertor.ini', priority_config='./config/priority_columns.csv'):
     """
@@ -201,107 +314,16 @@ def create_xls(filename, sheets, root, hide_non_priority=True, beschrijving_conf
     initialize_config(beschrijving_config, header_config, priority_config)
 
     workbook = xlsxwriter.Workbook(filename)
-
     last_code_lijst_index = 0
 
-    standard_format = workbook.add_format({"bold": 1, "border": 1, "align": "left", "valign": "vcenter", })
-    date_format = workbook.add_format({'num_format': 'dd/mm/yyyy'})
+    formats = get_default_formats(workbook)
+    workbook.add_worksheet('Codelijsten')
 
-    codelijst_worksheet = workbook.add_worksheet('Codelijsten')
-
-    worksheets = []
     for sheet in sheets:
-        first_code_lijst_index = last_code_lijst_index
-        worksheet = workbook.add_worksheet(sheet)
-        worksheets.append(worksheet)
         xls_root = root.get_specific_child(sheet)
-        sheet_data = get_excel_format_data(xls_root)
-        bottom_header_index = max(d.row_range[1] for d in sheet_data)
+        last_code_lijst_index = add_sheet(workbook, sheet, xls_root, formats, hide_non_priority, last_code_lijst_index)
 
-        for data in sheet_data:
-            formatting = {"bold": 1, "border": 1, "align": "left", "valign": "vcenter", }
-
-            if data.row_range[0] in (0, bottom_header_index):
-                if data.mandatory:
-                    rgb = hsv_to_rgb(27 / 360, 1 / (2 ** data.choices), 1)
-                    _hex = rgb_to_hex(*rgb)
-                    formatting["fg_color"] = _hex
-
-                if data.row_range[0] == 0:
-                    worksheet.set_column(data.col_range[0], data.col_range[1], len(data.data) * 2,
-                                         date_format if data.data_type == "java.sql.Date" else None,
-                                         {'hidden': (data.data not in priority_columns[
-                                             sheet]) and hide_non_priority})
-
-
-
-
-
-            elif data.min_occur > 0:
-                formatting["fg_color"] = "#FABF8F"
-            cell_format = workbook.add_format(formatting)
-
-            if data.col_range[0] != data.col_range[1]:
-                worksheet.merge_range(
-                    f'{get_nth_col_name(data.col_range[0])}{data.row_range[0] + 1}:{get_nth_col_name(data.col_range[1])}{data.row_range[0] + 1}',
-                    data.data, cell_format)
-
-            else:
-                worksheet.write(f'{get_nth_col_name(data.col_range[0])}{data.row_range[0] + 1}', data.data, cell_format)
-
-            if data.row_range[0] == bottom_header_index:
-                if data.data_type == 'java.sql.Date':
-                    worksheet.data_validation(bottom_header_index + 1, data.col_range[0], 1000000, data.col_range[0], {
-                        'validate': 'date',
-                        'criteria': '>',
-                        'minimum': date(1500, 1, 1)
-                    })
-
-                if data.code_lijst:
-
-                    # Toevoegen van codelijst aan Codelijsten sheet
-
-                    codelijst_worksheet.merge_range(1, 2 * last_code_lijst_index, 1, 2 * last_code_lijst_index + 1,
-                                                    data.data, cell_format=standard_format)
-
-                    for i, code in enumerate(data.code_lijst):
-                        codelijst_worksheet.write(i + 3, 2 * last_code_lijst_index, code)
-                        beschrijving = '/'
-                        if f'{sheet}-{data.data}' in codelijst_beschrijvingen and code in codelijst_beschrijvingen[
-                            f'{sheet}-{data.data}']:
-                            beschrijving = codelijst_beschrijvingen[f'{sheet}-{data.data}'][code]
-                        codelijst_worksheet.write(i + 3, 2 * last_code_lijst_index + 1, beschrijving)
-
-                    codelijst_worksheet.add_table(2, 2 * last_code_lijst_index, 2 + len(data.code_lijst),
-                                                  2 * last_code_lijst_index + 1,
-                                                  {'banded_columns': True, 'banded_rows': False, 'autofilter': False,
-                                                   'columns': [{'header': 'Code'},
-                                                               {'header': 'Beschrijving'}]
-                                                   })
-
-                    # Gegevensvalidatie toevoegen
-                    worksheet.data_validation(bottom_header_index + 1, data.col_range[0], 1000000, data.col_range[0], {
-                        'validate': 'list',
-                        'source': f"='Codelijsten'!${get_nth_col_name(2 * last_code_lijst_index)}${4}:${get_nth_col_name(2 * last_code_lijst_index)}${4 - 1 + len(data.code_lijst)}"
-                    })
-
-                    # link toevoegen
-
-                    worksheet.write_url(data.row_range[0], data.col_range[0],
-                                        f"internal:'Codelijsten'!${get_nth_col_name(2 * last_code_lijst_index)}${2}",
-                                        string=data.data, cell_format=cell_format)
-
-                    last_code_lijst_index += 1
-
-        for row in range(0, bottom_header_index):
-            worksheet.set_row(row, None, None, {'hidden': True})
-        for col in range(0, 2 * last_code_lijst_index + 1):
-            codelijst_worksheet.set_column(col, col, 10)
-
-        codelijst_worksheet.merge_range(0, 2 * first_code_lijst_index, 0, 2 * last_code_lijst_index - 1, sheet,
-                                        cell_format=standard_format)
-
-    worksheets[0].activate()
+    workbook.worksheets()[1].activate()
     workbook.close()
 
 

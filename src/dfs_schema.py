@@ -35,7 +35,7 @@ class Node:
         self.name = None
         self.constraints = []
         self.enum = None
-        self.valid = None
+        self.binding = None
 
     def set_metadata(self, metadata: dict) -> None:
         """
@@ -63,7 +63,12 @@ class Node:
                  c['allowOthers'] == False]
 
         if enums:
-            self.enum = enums
+            self.enum = enums[0]
+
+        bindings = [restriction['binding'] for restriction in self.constraints if 'binding' in restriction]
+
+        self.binding = 'java.lang.Object' if not bindings else bindings[0]
+
 
     def __str__(self) -> str:
         return f'Node(name="{self.name}", {self.min_amount}..{self.max_amount})'
@@ -213,4 +218,5 @@ def get_dfs_schema() -> Node:
    """
     init()
     root = create_dfs_schema(TYPE_LIJST[dov_schema_id])
+
     return root

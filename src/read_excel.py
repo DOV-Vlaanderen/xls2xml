@@ -76,15 +76,15 @@ def clean_data(data, schema_node):
                    'java.net.URI': lambda x: str(x),
                    'java.sql.Time': lambda x: x.strftime("%H:%M:%S")}
 
-        bindings = [restriction['binding'] for restriction in schema_node.constraints if 'binding' in restriction]
-        if bindings:
+        binding = schema_node.binding
+        if binding:
             try:
-                data = cleaner[bindings[0]](data)
+                data = cleaner[binding](data)
             except KeyError:
-                print(bindings[0])
-                raise NotImplementedError(f'{data} in node {schema_node} has {bindings[0]}')
+                print(binding)
+                raise NotImplementedError(f'{data} in node {schema_node} has {binding}')
             except AttributeError:
-                raise AttributeError(f'{data} in node {schema_node} is not {bindings[0]}')
+                raise AttributeError(f'{data} in node {schema_node} is not {binding}')
 
         return data
 
@@ -256,6 +256,7 @@ def read_sheets(filename, sheets, xml_schema=None):
             print(f'No {sheet} sheet found.')
 
     data_root.delete_empty()
+
     json_dict = data_node_to_json(data_root, root)[0]
 
     if xml_schema is None:
@@ -296,5 +297,5 @@ if __name__ == '__main__':
     sheets = ["opdracht", "grondwaterlocatie", "filter", "filtermeting", "bodemlocatie", "bodemmonster",
               "bodemobservatie"]
 
-    # read_to_xml('../tests/data/filled_templates/bodem_template_full.xlsx', '../dist/dev.xml', sheets)
-    read_to_xml('../data_voorbeeld/template_full_tulpenhof.xlsx', '../dist/tulpenhof.xml', sheets)
+    # read_to_xml('../tests/data/filled_templates/bodem_template_full2.xlsx', '../dist/dev.xml', sheets)
+    read_to_xml('../data_voorbeeld/demo_template.xlsx', '../dist/demo.xml', sheets)
