@@ -36,6 +36,7 @@ class Node:
         self.constraints = []
         self.enum = None
         self.binding = None
+        self.priority = None
 
     def set_metadata(self, metadata: dict) -> None:
         """

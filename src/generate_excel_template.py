@@ -1,3 +1,4 @@
+import datetime
 from collections import defaultdict
 import xlsxwriter
 from colorsys import hsv_to_rgb
@@ -10,7 +11,7 @@ header_convertor = configparser.ConfigParser()
 codelijst_beschrijvingen = configparser.ConfigParser()
 
 # Initialize defaultdict for priority columns
-priority_columns = defaultdict(list)
+priority_columns = configparser.ConfigParser()
 
 
 class ExcelData:
@@ -27,6 +28,7 @@ class ExcelData:
         self.mandatory = False
         self.min_occur = 0
         self.choices = 0
+        self.priority = None
 
     def __repr__(self):
         return f"ExcelData[{self.data}]"
@@ -48,8 +50,32 @@ class ExcelData:
         copy_data.mandatory = self.mandatory
         copy_data.min_occur = self.min_occur
         copy_data.choices = self.choices
+        copy_data.priority = self.priority
 
         return copy_data
+
+
+def fill_priority(current_node, previous_names, convertor):
+    previous_names.append(current_node.name)
+    if current_node.children:
+        priorities = []
+        for child in current_node.children:
+            priorities.append(fill_priority(child, previous_names, convertor))
+        current_node.priority = min(priorities)
+
+    else:
+        current_node.priority = convertor['-'.join(previous_names[1:]).lower()]
+    del previous_names[-1]
+
+    if isinstance(current_node, ChoiceNode):
+        assert not (current_node.priority[0] < 4 and all(
+            c.priority[0] >= 4 for c in current_node.children if c.min_amount > 0) and [c for c in current_node.children
+                                                                                        if
+                                                                                        c.min_amount > 0]), 'Removed a node that is necessary for its parent!'
+    else:
+        assert not (current_node.priority[0] < 4 and any(c.priority[0] >= 4 and c.min_amount > 0 for c in
+                                                         current_node.children)), 'Removed a node that is necessary for its parent!'
+    return current_node.priority
 
 
 def rgb_to_hex(r, g, b):
@@ -110,10 +136,11 @@ def excel_dfs(current_node, current_lijst, column, sheet_data, choices_made, is_
     length = 0
     data = ExcelData()
 
-    for child in sorted(current_node.children, key=lambda x: -x.min_amount):
-        length += excel_dfs(child, current_lijst, column + length, sheet_data,
-                            choices_made + int(isinstance(current_node, ChoiceNode)),
-                            (is_needed and current_node.min_amount > 0) or first)
+    for child in sorted(current_node.children, key=lambda x: (-x.min_amount, x.priority)):
+        if child.priority[0] < 4:
+            length += excel_dfs(child, current_lijst, column + length, sheet_data,
+                                choices_made + int(isinstance(current_node, ChoiceNode)),
+                                (is_needed and current_node.min_amount > 0) or first)
     if not current_node.children:
         length += 1
         header_data = ExcelData()
@@ -124,6 +151,7 @@ def excel_dfs(current_node, current_lijst, column, sheet_data, choices_made, is_
         header_data.data = '-'.join(current_lijst[1:])
         header_data.choices = choices_made
         header_data.mandatory = is_needed and current_node.min_amount > 0
+        header_data.priority = current_node.priority
         if current_node.binding:
             header_data.data_type = current_node.binding
 
@@ -143,7 +171,16 @@ def excel_dfs(current_node, current_lijst, column, sheet_data, choices_made, is_
     return length
 
 
+def make_tuple(val):
+    return tuple(int(x) for x in val.split('.'))
+
+
 def get_excel_format_data(xls_root):
+    convertor = defaultdict(lambda: make_tuple(priority_columns['default']['default']),
+                            {} if xls_root.name not in priority_columns else {k: make_tuple(v) for k, v in
+                                                                              priority_columns[xls_root.name].items()})
+
+    fill_priority(xls_root, [], convertor)
     current_lijst = []
     column = 0
     sheet_data = []
@@ -168,7 +205,7 @@ def initialize_config(beschrijving_config, header_config, priority_config):
     global priority_columns
     header_convertor = configparser.ConfigParser()
     codelijst_beschrijvingen = configparser.ConfigParser()
-    priority_columns = defaultdict(list)
+    priority_columns = configparser.ConfigParser()
 
     if beschrijving_config is not None:
         codelijst_beschrijvingen.read(beschrijving_config)
@@ -177,17 +214,22 @@ def initialize_config(beschrijving_config, header_config, priority_config):
         header_convertor.read(header_config)
 
     if priority_config is not None:
-        with open(priority_config) as f:
-            for line in f.readlines():
-                line = line.strip(',\n').split(',')
-                priority_columns[line[0]] = line[1:]
+        priority_columns.read(priority_config)
 
 
 def get_default_formats(workbook):
     standard_format = workbook.add_format({"bold": 1, "border": 1, "align": "left", "valign": "vcenter", })
     date_format = workbook.add_format({'num_format': 'dd/mm/yyyy'})
+    decimal_format = workbook.add_format({'num_format': 'General'})
+    integer_format = workbook.add_format({'num_format': '0'})
+    time_format = workbook.add_format({'num_format': 'h:mm:ss'})
     formats = defaultdict(lambda: None)
     formats["java.sql.Date"] = date_format
+    formats['java.math.BigDecimal'] = decimal_format
+    formats['java.math.BigInteger'] = integer_format
+    formats['java.sql.Time'] = time_format
+    formats['java.lang.Double'] = decimal_format
+    formats['java.lang.String'] = workbook.add_format({'num_format': '@'})
     formats["standard"] = standard_format
 
     return formats
@@ -234,12 +276,12 @@ def add_table_to_codelijst_sheet(workbook, data, cell_format, last_code_lijst_in
                         string=data.data, cell_format=cell_format)
 
 
-def get_cell_format(data, bottom_header_index):
+def get_cell_format(data, bottom_header_index, color_choice):
     formatting = {"bold": 1, "border": 1, "align": "left", "valign": "vcenter", }
 
     if data.row_range[0] in (0, bottom_header_index):  # Top or bottom row
-        if data.mandatory:
-            rgb = hsv_to_rgb(27 / 360, 1 / (2 ** data.choices), 1)
+        if data.mandatory or data.priority[0] < 2:
+            rgb = hsv_to_rgb(27 / 360, 1 / (2 ** (data.choices * color_choice)), 1)
             _hex = rgb_to_hex(*rgb)
             formatting["fg_color"] = _hex
 
@@ -259,7 +301,20 @@ def write_cell(data, worksheet, cell_format):
         worksheet.write(f'{get_nth_col_name(data.col_range[0])}{data.row_range[0] + 1}', data.data, cell_format)
 
 
-def add_sheet(workbook, sheet, xls_root, formats, hide_non_priority, last_code_lijst_index):
+def add_metadata_sheet(workbook):
+    config = configparser.ConfigParser()
+    config.read('./config/config.ini')
+    worksheet = workbook.add_worksheet('metadata')
+
+    worksheet.write('A1', 'Date generated')
+    worksheet.write('B1', f'{datetime.datetime.now()}')
+    worksheet.write('A2', 'Version')
+    worksheet.write('B2', f'{config["generation"]["version"]}')
+
+    worksheet.hide()
+
+
+def add_sheet(workbook, sheet, xls_root, formats, last_code_lijst_index, color_choice):
     first_code_lijst_index = last_code_lijst_index
     codelijst_worksheet = workbook.worksheets()[0]
     worksheet = workbook.add_worksheet(sheet)
@@ -267,14 +322,13 @@ def add_sheet(workbook, sheet, xls_root, formats, hide_non_priority, last_code_l
     bottom_header_index = max(d.row_range[1] for d in sheet_data)
 
     for data in sheet_data:
-        cell_format = workbook.add_format(get_cell_format(data, bottom_header_index))
+        cell_format = workbook.add_format(get_cell_format(data, bottom_header_index, color_choice))
         write_cell(data, worksheet, cell_format)
 
         if data.row_range[0] == bottom_header_index:
             worksheet.set_column(data.col_range[0], data.col_range[1], len(data.data) * 2,
                                  formats[data.data_type],
-                                 {'hidden': (data.data not in priority_columns[
-                                     sheet]) and hide_non_priority})
+                                 {'hidden': data.priority[0] >= 3 and not data.mandatory})
 
             if data.data_type == 'java.sql.Date':
                 worksheet.data_validation(bottom_header_index + 1, data.col_range[0], 1000000, data.col_range[0], {
@@ -300,8 +354,8 @@ def add_sheet(workbook, sheet, xls_root, formats, hide_non_priority, last_code_l
     return last_code_lijst_index
 
 
-def create_xls(filename, sheets, root, hide_non_priority=True, beschrijving_config='./config/beschrijvingen.ini',
-               header_config='./config/header_convertor.ini', priority_config='./config/priority_columns.csv'):
+def create_xls(filename, sheets, root, beschrijving_config='./config/beschrijvingen.ini',
+               header_config=None, priority_config='./config/priority_config_full.ini', color_choice=True):
     """
     Creates an Excel file based on the given schema.
 
@@ -321,40 +375,53 @@ def create_xls(filename, sheets, root, hide_non_priority=True, beschrijving_conf
 
     for sheet in sheets:
         xls_root = root.get_specific_child(sheet)
-        last_code_lijst_index = add_sheet(workbook, sheet, xls_root, formats, hide_non_priority, last_code_lijst_index)
+        last_code_lijst_index = add_sheet(workbook, sheet, xls_root, formats, last_code_lijst_index, color_choice)
+
+    add_metadata_sheet(workbook)
 
     workbook.worksheets()[1].activate()
+
     workbook.close()
 
 
 if __name__ == '__main__':
+    priorities_filename = './config/priority_config_beknopt.ini'
+    header_filename = './config/header_convertor.ini'
+
     root = get_dfs_schema()
 
     sheets = ['grondwaterlocatie', 'filter', 'filtermeting', 'opdracht']
-    create_xls('../data/grondwater_template.xlsx', sheets, root, hide_non_priority=True,
-               header_config='./config/grondwater/header_convertor.ini',
-               priority_config='./config/grondwater/priority_columns.csv')
+    create_xls('../data/grondwater_template.xlsx', sheets, root,
+               header_config=header_filename,
+               priority_config=priorities_filename,
+               color_choice=False)
     sheets += ['filterdebietmeter']
-    create_xls('../data/grondwater_template_full.xlsx', sheets, root, hide_non_priority=False, header_config=None)
+    create_xls('../data/grondwater_template_full.xlsx', sheets, root)
 
-    sheets = ['bodemlocatie', 'bodemsite', 'bodemmonster', 'bodemobservatie', 'bodemlocatieclassificatie',
+    sheets = ['bodemlocatie', 'bodemsite', 'bodemmonster', 'bodemobservatie',
               'bodemkundigeopbouw', 'opdracht']
-    create_xls('../data/bodem_template.xlsx', sheets, root, hide_non_priority=True,
-               header_config='./config/bodem/header_convertor.ini',
-               priority_config='./config/bodem/priority_columns.csv')
-    create_xls('../data/bodem_template_full.xlsx', sheets, root, hide_non_priority=False, header_config=None)
+    create_xls('../data/bodem_template.xlsx', sheets, root,
+               header_config=header_filename,
+               priority_config=priorities_filename,
+               color_choice=False)
+    sheets.append('bodemlocatieclassificatie')
+    sheets.sort()
+    create_xls('../data/bodem_template_full.xlsx', sheets, root)
 
     sheets = ['boring', 'interpretaties', 'grondmonster', 'opdracht']
-    create_xls('../data/geologie_template.xlsx', sheets, root, hide_non_priority=True,
-               header_config='./config/geologie/header_convertor.ini',
-               priority_config='./config/geologie/priority_columns.csv')
-    create_xls('../data/geologie_template_full.xlsx', sheets, root, hide_non_priority=False, header_config=None)
+    create_xls('../data/geologie_template.xlsx', sheets, root,
+               header_config=header_filename,
+               priority_config=priorities_filename,
+               color_choice=False)
+    create_xls('../data/geologie_template_full.xlsx', sheets, root)
 
     sheets = ['opdracht']
-    create_xls('../data/opdracht_template.xlsx', sheets, root, hide_non_priority=True,
-               header_config='./config/opdracht/header_convertor.ini',
-               priority_config='./config/opdracht/priority_columns.csv')
-    create_xls('../data/opdracht_template_full.xlsx', sheets, root, hide_non_priority=False, header_config=None)
+    create_xls('../data/opdracht_template.xlsx', sheets, root,
+               header_config=header_filename,
+               priority_config=priorities_filename,
+               color_choice=False
+               )
+    create_xls('../data/opdracht_template_full.xlsx', sheets, root)
 
     sheets = ['grondwaterlocatie', 'filter', 'filtermeting', 'filterdebietmeter', 'bodemlocatie',
               'bodemsite',
@@ -363,7 +430,4 @@ if __name__ == '__main__':
               'bodemlocatieclassificatie',
               'bodemkundigeopbouw',
               'boring', 'interpretaties', 'grondmonster', 'opdracht']
-    create_xls('../data/template.xlsx', sheets, root, hide_non_priority=True,
-               header_config='./config/header_convertor.ini',
-               priority_config='./config/priority_columns.csv')
-    create_xls('../data/template_full.xlsx', sheets, root, hide_non_priority=False, header_config=None)
+    create_xls('../data/template_full.xlsx', sheets, root)

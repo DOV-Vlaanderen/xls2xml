@@ -74,7 +74,8 @@ def clean_data(data, schema_node):
                    'java.lang.Double': lambda x: float(x),
                    'java.lang.String': lambda x: str(x),
                    'java.net.URI': lambda x: str(x),
-                   'java.sql.Time': lambda x: x.strftime("%H:%M:%S")}
+                   'java.sql.Time': lambda x: x.strftime("%H:%M:%S"),
+                   'java.lang.Object': lambda x: str(x)}
 
         binding = schema_node.binding
         if binding:
@@ -129,6 +130,7 @@ def get_partition(df, filter, current_lijst, node):
     identifiers = []
     get_identifiers(node, current_lijst, identifiers)
     possibilities = OrderedSet()
+    identifiers = [i for i in identifiers if i in df.columns]
 
     last_row = None
     for i, row in df[filter].loc[:, identifiers].iterrows():
@@ -173,10 +175,11 @@ def recursive_data_read(df, filter, schema_node, current_lijst) -> DataNode:
     if not schema_node.children:
         data = OrderedSet()
         column = '-'.join(current_lijst)
-        for d in df[filter].loc[:, column]:
-            d = clean_data(d, schema_node)
-            if d is not None:
-                data.add(d)
+        if column in df.columns:
+            for d in df[filter].loc[:, column]:
+                d = clean_data(d, schema_node)
+                if d is not None:
+                    data.add(d)
         data_node.data += list(data)
 
     for c in schema_node.children:
@@ -298,4 +301,4 @@ if __name__ == '__main__':
               "bodemobservatie"]
 
     # read_to_xml('../tests/data/filled_templates/bodem_template_full2.xlsx', '../dist/dev.xml', sheets)
-    read_to_xml('../data_voorbeeld/demo_template.xlsx', '../dist/demo.xml', sheets)
+    read_to_xml('../data_voorbeeld/demo_template.xlsx', '../dist/demo2.xml', sheets)
