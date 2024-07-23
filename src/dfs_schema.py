@@ -9,7 +9,7 @@ from xmlschema.validators.groups import XsdGroup
 from xmlschema.validators.attributes import XsdAttribute
 import xmlschema
 import math
-from dfs_schema import Node, ChoiceNode, SequenceNode
+
 
 # Global variables to store schema data
 TYPE_LIJST = dict()

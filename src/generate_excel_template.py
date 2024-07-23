@@ -74,7 +74,7 @@ def fill_priority(current_node, previous_names, convertor):
                                                                                         c.min_amount > 0]), 'Removed a node that is necessary for its parent!'
     else:
         assert not (current_node.priority[0] < 4 and any(c.priority[0] >= 4 and c.min_amount > 0 for c in
-                                                         current_node.children)), 'Removed a node that is necessary for its parent!'
+                                                         current_node.children)), f'Removed node(s) {[c for c in current_node.children if c.priority[0] >= 4 and c.min_amount > 0]} that is necessary for its parent {previous_names, current_node}!'
     return current_node.priority
 
 
@@ -308,8 +308,11 @@ def add_metadata_sheet(workbook):
 
     worksheet.write('A1', 'Date generated')
     worksheet.write('B1', f'{datetime.datetime.now()}')
-    worksheet.write('A2', 'Version')
-    worksheet.write('B2', f'{config["generation"]["version"]}')
+    row = 2
+    for key, value in config['generation'].items():
+        worksheet.write(f'A{row}', key)
+        worksheet.write(f'B{row}', f'{value}')
+        row += 1
 
     worksheet.hide()
 
