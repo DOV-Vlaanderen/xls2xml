@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns4:dov-schema xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns4="http://kern.schemas.dov.vlaanderen.be" xsi:schemaLocation="http://kern.schemas.dov.vlaanderen.be https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd">
+    <bodemkundigeopbouw>
+        <metadata>
+            <type>ALG</type>
+            <dataidentifier>
+                <permkey>2018-000082</permkey>
+                <uri>https://www.dov.vlaanderen.be/data/bodemopbouw/2018-000082</uri>
+            </dataidentifier>
+            <betrouwbaarheid>goed</betrouwbaarheid>
+            <auteur>
+                <persoon>
+                    <naam>Vanierschot</naam>
+                    <voornaam>Laura</voornaam>
+                </persoon>
+                <bedrijf>
+                    <naam>KULeuven</naam>
+                </bedrijf>
+            </auteur>
+            <auteur>
+                <persoon>
+                    <naam>Langohr</naam>
+                    <voornaam>Roger</voornaam>
+                </persoon>
+                <bedrijf>
+                    <naam>ASDIS</naam>
+                </bedrijf>
+            </auteur>
+        </metadata>
+        <diepteinterval>
+            <type>HORIZONT</type>
+            <volgnummer>1</volgnummer>
+            <naam>Ah</naam>
+            <dataidentifier>
+                <permkey>2018-000336</permkey>
+                <uri>https://www.dov.vlaanderen.be/data/bodemdiepteinterval/2018-000336</uri>
+            </dataidentifier>
+            <beschrijving>
+                <type>ALG</type>
+                <beschrijving>humus aangerijkte oppervlaktehorizont</beschrijving>
+            </beschrijving>
+        </diepteinterval>
+        <diepteinterval>
+            <type>HORIZONT</type>
+            <volgnummer>2</volgnummer>
+            <naam>E</naam>
+            <dataidentifier>
+                <permkey>2018-000337</permkey>
+                <uri>https://www.dov.vlaanderen.be/data/bodemdiepteinterval/2018-000337</uri>
+            </dataidentifier>
+            <beschrijving>
+                <type>ALG</type>
+                <beschrijving>bleke uitlogingshorizont</beschrijving>
+            </beschrijving>
+        </diepteinterval>
+        <ref_bodemlocatie>
+            <naam>ASDIS_1</naam>
+        </ref_bodemlocatie>
+    </bodemkundigeopbouw>
+</ns4:dov-schema>

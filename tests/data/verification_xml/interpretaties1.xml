@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns4:dov-schema xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:ns4="http://kern.schemas.dov.vlaanderen.be"
+                xsi:schemaLocation="http://kern.schemas.dov.vlaanderen.be https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd">
+    <interpretaties>
+        <lithologischebeschrijving>
+            <boring>kb22d55w-B1044</boring>
+            <dataidentifier>
+                <permkey>2016-254494</permkey>
+                <uri>https://www.dov.vlaanderen.be/data/interpretatie/2016-254494</uri>
+            </dataidentifier>
+            <auteur>
+                <persoon>
+                    <naam>Onbekend</naam>
+                </persoon>
+                <bedrijf-dienst>
+                    <naam>bedrijf-dienst onbekend</naam>
+                </bedrijf-dienst>
+            </auteur>
+            <betrouwbaarheid>goed</betrouwbaarheid>
+            <dataleverancier>
+                <naam>onbekend</naam>
+            </dataleverancier>
+            <kwaliteit>
+                <categorie>slecht</categorie>
+                <geschiktheid_boormethode>Onbekend</geschiktheid_boormethode>
+            </kwaliteit>
+            <laag>
+                <van>0.00</van>
+                <tot>4.00</tot>
+                <beschrijving>geremanieerd materiaal</beschrijving>
+            </laag>
+            <laag>
+                <van>4.00</van>
+                <tot>9.50</tot>
+                <beschrijving>grijs zand met onzuiverheden</beschrijving>
+            </laag>
+            <laag>
+                <van>9.50</van>
+                <tot>22.90</tot>
+                <beschrijving>grijsgroen zand, glauconiethoudend, licht schilferig</beschrijving>
+            </laag>
+        </lithologischebeschrijving>
+        <lithologischebeschrijving>
+            <boring>kb17d46e-B98</boring>
+            <dataidentifier>
+                <permkey>1896-044741</permkey>
+                <uri>https://www.dov.vlaanderen.be/data/interpretatie/1896-044741</uri>
+            </dataidentifier>
+            <auteur>
+                <persoon>
+                    <naam>Mourlon</naam>
+                    <voornaam>Michel</voornaam>
+                </persoon>
+                <bedrijf-dienst>
+                    <naam>Belgische Geologische Dienst (BGD)</naam>
+                </bedrijf-dienst>
+            </auteur>
+            <datum>1996-04-14</datum>
+            <betrouwbaarheid>goed</betrouwbaarheid>
+            <dataleverancier>
+                <naam>onbekend</naam>
+            </dataleverancier>
+            <kwaliteit>
+                <categorie>slecht</categorie>
+                <geschiktheid_boormethode>Onbekend</geschiktheid_boormethode>
+            </kwaliteit>
+            <laag>
+                <van>0.00</van>
+                <tot>0.80</tot>
+                <beschrijving>Sable quartzeux brun jaunâtre</beschrijving>
+            </laag>
+            <laag>
+                <van>0.80</van>
+                <tot>1.30</tot>
+                <beschrijving>Argile verdâtre graveleuse</beschrijving>
+            </laag>
+        </lithologischebeschrijving>
+    </interpretaties>
+</ns4:dov-schema>

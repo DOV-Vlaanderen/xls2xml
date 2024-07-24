@@ -1,15 +1,24 @@
 # Script voor conversie van Excel data naar DOV XML-formaat
 
-## Stap 1: Download en installeer Node.js
+## Stap 1: Download en installeer Python
 
-Het script is geschreven in javascript en gebruikt Node.js als runtime. Om dit op jouw computer te kunnen uitvoeren, moet je Node.js geïnstalleerd hebben staan. Geen zorgen, dit is een simpele procedure, en je zal er verder niks van merken.
+Het script is geschreven in python. Om dit op jouw computer te kunnen uitvoeren, moet je Python geïnstalleerd hebben staan. Geen zorgen, dit is een simpele procedure, en je zal er verder niks van merken.
 
-Ga naar de downloadpagina van Node.js: https://nodejs.org/en/download/
+Als je nog geen Python hebt geïnstalleerd op je systeem, volg dan deze stappen:
 
-Download de LTS versie voor jouw besturingsstysteem. Kies voor de .msi versie (voor Windows gebruikers) of de .pkg versie (voor MacOS gebruikers). Installeer vervolgens Node op je computer door de stappen van de installer te volgen. Je mag bij alle mogelijke tussenstappen op het standaard antwoord laten staan en op Volgende klikken. 
+1.  Ga naar de officiële Python-website op [python.org](python.org).
+2.  Klik op de "Downloads" knop in het menu.
+3. Kies de versie van Python die overeenkomt met je besturingssysteem (meestal wordt de nieuwste stabiele versie aanbevolen).
+4. Download het installatiebestand en voer het uit.
+5. Volg de installatie-instructies op het scherm.
 
-Let wel op: mogelijks heb je voor de installatie wel de hulp of rechten nodig van je systeembeheerder.  
-<br>
+Alternatief kan je als je Windows 10 gebruikt, Python eenvoudig installeren via de Microsoft Store:
+
+1. Open de Microsoft Store-app op je Windows 10-computer.
+2. Zoek naar "Python" in de zoekbalk van de Microsoft Store.
+3. Klik op de recentste versie van Python die wordt weergegeven in de zoekresultaten.
+4. Klik op de knop "Installeren" om de installatie te starten.
+5. Volg de instructies op het scherm om de installatie te voltooien.
 
 ## Stap 2: Download het script
 
@@ -21,15 +30,17 @@ Heb je het script reeds aangeleverd gekregen als zip bestand? Kijk dan zeker op 
 
 ## Stap 3: Data voorbereiden
 
-Het script vergt aangeleverde data in het juiste formaat. In de map data vind je de Excel-template (Data_input.xlsx) die nodig is voor het aanleveren van de data.
+Het script vergt aangeleverde data in het juiste formaat. In de map data vind je de Excel-template (template.xlsx) die nodig is voor het aanleveren van de data.
 
-Vul het Excel-bestand in met de data die je in DOV wenst toe te voegen. Als je klaar bent sla je elk blad van de Excel die je wenst toe te voegen op als txt-bestand. De naam van dit txt-bestand moet de naam van het excel blad zijn (bv. grondwaterlocatie.txt, filter.txt, filtermeting.txt, ...). Sla de txt-bestanden op in de map 'data'.  
-
+Vul het Excel-bestand in met de data die je in DOV wenst toe te voegen. 
 In het excel bestand zijn enkele gegevensvalidaties aanwezig. Zo zijn enkel datums later dan 01/01/1900 toegelaten in velden waar een datum wordt verwacht.
 Ook zijn er enkele velden waar de optie uit een codelijst moet komen. Deze zijn makkelijk zichtbaar aan de verwijzing in de kolomnamen, die rechtstreeks verwijzen naar de relevante codelijst op het Excel-blad "Codelijsten".
 
-Op het blad Codelijsten zul je zien dat in elke tabel een rood veld aanwezig is. De waarden onder dit veld zijn de waarden die kunnen ingevuld worden in de voorgaande bladen.
-De andere kolommen bevatten extra informatie omtrent deze attribuutwaarden.
+Wanneer over een bepaald object meerdere rijen aan gegevens moeten ingevuld worden, dan kan dit door de gegevens in de verplichte velden te dupliceren naar de onderstaande rijen en vervolgens de gegevens in de corresponderende kolom toe te voegen.
+Een voorbeeld van dit proces wordt weergegeven in onderstaande afbeelding:
+![data_voorbeeld](data_voorbeeld.png)
+
+
 
 ## Stap 4: Het script uitvoeren
 
@@ -47,15 +58,10 @@ Open Finder. Rechtermuisklik op de map met het main script. Er verschijnt een me
 
 ### Stap 4.2: Packages installeren
 
-Om het script uit te kunnen voeren moeten er nog een aantal extensies geïnstalleerd worden. Dit kan je eenvoudigweg doen door in de terminal die hebt openstaan het volgende commando uit te voeren (typ het commando en druk op Enter):
+Om het script uit te kunnen voeren moeten er nog een aantal extensies geïnstalleerd worden. Dit kan je eenvoudigweg doen door in de terminal die hebt openstaan de volgende commando's uit te voeren (typ het commando en druk op Enter):
 ```
-npm install
-```
-Indien uw netwerk een proxy server vereist voert u het volgende commando uit (vervang PROXYSERVER met de URL naar de proxy server).
-```
-npm config set proxy PROXYSERVER
-npm config set https-proxy PROXYSERVER
-npm install
+python.exe -m pip install --upgrade pip
+pip install -r requirements.txt
 ```
 <br>
 
@@ -64,21 +70,33 @@ npm install
 Nu je een terminal hebt open staan, kan je een van volgende commando's uitvoeren (typ het commando en druk op Enter):
 
 ```
-node main -opdracht
+python xls2xml.py
 ```
-
-voor opdrachtdata of
-
-```
-node main -grondwater
-```
-
-voor grondwaterdata.
-
-
 
 <br>
-Wanneer het script gedaan is, worden de xml bestanden toegevoegd aan de map 'dist'. Indien er zich errors voordoen, krijg je die te zien.
-Indien u verwijst naar een opdracht in een grondwaterlocatie of filter is het belangrijk dat u eerst de opdracht-xml uploadt. 
+Wanneer het script klaar is, worden de xml bestanden toegevoegd aan de map 'dist'. Indien er zich errors voordoen, krijg je die te zien.
 
-Wanneer er rijen ongeldig waren werden die overgeslagen in het script. Om meer informatie te krijgen waarom de rijen ongeldig waren, voeg `-v` toe aan je commando en voer het script op nieuw uit.
+### Stap 4.3a: Geavanceerd gebruik
+
+Het is mogelijk om enkele opties aan deze functie toe te voegen:
+
+```
+usage: xls2xml [-h] [-i INPUT_FILE] [-o OUTPUT_FILE]
+               [-s SHEETS [SHEETS ...]]
+
+Function to parse data from xlsx-files to XML ready to be uploaded
+in DOV
+
+options:
+  -h, --help            show this help message and exit
+  -i INPUT_FILE, --input_file INPUT_FILE
+                        Input xlsx file that will be parsed to XML,
+                        default: data/template.xlsx
+  -o OUTPUT_FILE, --output_file OUTPUT_FILE
+                        Output file to which the parsed XML-file is
+                        outputted, default: dist/dev.xml
+  -s SHEETS [SHEETS ...], --sheets SHEETS [SHEETS ...]
+                        Sheet(s) from excel file that needs to be
+                        parsed, by default all sheets will be
+                        parsed
+```

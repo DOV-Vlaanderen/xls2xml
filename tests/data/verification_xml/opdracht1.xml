@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns4:dov-schema xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns4="http://kern.schemas.dov.vlaanderen.be" xsi:schemaLocation="http://kern.schemas.dov.vlaanderen.be https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd">
+    <opdracht>
+        <naam>VLA98-4.3</naam>
+        <dataidentifier>
+            <permkey>1999-006699</permkey>
+            <uri>https://www.dov.vlaanderen.be/data/opdracht/1999-006699</uri>
+        </dataidentifier>
+        <omschrijving>Boringen geologische kartering</omschrijving>
+        <opdrachtgever>
+            <naam>MVG - Afdeling Natuurlijke Rijkdommen en Energie (ANRE)</naam>
+        </opdrachtgever>
+        <opdrachtnemer>
+            <naam>GEOLAB</naam>
+        </opdrachtnemer>
+        <dataleverancier>
+            <naam>onbekend</naam>
+        </dataleverancier>
+        <startdatum>1998-01-01</startdatum>
+        <einddatum>1999-11-08</einddatum>
+        <locatie>
+            <coordinatenstelsel>EPSG:31370</coordinatenstelsel>
+            <wkt>MULTIPOLYGON (((21991.0 153077.0, 258872.0 153077.0, 258872.0 244028.0, 21991.0 244028.0, 21991.0 153077.0)))</wkt>
+        </locatie>
+        <kwaliteit>
+            <origine>gebruikt in kartering</origine>
+            <aard>Geologisch onderzoek</aard>
+        </kwaliteit>
+    </opdracht>
+    <opdracht>
+        <naam>Vooronderzoek Gent Jozef Guislainstraat</naam>
+        <dataidentifier>
+            <permkey>2020-022047</permkey>
+            <uri>https://www.dov.vlaanderen.be/data/opdracht/2020-022047</uri>
+        </dataidentifier>
+        <omschrijving>https://id.erfgoed.net/archeologie/archeologienotas/13951</omschrijving>
+        <opdrachtgever>
+            <naam>onbekend</naam>
+        </opdrachtgever>
+        <opdrachtnemer>
+            <naam>All-Archeo bv</naam>
+        </opdrachtnemer>
+        <dataleverancier>
+            <naam>VO - Agentschap Onroerend Erfgoed</naam>
+        </dataleverancier>
+        <locatie>
+            <coordinatenstelsel>EPSG:31370</coordinatenstelsel>
+            <wkt>MULTIPOLYGON (((103276.7729338227 195317.5679738196, 103309.0650862629 195321.1157663523, 103310.0606402899 195298.5981443592, 103312.4861719194 195298.8515581115, 103312.7214846894 195297.4939844383, 103318.4594960816 195297.9646099784, 103318.60430394 195295.249462632, 103331.7818190614 195296.2269156767, 103332.3972524599 195290.5522577227, 103340.8232597249 195291.2581960327, 103340.7327548134 195291.9641343428, 103351.968939582 195301.1277566369, 103382.6184278776 195263.3826832759, 103384.5733339671 195254.1873842627, 103348.1541575603 195245.7885284711, 103348.8781968527 195232.9730329959, 103321.473309636 195231.3620455704, 103321.8896322292 195222.8364829026, 103311.1376487373 195222.0762416456, 103298.5393650499 195221.3884043178, 103281.4520377497 195220.4471532376, 103280.474584705 195246.7659815157, 103276.7729338227 195317.5679738196)))</wkt>
+        </locatie>
+        <kwaliteit>
+            <origine>Archeologieregelgeving</origine>
+            <aard>Bodemkundig onderzoek</aard>
+        </kwaliteit>
+        <bijlage>
+            <titel>Programma van maatregelen</titel>
+            <auteurs>Hellinx, Alice-Jan</auteurs>
+            <bijlage_type>Andere archeologie</bijlage_type>
+            <url>https://loket.onroerenderfgoed.be/archeologie/notas/notas/13951/bijlagen/58731</url>
+        </bijlage>
+        <bijlage>
+            <titel>Verslag van resultaten</titel>
+            <auteurs>Hellinx, Alice-Jan</auteurs>
+            <bijlage_type>Andere archeologie</bijlage_type>
+            <url>https://loket.onroerenderfgoed.be/archeologie/notas/notas/13951/bijlagen/58732</url>
+        </bijlage></opdracht>
+</ns4:dov-schema>
