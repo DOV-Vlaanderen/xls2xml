@@ -208,13 +208,13 @@ def initialize_config(beschrijving_config, header_config, priority_config):
     priority_columns = configparser.ConfigParser()
 
     if beschrijving_config is not None:
-        codelijst_beschrijvingen.read(beschrijving_config)
+        codelijst_beschrijvingen.read(beschrijving_config, encoding='utf-8')
 
     if header_config is not None:
-        header_convertor.read(header_config)
+        header_convertor.read(header_config, encoding='utf-8')
 
     if priority_config is not None:
-        priority_columns.read(priority_config)
+        priority_columns.read(priority_config, encoding='utf-8')
 
 
 def get_default_formats(workbook):
