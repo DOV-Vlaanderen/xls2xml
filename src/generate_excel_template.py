@@ -186,7 +186,7 @@ def get_excel_format_data(xls_root):
     sheet_data = []
     excel_dfs(xls_root, current_lijst, column, sheet_data, 0, first=True)
 
-    max_n = max(x.row_range[1] for x in sheet_data)
+    max_n = xls_root.get_max_depth()-1
     header_row = []
 
     for cell_data in [s for s in sheet_data if s.row_range[0] == 0]:
