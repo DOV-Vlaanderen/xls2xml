@@ -10,17 +10,16 @@ from xmlschema.validators.attributes import XsdAttribute
 import xmlschema
 import math
 
-
 # Global variables to store schema data
 TYPE_LIJST = dict()
 dov_schema_id = None
 
 
-def init() -> None:
+def init(config_filename="xsd_schema.json") -> None:
     """
     Initializes global variables TYPE_LIJST and dov_schema_id with schema data from xsd_schema.json file.
     """
-    xsd_schema = Path(os.path.dirname(__file__) + "/config/xsd_schema.json")
+    xsd_schema = Path(os.path.dirname(__file__) + f"/config/schemas/{config_filename}")
     with open(xsd_schema) as f:
         data = json.load(f)
 
@@ -215,6 +214,7 @@ def create_dfs_schema(node, old_node: Node = None) -> Node:
 
     return current_node
 
+
 CONVERTOR = {'boolean': 'java.lang.Boolean',
              'date': 'java.sql.Date',
              'decimal': 'java.math.BigDecimal',
@@ -226,7 +226,7 @@ CONVERTOR = {'boolean': 'java.lang.Boolean',
              None: 'java.lang.Object'}
 
 
-def get_dfs_schema_from_url(url):
+def get_dfs_schema_from_url(url="https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd"):
     xml_schema = xmlschema.XMLSchema(url)
     root_node = Node()
     root_type = xml_schema.root_elements[0]
@@ -356,19 +356,16 @@ def compare_nodes(node1, node2):
         compare_nodes(child1, child2)
 
 
-def get_dfs_schema() -> Node:
+def get_dfs_schema(config_filename="xsd_schema.json") -> Node:
     """
    Gets the depth-first schema tree.
 
    Returns:
        Node: Root node of the depth-first schema tree.
    """
-    init()
+    init(config_filename=config_filename)
     root = create_dfs_schema(TYPE_LIJST[dov_schema_id])
     root.min_amount = 1
     root.max_amount = 1
 
     return root
-
-
-
