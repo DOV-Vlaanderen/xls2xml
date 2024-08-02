@@ -8,6 +8,8 @@ import re
 
 XML_SCHEMA = xmlschema.XMLSchema('https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd')
 
+DATA_FOLDER = 'tests/data'
+
 
 class ValidationNode:
 
@@ -70,69 +72,69 @@ def xls2xml_test(xls_filename, xml_filename, sheets):
 class BodemTemplateTest(unittest.TestCase):
 
     def test_bodemlocatie(self):
-        xls2xml_test('./data/filled_templates/bodem_template_full.xlsx',
-                     './data/verification_xml/bodemlocatie1.xml', ['bodemlocatie'])
+        xls2xml_test(f'{DATA_FOLDER}/filled_templates/bodem_template_full.xlsx',
+                     f'{DATA_FOLDER}/verification_xml/bodemlocatie1.xml', ['bodemlocatie'])
 
     def test_bodemsite(self):
-        xls2xml_test('./data/filled_templates/bodem_template_full.xlsx',
-                     './data/verification_xml/bodemsite1.xml', ['bodemsite'])
+        xls2xml_test(f'{DATA_FOLDER}/filled_templates/bodem_template_full.xlsx',
+                     f'{DATA_FOLDER}/verification_xml/bodemsite1.xml', ['bodemsite'])
 
     def test_bodemmonster(self):
-        xls2xml_test('./data/filled_templates/bodem_template_full.xlsx',
-                     './data/verification_xml/bodemmonster1.xml', ['bodemmonster'])
+        xls2xml_test(f'{DATA_FOLDER}/filled_templates/bodem_template_full.xlsx',
+                     f'{DATA_FOLDER}/verification_xml/bodemmonster1.xml', ['bodemmonster'])
 
     def test_bodemobservatie(self):
-        xls2xml_test('./data/filled_templates/bodem_template_full.xlsx',
-                     './data/verification_xml/bodemobservatie1.xml', ['bodemobservatie'])
+        xls2xml_test(f'{DATA_FOLDER}/filled_templates/bodem_template_full.xlsx',
+                     f'{DATA_FOLDER}/verification_xml/bodemobservatie1.xml', ['bodemobservatie'])
 
     def test_bodemlocatieclassificatie(self):
-        xls2xml_test('./data/filled_templates/bodem_template_full.xlsx',
-                     './data/verification_xml/bodemlocatieclassificatie1.xml', ['bodemlocatieclassificatie'])
+        xls2xml_test(f'{DATA_FOLDER}/filled_templates/bodem_template_full.xlsx',
+                     f'{DATA_FOLDER}/verification_xml/bodemlocatieclassificatie1.xml', ['bodemlocatieclassificatie'])
 
     def test_bodemkundigeopbouw(self):
-        xls2xml_test('./data/filled_templates/bodem_template_full.xlsx',
-                     './data/verification_xml/bodemkundigeopbouw1.xml', ['bodemkundigeopbouw'])
+        xls2xml_test(f'{DATA_FOLDER}/filled_templates/bodem_template_full.xlsx',
+                     f'{DATA_FOLDER}/verification_xml/bodemkundigeopbouw1.xml', ['bodemkundigeopbouw'])
 
 
 class GrondwaterTemplateTest(unittest.TestCase):
 
     def test_grondwaterlocatie(self):
-        xls2xml_test('./data/filled_templates/grondwater_template_full.xlsx',
-                     './data/verification_xml/grondwaterlocatie1.xml', ['grondwaterlocatie'])
+        xls2xml_test(f'{DATA_FOLDER}/filled_templates/grondwater_template_full.xlsx',
+                     f'{DATA_FOLDER}/verification_xml/grondwaterlocatie1.xml', ['grondwaterlocatie'])
 
     def test_filter(self):
-        xls2xml_test('./data/filled_templates/grondwater_template_full.xlsx',
-                     './data/verification_xml/filter1.xml', ['filter'])
+        xls2xml_test(f'{DATA_FOLDER}/filled_templates/grondwater_template_full.xlsx',
+                     f'{DATA_FOLDER}/verification_xml/filter1.xml', ['filter'])
 
     def test_filtermeting(self):
-        xls2xml_test('./data/filled_templates/grondwater_template_full.xlsx',
-                     './data/verification_xml/filtermeting1.xml', ['filtermeting'])
+        xls2xml_test(f'{DATA_FOLDER}/filled_templates/grondwater_template_full.xlsx',
+                     f'{DATA_FOLDER}/verification_xml/filtermeting1.xml', ['filtermeting'])
 
     def test_filterdebietmeter(self):
-        xls2xml_test('./data/filled_templates/grondwater_template_full.xlsx',
-                     './data/verification_xml/filterdebietmeter1.xml', ['filterdebietmeter'])
+        xls2xml_test(f'{DATA_FOLDER}/filled_templates/grondwater_template_full.xlsx',
+                     f'{DATA_FOLDER}/verification_xml/filterdebietmeter1.xml', ['filterdebietmeter'])
 
 
 class GeologieTemplateTest(unittest.TestCase):
 
     def test_boring(self):
-        xls2xml_test('./data/filled_templates/geologie_template_full.xlsx',
-                     './data/verification_xml/boring1.xml', ['boring'])
+        xls2xml_test(f'{DATA_FOLDER}/filled_templates/geologie_template_full.xlsx',
+                     f'{DATA_FOLDER}/verification_xml/boring1.xml', ['boring'])
 
     def test_interpretaties(self):
-        xls2xml_test('./data/filled_templates/geologie_template_full.xlsx',
-                     './data/verification_xml/interpretaties1.xml', ['interpretaties'])
+        xls2xml_test(f'{DATA_FOLDER}/filled_templates/geologie_template_full.xlsx',
+                     f'{DATA_FOLDER}/verification_xml/interpretaties1.xml', ['interpretaties'])
 
     def test_grondmonster(self):
-        xls2xml_test('./data/filled_templates/geologie_template_full.xlsx',
-                     './data/verification_xml/grondmonster1.xml', ['grondmonster'])
+        xls2xml_test(f'{DATA_FOLDER}/filled_templates/geologie_template_full.xlsx',
+                     f'{DATA_FOLDER}/verification_xml/grondmonster1.xml', ['grondmonster'])
 
 
 class OpdrachtTemplateTest(unittest.TestCase):
 
     def test_opdracht(self):
-        xls2xml_test('./data/filled_templates/opdracht_template_full.xlsx',
-                     './data/verification_xml/opdracht1.xml', ['opdracht'])
+        xls2xml_test(f'{DATA_FOLDER}/filled_templates/opdracht_template_full.xlsx',
+                     f'{DATA_FOLDER}/verification_xml/opdracht1.xml', ['opdracht'])
 
 
 if __name__ == '__main__':

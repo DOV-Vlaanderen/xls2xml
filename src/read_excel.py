@@ -244,6 +244,7 @@ def read_sheets(filename, sheets, xml_schema=None):
         sheets = xl.sheet_names
         sheets.remove('Codelijsten')
 
+
     root = get_dfs_schema()
     for sheet in sheets:
         try:
@@ -297,8 +298,7 @@ def read_to_xml(input_filename, output_filename='./dist/result.xml', sheets=None
 
 
 if __name__ == '__main__':
-    sheets = ["opdracht", "grondwaterlocatie", "filter", "filtermeting", "bodemlocatie", "bodemmonster",
-              "bodemobservatie"]
+    sheets = None
 
     # read_to_xml('../tests/data/filled_templates/bodem_template_full2.xlsx', '../dist/dev.xml', sheets)
-    read_to_xml('../data_voorbeeld/demo_template.xlsx', '../dist/demo2.xml', sheets)
+    read_to_xml('../data_voorbeeld/test.xlsx', '../dist/demo2.xml', sheets)
