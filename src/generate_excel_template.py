@@ -301,7 +301,7 @@ def write_cell(data, worksheet, cell_format):
         worksheet.write(f'{get_nth_col_name(data.col_range[0])}{data.row_range[0] + 1}', data.data, cell_format)
 
 
-def add_metadata_sheet(workbook):
+def add_metadata_sheet(workbook, root):
     config = configparser.ConfigParser()
     config.read('./config/config.ini')
     worksheet = workbook.add_worksheet('metadata')
@@ -313,6 +313,11 @@ def add_metadata_sheet(workbook):
         worksheet.write(f'A{row}', key)
         worksheet.write(f'B{row}', f'{value}')
         row += 1
+    worksheet.write(f'A{row}', 'mode')
+    worksheet.write(f'B{row}', root.source[0])
+    row += 1
+    worksheet.write(f'A{row}', 'source')
+    worksheet.write(f'B{row}', root.source[1])
 
     worksheet.hide()
 
@@ -368,6 +373,8 @@ def create_xls(filename, sheets, root, beschrijving_config='./config/beschrijvin
         root (Node): The root node of the schema.
     """
 
+
+
     initialize_config(beschrijving_config, header_config, priority_config)
 
     workbook = xlsxwriter.Workbook(filename)
@@ -380,7 +387,7 @@ def create_xls(filename, sheets, root, beschrijving_config='./config/beschrijvin
         xls_root = root.get_specific_child(sheet)
         last_code_lijst_index = add_sheet(workbook, sheet, xls_root, formats, last_code_lijst_index, color_choice)
 
-    add_metadata_sheet(workbook)
+    add_metadata_sheet(workbook, root)
 
     workbook.worksheets()[1].activate()
 

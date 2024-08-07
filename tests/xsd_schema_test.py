@@ -1,11 +1,11 @@
-from src.dfs_schema import get_dfs_schema, get_dfs_schema_from_url, compare_nodes
+from src.dfs_schema import get_dfs_schema_from_local, get_dfs_schema_from_url, compare_nodes
 import unittest
 
 
 def compare_schemas(filename, omgeving):
     url = f"https://{omgeving}.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd"
 
-    schema_local = get_dfs_schema(filename)
+    schema_local = get_dfs_schema_from_local(filename)
     schema_url = get_dfs_schema_from_url(url)
     compare_nodes(schema_local, schema_url)
 

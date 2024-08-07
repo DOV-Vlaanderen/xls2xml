@@ -43,6 +43,7 @@ class Node:
         self.enum = None
         self.binding = None
         self.priority = None
+        self.source = None
 
     def set_metadata(self, metadata: dict) -> None:
         """
@@ -226,17 +227,6 @@ CONVERTOR = {'boolean': 'java.lang.Boolean',
              None: 'java.lang.Object'}
 
 
-def get_dfs_schema_from_url(url="https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd"):
-    xml_schema = xmlschema.XMLSchema(url)
-    root_node = Node()
-    root_type = xml_schema.root_elements[0]
-
-    recursive_fill(root_node, root_type)
-    clean_sequence_nodes(root_node, None)
-
-    return root_node
-
-
 def get_content(current_type):
     content = []
 
@@ -356,7 +346,18 @@ def compare_nodes(node1, node2):
         compare_nodes(child1, child2)
 
 
-def get_dfs_schema(config_filename="xsd_schema.json") -> Node:
+def get_dfs_schema_from_url(url="https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd"):
+    xml_schema = xmlschema.XMLSchema(url)
+    root_node = Node()
+    root_type = xml_schema.root_elements[0]
+
+    recursive_fill(root_node, root_type)
+    clean_sequence_nodes(root_node, None)
+
+    return root_node
+
+
+def get_dfs_schema_from_local(config_filename="xsd_schema.json") -> Node:
     """
    Gets the depth-first schema tree.
 
@@ -368,4 +369,22 @@ def get_dfs_schema(config_filename="xsd_schema.json") -> Node:
     root.min_amount = 1
     root.max_amount = 1
 
+    return root
+
+
+def get_dfs_schema(config_source="xsd_schema.json", mode='local') -> Node:
+    """
+   Gets the depth-first schema tree.
+
+   Returns:
+       Node: Root node of the depth-first schema tree.
+   """
+    assert mode in ('local', 'online')
+
+    if mode == 'local':
+        root = get_dfs_schema_from_local(config_source)
+    else:
+        root = get_dfs_schema_from_url(config_source)
+
+    root.source = (mode, config_source)
     return root
