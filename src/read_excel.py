@@ -227,7 +227,14 @@ def data_node_to_json(data_node, schema_node):
     return [json_dict]
 
 
-def read_sheets(filename, sheets, xml_schema=None, mode='local', xsd_source='xsd_schema.json'):
+def get_XML_schema(omgeving):
+    if omgeving == 'productie':
+        omgeving = 'www'
+    xml_schema = xmlschema.XMLSchema(f'https://{omgeving}.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd')
+    return xml_schema
+
+
+def read_sheets(filename, sheets, xml_schema=None, mode='local', xsd_source='productie'):
     """
     Reads data from Excel sheets and generates filled XML.
 
@@ -238,11 +245,13 @@ def read_sheets(filename, sheets, xml_schema=None, mode='local', xsd_source='xsd
     Returns:
         str: Filled XML data.
     """
+
     data_root = DataNode('schema')
     if not sheets:
         xl = pd.ExcelFile(filename)
         sheets = xl.sheet_names
         sheets.remove('Codelijsten')
+        sheets.remove('metadata')
 
     root = get_dfs_schema(xsd_source, mode)
     for sheet in sheets:
@@ -256,6 +265,7 @@ def read_sheets(filename, sheets, xml_schema=None, mode='local', xsd_source='xsd
             for part in partition:
                 data_root.children[sheet].append(recursive_data_read(df, part, base, []))
         except ValueError:
+
             print(f'No {sheet} sheet found.')
 
     data_root.delete_empty()
@@ -263,7 +273,7 @@ def read_sheets(filename, sheets, xml_schema=None, mode='local', xsd_source='xsd
     json_dict = data_node_to_json(data_root, root)[0]
 
     if xml_schema is None:
-        xml_schema = xmlschema.XMLSchema('https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd')
+        xml_schema = get_XML_schema(xsd_source)
     filled_xml = xml_schema.encode(json_dict)
 
     return filled_xml
@@ -284,7 +294,7 @@ def write_xml(xml, filename):
 
 
 def read_to_xml(input_filename, output_filename='./dist/result.xml', sheets=None, mode='local',
-                xsd_source='xsd_schema.json'):
+                xsd_source='productie'):
     """
     Reads data from Excel sheets and generates filled XML.
 
@@ -298,7 +308,8 @@ def read_to_xml(input_filename, output_filename='./dist/result.xml', sheets=None
 
 
 if __name__ == '__main__':
-    sheets = None
+    sheets = ['bodemobservatie']
 
     # read_to_xml('../tests/data/filled_templates/bodem_template_full2.xlsx', '../dist/dev.xml', sheets)
-    read_to_xml('../data_voorbeeld/xls2xml_b_bodem_OudeKale_v1.xlsx', '../dist/demo2.xml', sheets)
+    read_to_xml('../data_voorbeeld/fixed_oefen2.xlsx', '../dist/demo2.xml', sheets=sheets,
+                xsd_source='oefen')

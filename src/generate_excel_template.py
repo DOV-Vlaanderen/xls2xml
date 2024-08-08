@@ -441,3 +441,19 @@ if __name__ == '__main__':
               'bodemkundigeopbouw',
               'boring', 'interpretaties', 'grondmonster', 'opdracht']
     create_xls('../data/template_full.xlsx', sheets, root)
+
+    # OEFEN
+
+    # priorities_filename = './config/priority_config_beknopt_oefen.ini'
+    # header_filename = './config/header_convertor_oefen.ini'
+    # root = get_dfs_schema(config_source='xsd_schema_oefen.json')
+    #
+    # sheets = ['bodemlocatie', 'bodemsite', 'bodemmonster', 'bodemobservatie',
+    #           'bodemkundigeopbouw', 'opdracht']
+    # create_xls('../data/bodem_template_oefen.xlsx', sheets, root,
+    #            header_config=header_filename,
+    #            priority_config=priorities_filename,
+    #            color_choice=False)
+    # sheets.append('bodemlocatieclassificatie')
+    # sheets.sort()
+    # create_xls('../data/bodem_template_full_oefen.xlsx', sheets, root)

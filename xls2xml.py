@@ -31,17 +31,8 @@ if __name__ == '__main__':
     assert args.omgeving in ('ontwikkel', 'oefen', 'productie')
     assert args.mode in ('local', 'online')
 
-    arg_convertor = {('ontwikkel', 'local'): 'xsd_schema_ontwikkel.json', ('oefen', 'local'): 'xsd_schema_oefen.json',
-                     ('productie', 'local'): 'xsd_schema.json',
-                     ('ontwikkel', 'online'): 'https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd',
-                     ('oefen', 'online'): 'https://oefen.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd',
-                     ('productie', 'online'): 'https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd'
-                     }
-
-    source = arg_convertor[(args.omgeving, args.mode)]
-
     # Call the read_to_xml function with provided arguments
     if args.sheets:
-        read_to_xml(args.input_file, args.output_file, sheets=args.sheets, mode=args.mode, xsd_source=source)
+        read_to_xml(args.input_file, args.output_file, sheets=args.sheets, mode=args.mode, xsd_source=args.omgeving)
     else:
-        read_to_xml(args.input_file, args.output_file, mode=args.mode, xsd_source=source)
+        read_to_xml(args.input_file, args.output_file, mode=args.mode, xsd_source=args.omgeving)

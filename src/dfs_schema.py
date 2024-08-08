@@ -372,19 +372,23 @@ def get_dfs_schema_from_local(config_filename="xsd_schema.json") -> Node:
     return root
 
 
-def get_dfs_schema(config_source="xsd_schema.json", mode='local') -> Node:
+def get_dfs_schema(xsd_source="productie", mode='local') -> Node:
     """
    Gets the depth-first schema tree.
 
    Returns:
        Node: Root node of the depth-first schema tree.
    """
+    assert xsd_source in ('productie', 'ontwikkel', 'oefen')
     assert mode in ('local', 'online')
 
     if mode == 'local':
-        root = get_dfs_schema_from_local(config_source)
+        file = f'xsd_schema{"" if xsd_source == "productie" else "_" + xsd_source}.json'
+        root = get_dfs_schema_from_local(file)
     else:
-        root = get_dfs_schema_from_url(config_source)
 
-    root.source = (mode, config_source)
+        url = f"https://{'www' if xsd_source == 'productie' else xsd_source}.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd"
+        root = get_dfs_schema_from_url(url)
+
+    root.source = (mode, xsd_source)
     return root
