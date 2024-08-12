@@ -311,5 +311,5 @@ if __name__ == '__main__':
     sheets = ['bodemobservatie']
 
     # read_to_xml('../tests/data/filled_templates/bodem_template_full2.xlsx', '../dist/dev.xml', sheets)
-    read_to_xml('../data_voorbeeld/fixed_oefen2.xlsx', '../dist/demo2.xml', sheets=sheets,
+    read_to_xml('../data_voorbeeld/fixed_oefen.xlsx', '../dist/demo.xml', sheets=sheets,
                 xsd_source='oefen')
