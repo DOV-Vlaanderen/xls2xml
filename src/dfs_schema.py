@@ -13,7 +13,7 @@ import math
 # Global variables to store schema data
 TYPE_LIJST = dict()
 dov_schema_id = None
-
+DEFAULT_TYPE = "java.lang.Object"
 
 def init(config_filename="xsd_schema.json") -> None:
     """
@@ -75,7 +75,7 @@ class Node:
 
         bindings = [restriction['binding'] for restriction in self.constraints if 'binding' in restriction]
 
-        self.binding = 'java.lang.Object' if not bindings else bindings[0]
+        self.binding = DEFAULT_TYPE if not bindings else bindings[0]
 
     def __str__(self) -> str:
         return f'Node(name="{self.name}", {self.min_amount}..{self.max_amount})'
@@ -224,7 +224,7 @@ CONVERTOR = {'boolean': 'java.lang.Boolean',
              'anyURI': 'java.net.URI',
              'time': 'java.sql.Time',
              'dateTime': 'java.sql.Timestamp',
-             None: 'java.lang.Object'}
+             None: DEFAULT_TYPE}
 
 
 def get_content(current_type):
@@ -302,7 +302,7 @@ def recursive_fill(current_node, current_type):
         current_node.children.append(recursive_fill(child_node, child_type))
 
     if not isinstance(current_node, ChoiceNode) and not isinstance(current_node, SequenceNode):
-        current_node.binding = 'java.lang.Object'
+        current_node.binding = DEFAULT_TYPE
     if not content:
         try:
             current_node.binding = get_binding(current_type)
