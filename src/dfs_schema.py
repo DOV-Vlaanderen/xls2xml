@@ -1,6 +1,5 @@
 import json
 import os
-from pathlib import Path
 from typing import List
 from xmlschema.validators.elements import XsdElement
 from xmlschema.validators.complex_types import XsdComplexType
@@ -9,17 +8,19 @@ from xmlschema.validators.groups import XsdGroup
 from xmlschema.validators.attributes import XsdAttribute
 import xmlschema
 import math
+import sys
 
 # Global variables to store schema data
 TYPE_LIJST = dict()
 dov_schema_id = None
 DEFAULT_TYPE = "java.lang.Object"
 
-def init(config_filename="xsd_schema.json") -> None:
+
+def init(project_root, config_filename="xsd_schema.json") -> None:
     """
     Initializes global variables TYPE_LIJST and dov_schema_id with schema data from xsd_schema.json file.
     """
-    xsd_schema = Path(os.path.dirname(__file__) + f"/config/schemas/{config_filename}")
+    xsd_schema = os.path.join(project_root, "config", "schemas", config_filename)
     with open(xsd_schema) as f:
         data = json.load(f)
 
@@ -346,8 +347,9 @@ def compare_nodes(node1, node2):
         compare_nodes(child1, child2)
 
 
-def get_dfs_schema_from_url(url="https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd"):
-    xml_schema = xmlschema.XMLSchema(url)
+def get_dfs_schema_from_url(url, xml_schema=None):
+    if xml_schema is None:
+        xml_schema = xmlschema.XMLSchema(url)
     root_node = Node()
     root_type = xml_schema.root_elements[0]
 
@@ -357,14 +359,27 @@ def get_dfs_schema_from_url(url="https://www.dov.vlaanderen.be/xdov/schema/lates
     return root_node
 
 
-def get_dfs_schema_from_local(config_filename="xsd_schema.json") -> Node:
+
+def get_project_root():
+    cw_dir = os.path.abspath(os.path.dirname(sys.executable))
+    while 'config' not in [x for x in list(os.walk(cw_dir))[0][1]]:
+        cw_dir = os.path.dirname(cw_dir)
+    return cw_dir
+
+def get_XML_schema(omgeving):
+    if omgeving == 'productie':
+        omgeving = 'www'
+    xml_schema = xmlschema.XMLSchema(f'https://{omgeving}.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd')
+    return xml_schema
+
+def get_dfs_schema_from_local(project_root, config_filename="xsd_schema.json") -> Node:
     """
    Gets the depth-first schema tree.
 
    Returns:
        Node: Root node of the depth-first schema tree.
    """
-    init(config_filename=config_filename)
+    init(project_root=project_root, config_filename=config_filename)
     root = create_dfs_schema(TYPE_LIJST[dov_schema_id])
     root.min_amount = 1
     root.max_amount = 1
@@ -372,7 +387,7 @@ def get_dfs_schema_from_local(config_filename="xsd_schema.json") -> Node:
     return root
 
 
-def get_dfs_schema(xsd_source="productie", mode='local') -> Node:
+def get_dfs_schema(project_root=None, xsd_source="productie", mode='local', xml_schema=None) -> Node:
     """
    Gets the depth-first schema tree.
 
@@ -384,11 +399,11 @@ def get_dfs_schema(xsd_source="productie", mode='local') -> Node:
 
     if mode == 'local':
         file = f'xsd_schema{"" if xsd_source == "productie" else "_" + xsd_source}.json'
-        root = get_dfs_schema_from_local(file)
+        root = get_dfs_schema_from_local(project_root, file)
     else:
 
         url = f"https://{'www' if xsd_source == 'productie' else xsd_source}.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd"
-        root = get_dfs_schema_from_url(url)
+        root = get_dfs_schema_from_url(url, xml_schema=xml_schema)
 
     root.source = (mode, xsd_source)
     return root

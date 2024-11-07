@@ -1,3 +1,7 @@
 venv/*
 .idea/*
 dev/*
+.ipynb_checkpoints/*
+.pytest_cache/*
+.github/*
+build/*

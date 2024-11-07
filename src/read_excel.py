@@ -3,13 +3,17 @@ from collections import defaultdict
 import xmlschema
 import pandas as pd
 import numpy as np
-from src.dfs_schema import ChoiceNode, SequenceNode, get_dfs_schema
+from src.dfs_schema import ChoiceNode, SequenceNode, get_dfs_schema, get_XML_schema
 import traceback
+from pathlib import Path
+import os
 import warnings
 
 from ordered_set import OrderedSet
 
 warnings.filterwarnings("ignore", message="Data Validation extension is not supported and will be removed")
+
+PROJECT_ROOT = Path(os.path.dirname(os.path.dirname(__file__)))
 
 
 class DataNode:
@@ -227,13 +231,6 @@ def data_node_to_json(data_node, schema_node):
     return [json_dict]
 
 
-def get_XML_schema(omgeving):
-    if omgeving == 'productie':
-        omgeving = 'www'
-    xml_schema = xmlschema.XMLSchema(f'https://{omgeving}.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd')
-    return xml_schema
-
-
 def read_sheets(filename, sheets, xml_schema=None, mode='local', xsd_source='productie'):
     """
     Reads data from Excel sheets and generates filled XML.
@@ -253,7 +250,7 @@ def read_sheets(filename, sheets, xml_schema=None, mode='local', xsd_source='pro
         sheets.remove('Codelijsten')
         sheets.remove('metadata')
 
-    root = get_dfs_schema(xsd_source, mode)
+    root = get_dfs_schema(PROJECT_ROOT, xsd_source, mode)
     for sheet in sheets:
         try:
             df = pd.read_excel(filename, sheet_name=sheet, dtype={'meetnet': str}).iloc[
@@ -294,7 +291,7 @@ def write_xml(xml, filename):
 
 
 def read_to_xml(input_filename, output_filename='./dist/result.xml', sheets=None, mode='local',
-                xsd_source='productie'):
+                xsd_source='productie', project_root=None, xml_schema=None):
     """
     Reads data from Excel sheets and generates filled XML.
 
@@ -303,13 +300,15 @@ def read_to_xml(input_filename, output_filename='./dist/result.xml', sheets=None
         output_filename (str, optional): Path to the output XML file. Defaults to './dist/result.xml'.
         sheets (List[str], optional): List of sheet names to be read. Defaults to None.
     """
-    filled_xml = read_sheets(input_filename, sheets=sheets, mode=mode, xsd_source=xsd_source)
+    if project_root is not None:
+        global PROJECT_ROOT
+        PROJECT_ROOT = project_root
+
+    filled_xml = read_sheets(input_filename, sheets=sheets, mode=mode, xsd_source=xsd_source, xml_schema=xml_schema)
     write_xml(filled_xml, output_filename)
 
 
 if __name__ == '__main__':
-    sheets = ['bodemobservatie']
-
     # read_to_xml('../tests/data/filled_templates/bodem_template_full2.xlsx', '../dist/dev.xml', sheets)
-    read_to_xml('../data_voorbeeld/fixed_oefen.xlsx', '../dist/demo.xml', sheets=sheets,
+    read_to_xml('../data_voorbeeld/evaluatie_THK_PFAS_oefen.xlsx', '../dist/demo.xml', sheets=['boring'],
                 xsd_source='oefen')
