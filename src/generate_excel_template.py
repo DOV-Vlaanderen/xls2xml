@@ -453,9 +453,20 @@ def generate_standard_templates(project_root, mode='local'):
 
     # OEFEN
 
+
+
     priorities_filename = f'{project_root}/config/priority_config_beknopt_oefen.ini'
     header_filename = f'{project_root}/config/header_convertor_oefen.ini'
     root = get_dfs_schema(project_root, xsd_source='oefen', mode=mode)
+
+    sheets = ['grondwaterlocatie', 'filter', 'filtermeting', 'opdracht']
+    create_xls(f'{project_root}/data/grondwater_template_oefen.xlsx', sheets, root, project_root=project_root,
+               header_config=header_filename,
+               priority_config=priorities_filename,
+               color_choice=False)
+    sheets += ['filterdebietmeter']
+    create_xls(f'{project_root}/data/grondwater_template_full_oefen.xlsx', sheets, root, project_root=project_root)
+
 
     sheets = ['bodemlocatie', 'bodemsite', 'bodemmonster', 'bodemobservatie',
               'bodemkundigeopbouw', 'opdracht']

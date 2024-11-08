@@ -359,6 +359,27 @@ def get_dfs_schema_from_url(url, xml_schema=None):
     return root_node
 
 
+def schema_to_json(filename, dfs_schema):
+    result = []
+    dfs_node_to_json(dfs_schema, result)
+    print('r')
+
+
+
+def dfs_node_to_json(node, result):
+    node_id = len(result)
+    data = {'id': node_id}
+    result.append(data)
+
+    declares = []
+    for child in node.children:
+        child_id = dfs_node_to_json(child, result)
+        declares.append({'name': child.name, 'propertyType': {'ref': child_id}})
+    if declares:
+        data['declares'] = declares
+
+    return node_id
+
 
 def get_project_root():
     cw_dir = os.path.abspath(os.path.dirname(sys.executable))
@@ -366,11 +387,13 @@ def get_project_root():
         cw_dir = os.path.dirname(cw_dir)
     return cw_dir
 
+
 def get_XML_schema(omgeving):
     if omgeving == 'productie':
         omgeving = 'www'
     xml_schema = xmlschema.XMLSchema(f'https://{omgeving}.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd')
     return xml_schema
+
 
 def get_dfs_schema_from_local(project_root, config_filename="xsd_schema.json") -> Node:
     """
@@ -407,3 +430,9 @@ def get_dfs_schema(project_root=None, xsd_source="productie", mode='local', xml_
 
     root.source = (mode, xsd_source)
     return root
+
+
+if __name__ == '__main__':
+    dfs_schema = get_dfs_schema_from_local(os.path.dirname(os.path.dirname(__file__)))
+
+    schema_to_json('test.json', dfs_schema)
