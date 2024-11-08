@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns4:dov-schema xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns4="http://kern.schemas.dov.vlaanderen.be" xsi:schemaLocation="http://kern.schemas.dov.vlaanderen.be https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd">
+<ns0:dov-schema xmlns:ns0="http://kern.schemas.dov.vlaanderen.be">
     <boring>
         <identificatie>1508-B2023-00558-B8/P8</identificatie>
         <dataidentifier>
@@ -8,7 +8,7 @@
         </dataidentifier>
         <xy>
             <x>123378.29</x>
-            <y>184289.90</y>
+            <y>184289.9</y>
             <betrouwbaarheid>onbekend</betrouwbaarheid>
             <methode_opmeten>methode onbekend</methode_opmeten>
             <origine_opmeten>
@@ -27,17 +27,15 @@
         <start_tov_maaiveld>
             <gestart_op>MAAIVELD</gestart_op>
         </start_tov_maaiveld>
-        <diepte_van>0.00</diepte_van>
-        <diepte_tot>5.00</diepte_tot>
+        <diepte_van>0.0</diepte_van>
+        <diepte_tot>5.0</diepte_tot>
         <datum_aanvang>2023-05-02</datum_aanvang>
         <doel>Geotechnisch onderzoek</doel>
+        <boringtype>Bemaling - permanent - exploitatie van terreinen</boringtype>
         <wet_kader>
-            <niet_ingedeeld/>
+            <niet_ingedeeld />
             <type_erkenning>c</type_erkenning>
         </wet_kader>
-        <uitvoerder>
-            <naam>GEOSONDA</naam>
-        </uitvoerder>
         <boormeester>
             <naam>[afgeschermd]</naam>
             <voornaam>[afgeschermd]</voornaam>
@@ -56,36 +54,36 @@
         </stalen>
         <details>
             <boormethode>
-                <van>0.00</van>
+                <van>0.0</van>
                 <tot>0.18</tot>
                 <methode>kernboring</methode>
             </boormethode>
             <boormethode>
                 <van>0.18</van>
-                <tot>0.50</tot>
+                <tot>0.5</tot>
                 <methode>slagboring</methode>
             </boormethode>
             <boordiameter>
-                <van>0.00</van>
+                <van>0.0</van>
                 <tot>0.18</tot>
-                <diameter>0.00</diameter>
+                <diameter>0.0</diameter>
             </boordiameter>
             <boordiameter>
                 <van>0.18</van>
-                <tot>0.50</tot>
-                <diameter>0.00</diameter>
+                <tot>0.5</tot>
+                <diameter>0.0</diameter>
             </boordiameter>
         </details>
     </boring>
-	    <boring>
+    <boring>
         <identificatie>GEO-79/352-b</identificatie>
         <dataidentifier>
             <permkey>1979-002247</permkey>
             <uri>https://www.dov.vlaanderen.be/data/boring/1979-002247</uri>
         </dataidentifier>
         <xy>
-            <x>100264.00</x>
-            <y>182786.00</y>
+            <x>100264.0</x>
+            <y>182786.0</y>
             <betrouwbaarheid>goed</betrouwbaarheid>
             <methode_opmeten>gedigitaliseerd op topokaart</methode_opmeten>
             <origine_opmeten>
@@ -94,7 +92,7 @@
         </xy>
         <gemeente>44020</gemeente>
         <oorspronkelijk_maaiveld>
-            <waarde>7.90</waarde>
+            <waarde>7.9</waarde>
             <betrouwbaarheid>goed</betrouwbaarheid>
             <methode_opmeten>methode onbekend</methode_opmeten>
             <origine_opmeten>
@@ -104,13 +102,18 @@
         <start_tov_maaiveld>
             <gestart_op>MAAIVELD</gestart_op>
         </start_tov_maaiveld>
-        <diepte_van>0.00</diepte_van>
+        <diepte_van>0.0</diepte_van>
         <diepte_tot>12.75</diepte_tot>
         <datum_aanvang>1979-11-05</datum_aanvang>
         <doel>Geotechnisch onderzoek</doel>
-        <uitvoerder>
-            <naam>Rijksinstituut voor Grondmechanica (RIG)</naam>
-        </uitvoerder>
+        <boringtype>Bemaling - permanent - exploitatie van gebouwen</boringtype>
+        <wet_kader>
+            <niet_ingedeeld />
+            <type_erkenning>c</type_erkenning>
+        </wet_kader>
+        <boormeester>
+            <naam>[afgeschermd]</naam>
+        </boormeester>
         <opdrachtgever>
             <naam>MOW - Bestuur Waterwegen</naam>
         </opdrachtgever>
@@ -125,8 +128,8 @@
         </stalen>
         <details>
             <boormethode>
-                <van>0.00</van>
-                <tot>11.20</tot>
+                <van>0.0</van>
+                <tot>11.2</tot>
                 <methode>lepelboring</methode>
             </boormethode>
             <aangenomengrondwaterstand>
@@ -135,4 +138,4 @@
         </details>
         <opdracht>GEO-79/352</opdracht>
     </boring>
-</ns4:dov-schema>
+</ns0:dov-schema>

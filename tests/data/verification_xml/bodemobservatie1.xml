@@ -1,10 +1,9 @@
-<ns4:dov-schema xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                xmlns:ns4="http://kern.schemas.dov.vlaanderen.be"
-                xsi:schemaLocation="http://kern.schemas.dov.vlaanderen.be https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns0:dov-schema xmlns:ns0="http://kern.schemas.dov.vlaanderen.be">
     <bodemobservatie>
         <parameter>ksat</parameter>
         <parametergroep>Bodem_fysisch_vocht</parametergroep>
-        <waarde_numeriek>0.00</waarde_numeriek>
+        <waarde_numeriek>0.0</waarde_numeriek>
         <eenheid>m/s</eenheid>
         <methode>Ksat Open-end-methode</methode>
         <betrouwbaarheid>goed</betrouwbaarheid>
@@ -39,8 +38,8 @@
         <status>publiek</status>
         <auteur>
             <bedrijf>
+                <naam>test</naam>
                 <kbonummer>0420.415.024</kbonummer>
-                <detailnaam>Bodemkundige Dienst van België</detailnaam>
             </bedrijf>
         </auteur>
         <ref_diepteinterval>
@@ -54,7 +53,7 @@
     <bodemobservatie>
         <parameter>textuur_mediaan</parameter>
         <parametergroep>Bodem_fysisch_textuur</parametergroep>
-        <waarde_numeriek>44.00</waarde_numeriek>
+        <waarde_numeriek>44.0</waarde_numeriek>
         <eenheid>µm</eenheid>
         <betrouwbaarheid>onbekend</betrouwbaarheid>
         <veld_labo>LABO</veld_labo>
@@ -97,8 +96,8 @@
         <status>publiek</status>
         <auteur>
             <bedrijf>
+                <naam>test</naam>
                 <kbonummer>0420.415.024</kbonummer>
-                <detailnaam>Bodemkundige Dienst van België</detailnaam>
             </bedrijf>
         </auteur>
         <ref_bodemmonster>
@@ -112,4 +111,4 @@
             <identificatie>A0057109</identificatie>
         </ref_bodemmonster>
     </bodemobservatie>
-</ns4:dov-schema>
+</ns0:dov-schema>

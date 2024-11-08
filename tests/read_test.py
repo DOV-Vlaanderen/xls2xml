@@ -28,9 +28,13 @@ class ValidationNode:
 
     def __eq__(self, other):
         if (self.tag != other.tag) or (self.value != other.value):
+            print(self.tag, other.tag)
             return False
 
         _, indices, other_indices = self.__compare_children__(other)
+
+        if indices or other_indices:
+            print(self.tag)
 
         return (not indices) and (not other_indices)
 
@@ -72,34 +76,34 @@ def xls2xml_test(xls_filename, xml_filename, sheets):
 class BodemTemplateTest(unittest.TestCase):
 
     def test_bodemlocatie(self):
-        xls2xml_test(f'{DATA_FOLDER}/filled_templates/bodem_template_full.xlsx',
+        xls2xml_test(f'{DATA_FOLDER}/filled_templates/bodem_template_full2.xlsx',
                      f'{DATA_FOLDER}/verification_xml/bodemlocatie1.xml', ['bodemlocatie'])
 
     def test_bodemsite(self):
-        xls2xml_test(f'{DATA_FOLDER}/filled_templates/bodem_template_full.xlsx',
+        xls2xml_test(f'{DATA_FOLDER}/filled_templates/bodem_template_full2.xlsx',
                      f'{DATA_FOLDER}/verification_xml/bodemsite1.xml', ['bodemsite'])
 
     def test_bodemmonster(self):
-        xls2xml_test(f'{DATA_FOLDER}/filled_templates/bodem_template_full.xlsx',
+        xls2xml_test(f'{DATA_FOLDER}/filled_templates/bodem_template_full2.xlsx',
                      f'{DATA_FOLDER}/verification_xml/bodemmonster1.xml', ['bodemmonster'])
 
     def test_bodemobservatie(self):
-        xls2xml_test(f'{DATA_FOLDER}/filled_templates/bodem_template_full.xlsx',
+        xls2xml_test(f'{DATA_FOLDER}/filled_templates/bodem_template_full2.xlsx',
                      f'{DATA_FOLDER}/verification_xml/bodemobservatie1.xml', ['bodemobservatie'])
 
     def test_bodemlocatieclassificatie(self):
-        xls2xml_test(f'{DATA_FOLDER}/filled_templates/bodem_template_full.xlsx',
+        xls2xml_test(f'{DATA_FOLDER}/filled_templates/bodem_template_full2.xlsx',
                      f'{DATA_FOLDER}/verification_xml/bodemlocatieclassificatie1.xml', ['bodemlocatieclassificatie'])
 
     def test_bodemkundigeopbouw(self):
-        xls2xml_test(f'{DATA_FOLDER}/filled_templates/bodem_template_full.xlsx',
+        xls2xml_test(f'{DATA_FOLDER}/filled_templates/bodem_template_full2.xlsx',
                      f'{DATA_FOLDER}/verification_xml/bodemkundigeopbouw1.xml', ['bodemkundigeopbouw'])
 
 
 class GrondwaterTemplateTest(unittest.TestCase):
 
     def test_grondwaterlocatie(self):
-        xls2xml_test(f'{DATA_FOLDER}/filled_templates/grondwater_template_full.xlsx',
+        xls2xml_test(f'{DATA_FOLDER}/filled_templates/grondwater_template_full2.xlsx',
                      f'{DATA_FOLDER}/verification_xml/grondwaterlocatie1.xml', ['grondwaterlocatie'])
 
     def test_filter(self):
@@ -118,22 +122,22 @@ class GrondwaterTemplateTest(unittest.TestCase):
 class GeologieTemplateTest(unittest.TestCase):
 
     def test_boring(self):
-        xls2xml_test(f'{DATA_FOLDER}/filled_templates/geologie_template_full.xlsx',
+        xls2xml_test(f'{DATA_FOLDER}/filled_templates/geologie_template_full2.xlsx',
                      f'{DATA_FOLDER}/verification_xml/boring1.xml', ['boring'])
 
     def test_interpretaties(self):
-        xls2xml_test(f'{DATA_FOLDER}/filled_templates/geologie_template_full.xlsx',
+        xls2xml_test(f'{DATA_FOLDER}/filled_templates/geologie_template_full2.xlsx',
                      f'{DATA_FOLDER}/verification_xml/interpretaties1.xml', ['interpretaties'])
 
     def test_grondmonster(self):
-        xls2xml_test(f'{DATA_FOLDER}/filled_templates/geologie_template_full.xlsx',
+        xls2xml_test(f'{DATA_FOLDER}/filled_templates/geologie_template_full2.xlsx',
                      f'{DATA_FOLDER}/verification_xml/grondmonster1.xml', ['grondmonster'])
 
 
 class OpdrachtTemplateTest(unittest.TestCase):
 
     def test_opdracht(self):
-        xls2xml_test(f'{DATA_FOLDER}/filled_templates/opdracht_template_full.xlsx',
+        xls2xml_test(f'{DATA_FOLDER}/filled_templates/opdracht_template_full2.xlsx',
                      f'{DATA_FOLDER}/verification_xml/opdracht1.xml', ['opdracht'])
 
 
