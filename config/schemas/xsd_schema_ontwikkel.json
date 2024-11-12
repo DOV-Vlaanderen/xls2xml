@@ -4722,7 +4722,7 @@
 							"name": "bemonsteringsinstrument",
 							"description": "cfr. https://github.com/bodemenondergrond/codelijst-bemonsteringsinstrument\n",
 							"constraints": {
-								"cardinality": "1..n",
+								"cardinality": "0..1",
 								"nillable": false
 							},
 							"propertyType": {
@@ -5073,8 +5073,6 @@
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
-						"binding": "java.lang.Object",
-						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -5219,8 +5217,6 @@
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
-						"binding": "java.lang.Object",
-						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -5513,8 +5509,6 @@
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
-						"binding": "java.lang.Object",
-						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -5819,8 +5813,6 @@
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
-						"binding": "java.lang.Object",
-						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -6147,12 +6139,10 @@
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
-						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
-						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -6330,8 +6320,6 @@
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
-						"binding": "java.lang.Object",
-						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -7483,8 +7471,6 @@
 					"namespace": "http://boring.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
-						"binding": "java.lang.Object",
-						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -7845,14 +7831,14 @@
 					"constraints": {
 						"enumeration": {
 							"@type": "properties",
-							"@value": {"allowOthers":false,"values":["Bemaling","Bemaling - permanent - exploitatie van terreinen","Bemaling - permanent - exploitatie van gebouwen","Bemaling - permanent - exploitatie van tunnels","Bemaling - permanent - waterbeheersing van mijnverzakkingsgebieden","Bemaling - tijdelijk - realisatie van werken","Bemaling - tijdelijk - realisatie van nutsvoorzieningen","Bemaling i.h.k.v. bodemsanering - mitigatie","Bemaling i.h.k.v. bodemsanering - sanering","Bemaling i.h.k.v. bodemsanering - grondwaterverlaging","Grondwaterwinning","Grondwaterwinning met ondergrondse beluchting","Grondwaterwinning voor bedrijfsgebonden toepassingen","Grondwaterwinning voor huishoudelijke toepassingen","Grondwaterwinning voor openbare watervoorziening","Boring voor kunstmatig aanvullen van grondwater","Koude-warmteopslag (KWO, WKO, ATES)","Grondwateronttrekking incl drijflaagverwijdering (bodemsanering)","Boring voor herinfiltratie van opgepompt grondwater (bodemsanering)","Geotechnische boring","Geotechnische boring - (dis)continue monstername","Geotechnische boring - peilfilters","Geotechnische boring - waterspanningsmeters","Geotechnische boring - gronddrukmeters","Geotechnische boring - inclinometers","Geotechnische boring - extensometers","Geotechnische boring - ander instrumentarium","Boring (d<100m) in verband met opslag kernafval","Boring voor archeologisch onderzoek","Boring voor bodemkundig onderzoek","Boring voor inbouw van een seismometer","Boring voor kathodische bescherming","Thermische energieopslag in boorgat (BEO, bodemlus, BTES)","Boring voor verkennend onderzoek (geologisch)","Boring voor verkennend onderzoek (hydrogeologisch)","Boring voor verkennend onderzoek (geofysisch)","Boring voor verkennend onderzoek (geochemisch)","Boring voor verkennend onderzoek (prospectie delfstoffen)","Boring voor verkennend onderzoek (bodemverontreiniging) (milieuboring)","Boring (d>500m) louter voor verkennend en wetenschappelijk onderzoek","Boring (d>500m) i.h.k.v. een opsporingsvergunning voor koolwaterstoffen","Boring (d>500m) i.h.k.v. een winningsvergunning voor koolwaterstoffen","Boring (d>500m) i.h.k.v. een opsporingsvergunning voor koolstofdioxideopslag","Boring (d>500m) i.h.k.v. een opslagvergunning voor koolstofdioxide","Boring (d>500m) i.h.k.v. een opsporingsvergunning voor aardwarmte","Boring (d>500m) i.h.k.v. een winningsvergunning voor aardwarmte","Boring (d>500m) i.h.k.v. een opsporingsvergunning voor het opslaan van gas","Boring (d>500m) i.h.k.v. een exploitatievergunning  voor het opslaan van gas","Boring (d>100m) in verband met opslag kernafval","Boring voor proefpomping, pompproef of bemalingsproef","Aanleg peilput","Aanleg peilput - milieuvoorwaarden exploitatie inrichting","Aanleg peilput - bodem- en grondwateranalyses","Aanleg peilput - bodemverontreinining","Opvullen van een boring of een grondwaterwinning","Boring i.h.k.v. grondverzet","Aanleg peilput - Grondverzet","Boring i.h.k.v. Certificaat van Herkomst","Historische geologische boring","Historische hydrogeologische boring"]}
+							"@value": {"allowOthers":false,"values":["Bemaling - permanent - exploitatie van terreinen","Bemaling - permanent - exploitatie van gebouwen","Bemaling - permanent - exploitatie van tunnels","Bemaling - permanent - waterbeheersing van mijnverzakkingsgebieden","Bemaling - tijdelijk - realisatie van werken","Bemaling - tijdelijk - realisatie van nutsvoorzieningen","Bemaling i.h.k.v. bodemsanering - mitigatie","Bemaling i.h.k.v. bodemsanering - sanering","Bemaling i.h.k.v. bodemsanering - grondwaterverlaging","Grondwaterwinning met ondergrondse beluchting","Grondwaterwinning voor bedrijfsgebonden toepassingen","Grondwaterwinning voor huishoudelijke toepassingen","Grondwaterwinning voor openbare watervoorziening","Boring voor kunstmatig aanvullen van grondwater","Koude-warmteopslag (KWO, WKO, ATES)","Grondwateronttrekking incl drijflaagverwijdering (bodemsanering)","Boring voor herinfiltratie van opgepompt grondwater (bodemsanering)","Geotechnische boring - (dis)continue monstername","Geotechnische boring - peilfilters","Geotechnische boring - waterspanningsmeters","Geotechnische boring - gronddrukmeters","Geotechnische boring - inclinometers","Geotechnische boring - extensometers","Geotechnische boring - ander instrumentarium","Boring (d<100m) in verband met opslag kernafval","Boring voor archeologisch onderzoek","Boring voor bodemkundig onderzoek","Boring voor inbouw van een seismometer","Boring voor kathodische bescherming","Thermische energieopslag in boorgat (BEO, bodemlus, BTES)","Boring voor verkennend onderzoek (geologisch)","Boring voor verkennend onderzoek (hydrogeologisch)","Boring voor verkennend onderzoek (geofysisch)","Boring voor verkennend onderzoek (geochemisch)","Boring voor verkennend onderzoek (prospectie delfstoffen)","Boring voor verkennend onderzoek (bodemverontreiniging) (milieuboring)","Boring (d>500m) louter voor verkennend en wetenschappelijk onderzoek","Boring (d>500m) i.h.k.v. een opsporingsvergunning voor koolwaterstoffen","Boring (d>500m) i.h.k.v. een winningsvergunning voor koolwaterstoffen","Boring (d>500m) i.h.k.v. een opsporingsvergunning voor koolstofdioxideopslag","Boring (d>500m) i.h.k.v. een opslagvergunning voor koolstofdioxide","Boring (d>500m) i.h.k.v. een opsporingsvergunning voor aardwarmte","Boring (d>500m) i.h.k.v. een winningsvergunning voor aardwarmte","Boring (d>500m) i.h.k.v. een opsporingsvergunning voor het opslaan van gas","Boring (d>500m) i.h.k.v. een exploitatievergunning  voor het opslaan van gas","Boring (d>100m) in verband met opslag kernafval","Boring voor proefpomping, pompproef of bemalingsproef","Aanleg peilput - milieuvoorwaarden exploitatie inrichting","Aanleg peilput - bodem- en grondwateranalyses","Aanleg peilput - bodemverontreinining","Opvullen van een boring of een grondwaterwinning","Boring i.h.k.v. grondverzet","Aanleg peilput - Grondverzet","Boring i.h.k.v. Certificaat van Herkomst"]}
 
 						},
 						"has-value": true,
 						"mapping-relevant": false,
 						"validation": {
 							"@type": "validator",
-							"@value": {"type":"and","config":[{"@type":"validator","@value":{"type":"enumeration","config":["Bemaling","Bemaling - permanent - exploitatie van terreinen","Bemaling - permanent - exploitatie van gebouwen","Bemaling - permanent - exploitatie van tunnels","Bemaling - permanent - waterbeheersing van mijnverzakkingsgebieden","Bemaling - tijdelijk - realisatie van werken","Bemaling - tijdelijk - realisatie van nutsvoorzieningen","Bemaling i.h.k.v. bodemsanering - mitigatie","Bemaling i.h.k.v. bodemsanering - sanering","Bemaling i.h.k.v. bodemsanering - grondwaterverlaging","Grondwaterwinning","Grondwaterwinning met ondergrondse beluchting","Grondwaterwinning voor bedrijfsgebonden toepassingen","Grondwaterwinning voor huishoudelijke toepassingen","Grondwaterwinning voor openbare watervoorziening","Boring voor kunstmatig aanvullen van grondwater","Koude-warmteopslag (KWO, WKO, ATES)","Grondwateronttrekking incl drijflaagverwijdering (bodemsanering)","Boring voor herinfiltratie van opgepompt grondwater (bodemsanering)","Geotechnische boring","Geotechnische boring - (dis)continue monstername","Geotechnische boring - peilfilters","Geotechnische boring - waterspanningsmeters","Geotechnische boring - gronddrukmeters","Geotechnische boring - inclinometers","Geotechnische boring - extensometers","Geotechnische boring - ander instrumentarium","Boring (d<100m) in verband met opslag kernafval","Boring voor archeologisch onderzoek","Boring voor bodemkundig onderzoek","Boring voor inbouw van een seismometer","Boring voor kathodische bescherming","Thermische energieopslag in boorgat (BEO, bodemlus, BTES)","Boring voor verkennend onderzoek (geologisch)","Boring voor verkennend onderzoek (hydrogeologisch)","Boring voor verkennend onderzoek (geofysisch)","Boring voor verkennend onderzoek (geochemisch)","Boring voor verkennend onderzoek (prospectie delfstoffen)","Boring voor verkennend onderzoek (bodemverontreiniging) (milieuboring)","Boring (d>500m) louter voor verkennend en wetenschappelijk onderzoek","Boring (d>500m) i.h.k.v. een opsporingsvergunning voor koolwaterstoffen","Boring (d>500m) i.h.k.v. een winningsvergunning voor koolwaterstoffen","Boring (d>500m) i.h.k.v. een opsporingsvergunning voor koolstofdioxideopslag","Boring (d>500m) i.h.k.v. een opslagvergunning voor koolstofdioxide","Boring (d>500m) i.h.k.v. een opsporingsvergunning voor aardwarmte","Boring (d>500m) i.h.k.v. een winningsvergunning voor aardwarmte","Boring (d>500m) i.h.k.v. een opsporingsvergunning voor het opslaan van gas","Boring (d>500m) i.h.k.v. een exploitatievergunning  voor het opslaan van gas","Boring (d>100m) in verband met opslag kernafval","Boring voor proefpomping, pompproef of bemalingsproef","Aanleg peilput","Aanleg peilput - milieuvoorwaarden exploitatie inrichting","Aanleg peilput - bodem- en grondwateranalyses","Aanleg peilput - bodemverontreinining","Opvullen van een boring of een grondwaterwinning","Boring i.h.k.v. grondverzet","Aanleg peilput - Grondverzet","Boring i.h.k.v. Certificaat van Herkomst","Historische geologische boring","Historische hydrogeologische boring"]}}]}
+							"@value": {"type":"and","config":[{"@type":"validator","@value":{"type":"enumeration","config":["Bemaling - permanent - exploitatie van terreinen","Bemaling - permanent - exploitatie van gebouwen","Bemaling - permanent - exploitatie van tunnels","Bemaling - permanent - waterbeheersing van mijnverzakkingsgebieden","Bemaling - tijdelijk - realisatie van werken","Bemaling - tijdelijk - realisatie van nutsvoorzieningen","Bemaling i.h.k.v. bodemsanering - mitigatie","Bemaling i.h.k.v. bodemsanering - sanering","Bemaling i.h.k.v. bodemsanering - grondwaterverlaging","Grondwaterwinning met ondergrondse beluchting","Grondwaterwinning voor bedrijfsgebonden toepassingen","Grondwaterwinning voor huishoudelijke toepassingen","Grondwaterwinning voor openbare watervoorziening","Boring voor kunstmatig aanvullen van grondwater","Koude-warmteopslag (KWO, WKO, ATES)","Grondwateronttrekking incl drijflaagverwijdering (bodemsanering)","Boring voor herinfiltratie van opgepompt grondwater (bodemsanering)","Geotechnische boring - (dis)continue monstername","Geotechnische boring - peilfilters","Geotechnische boring - waterspanningsmeters","Geotechnische boring - gronddrukmeters","Geotechnische boring - inclinometers","Geotechnische boring - extensometers","Geotechnische boring - ander instrumentarium","Boring (d<100m) in verband met opslag kernafval","Boring voor archeologisch onderzoek","Boring voor bodemkundig onderzoek","Boring voor inbouw van een seismometer","Boring voor kathodische bescherming","Thermische energieopslag in boorgat (BEO, bodemlus, BTES)","Boring voor verkennend onderzoek (geologisch)","Boring voor verkennend onderzoek (hydrogeologisch)","Boring voor verkennend onderzoek (geofysisch)","Boring voor verkennend onderzoek (geochemisch)","Boring voor verkennend onderzoek (prospectie delfstoffen)","Boring voor verkennend onderzoek (bodemverontreiniging) (milieuboring)","Boring (d>500m) louter voor verkennend en wetenschappelijk onderzoek","Boring (d>500m) i.h.k.v. een opsporingsvergunning voor koolwaterstoffen","Boring (d>500m) i.h.k.v. een winningsvergunning voor koolwaterstoffen","Boring (d>500m) i.h.k.v. een opsporingsvergunning voor koolstofdioxideopslag","Boring (d>500m) i.h.k.v. een opslagvergunning voor koolstofdioxide","Boring (d>500m) i.h.k.v. een opsporingsvergunning voor aardwarmte","Boring (d>500m) i.h.k.v. een winningsvergunning voor aardwarmte","Boring (d>500m) i.h.k.v. een opsporingsvergunning voor het opslaan van gas","Boring (d>500m) i.h.k.v. een exploitatievergunning  voor het opslaan van gas","Boring (d>100m) in verband met opslag kernafval","Boring voor proefpomping, pompproef of bemalingsproef","Aanleg peilput - milieuvoorwaarden exploitatie inrichting","Aanleg peilput - bodem- en grondwateranalyses","Aanleg peilput - bodemverontreinining","Opvullen van een boring of een grondwaterwinning","Boring i.h.k.v. grondverzet","Aanleg peilput - Grondverzet","Boring i.h.k.v. Certificaat van Herkomst"]}}]}
 
 						},
 						"xsd_elements": [],
@@ -9852,8 +9838,7 @@
 							"description": "Een Opdracht is een samensmelting van het huidige 'gedocumenteerd object' met informatie die gebruikt wordt om een studiegebied te kenmerken en af te bakenen. Het entiteittype bundelt gegevens die via een interne of externe opdracht in de databank ge\u00efmporteerd worden. Dit omvat eveneens ruimtelijke en niet-ruimtelijke informatie over de afbakening van bepaalde studiegebieden waarin een groep van gegevens verzameld werd.\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 369
@@ -9864,8 +9849,7 @@
 							"description": "Een Boring is locatie op het aardoppervlak waar een boring is uitgevoerd, nl een technische handeling waar men aan de hand van een boorapparaat grondstalen uit de ondergrond haalt. Tijdens de uitvoering van een boring kan men gebruik maken van verschillende soorten uitvoeringsmethoden, afhankelijk van het type grond en toepassingsgebied.\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 91
@@ -9876,8 +9860,7 @@
 							"description": "TODO\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 218
@@ -9887,8 +9870,7 @@
 							"name": "sondering",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 461
@@ -9899,8 +9881,7 @@
 							"description": "Een Interpretatie is een beschrijving van de ondergrond op een bepaalde locatie in Vlaanderen. Om de ondergrond te beschrijven wordt deze in functie van de diepte onderverdeeld in discrete stukken.\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 268
@@ -9911,8 +9892,7 @@
 							"description": "putten\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 224
@@ -9923,8 +9903,7 @@
 							"description": "filters\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 171
@@ -9935,8 +9914,7 @@
 							"description": "debietmeters aan filter\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 156
@@ -9947,8 +9925,7 @@
 							"description": "Verzameling van alle mogelijke metingen bij een filter\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 163
@@ -9959,8 +9936,7 @@
 							"description": "Verzameling van alle mogelijke bodemsites\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 74
@@ -9971,8 +9947,7 @@
 							"description": "Verzameling van alle mogelijke bodemlocaties\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 66
@@ -9983,8 +9958,7 @@
 							"description": "Verzameling van alle mogelijke bodemclassificaties\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 60
@@ -9995,8 +9969,7 @@
 							"description": "Verzameling van alle mogelijke bodemkundige opbouwen\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 56
@@ -10007,8 +9980,7 @@
 							"description": "Verzameling van alle mogelijke bodemmonsters\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 69
@@ -10019,8 +9991,7 @@
 							"description": "Verzameling van alle mogelijke bodemobservaties\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 72
@@ -10031,8 +10002,7 @@
 							"description": "monsters\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 322
@@ -10043,8 +10013,7 @@
 							"description": "Verzameling van alle mogelijke observaties\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false,
-								"xsd_attribute": false
+								"nillable": false
 							},
 							"propertyType": {
 								"ref": 357
@@ -11360,7 +11329,6 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
-						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -11744,7 +11712,6 @@
 					"description": "verzamelpunt voor alle metingen die aan de filter uitgevoerd worden\n",
 					"constraints": {
 						"abstract": false,
-						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -12183,7 +12150,6 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
-						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -14178,7 +14144,6 @@
 					"namespace": "http://grondmonster.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
-						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -14550,7 +14515,6 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
-						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -16908,7 +16872,6 @@
 					"description": "lijst van interpretaties; deze lijst kan verschillende soorten interpretaties bevatten\n",
 					"constraints": {
 						"abstract": false,
-						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -19302,7 +19265,6 @@
 					"namespace": "http://monster.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
-						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -19336,7 +19298,7 @@
 							"name": "bemonsterdObject",
 							"description": "Verwijzing naar het Object dat men heeft bemonsterd.\n",
 							"constraints": {
-								"cardinality": "0..n",
+								"cardinality": "1..1",
 								"nillable": false
 							},
 							"propertyType": {
@@ -21366,7 +21328,6 @@
 					"namespace": "http://observatie.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
-						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -22202,7 +22163,6 @@
 					"namespace": "http://opdracht.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
-						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -22783,7 +22743,7 @@
 						"mapping-relevant": false,
 						"validation": {
 							"@type": "validator",
-							"@value": {"type":"and","config":[{"@type":"validator","@value":{"type":"or","config":[{"@type":"validator","@value":{"type":"pattern","config":"OVO\\d{6}"}},{"@type":"validator","@value":{"type":"pattern","config":"ovo\\d{6}"}}]}}]}
+							"@value": {"type":"and","config":[{"@type":"validator","@value":{"type":"or","config":[{"@type":"validator","@value":{"type":"pattern","config":"OVO[0-1]\\d{6}"}},{"@type":"validator","@value":{"type":"pattern","config":"ovo[0-1]\\d{6}"}}]}}]}
 
 						},
 						"xsd_elements": [],
@@ -27332,7 +27292,6 @@
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
-						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
