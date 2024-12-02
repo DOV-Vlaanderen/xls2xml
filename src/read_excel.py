@@ -310,5 +310,5 @@ def read_to_xml(input_filename, output_filename='./dist/result.xml', sheets=None
 
 if __name__ == '__main__':
     # read_to_xml('../tests/data/filled_templates/bodem_template_full2.xlsx', '../dist/dev.xml', sheets)
-    read_to_xml('../data_voorbeeld/evaluatie_THK_PFAS_oefen.xlsx', '../dist/demo.xml', sheets=['boring'],
-                xsd_source='oefen')
+    read_to_xml('../data_voorbeeld/template_fixed.xlsx', '../dist/bug.xml', sheets=['grondwaterlocatie', 'filter'],
+                xsd_source='productie')
