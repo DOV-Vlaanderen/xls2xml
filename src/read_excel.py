@@ -8,6 +8,7 @@ import traceback
 from pathlib import Path
 import os
 import warnings
+import dateutil.parser as parser
 
 from ordered_set import OrderedSet
 
@@ -55,6 +56,12 @@ class DataNode:
         return f'DataNode(name={self.name}, children=[{", ".join(str(key) + ":" + str(len(val)) for key, val in self.children.items() if len(val) > 0)}], data={self.data})'
 
 
+def parse_date(d):
+    if isinstance(d, str):
+        d=parser.parse(d, dayfirst=True)
+    return d.strftime("%Y-%m-%d")
+
+
 def clean_data(data, schema_node):
     """
     Cleans the data according to schema constraints.
@@ -73,7 +80,7 @@ def clean_data(data, schema_node):
 
         cleaner = {'java.lang.Boolean': lambda x: bool(x),
                    'java.math.BigInteger': lambda x: int(x),
-                   'java.sql.Date': lambda x: x.strftime("%Y-%m-%d"),
+                   'java.sql.Date': parse_date,
                    'java.math.BigDecimal': lambda x: float(x),
                    'java.lang.Double': lambda x: float(x),
                    'java.lang.String': lambda x: str(x),
@@ -310,5 +317,5 @@ def read_to_xml(input_filename, output_filename='./dist/result.xml', sheets=None
 
 if __name__ == '__main__':
     # read_to_xml('../tests/data/filled_templates/bodem_template_full2.xlsx', '../dist/dev.xml', sheets)
-    read_to_xml('../data_voorbeeld/template_fixed.xlsx', '../dist/bug.xml', sheets=['grondwaterlocatie', 'filter'],
+    read_to_xml('../data_voorbeeld/output_file.xlsx', '../dist/bug.xml', sheets=['bodemlocatie'],
                 xsd_source='productie')
