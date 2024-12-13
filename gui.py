@@ -9,6 +9,10 @@ import traceback
 import time
 
 
+"""
+Command:
+pyinstaller -F -w -n xls2xml --distpath app gui.py
+"""
 def generate_templates():
     try:
         generate_standard_templates(project_root=get_project_root(), mode='online')
