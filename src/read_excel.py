@@ -58,7 +58,7 @@ class DataNode:
 
 def parse_date(d):
     if isinstance(d, str):
-        d=parser.parse(d, dayfirst=True)
+        d = parser.parse(d, dayfirst=True)
     return d.strftime("%Y-%m-%d")
 
 
@@ -81,7 +81,7 @@ def clean_data(data, schema_node):
         cleaner = {'java.lang.Boolean': lambda x: bool(x),
                    'java.math.BigInteger': lambda x: int(x),
                    'java.sql.Date': parse_date,
-                   'java.math.BigDecimal': lambda x: float(x),
+                   'java.math.BigDecimal': lambda x: float(x.replace(',', '.')),
                    'java.lang.Double': lambda x: float(x),
                    'java.lang.String': lambda x: str(x),
                    'java.net.URI': lambda x: str(x),
@@ -259,18 +259,24 @@ def read_sheets(filename, sheets, xml_schema=None, mode='local', xsd_source='pro
 
     root = get_dfs_schema(PROJECT_ROOT, xsd_source, mode)
     for sheet in sheets:
+        sheet_available = False
         try:
             df = pd.read_excel(filename, sheet_name=sheet, dtype={'meetnet': str}).iloc[
                  root.get_specific_child(sheet).get_max_depth():,
                  :].reset_index(
                 drop=True)
-            base = root.get_specific_child(sheet)
-            partition = get_partition(df, np.ones(df.shape[0], dtype='bool'), [], base)
-            for part in partition:
-                data_root.children[sheet].append(recursive_data_read(df, part, base, []))
+            sheet_available = True
         except ValueError:
-
             print(f'No {sheet} sheet found.')
+
+        if sheet_available:
+            try:
+                base = root.get_specific_child(sheet)
+                partition = get_partition(df, np.ones(df.shape[0], dtype='bool'), [], base)
+                for part in partition:
+                    data_root.children[sheet].append(recursive_data_read(df, part, base, []))
+            except ValueError:
+                print(f'Conversion of sheet {sheet} failed')
 
     data_root.delete_empty()
 
