@@ -62,6 +62,19 @@ def parse_date(d):
     return d.strftime("%Y-%m-%d")
 
 
+def parse_time(t):
+    if isinstance(t, str):
+        t = parser.parse(t, dayfirst=True)
+    return t.strftime("%H:%M:%S")
+
+
+def parse_float(f):
+    if isinstance(f, str):
+        f = float(f.replace(',', '.'))
+
+    return float(f)
+
+
 def clean_data(data, schema_node):
     """
     Cleans the data according to schema constraints.
@@ -81,11 +94,11 @@ def clean_data(data, schema_node):
         cleaner = {'java.lang.Boolean': lambda x: bool(x),
                    'java.math.BigInteger': lambda x: int(x),
                    'java.sql.Date': parse_date,
-                   'java.math.BigDecimal': lambda x: float(x.replace(',', '.')),
-                   'java.lang.Double': lambda x: float(x),
+                   'java.math.BigDecimal': parse_float,
+                   'java.lang.Double': parse_float,
                    'java.lang.String': lambda x: str(x),
                    'java.net.URI': lambda x: str(x),
-                   'java.sql.Time': lambda x: x.strftime("%H:%M:%S"),
+                   'java.sql.Time': parse_time,
                    'java.lang.Object': lambda x: str(x)}
 
         binding = schema_node.binding
