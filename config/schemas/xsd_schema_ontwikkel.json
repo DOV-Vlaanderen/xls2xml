@@ -2025,631 +2025,646 @@
 				},
 				{
 					"ref": 404,
+					"name": "positiveDecimal",
+					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be"
+				},
+				{
+					"ref": 405,
 					"name": "positiveInteger",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 405,
+					"ref": 406,
 					"name": "PostcodeType",
 					"namespace": "http://geografie.schemas.milieuinfo.be"
 				},
 				{
-					"ref": 406,
+					"ref": 407,
 					"name": "PostVerwerkingType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 407,
+					"ref": 408,
 					"name": "ProefNaamEnumType",
 					"namespace": "http://grondmonster.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 408,
+					"ref": 409,
 					"name": "ProefuitvoeringsDataType",
 					"namespace": "http://grondmonster.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 409,
+					"ref": 410,
 					"name": "ProefuitvoeringsType",
 					"namespace": "http://grondmonster.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 410,
+					"ref": 411,
 					"name": "ProfielontwikkelingsgroepEnumType",
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 411,
+					"ref": 412,
 					"name": "public",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 412,
+					"ref": 413,
 					"name": "PuntlocatieType",
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 413,
+					"ref": 414,
 					"name": "PuntlocatieType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 414,
-					"name": "PutnabestemmingEnumType",
-					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be"
-				},
-				{
 					"ref": 415,
-					"name": "PutsleutelEnumType",
+					"name": "PutafwerkingPositieEnumType",
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be"
 				},
 				{
 					"ref": 416,
-					"name": "PutsoortEnumType",
+					"name": "PutafwerkingTypeEnumType",
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be"
 				},
 				{
 					"ref": 417,
+					"name": "PutnabestemmingEnumType",
+					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be"
+				},
+				{
+					"ref": 418,
+					"name": "PutsleutelEnumType",
+					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be"
+				},
+				{
+					"ref": 419,
+					"name": "PutsoortEnumType",
+					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be"
+				},
+				{
+					"ref": 420,
 					"name": "QName",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 418,
+					"ref": 421,
 					"name": "QuartairStratigrafieLaagType",
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 419,
+					"ref": 422,
 					"name": "QuartairStratigrafieLedenEnumType",
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 420,
+					"ref": 423,
 					"name": "QuartairStratigrafieType",
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 421,
+					"ref": 424,
 					"name": "realGroup",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 422,
+					"ref": 425,
 					"name": "RechtsvormEnumType",
 					"namespace": "http://geografie.schemas.milieuinfo.be"
 				},
 				{
-					"ref": 423,
+					"ref": 426,
 					"name": "redefine_AnonymousType",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 424,
+					"ref": 427,
 					"name": "reducedDerivationControl",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 425,
+					"ref": 428,
 					"name": "ReferentieEnumType",
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 426,
+					"ref": 429,
 					"name": "ReferentiepuntHoogtebepalingEnumType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 427,
+					"ref": 430,
 					"name": "ReferentiepuntType",
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 428,
+					"ref": 431,
 					"name": "ReferentieType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 429,
+					"ref": 432,
 					"name": "RegimeEnumType",
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 430,
+					"ref": 433,
 					"name": "RelatieLedenEnumType",
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 431,
+					"ref": 434,
 					"name": "requiredstring255",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 432,
+					"ref": 435,
 					"name": "restriction_AnonymousType",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 433,
+					"ref": 436,
 					"name": "restrictionType",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 434,
+					"ref": 437,
 					"name": "schema_AnonymousType",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 435,
+					"ref": 438,
 					"name": "SectieType",
 					"namespace": "http://geografie.schemas.milieuinfo.be"
 				},
 				{
-					"ref": 436,
+					"ref": 439,
 					"name": "SecundaireParameterMetingType",
 					"namespace": "http://observatie.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 437,
+					"ref": 440,
 					"name": "SecundairKenmerkType",
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 438,
+					"ref": 441,
 					"name": "SecundairKenmerktypeEnumType",
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 439,
+					"ref": 442,
 					"name": "SedimentaireStructuurType",
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 440,
+					"ref": 443,
 					"name": "SedimentaireStructuurtypeEnumType",
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 441,
+					"ref": 444,
 					"name": "selector_AnonymousType",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 442,
+					"ref": 445,
 					"name": "short",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 443,
+					"ref": 446,
 					"name": "simpleContent_AnonymousType",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 444,
+					"ref": 447,
 					"name": "simpleDerivationSet",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 445,
+					"ref": 448,
 					"name": "simpleExplicitGroup",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 446,
+					"ref": 449,
 					"name": "simpleExtensionType",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 447,
+					"ref": 450,
 					"name": "simpleRestrictionType",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 448,
+					"ref": 451,
 					"name": "simpleType",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 449,
+					"ref": 452,
 					"name": "SondeerApparaatEnumType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 450,
+					"ref": 453,
 					"name": "SondeerApparaatType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 451,
+					"ref": 454,
 					"name": "SondeerConusType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 452,
+					"ref": 455,
 					"name": "SondeerKwaliteitType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 453,
+					"ref": 456,
 					"name": "SondeerMeetlichaamEnumType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 454,
+					"ref": 457,
 					"name": "SondeerMethodeEnumType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 455,
+					"ref": 458,
 					"name": "SondeerNormEnumType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 456,
+					"ref": 459,
 					"name": "SondeerTechniekEnumType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 457,
+					"ref": 460,
 					"name": "SondeerTechniekType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 458,
+					"ref": 461,
 					"name": "SondeOnderzoekType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 459,
+					"ref": 462,
 					"name": "SonderingKalibratieType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 460,
+					"ref": 463,
 					"name": "SonderingReferentieType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 461,
+					"ref": 464,
 					"name": "SonderingType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 462,
+					"ref": 465,
 					"name": "SondeTrajectType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 463,
+					"ref": 466,
 					"name": "StatusEnumType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 464,
+					"ref": 467,
 					"name": "StopcriteriumEnumType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 465,
+					"ref": 468,
 					"name": "StraatType",
 					"namespace": "http://geografie.schemas.milieuinfo.be"
 				},
 				{
-					"ref": 466,
+					"ref": 469,
 					"name": "string",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 467,
+					"ref": 470,
 					"name": "string100",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 468,
+					"ref": 471,
 					"name": "string150",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 469,
+					"ref": 472,
 					"name": "string25",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 470,
+					"ref": 473,
 					"name": "string255",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 471,
+					"ref": 474,
 					"name": "string50",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 472,
+					"ref": 475,
 					"name": "string75",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 473,
+					"ref": 476,
 					"name": "SubstraatEnumType",
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 474,
+					"ref": 477,
 					"name": "SurfaceArrayPropertyType",
 					"namespace": "http://www.opengis.net/gml/3.2"
 				},
 				{
-					"ref": 475,
+					"ref": 478,
 					"name": "SurfacePropertyType",
 					"namespace": "http://www.opengis.net/gml/3.2"
 				},
 				{
-					"ref": 476,
+					"ref": 479,
 					"name": "TaalEnumType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 477,
+					"ref": 480,
 					"name": "TektoniekType",
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 478,
+					"ref": 481,
 					"name": "TektoniektypeEnumType",
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 479,
+					"ref": 482,
 					"name": "TemporeelType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 480,
+					"ref": 483,
 					"name": "TesttypeEnumType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 481,
+					"ref": 484,
 					"name": "TextuurklasseEnumType",
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 482,
+					"ref": 485,
 					"name": "time",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 483,
+					"ref": 486,
 					"name": "ToestandType",
 					"namespace": "http://geografie.schemas.milieuinfo.be"
 				},
 				{
-					"ref": 484,
+					"ref": 487,
 					"name": "token",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 485,
+					"ref": 488,
 					"name": "topLevelAttribute",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 486,
+					"ref": 489,
 					"name": "topLevelComplexType",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 487,
+					"ref": 490,
 					"name": "topLevelElement",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 488,
+					"ref": 491,
 					"name": "topLevelSimpleType",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 489,
+					"ref": 492,
 					"name": "totalDigits_AnonymousType",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 490,
+					"ref": 493,
 					"name": "typeDerivationControl",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 491,
+					"ref": 494,
 					"name": "UitvoerderType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 492,
+					"ref": 495,
 					"name": "UitvoeringAnalyseType",
 					"namespace": "http://observatie.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 493,
+					"ref": 496,
 					"name": "union_AnonymousType",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 494,
+					"ref": 497,
 					"name": "unsignedByte",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 495,
+					"ref": 498,
 					"name": "unsignedInt",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 496,
+					"ref": 499,
 					"name": "unsignedLong",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 497,
+					"ref": 500,
 					"name": "unsignedShort",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 498,
+					"ref": 501,
 					"name": "VarianteMoedermateriaalEnumType",
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 499,
+					"ref": 502,
 					"name": "VarianteProfielontwikkelingEnumType",
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 500,
+					"ref": 503,
 					"name": "VectorType",
 					"namespace": "http://www.opengis.net/gml/3.2"
 				},
 				{
-					"ref": 501,
+					"ref": 504,
 					"name": "VestigingsNummerType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 502,
+					"ref": 505,
 					"name": "VisueelOnderzoekType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 503,
+					"ref": 506,
 					"name": "VlaamseGemeenteEnumType",
 					"namespace": "http://geografie.schemas.milieuinfo.be"
 				},
 				{
-					"ref": 504,
+					"ref": 507,
 					"name": "VlaamseGemeenteNUTSCodeType",
 					"namespace": "http://geografie.schemas.milieuinfo.be"
 				},
 				{
-					"ref": 505,
+					"ref": 508,
 					"name": "VlaamseHoofdgemeenteNISCodeType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 506,
-					"name": "VlaamseHoofdgemeenteNISCodeType",
-					"namespace": "http://geografie.schemas.milieuinfo.be"
-				},
-				{
-					"ref": 507,
-					"name": "VlaamsePostcodeEnumType",
-					"namespace": "http://geografie.schemas.milieuinfo.be"
-				},
-				{
-					"ref": 508,
-					"name": "VlaamseProvincieNISCodeType",
-					"namespace": "http://geografie.schemas.milieuinfo.be"
-				},
-				{
 					"ref": 509,
-					"name": "VlaamseProvincieNUTSCodeType",
+					"name": "VlaamseHoofdgemeenteNISCodeType",
 					"namespace": "http://geografie.schemas.milieuinfo.be"
 				},
 				{
 					"ref": 510,
-					"name": "VlaamsXLambertCoordinaatType",
+					"name": "VlaamsePostcodeEnumType",
 					"namespace": "http://geografie.schemas.milieuinfo.be"
 				},
 				{
 					"ref": 511,
-					"name": "VlaamsYLambertCoordinaatType",
+					"name": "VlaamseProvincieNISCodeType",
 					"namespace": "http://geografie.schemas.milieuinfo.be"
 				},
 				{
 					"ref": 512,
+					"name": "VlaamseProvincieNUTSCodeType",
+					"namespace": "http://geografie.schemas.milieuinfo.be"
+				},
+				{
+					"ref": 513,
+					"name": "VlaamsXLambertCoordinaatType",
+					"namespace": "http://geografie.schemas.milieuinfo.be"
+				},
+				{
+					"ref": 514,
+					"name": "VlaamsYLambertCoordinaatType",
+					"namespace": "http://geografie.schemas.milieuinfo.be"
+				},
+				{
+					"ref": 515,
 					"name": "VochtgehalteAKEnumType",
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 513,
+					"ref": 516,
 					"name": "WaarnemingEnumType",
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 514,
+					"ref": 517,
 					"name": "WaarnemingType",
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 515,
+					"ref": 518,
 					"name": "WatermonsterType",
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 516,
+					"ref": 519,
 					"name": "WetKaderType",
 					"namespace": "http://boring.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 517,
+					"ref": 520,
 					"name": "whiteSpace_AnonymousType",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 518,
+					"ref": 521,
 					"name": "wildcard",
 					"namespace": "http://www.w3.org/2001/XMLSchema"
 				},
 				{
-					"ref": 519,
+					"ref": 522,
 					"name": "WKTType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 520,
+					"ref": 523,
 					"name": "WrbBodemClassificatieType",
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 521,
+					"ref": 524,
 					"name": "WrbQualifierEnumType",
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 522,
+					"ref": 525,
 					"name": "WrbQualifierType",
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 523,
+					"ref": 526,
 					"name": "WrbQualifierTypeEnumType",
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 524,
+					"ref": 527,
 					"name": "WrbReferenceSoilGroupEnumType",
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 525,
+					"ref": 528,
 					"name": "WRBVersieEnumType",
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 526,
+					"ref": 529,
 					"name": "XCoordinaatType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 527,
+					"ref": 530,
 					"name": "XYType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 528,
+					"ref": 531,
 					"name": "YCoordinaatType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be"
 				},
 				{
-					"ref": 529,
+					"ref": 532,
 					"name": "ZType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be"
 				}
@@ -2697,7 +2712,7 @@
 									"xsd_restriction": true
 								},
 								"superType": {
-									"ref": 466
+									"ref": 469
 								}
 							}
 						},
@@ -2820,7 +2835,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 404
+								"ref": 405
 							}
 						}
 					],
@@ -2937,7 +2952,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -2963,7 +2978,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -3018,7 +3033,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -3042,7 +3057,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -3053,7 +3068,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -3064,7 +3079,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -3075,7 +3090,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -3137,7 +3152,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 405
+								"ref": 406
 							}
 						},
 						{
@@ -3148,7 +3163,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 465
+								"ref": 468
 							}
 						},
 						{
@@ -3206,7 +3221,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -3366,7 +3381,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -3391,7 +3406,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 471
+								"ref": 474
 							}
 						},
 						{
@@ -3444,7 +3459,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -3694,7 +3709,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 512
+								"ref": 515
 							}
 						}
 					],
@@ -3771,7 +3786,7 @@
 						}
 					],
 					"superType": {
-						"ref": 518
+						"ref": 521
 					}
 				},
 				{
@@ -3902,7 +3917,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -3928,7 +3943,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -3975,7 +3990,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 417
+								"ref": 420
 							}
 						},
 						{
@@ -3986,7 +4001,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 417
+								"ref": 420
 							}
 						},
 						{
@@ -4028,7 +4043,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -4039,7 +4054,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -4114,7 +4129,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 518
+								"ref": 521
 							}
 						},
 						{
@@ -4136,7 +4151,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 417
+								"ref": 420
 							}
 						}
 					],
@@ -4177,7 +4192,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 417
+								"ref": 420
 							}
 						},
 						{
@@ -4277,7 +4292,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -4302,7 +4317,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -4327,7 +4342,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -4352,7 +4367,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -4406,7 +4421,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -4417,7 +4432,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						}
 					],
@@ -4448,7 +4463,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -4472,7 +4487,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -4483,7 +4498,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 473
+								"ref": 476
 							}
 						},
 						{
@@ -4494,7 +4509,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 481
+								"ref": 484
 							}
 						},
 						{
@@ -4516,7 +4531,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 410
+								"ref": 411
 							}
 						},
 						{
@@ -4538,7 +4553,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 498
+								"ref": 501
 							}
 						},
 						{
@@ -4549,7 +4564,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 499
+								"ref": 502
 							}
 						}
 					],
@@ -4599,7 +4614,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 471
+										"ref": 474
 									}
 								},
 								{
@@ -4736,7 +4751,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 491
+								"ref": 494
 							}
 						}
 					],
@@ -4767,7 +4782,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -4793,7 +4808,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -4819,7 +4834,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -4844,7 +4859,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -4855,7 +4870,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -4866,7 +4881,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -4936,7 +4951,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -4956,7 +4971,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 466
+										"ref": 469
 									}
 								},
 								{
@@ -4994,7 +5009,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -5140,7 +5155,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -5166,7 +5181,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -5202,7 +5217,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						}
 					],
@@ -5253,7 +5268,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 520
+								"ref": 523
 							}
 						},
 						{
@@ -5295,7 +5310,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -5321,7 +5336,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -5357,7 +5372,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 471
+								"ref": 474
 							}
 						}
 					],
@@ -5387,7 +5402,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 412
+								"ref": 413
 							}
 						},
 						{
@@ -5398,7 +5413,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 412
+								"ref": 413
 							}
 						},
 						{
@@ -5420,7 +5435,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -5431,7 +5446,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -5442,7 +5457,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -5453,7 +5468,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -5464,7 +5479,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						}
 					],
@@ -5494,7 +5509,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						}
 					],
@@ -5523,7 +5538,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -5621,7 +5636,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 463
+								"ref": 466
 							}
 						},
 						{
@@ -5729,7 +5744,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -5798,7 +5813,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 471
+								"ref": 474
 							}
 						}
 					],
@@ -5827,7 +5842,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 471
+								"ref": 474
 							}
 						},
 						{
@@ -5859,7 +5874,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 482
+								"ref": 485
 							}
 						},
 						{
@@ -5881,7 +5896,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 491
+								"ref": 494
 							}
 						},
 						{
@@ -5892,7 +5907,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 463
+								"ref": 466
 							}
 						},
 						{
@@ -5903,7 +5918,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -5914,7 +5929,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -5958,7 +5973,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -6066,7 +6081,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -6176,7 +6191,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 463
+								"ref": 466
 							}
 						},
 						{
@@ -6305,7 +6320,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						}
 					],
@@ -6334,7 +6349,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -6377,7 +6392,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -6399,7 +6414,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 463
+								"ref": 466
 							}
 						},
 						{
@@ -6474,7 +6489,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -6672,7 +6687,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -6830,7 +6845,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -7107,7 +7122,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 471
+								"ref": 474
 							}
 						},
 						{
@@ -7140,7 +7155,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 470
+								"ref": 473
 							}
 						},
 						{
@@ -7239,7 +7254,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 516
+								"ref": 519
 							}
 						},
 						{
@@ -7250,7 +7265,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 491
+								"ref": 494
 							}
 						},
 						{
@@ -7402,7 +7417,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 482
+								"ref": 485
 							}
 						},
 						{
@@ -7435,7 +7450,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						}
 					],
@@ -7461,7 +7476,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -7485,7 +7500,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -7517,7 +7532,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 527
+								"ref": 530
 							}
 						},
 						{
@@ -7528,7 +7543,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -7550,7 +7565,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 529
+								"ref": 532
 							}
 						},
 						{
@@ -7561,7 +7576,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 529
+								"ref": 532
 							}
 						},
 						{
@@ -7572,7 +7587,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 529
+								"ref": 532
 							}
 						},
 						{
@@ -7671,7 +7686,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 516
+								"ref": 519
 							}
 						},
 						{
@@ -7682,7 +7697,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 491
+								"ref": 494
 							}
 						},
 						{
@@ -7792,7 +7807,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 463
+								"ref": 466
 							}
 						},
 						{
@@ -7815,6 +7830,17 @@
 							},
 							"propertyType": {
 								"ref": 52
+							}
+						},
+						{
+							"name": "refID",
+							"constraints": {
+								"cardinality": "0..1",
+								"nillable": false,
+								"xsd_attribute": true
+							},
+							"propertyType": {
+								"ref": 469
 							}
 						}
 					],
@@ -7845,7 +7871,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -7871,7 +7897,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -7950,7 +7976,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -7971,7 +7997,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -7994,7 +8020,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 442
+						"ref": 445
 					}
 				},
 				{
@@ -8018,7 +8044,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 407
+								"ref": 408
 							}
 						},
 						{
@@ -8040,7 +8066,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 491
+								"ref": 494
 							}
 						},
 						{
@@ -8051,7 +8077,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 471
+								"ref": 474
 							}
 						},
 						{
@@ -8073,7 +8099,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 470
+								"ref": 473
 							}
 						},
 						{
@@ -8137,7 +8163,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -8329,12 +8355,12 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 518
+								"ref": 521
 							}
 						}
 					],
 					"superType": {
-						"ref": 433
+						"ref": 436
 					}
 				},
 				{
@@ -8368,7 +8394,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 443
+										"ref": 446
 									}
 								},
 								{
@@ -8490,7 +8516,7 @@
 												"nillable": false
 											},
 											"propertyType": {
-												"ref": 518
+												"ref": 521
 											}
 										}
 									]
@@ -8584,7 +8610,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -8610,7 +8636,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -8867,7 +8893,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 457
+								"ref": 460
 							}
 						}
 					],
@@ -8956,7 +8982,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -8966,7 +8992,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						}
 					],
@@ -9049,7 +9075,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 471
+								"ref": 474
 							}
 						},
 						{
@@ -9060,7 +9086,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -9197,7 +9223,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -9233,7 +9259,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						}
 					],
@@ -9264,7 +9290,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -9290,7 +9316,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -9391,7 +9417,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -9531,7 +9557,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -9630,7 +9656,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 404
+								"ref": 405
 							}
 						},
 						{
@@ -9641,7 +9667,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 404
+								"ref": 405
 							}
 						}
 					],
@@ -9683,7 +9709,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 404
+								"ref": 405
 							}
 						}
 					],
@@ -9727,7 +9753,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"location": "bundleresource://224.fwk534414401/schemas/xml.xsd#0:0",
+								"location": "bundleresource://224.fwk327329632/schemas/xml.xsd#0:0",
 								"name": "AnonymousType",
 								"namespace": "http://www.w3.org/XML/1998/namespace/lang",
 								"constraints": {
@@ -9775,7 +9801,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -9873,7 +9899,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 461
+								"ref": 464
 							}
 						},
 						{
@@ -10027,7 +10053,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -10038,7 +10064,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						}
 					],
@@ -10069,7 +10095,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -10152,7 +10178,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -10178,7 +10204,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -10292,7 +10318,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 417
+								"ref": 420
 							}
 						},
 						{
@@ -10303,7 +10329,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 417
+								"ref": 420
 							}
 						},
 						{
@@ -10314,7 +10340,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 417
+								"ref": 420
 							}
 						},
 						{
@@ -10348,7 +10374,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -10359,7 +10385,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -10559,7 +10585,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 404
+								"ref": 405
 							}
 						}
 					],
@@ -10585,7 +10611,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -10611,7 +10637,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -10727,7 +10753,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 417
+								"ref": 420
 							}
 						}
 					],
@@ -10752,7 +10778,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -10869,7 +10895,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 518
+								"ref": 521
 							}
 						},
 						{
@@ -10880,7 +10906,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 417
+								"ref": 420
 							}
 						}
 					],
@@ -10911,7 +10937,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 526
+								"ref": 529
 							}
 						},
 						{
@@ -10922,7 +10948,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 528
+								"ref": 531
 							}
 						},
 						{
@@ -11093,7 +11119,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -11104,7 +11130,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -11178,7 +11204,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -11204,7 +11230,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -11271,7 +11297,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -11313,7 +11339,7 @@
 									"xsd_restriction": true
 								},
 								"superType": {
-									"ref": 484
+									"ref": 487
 								}
 							}
 						}
@@ -11397,7 +11423,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -11423,7 +11449,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -11543,7 +11569,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -11598,7 +11624,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 429
+								"ref": 432
 							}
 						}
 					],
@@ -11628,7 +11654,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -11749,7 +11775,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 427
+								"ref": 430
 							}
 						},
 						{
@@ -11781,7 +11807,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 514
+										"ref": 517
 									}
 								},
 								{
@@ -11816,7 +11842,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 515
+								"ref": 518
 							}
 						},
 						{
@@ -11856,7 +11882,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -12072,7 +12098,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -12114,7 +12140,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -12140,7 +12166,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -12165,7 +12191,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -12340,7 +12366,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 463
+								"ref": 466
 							}
 						},
 						{
@@ -12460,7 +12486,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 430
+								"ref": 433
 							}
 						},
 						{
@@ -12513,7 +12539,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -12568,7 +12594,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -12614,7 +12640,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -12656,7 +12682,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -12840,7 +12866,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -12978,7 +13004,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 471
+								"ref": 474
 							}
 						},
 						{
@@ -13022,7 +13048,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 437
+								"ref": 440
 							}
 						},
 						{
@@ -13033,7 +13059,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 439
+								"ref": 442
 							}
 						},
 						{
@@ -13055,7 +13081,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 477
+								"ref": 480
 							}
 						}
 					],
@@ -13115,7 +13141,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -13171,7 +13197,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -13192,7 +13218,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -13287,7 +13313,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 519
+								"ref": 522
 							}
 						}
 					],
@@ -13500,7 +13526,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -13606,7 +13632,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -13661,7 +13687,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -13774,7 +13800,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -13799,7 +13825,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 404
+						"ref": 405
 					}
 				},
 				{
@@ -14042,7 +14068,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -14067,7 +14093,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 471
+								"ref": 474
 							}
 						},
 						{
@@ -14109,7 +14135,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -14134,7 +14160,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -14159,7 +14185,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 471
+								"ref": 474
 							}
 						},
 						{
@@ -14257,7 +14283,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 408
+								"ref": 409
 							}
 						},
 						{
@@ -14312,7 +14338,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						}
 					],
@@ -14337,7 +14363,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -14372,7 +14398,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 470
+								"ref": 473
 							}
 						},
 						{
@@ -14394,7 +14420,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 529
+								"ref": 532
 							}
 						},
 						{
@@ -14405,7 +14431,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 529
+								"ref": 532
 							}
 						},
 						{
@@ -14416,7 +14442,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 529
+								"ref": 532
 							}
 						},
 						{
@@ -14458,7 +14484,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -14484,7 +14510,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -14505,7 +14531,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -14530,7 +14556,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -14541,17 +14567,6 @@
 							},
 							"propertyType": {
 								"ref": 110
-							}
-						},
-						{
-							"name": "putnaam",
-							"description": "naam zoals die bekend is bij de bneheerder/exploitant\n",
-							"constraints": {
-								"cardinality": "0..1",
-								"nillable": false
-							},
-							"propertyType": {
-								"ref": 466
 							}
 						},
 						{
@@ -14628,7 +14643,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 416
+								"ref": 419
 							}
 						},
 						{
@@ -14639,7 +14654,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 414
+								"ref": 417
 							}
 						},
 						{
@@ -14705,7 +14720,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 463
+								"ref": 466
 							}
 						},
 						{
@@ -14747,7 +14762,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -14772,7 +14787,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 527
+								"ref": 530
 							}
 						},
 						{
@@ -14783,7 +14798,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -14805,7 +14820,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 529
+								"ref": 532
 							}
 						},
 						{
@@ -14816,7 +14831,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 529
+								"ref": 532
 							}
 						},
 						{
@@ -14827,7 +14842,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 529
+								"ref": 532
 							}
 						},
 						{
@@ -14869,7 +14884,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -14986,7 +15001,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 417
+								"ref": 420
 							}
 						},
 						{
@@ -15050,7 +15065,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 417
+								"ref": 420
 							}
 						},
 						{
@@ -15066,7 +15081,7 @@
 						}
 					],
 					"superType": {
-						"ref": 421
+						"ref": 424
 					}
 				},
 				{
@@ -15085,8 +15100,19 @@
 					},
 					"declares": [
 						{
-							"name": "beschermbuis",
-							"description": "informatie ivm de beschermbuis\n",
+							"name": "type",
+							"description": "type putafwerking\n",
+							"constraints": {
+								"cardinality": "0..1",
+								"nillable": false
+							},
+							"propertyType": {
+								"ref": 416
+							}
+						},
+						{
+							"name": "positie_bovenkant",
+							"description": "positie van de bovenkant van de putafwerking\n",
 							"constraints": {
 								"cardinality": "0..1",
 								"nillable": false
@@ -15094,7 +15120,7 @@
 							"propertyType": {
 								"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/gwmeetnet/GwLocatieDataTypes.xsd#0:0",
 								"name": "AnonymousType",
-								"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be/GwLocatieAfwerkingType/beschermbuis",
+								"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be/GwLocatieAfwerkingType/positie_bovenkant",
 								"constraints": {
 									"abstract": false,
 									"has-value": false,
@@ -15103,39 +15129,60 @@
 								},
 								"declares": [
 									{
-										"name": "diameter",
-										"description": "diameter van de beschermbuis, uitgedrukt in mm\n",
-										"constraints": {
-											"cardinality": "0..1",
-											"nillable": false
-										},
-										"propertyType": {
-											"ref": 263
-										}
-									},
-									{
 										"name": "hoogteverschil",
-										"description": "hoogteverschil van de beschermbuis met het maaiveld (cm). Een positieve waarde betekent dat de beschermbuis boven het maaiveld uitsteekt. Kan ook negatief zijn, als de beschermbuis onder het maaiveld gelegen is\n",
+										"description": "hoogteverschil van de putafwerking, uitgedrukt in cm\n",
 										"constraints": {
-											"cardinality": "0..1",
+											"cardinality": "1..1",
 											"nillable": false
 										},
 										"propertyType": {
-											"ref": 131
+											"ref": 404
 										}
 									},
 									{
-										"name": "materiaal",
-										"description": "materiaal waaruit de beschermbuis gemaakt is\n",
+										"name": "verschil_tov_maaiveld",
 										"constraints": {
-											"cardinality": "0..1",
+											"cardinality": "1..1",
 											"nillable": false
 										},
 										"propertyType": {
-											"ref": 305
+											"ref": 415
 										}
 									}
 								]
+							}
+						},
+						{
+							"name": "lengte",
+							"description": "lengte putafwerking, uitgedrukt in cm\n",
+							"constraints": {
+								"cardinality": "0..1",
+								"nillable": false
+							},
+							"propertyType": {
+								"ref": 404
+							}
+						},
+						{
+							"name": "materiaal",
+							"description": "materiaal waaruit de putafwerking gemaakt is\n",
+							"constraints": {
+								"cardinality": "0..1",
+								"nillable": false
+							},
+							"propertyType": {
+								"ref": 305
+							}
+						},
+						{
+							"name": "diameter",
+							"description": "diameter van de putafwerking, uitgedrukt in mm\n",
+							"constraints": {
+								"cardinality": "0..1",
+								"nillable": false
+							},
+							"propertyType": {
+								"ref": 404
 							}
 						},
 						{
@@ -15157,7 +15204,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 415
+								"ref": 418
 							}
 						},
 						{
@@ -15291,7 +15338,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -15512,7 +15559,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -15585,7 +15632,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 426
+								"ref": 429
 							}
 						}
 					],
@@ -15611,7 +15658,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -15632,7 +15679,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -15851,7 +15898,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -15877,7 +15924,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -15971,7 +16018,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 503
+								"ref": 506
 							}
 						},
 						{
@@ -15982,7 +16029,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 405
+								"ref": 406
 							}
 						},
 						{
@@ -15993,7 +16040,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 465
+								"ref": 468
 							}
 						},
 						{
@@ -16092,7 +16139,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 405
+								"ref": 406
 							}
 						},
 						{
@@ -16103,7 +16150,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 465
+								"ref": 468
 							}
 						},
 						{
@@ -16260,7 +16307,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						}
 					],
@@ -16372,7 +16419,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						}
 					],
@@ -16614,7 +16661,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 460
+										"ref": 463
 									}
 								}
 							]
@@ -16725,7 +16772,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 463
+								"ref": 466
 							}
 						},
 						{
@@ -16777,7 +16824,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -16788,7 +16835,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						}
 					],
@@ -16936,7 +16983,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 420
+								"ref": 423
 							}
 						},
 						{
@@ -17007,7 +17054,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -17081,7 +17128,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -17101,7 +17148,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -17127,7 +17174,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 441
+								"ref": 444
 							}
 						},
 						{
@@ -17181,7 +17228,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 417
+								"ref": 420
 							}
 						}
 					],
@@ -17327,7 +17374,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						}
 					],
@@ -17416,7 +17463,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -17463,7 +17510,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -17489,7 +17536,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -17517,7 +17564,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 484
+						"ref": 487
 					}
 				},
 				{
@@ -17983,7 +18030,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 417
+								"ref": 420
 							}
 						}
 					],
@@ -18066,7 +18113,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						}
 					],
@@ -18147,7 +18194,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 443
+										"ref": 446
 									}
 								},
 								{
@@ -18269,7 +18316,7 @@
 												"nillable": false
 											},
 											"propertyType": {
-												"ref": 518
+												"ref": 521
 											}
 										}
 									]
@@ -18508,7 +18555,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 432
+										"ref": 435
 									}
 								},
 								{
@@ -18532,7 +18579,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 493
+										"ref": 496
 									}
 								}
 							]
@@ -18562,7 +18609,7 @@
 						}
 					],
 					"superType": {
-						"ref": 448
+						"ref": 451
 					}
 				},
 				{
@@ -18662,7 +18709,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 405
+								"ref": 406
 							}
 						},
 						{
@@ -18673,7 +18720,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 465
+								"ref": 468
 							}
 						},
 						{
@@ -18754,7 +18801,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -18780,7 +18827,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -18806,7 +18853,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -18832,7 +18879,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -18858,7 +18905,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -18905,7 +18952,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -18931,7 +18978,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -18957,7 +19004,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -18983,7 +19030,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -19009,7 +19056,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -19034,7 +19081,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -19055,7 +19102,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 484
+						"ref": 487
 					}
 				},
 				{
@@ -19080,7 +19127,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -19091,7 +19138,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						}
 					],
@@ -19122,7 +19169,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -19147,7 +19194,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 471
+								"ref": 474
 							}
 						},
 						{
@@ -19187,7 +19234,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -19229,7 +19276,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -19255,7 +19302,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -19302,7 +19349,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 428
+								"ref": 431
 							}
 						},
 						{
@@ -19346,7 +19393,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 479
+								"ref": 482
 							}
 						},
 						{
@@ -19379,7 +19426,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 428
+								"ref": 431
 							}
 						},
 						{
@@ -19434,7 +19481,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						}
 					],
@@ -19465,7 +19512,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -19497,7 +19544,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 492
+								"ref": 495
 							}
 						},
 						{
@@ -19508,7 +19555,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 492
+								"ref": 495
 							}
 						},
 						{
@@ -19583,7 +19630,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 479
+								"ref": 482
 							}
 						}
 					],
@@ -19848,7 +19895,7 @@
 								"xsd_attribute": false
 							},
 							"propertyType": {
-								"ref": 475
+								"ref": 478
 							}
 						},
 						{
@@ -19860,7 +19907,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 474
+								"ref": 477
 							}
 						}
 					],
@@ -19886,7 +19933,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -19909,7 +19956,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 484
+						"ref": 487
 					}
 				},
 				{
@@ -19979,7 +20026,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 518
+								"ref": 521
 							}
 						},
 						{
@@ -20120,7 +20167,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 445
+										"ref": 448
 									}
 								},
 								{
@@ -20131,7 +20178,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 445
+										"ref": 448
 									}
 								}
 							]
@@ -20182,7 +20229,7 @@
 						}
 					],
 					"superType": {
-						"ref": 421
+						"ref": 424
 					}
 				},
 				{
@@ -20437,21 +20484,21 @@
 					"constraints": {
 						"enumeration": {
 							"@type": "properties",
-							"@value": {"allowOthers":false,"values":["0","1","11001","11002","11004","11005","11007","11008","11009","11013","11016","11018","11021","11022","11023","11024","11025","11029","11030","11035","11037","11038","11039","11040","11044","11050","11052","11053","11054","11055","11056","11057","12002","12005","12007","12009","12014","12021","12025","12026","12029","12030","12034","12035","12040","12041","13001","13002","13003","13004","13006","13008","13010","13011","13012","13013","13014","13016","13017","13019","13021","13023","13025","13029","13031","13035","13036","13037","13040","13044","13046","13049","13053","21001","21002","21003","21004","21005","21006","21007","21008","21009","21010","21011","21012","21013","21014","21015","21016","21017","21018","21019","23002","23003","23009","23016","23023","23024","23025","23027","23032","23033","23038","23039","23044","23045","23047","23050","23052","23060","23062","23064","23077","23081","23086","23088","23094","23096","23097","23098","23099","23100","23101","23102","23103","23104","23105","24001","24007","24008","24009","24011","24014","24016","24020","24028","24033","24038","24041","24043","24045","24048","24054","24055","24059","24062","24066","24086","24094","24104","24107","24109","24130","24133","24134","24135","24137","31003","31004","31005","31006","31012","31022","31033","31040","31042","31043","32003","32006","32010","32011","32030","33011","33016","33021","33029","33037","33039","33040","33041","34002","34003","34009","34013","34022","34023","34025","34027","34040","34041","34042","34043","35002","35005","35006","35011","35013","35014","35029","36006","36007","36008","36010","36011","36012","36015","36019","37002","37007","37010","37011","37012","37015","37017","37018","37020","38002","38008","38014","38016","38025","41002","41011","41018","41024","41027","41034","41048","41063","41081","41082","42003","42004","42006","42008","42010","42011","42023","42025","42026","42028","43002","43005","43007","43010","43014","43018","44001","44011","44012","44013","44019","44020","44021","44029","44034","44036","44040","44043","44045","44048","44049","44052","44064","44072","44073","44080","44081","44083","44084","44085","45017","45035","45041","45057","45059","45060","45061","45062","45063","45064","45065","45068","46003","46013","46014","46020","46021","46024","46025","71002","71004","71011","71016","71017","71020","71022","71024","71034","71037","71045","71047","71053","71057","71066","71067","71069","71070","72003","72004","72018","72020","72021","72025","72029","72030","72037","72038","72039","72040","72041","72042","72043","73001","73006","73009","73022","73028","73032","73040","73042","73066","73083","73098","73107","73109"]}
+							"@value": {"allowOthers":false,"values":["0","1","11001","11002","11004","11005","11007","11008","11009","11013","11016","11018","11021","11022","11023","11024","11025","11029","11030","11035","11037","11038","11039","11040","11044","11050","11052","11053","11054","11055","11056","11057","12002","12005","12007","12009","12014","12021","12025","12026","12029","12030","12034","12035","12040","12041","13001","13002","13003","13004","13006","13008","13010","13011","13012","13013","13014","13016","13017","13019","13021","13023","13025","13029","13031","13035","13036","13037","13040","13044","13046","13049","13053","21001","21002","21003","21004","21005","21006","21007","21008","21009","21010","21011","21012","21013","21014","21015","21016","21017","21018","21019","23002","23003","23009","23016","23023","23024","23025","23027","23032","23033","23038","23039","23044","23045","23047","23050","23052","23060","23062","23064","23077","23081","23086","23088","23094","23096","23097","23098","23099","23100","23101","23102","23103","23104","23105","24001","24007","24008","24009","24011","24014","24016","24020","24028","24033","24038","24041","24043","24045","24048","24054","24055","24059","24062","24066","24086","24094","24104","24107","24109","24130","24133","24134","24135","24137","31003","31004","31005","31006","31012","31022","31033","31040","31042","31043","32003","32006","32010","32011","32030","33011","33016","33021","33029","33037","33039","33040","33041","34002","34003","34009","34013","34022","34023","34025","34027","34040","34041","34042","34043","35002","35005","35006","35011","35013","35014","35029","36006","36007","36008","36010","36011","36012","36015","36019","37002","37007","37010","37011","37012","37015","37017","37018","37020","38002","38008","38014","38016","38025","41002","41011","41018","41024","41027","41034","41048","41063","41081","41082","42003","42004","42006","42008","42010","42011","42023","42025","42026","42028","43002","43005","43007","43010","43014","43018","44001","44011","44012","44013","44019","44020","44021","44029","44034","44036","44040","44043","44045","44048","44049","44052","44064","44072","44073","44080","44081","44083","44084","44085","45017","45035","45041","45057","45059","45060","45061","45062","45063","45064","45065","45068","46003","46013","46014","46020","46021","46024","46025","71002","71004","71011","71016","71017","71020","71022","71024","71034","71037","71045","71047","71053","71057","71066","71067","71069","71070","72003","72004","72018","72020","72021","72025","72029","72030","72037","72038","72039","72040","72041","72042","72043","73001","73006","73009","73022","73028","73032","73040","73042","73066","73083","73098","73107","73109","23106","37021","37022","44086","44087","46029","44088","46030","73110","73111","71071","71072"]}
 
 						},
 						"has-value": true,
 						"mapping-relevant": false,
 						"validation": {
 							"@type": "validator",
-							"@value": {"type":"and","config":[{"@type":"validator","@value":{"type":"enumeration","config":["0","1","11001","11002","11004","11005","11007","11008","11009","11013","11016","11018","11021","11022","11023","11024","11025","11029","11030","11035","11037","11038","11039","11040","11044","11050","11052","11053","11054","11055","11056","11057","12002","12005","12007","12009","12014","12021","12025","12026","12029","12030","12034","12035","12040","12041","13001","13002","13003","13004","13006","13008","13010","13011","13012","13013","13014","13016","13017","13019","13021","13023","13025","13029","13031","13035","13036","13037","13040","13044","13046","13049","13053","21001","21002","21003","21004","21005","21006","21007","21008","21009","21010","21011","21012","21013","21014","21015","21016","21017","21018","21019","23002","23003","23009","23016","23023","23024","23025","23027","23032","23033","23038","23039","23044","23045","23047","23050","23052","23060","23062","23064","23077","23081","23086","23088","23094","23096","23097","23098","23099","23100","23101","23102","23103","23104","23105","24001","24007","24008","24009","24011","24014","24016","24020","24028","24033","24038","24041","24043","24045","24048","24054","24055","24059","24062","24066","24086","24094","24104","24107","24109","24130","24133","24134","24135","24137","31003","31004","31005","31006","31012","31022","31033","31040","31042","31043","32003","32006","32010","32011","32030","33011","33016","33021","33029","33037","33039","33040","33041","34002","34003","34009","34013","34022","34023","34025","34027","34040","34041","34042","34043","35002","35005","35006","35011","35013","35014","35029","36006","36007","36008","36010","36011","36012","36015","36019","37002","37007","37010","37011","37012","37015","37017","37018","37020","38002","38008","38014","38016","38025","41002","41011","41018","41024","41027","41034","41048","41063","41081","41082","42003","42004","42006","42008","42010","42011","42023","42025","42026","42028","43002","43005","43007","43010","43014","43018","44001","44011","44012","44013","44019","44020","44021","44029","44034","44036","44040","44043","44045","44048","44049","44052","44064","44072","44073","44080","44081","44083","44084","44085","45017","45035","45041","45057","45059","45060","45061","45062","45063","45064","45065","45068","46003","46013","46014","46020","46021","46024","46025","71002","71004","71011","71016","71017","71020","71022","71024","71034","71037","71045","71047","71053","71057","71066","71067","71069","71070","72003","72004","72018","72020","72021","72025","72029","72030","72037","72038","72039","72040","72041","72042","72043","73001","73006","73009","73022","73028","73032","73040","73042","73066","73083","73098","73107","73109"]}}]}
+							"@value": {"type":"and","config":[{"@type":"validator","@value":{"type":"enumeration","config":["0","1","11001","11002","11004","11005","11007","11008","11009","11013","11016","11018","11021","11022","11023","11024","11025","11029","11030","11035","11037","11038","11039","11040","11044","11050","11052","11053","11054","11055","11056","11057","12002","12005","12007","12009","12014","12021","12025","12026","12029","12030","12034","12035","12040","12041","13001","13002","13003","13004","13006","13008","13010","13011","13012","13013","13014","13016","13017","13019","13021","13023","13025","13029","13031","13035","13036","13037","13040","13044","13046","13049","13053","21001","21002","21003","21004","21005","21006","21007","21008","21009","21010","21011","21012","21013","21014","21015","21016","21017","21018","21019","23002","23003","23009","23016","23023","23024","23025","23027","23032","23033","23038","23039","23044","23045","23047","23050","23052","23060","23062","23064","23077","23081","23086","23088","23094","23096","23097","23098","23099","23100","23101","23102","23103","23104","23105","24001","24007","24008","24009","24011","24014","24016","24020","24028","24033","24038","24041","24043","24045","24048","24054","24055","24059","24062","24066","24086","24094","24104","24107","24109","24130","24133","24134","24135","24137","31003","31004","31005","31006","31012","31022","31033","31040","31042","31043","32003","32006","32010","32011","32030","33011","33016","33021","33029","33037","33039","33040","33041","34002","34003","34009","34013","34022","34023","34025","34027","34040","34041","34042","34043","35002","35005","35006","35011","35013","35014","35029","36006","36007","36008","36010","36011","36012","36015","36019","37002","37007","37010","37011","37012","37015","37017","37018","37020","38002","38008","38014","38016","38025","41002","41011","41018","41024","41027","41034","41048","41063","41081","41082","42003","42004","42006","42008","42010","42011","42023","42025","42026","42028","43002","43005","43007","43010","43014","43018","44001","44011","44012","44013","44019","44020","44021","44029","44034","44036","44040","44043","44045","44048","44049","44052","44064","44072","44073","44080","44081","44083","44084","44085","45017","45035","45041","45057","45059","45060","45061","45062","45063","45064","45065","45068","46003","46013","46014","46020","46021","46024","46025","71002","71004","71011","71016","71017","71020","71022","71024","71034","71037","71045","71047","71053","71057","71066","71067","71069","71070","72003","72004","72018","72020","72021","72025","72029","72030","72037","72038","72039","72040","72041","72042","72043","73001","73006","73009","73022","73028","73032","73040","73042","73066","73083","73098","73107","73109","23106","37021","37022","44086","44087","46029","44088","46030","73110","73111","71071","71072"]}}]}
 
 						},
 						"xsd_elements": [],
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -20476,7 +20523,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -20499,7 +20546,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 484
+						"ref": 487
 					}
 				},
 				{
@@ -20643,7 +20690,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -20699,7 +20746,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 411
+								"ref": 412
 							}
 						},
 						{
@@ -20864,7 +20911,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -20886,7 +20933,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -20958,7 +21005,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 466
+										"ref": 469
 									}
 								}
 							]
@@ -20990,7 +21037,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 466
+										"ref": 469
 									}
 								}
 							]
@@ -21105,7 +21152,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 466
+										"ref": 469
 									}
 								},
 								{
@@ -21204,7 +21251,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -21258,7 +21305,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 491
+								"ref": 494
 							}
 						},
 						{
@@ -21269,7 +21316,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 428
+								"ref": 431
 							}
 						},
 						{
@@ -21291,7 +21338,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 436
+								"ref": 439
 							}
 						},
 						{
@@ -21313,7 +21360,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						}
 					],
@@ -21355,7 +21402,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -21385,7 +21432,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 466
+										"ref": 469
 									}
 								},
 								{
@@ -21484,7 +21531,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -21538,7 +21585,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 491
+								"ref": 494
 							}
 						},
 						{
@@ -21549,7 +21596,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 428
+								"ref": 431
 							}
 						},
 						{
@@ -21571,7 +21618,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 436
+								"ref": 439
 							}
 						},
 						{
@@ -21677,7 +21724,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 404
+						"ref": 405
 					}
 				},
 				{
@@ -21698,7 +21745,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -21734,7 +21781,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 482
+								"ref": 485
 							}
 						},
 						{
@@ -21833,7 +21880,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 463
+								"ref": 466
 							}
 						},
 						{
@@ -21971,7 +22018,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -22071,7 +22118,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -22132,7 +22179,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -22153,7 +22200,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -22178,7 +22225,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 467
+								"ref": 470
 							}
 						},
 						{
@@ -22199,7 +22246,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 470
+								"ref": 473
 							}
 						},
 						{
@@ -22276,7 +22323,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 463
+								"ref": 466
 							}
 						},
 						{
@@ -22370,7 +22417,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -22453,7 +22500,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -22479,7 +22526,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -22531,7 +22578,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -22584,7 +22631,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -22637,7 +22684,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -22663,7 +22710,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 431
+								"ref": 434
 							}
 						},
 						{
@@ -22750,7 +22797,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -22776,7 +22823,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -22829,7 +22876,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -22855,7 +22902,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -22892,7 +22939,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						}
 					],
@@ -22923,7 +22970,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -22949,7 +22996,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -22985,7 +23032,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 482
+								"ref": 485
 							}
 						},
 						{
@@ -23084,7 +23131,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 463
+								"ref": 466
 							}
 						},
 						{
@@ -23166,7 +23213,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 435
+								"ref": 438
 							}
 						},
 						{
@@ -23217,7 +23264,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 483
+								"ref": 486
 							}
 						},
 						{
@@ -23284,7 +23331,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -23310,7 +23357,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -23331,7 +23378,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
@@ -23357,7 +23404,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 471
+								"ref": 474
 							}
 						},
 						{
@@ -23368,7 +23415,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 471
+								"ref": 474
 							}
 						},
 						{
@@ -23379,7 +23426,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 471
+								"ref": 474
 							}
 						},
 						{
@@ -23390,7 +23437,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 471
+								"ref": 474
 							}
 						},
 						{
@@ -23401,7 +23448,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 471
+								"ref": 474
 							}
 						}
 					],
@@ -23431,7 +23478,7 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 404
+						"ref": 405
 					}
 				},
 				{
@@ -23708,11 +23755,31 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
 					"id": 404,
+					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/generiek/GeneriekeDataTypes.xsd#0:0",
+					"name": "positiveDecimal",
+					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
+					"constraints": {
+						"has-value": true,
+						"mapping-relevant": false,
+						"validation": {
+							"@type": "validator",
+							"@value": {"type":"and","config":[{"@type":"validator","@value":{"type":"number","config":{"@type":"properties","@value":{"compare":"MINEXCLUSIVE","value":0}}}}]}
+
+						},
+						"xsd_elements": [],
+						"xsd_restriction": true
+					},
+					"superType": {
+						"ref": 115
+					}
+				},
+				{
+					"id": 405,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "positiveInteger",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -23735,7 +23802,7 @@
 					}
 				},
 				{
-					"id": 405,
+					"id": 406,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/acd/generiek/geografie/Geografie.xsd#0:0",
 					"name": "PostcodeType",
 					"namespace": "http://geografie.schemas.milieuinfo.be",
@@ -23747,11 +23814,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 406,
+					"id": 407,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/sondering/SonderingDataTypes.xsd#0:0",
 					"name": "PostVerwerkingType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be",
@@ -23802,7 +23869,7 @@
 					}
 				},
 				{
-					"id": 407,
+					"id": 408,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/grondmonster/GrondmonsterDataCodes.xsd#0:0",
 					"name": "ProefNaamEnumType",
 					"namespace": "http://grondmonster.kern.schemas.dov.vlaanderen.be",
@@ -23824,11 +23891,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 408,
+					"id": 409,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/grondmonster/GrondmonsterDataTypes.xsd#0:0",
 					"name": "ProefuitvoeringsDataType",
 					"namespace": "http://grondmonster.kern.schemas.dov.vlaanderen.be",
@@ -23850,7 +23917,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 409
+								"ref": 410
 							}
 						},
 						{
@@ -23870,7 +23937,7 @@
 					}
 				},
 				{
-					"id": 409,
+					"id": 410,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/grondmonster/GrondmonsterDataTypes.xsd#0:0",
 					"name": "ProefuitvoeringsType",
 					"namespace": "http://grondmonster.kern.schemas.dov.vlaanderen.be",
@@ -23891,7 +23958,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 407
+								"ref": 408
 							}
 						},
 						{
@@ -23913,7 +23980,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 491
+								"ref": 494
 							}
 						},
 						{
@@ -23924,7 +23991,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 471
+								"ref": 474
 							}
 						},
 						{
@@ -23946,7 +24013,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 470
+								"ref": 473
 							}
 						},
 						{
@@ -23966,7 +24033,7 @@
 					}
 				},
 				{
-					"id": 410,
+					"id": 411,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/bodem/ClassificatieDataCodes.xsd#0:0",
 					"name": "ProfielontwikkelingsgroepEnumType",
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be",
@@ -23988,11 +24055,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 411,
+					"id": 412,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "public",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -24007,11 +24074,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 484
+						"ref": 487
 					}
 				},
 				{
-					"id": 412,
+					"id": 413,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/bodem/BodemLocatieDataTypes.xsd#0:0",
 					"name": "PuntlocatieType",
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be",
@@ -24033,7 +24100,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 527
+								"ref": 530
 							}
 						},
 						{
@@ -24044,7 +24111,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 529
+								"ref": 532
 							}
 						}
 					],
@@ -24053,7 +24120,7 @@
 					}
 				},
 				{
-					"id": 413,
+					"id": 414,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/sondering/SonderingDataTypes.xsd#0:0",
 					"name": "PuntlocatieType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be",
@@ -24074,7 +24141,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 527
+								"ref": 530
 							}
 						},
 						{
@@ -24085,7 +24152,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -24107,7 +24174,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 529
+								"ref": 532
 							}
 						},
 						{
@@ -24118,7 +24185,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 529
+								"ref": 532
 							}
 						},
 						{
@@ -24129,7 +24196,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 529
+								"ref": 532
 							}
 						},
 						{
@@ -24149,7 +24216,57 @@
 					}
 				},
 				{
-					"id": 414,
+					"id": 415,
+					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/gwmeetnet/GwLocatieDataCodes.xsd#0:0",
+					"name": "PutafwerkingPositieEnumType",
+					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
+					"constraints": {
+						"enumeration": {
+							"@type": "properties",
+							"@value": {"allowOthers":false,"values":["gelijkgronds","boven maaiveld","onder maaiveld"]}
+
+						},
+						"has-value": true,
+						"mapping-relevant": false,
+						"validation": {
+							"@type": "validator",
+							"@value": {"type":"and","config":[{"@type":"validator","@value":{"type":"enumeration","config":["gelijkgronds","boven maaiveld","onder maaiveld"]}}]}
+
+						},
+						"xsd_elements": [],
+						"xsd_restriction": true
+					},
+					"superType": {
+						"ref": 469
+					}
+				},
+				{
+					"id": 416,
+					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/gwmeetnet/GwLocatieDataCodes.xsd#0:0",
+					"name": "PutafwerkingTypeEnumType",
+					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
+					"constraints": {
+						"enumeration": {
+							"@type": "properties",
+							"@value": {"allowOthers":false,"values":["beschermkoker/schutkoker (afwerking met extra buis)","controlekamer/toezichtsput/inspectieput/putkamer (afwerking met putkamer)","straatpot","opstaande stijgbuis"]}
+
+						},
+						"has-value": true,
+						"mapping-relevant": false,
+						"validation": {
+							"@type": "validator",
+							"@value": {"type":"and","config":[{"@type":"validator","@value":{"type":"enumeration","config":["beschermkoker/schutkoker (afwerking met extra buis)","controlekamer/toezichtsput/inspectieput/putkamer (afwerking met putkamer)","straatpot","opstaande stijgbuis"]}}]}
+
+						},
+						"xsd_elements": [],
+						"xsd_restriction": true
+					},
+					"superType": {
+						"ref": 469
+					}
+				},
+				{
+					"id": 417,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/gwmeetnet/GwLocatieDataCodes.xsd#0:0",
 					"name": "PutnabestemmingEnumType",
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
@@ -24171,11 +24288,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 415,
+					"id": 418,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/gwmeetnet/GwLocatieDataCodes.xsd#0:0",
 					"name": "PutsleutelEnumType",
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
@@ -24197,11 +24314,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 416,
+					"id": 419,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/gwmeetnet/GwLocatieDataCodes.xsd#0:0",
 					"name": "PutsoortEnumType",
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
@@ -24223,11 +24340,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 417,
+					"id": 420,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "QName",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -24245,7 +24362,7 @@
 					}
 				},
 				{
-					"id": 418,
+					"id": 421,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/interpretatie/QuartairStratigrafieDataTypes.xsd#0:0",
 					"name": "QuartairStratigrafieLaagType",
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be",
@@ -24287,7 +24404,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 419
+								"ref": 422
 							}
 						},
 						{
@@ -24298,7 +24415,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 430
+								"ref": 433
 							}
 						},
 						{
@@ -24309,7 +24426,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 419
+								"ref": 422
 							}
 						},
 						{
@@ -24329,7 +24446,7 @@
 					}
 				},
 				{
-					"id": 419,
+					"id": 422,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/interpretatie/QuartairStratigrafieDataCodes.xsd#0:0",
 					"name": "QuartairStratigrafieLedenEnumType",
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be",
@@ -24351,11 +24468,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 420,
+					"id": 423,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/interpretatie/QuartairStratigrafieDataTypes.xsd#0:0",
 					"name": "QuartairStratigrafieType",
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be",
@@ -24376,7 +24493,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 418
+								"ref": 421
 							}
 						}
 					],
@@ -24385,7 +24502,7 @@
 					}
 				},
 				{
-					"id": 421,
+					"id": 424,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "realGroup",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -24462,7 +24579,7 @@
 					}
 				},
 				{
-					"id": 422,
+					"id": 425,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/acd/generiek/geografie/Geografie.xsd#0:0",
 					"name": "RechtsvormEnumType",
 					"namespace": "http://geografie.schemas.milieuinfo.be",
@@ -24484,11 +24601,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 423,
+					"id": 426,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "redefine_AnonymousType",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -24539,7 +24656,7 @@
 												"nillable": false
 											},
 											"propertyType": {
-												"ref": 488
+												"ref": 491
 											}
 										},
 										{
@@ -24550,7 +24667,7 @@
 												"nillable": false
 											},
 											"propertyType": {
-												"ref": 486
+												"ref": 489
 											}
 										},
 										{
@@ -24608,7 +24725,7 @@
 					}
 				},
 				{
-					"id": 424,
+					"id": 427,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "reducedDerivationControl",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -24637,7 +24754,7 @@
 					}
 				},
 				{
-					"id": 425,
+					"id": 428,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/gwmeetnet/FilterDataCodes.xsd#0:0",
 					"name": "ReferentieEnumType",
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
@@ -24659,11 +24776,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 426,
+					"id": 429,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/generiek/GeneriekeDataCodes.xsd#0:0",
 					"name": "ReferentiepuntHoogtebepalingEnumType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
@@ -24685,11 +24802,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 427,
+					"id": 430,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/gwmeetnet/FilterDataTypes.xsd#0:0",
 					"name": "ReferentiepuntType",
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
@@ -24743,7 +24860,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 425
+								"ref": 428
 							}
 						},
 						{
@@ -24763,7 +24880,7 @@
 					}
 				},
 				{
-					"id": 428,
+					"id": 431,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/generiek/ReferentieDataTypes.xsd#0:0",
 					"name": "ReferentieType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
@@ -24783,7 +24900,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -24794,7 +24911,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -24814,7 +24931,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 466
+										"ref": 469
 									}
 								},
 								{
@@ -24825,7 +24942,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 466
+										"ref": 469
 									}
 								}
 							]
@@ -24836,7 +24953,7 @@
 					}
 				},
 				{
-					"id": 429,
+					"id": 432,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/interpretatie/HydrogeologischeStratigrafieDataCodes.xsd#0:0",
 					"name": "RegimeEnumType",
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be",
@@ -24858,11 +24975,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 430,
+					"id": 433,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/interpretatie/InterpretatieDataCodes.xsd#0:0",
 					"name": "RelatieLedenEnumType",
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be",
@@ -24884,11 +25001,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 431,
+					"id": 434,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/generiek/GeneriekeDataTypes.xsd#0:0",
 					"name": "requiredstring255",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
@@ -24905,11 +25022,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 432,
+					"id": 435,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "restriction_AnonymousType",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -24997,7 +25114,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 489
+										"ref": 492
 									}
 								},
 								{
@@ -25063,7 +25180,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 517
+										"ref": 520
 									}
 								},
 								{
@@ -25087,7 +25204,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 417
+								"ref": 420
 							}
 						}
 					],
@@ -25096,7 +25213,7 @@
 					}
 				},
 				{
-					"id": 433,
+					"id": 436,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "restrictionType",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -25255,7 +25372,7 @@
 														"nillable": false
 													},
 													"propertyType": {
-														"ref": 489
+														"ref": 492
 													}
 												},
 												{
@@ -25321,7 +25438,7 @@
 														"nillable": false
 													},
 													"propertyType": {
-														"ref": 517
+														"ref": 520
 													}
 												},
 												{
@@ -25382,7 +25499,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 518
+								"ref": 521
 							}
 						},
 						{
@@ -25393,7 +25510,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 417
+								"ref": 420
 							}
 						}
 					],
@@ -25402,7 +25519,7 @@
 					}
 				},
 				{
-					"id": 434,
+					"id": 437,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "schema_AnonymousType",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -25455,7 +25572,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 423
+										"ref": 426
 									}
 								},
 								{
@@ -25505,7 +25622,7 @@
 														"nillable": false
 													},
 													"propertyType": {
-														"ref": 488
+														"ref": 491
 													}
 												},
 												{
@@ -25516,7 +25633,7 @@
 														"nillable": false
 													},
 													"propertyType": {
-														"ref": 486
+														"ref": 489
 													}
 												},
 												{
@@ -25551,7 +25668,7 @@
 												"nillable": false
 											},
 											"propertyType": {
-												"ref": 487
+												"ref": 490
 											}
 										},
 										{
@@ -25562,7 +25679,7 @@
 												"nillable": false
 											},
 											"propertyType": {
-												"ref": 485
+												"ref": 488
 											}
 										},
 										{
@@ -25610,7 +25727,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 484
+								"ref": 487
 							}
 						},
 						{
@@ -25682,7 +25799,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"location": "bundleresource://224.fwk534414401/schemas/xml.xsd#0:0",
+								"location": "bundleresource://224.fwk327329632/schemas/xml.xsd#0:0",
 								"name": "AnonymousType",
 								"namespace": "http://www.w3.org/XML/1998/namespace/lang",
 								"constraints": {
@@ -25708,7 +25825,7 @@
 					}
 				},
 				{
-					"id": 435,
+					"id": 438,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/acd/generiek/geografie/Geografie.xsd#0:0",
 					"name": "SectieType",
 					"namespace": "http://geografie.schemas.milieuinfo.be",
@@ -25724,11 +25841,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 436,
+					"id": 439,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/observatie/ObservatieDataTypes.xsd#0:0",
 					"name": "SecundaireParameterMetingType",
 					"namespace": "http://observatie.kern.schemas.dov.vlaanderen.be",
@@ -25791,7 +25908,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 466
+										"ref": 469
 									}
 								}
 							]
@@ -25802,7 +25919,7 @@
 					}
 				},
 				{
-					"id": 437,
+					"id": 440,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/interpretatie/GecodeerdeLithologieDataTypes.xsd#0:0",
 					"name": "SecundairKenmerkType",
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be",
@@ -25824,7 +25941,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 438
+								"ref": 441
 							}
 						}
 					],
@@ -25833,7 +25950,7 @@
 					}
 				},
 				{
-					"id": 438,
+					"id": 441,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/interpretatie/GecodeerdeLithologieDataCodes.xsd#0:0",
 					"name": "SecundairKenmerktypeEnumType",
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be",
@@ -25855,11 +25972,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 439,
+					"id": 442,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/interpretatie/GecodeerdeLithologieDataTypes.xsd#0:0",
 					"name": "SedimentaireStructuurType",
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be",
@@ -25881,7 +25998,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 440
+								"ref": 443
 							}
 						}
 					],
@@ -25890,7 +26007,7 @@
 					}
 				},
 				{
-					"id": 440,
+					"id": 443,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/interpretatie/GecodeerdeLithologieDataCodes.xsd#0:0",
 					"name": "SedimentaireStructuurtypeEnumType",
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be",
@@ -25912,11 +26029,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 441,
+					"id": 444,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "selector_AnonymousType",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -25955,7 +26072,7 @@
 									"xsd_restriction": true
 								},
 								"superType": {
-									"ref": 484
+									"ref": 487
 								}
 							}
 						}
@@ -25965,7 +26082,7 @@
 					}
 				},
 				{
-					"id": 442,
+					"id": 445,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "short",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -25988,7 +26105,7 @@
 					}
 				},
 				{
-					"id": 443,
+					"id": 446,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "simpleContent_AnonymousType",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -26020,7 +26137,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 447
+										"ref": 450
 									}
 								},
 								{
@@ -26031,7 +26148,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 446
+										"ref": 449
 									}
 								}
 							]
@@ -26042,7 +26159,7 @@
 					}
 				},
 				{
-					"id": 444,
+					"id": 447,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "simpleDerivationSet",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -26069,7 +26186,7 @@
 					}
 				},
 				{
-					"id": 445,
+					"id": 448,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "simpleExplicitGroup",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -26189,7 +26306,7 @@
 					}
 				},
 				{
-					"id": 446,
+					"id": 449,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "simpleExtensionType",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -26254,7 +26371,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 518
+								"ref": 521
 							}
 						}
 					],
@@ -26263,7 +26380,7 @@
 					}
 				},
 				{
-					"id": 447,
+					"id": 450,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "simpleRestrictionType",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -26366,7 +26483,7 @@
 												"nillable": false
 											},
 											"propertyType": {
-												"ref": 489
+												"ref": 492
 											}
 										},
 										{
@@ -26432,7 +26549,7 @@
 												"nillable": false
 											},
 											"propertyType": {
-												"ref": 517
+												"ref": 520
 											}
 										},
 										{
@@ -26491,16 +26608,16 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 518
+								"ref": 521
 							}
 						}
 					],
 					"superType": {
-						"ref": 433
+						"ref": 436
 					}
 				},
 				{
-					"id": 448,
+					"id": 451,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "simpleType",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -26531,7 +26648,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 432
+										"ref": 435
 									}
 								},
 								{
@@ -26555,7 +26672,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 493
+										"ref": 496
 									}
 								}
 							]
@@ -26569,7 +26686,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 444
+								"ref": 447
 							}
 						},
 						{
@@ -26590,7 +26707,7 @@
 					}
 				},
 				{
-					"id": 449,
+					"id": 452,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/sondering/SonderingDataCodes.xsd#0:0",
 					"name": "SondeerApparaatEnumType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be",
@@ -26612,11 +26729,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 450,
+					"id": 453,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/sondering/SonderingDataTypes.xsd#0:0",
 					"name": "SondeerApparaatType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be",
@@ -26636,7 +26753,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 449
+								"ref": 452
 							}
 						},
 						{
@@ -26647,7 +26764,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 451
+								"ref": 454
 							}
 						},
 						{
@@ -26658,7 +26775,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 453
+								"ref": 456
 							}
 						}
 					],
@@ -26667,7 +26784,7 @@
 					}
 				},
 				{
-					"id": 451,
+					"id": 454,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/sondering/SonderingDataTypes.xsd#0:0",
 					"name": "SondeerConusType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be",
@@ -26733,7 +26850,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -26755,7 +26872,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -26810,7 +26927,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 459
+								"ref": 462
 							}
 						}
 					],
@@ -26819,7 +26936,7 @@
 					}
 				},
 				{
-					"id": 452,
+					"id": 455,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/sondering/SonderingDataTypes.xsd#0:0",
 					"name": "SondeerKwaliteitType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be",
@@ -26840,7 +26957,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 455
+								"ref": 458
 							}
 						},
 						{
@@ -26862,7 +26979,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -26873,7 +26990,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						}
 					],
@@ -26882,7 +26999,7 @@
 					}
 				},
 				{
-					"id": 453,
+					"id": 456,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/sondering/SonderingDataCodes.xsd#0:0",
 					"name": "SondeerMeetlichaamEnumType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be",
@@ -26904,11 +27021,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 454,
+					"id": 457,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/sondering/SonderingDataCodes.xsd#0:0",
 					"name": "SondeerMethodeEnumType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be",
@@ -26930,11 +27047,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 455,
+					"id": 458,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/sondering/SonderingDataCodes.xsd#0:0",
 					"name": "SondeerNormEnumType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be",
@@ -26956,11 +27073,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 456,
+					"id": 459,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/sondering/SonderingDataCodes.xsd#0:0",
 					"name": "SondeerTechniekEnumType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be",
@@ -26982,11 +27099,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 457,
+					"id": 460,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/sondering/SonderingDataTypes.xsd#0:0",
 					"name": "SondeerTechniekType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be",
@@ -27030,7 +27147,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -27041,7 +27158,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 456
+								"ref": 459
 							}
 						},
 						{
@@ -27052,7 +27169,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 470
+								"ref": 473
 							}
 						}
 					],
@@ -27061,7 +27178,7 @@
 					}
 				},
 				{
-					"id": 458,
+					"id": 461,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/sondering/SonderingDataTypes.xsd#0:0",
 					"name": "SondeOnderzoekType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be",
@@ -27082,7 +27199,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 454
+								"ref": 457
 							}
 						},
 						{
@@ -27093,7 +27210,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 480
+								"ref": 483
 							}
 						},
 						{
@@ -27104,7 +27221,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 462
+								"ref": 465
 							}
 						},
 						{
@@ -27115,7 +27232,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 450
+								"ref": 453
 							}
 						},
 						{
@@ -27148,7 +27265,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 406
+								"ref": 407
 							}
 						},
 						{
@@ -27170,7 +27287,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 464
+								"ref": 467
 							}
 						},
 						{
@@ -27190,7 +27307,7 @@
 					}
 				},
 				{
-					"id": 459,
+					"id": 462,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/sondering/SonderingDataTypes.xsd#0:0",
 					"name": "SonderingKalibratieType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be",
@@ -27265,7 +27382,7 @@
 					}
 				},
 				{
-					"id": 460,
+					"id": 463,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/generiek/ReferentieDataTypes.xsd#0:0",
 					"name": "SonderingReferentieType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
@@ -27282,11 +27399,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 461,
+					"id": 464,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/sondering/SonderingDataTypes.xsd#0:0",
 					"name": "SonderingType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be",
@@ -27307,7 +27424,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 471
+								"ref": 474
 							}
 						},
 						{
@@ -27339,7 +27456,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 491
+								"ref": 494
 							}
 						},
 						{
@@ -27361,7 +27478,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 413
+								"ref": 414
 							}
 						},
 						{
@@ -27372,7 +27489,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 502
+								"ref": 505
 							}
 						},
 						{
@@ -27383,7 +27500,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 458
+								"ref": 461
 							}
 						},
 						{
@@ -27394,7 +27511,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -27405,7 +27522,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 452
+								"ref": 455
 							}
 						},
 						{
@@ -27447,7 +27564,7 @@
 					}
 				},
 				{
-					"id": 462,
+					"id": 465,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/sondering/SonderingDataTypes.xsd#0:0",
 					"name": "SondeTrajectType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be",
@@ -27555,7 +27672,7 @@
 					}
 				},
 				{
-					"id": 463,
+					"id": 466,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/generiek/GeneriekeDataCodes.xsd#0:0",
 					"name": "StatusEnumType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
@@ -27577,11 +27694,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 464,
+					"id": 467,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/sondering/SonderingDataCodes.xsd#0:0",
 					"name": "StopcriteriumEnumType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be",
@@ -27603,11 +27720,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 465,
+					"id": 468,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/acd/generiek/geografie/Geografie.xsd#0:0",
 					"name": "StraatType",
 					"namespace": "http://geografie.schemas.milieuinfo.be",
@@ -27624,11 +27741,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 466,
+					"id": 469,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "string",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -27656,7 +27773,7 @@
 					}
 				},
 				{
-					"id": 467,
+					"id": 470,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/generiek/GeneriekeDataTypes.xsd#0:0",
 					"name": "string100",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
@@ -27673,11 +27790,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 468,
+					"id": 471,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/generiek/GeneriekeDataTypes.xsd#0:0",
 					"name": "string150",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
@@ -27694,11 +27811,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 469,
+					"id": 472,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/generiek/GeneriekeDataTypes.xsd#0:0",
 					"name": "string25",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
@@ -27715,11 +27832,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 470,
+					"id": 473,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/generiek/GeneriekeDataTypes.xsd#0:0",
 					"name": "string255",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
@@ -27736,11 +27853,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 471,
+					"id": 474,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/generiek/GeneriekeDataTypes.xsd#0:0",
 					"name": "string50",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
@@ -27757,11 +27874,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 472,
+					"id": 475,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/generiek/GeneriekeDataTypes.xsd#0:0",
 					"name": "string75",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
@@ -27778,11 +27895,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 473,
+					"id": 476,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/bodem/ClassificatieDataCodes.xsd#0:0",
 					"name": "SubstraatEnumType",
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be",
@@ -27804,11 +27921,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 474,
+					"id": 477,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/generiek/Gml3Geometry.xsd#0:0",
 					"name": "SurfaceArrayPropertyType",
 					"namespace": "http://www.opengis.net/gml/3.2",
@@ -27840,7 +27957,7 @@
 					}
 				},
 				{
-					"id": 475,
+					"id": 478,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/generiek/Gml3Geometry.xsd#0:0",
 					"name": "SurfacePropertyType",
 					"namespace": "http://www.opengis.net/gml/3.2",
@@ -27871,7 +27988,7 @@
 					}
 				},
 				{
-					"id": 476,
+					"id": 479,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/generiek/GeneriekeDataCodes.xsd#0:0",
 					"name": "TaalEnumType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
@@ -27893,11 +28010,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 477,
+					"id": 480,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/interpretatie/GecodeerdeLithologieDataTypes.xsd#0:0",
 					"name": "TektoniekType",
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be",
@@ -27919,7 +28036,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 478
+								"ref": 481
 							}
 						},
 						{
@@ -27950,7 +28067,7 @@
 					}
 				},
 				{
-					"id": 478,
+					"id": 481,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/interpretatie/GecodeerdeLithologieDataCodes.xsd#0:0",
 					"name": "TektoniektypeEnumType",
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be",
@@ -27972,11 +28089,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 479,
+					"id": 482,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/generiek/GeneriekeDataTypes.xsd#0:0",
 					"name": "TemporeelType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
@@ -28015,7 +28132,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 482
+										"ref": 485
 									}
 								},
 								{
@@ -28036,7 +28153,7 @@
 					}
 				},
 				{
-					"id": 480,
+					"id": 483,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/sondering/SonderingDataCodes.xsd#0:0",
 					"name": "TesttypeEnumType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be",
@@ -28058,11 +28175,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 481,
+					"id": 484,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/bodem/ClassificatieDataCodes.xsd#0:0",
 					"name": "TextuurklasseEnumType",
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be",
@@ -28084,11 +28201,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 482,
+					"id": 485,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "time",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -28106,7 +28223,7 @@
 					}
 				},
 				{
-					"id": 483,
+					"id": 486,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/acd/generiek/geografie/Geografie.xsd#0:0",
 					"name": "ToestandType",
 					"namespace": "http://geografie.schemas.milieuinfo.be",
@@ -28123,11 +28240,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 484,
+					"id": 487,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "token",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -28155,7 +28272,7 @@
 					}
 				},
 				{
-					"id": 485,
+					"id": 488,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "topLevelAttribute",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -28241,7 +28358,7 @@
 					}
 				},
 				{
-					"id": 486,
+					"id": 489,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "topLevelComplexType",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -28283,7 +28400,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 443
+										"ref": 446
 									}
 								},
 								{
@@ -28405,7 +28522,7 @@
 												"nillable": false
 											},
 											"propertyType": {
-												"ref": 518
+												"ref": 521
 											}
 										}
 									]
@@ -28429,7 +28546,7 @@
 					}
 				},
 				{
-					"id": 487,
+					"id": 490,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "topLevelElement",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -28592,7 +28709,7 @@
 					}
 				},
 				{
-					"id": 488,
+					"id": 491,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "topLevelSimpleType",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -28635,7 +28752,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 432
+										"ref": 435
 									}
 								},
 								{
@@ -28659,7 +28776,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 493
+										"ref": 496
 									}
 								}
 							]
@@ -28678,11 +28795,11 @@
 						}
 					],
 					"superType": {
-						"ref": 448
+						"ref": 451
 					}
 				},
 				{
-					"id": 489,
+					"id": 492,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "totalDigits_AnonymousType",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -28715,7 +28832,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"ref": 404
+								"ref": 405
 							}
 						}
 					],
@@ -28724,7 +28841,7 @@
 					}
 				},
 				{
-					"id": 490,
+					"id": 493,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "typeDerivationControl",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -28750,7 +28867,7 @@
 					}
 				},
 				{
-					"id": 491,
+					"id": 494,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/generiek/OrganisatieDataTypes.xsd#0:0",
 					"name": "UitvoerderType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
@@ -28768,7 +28885,7 @@
 					}
 				},
 				{
-					"id": 492,
+					"id": 495,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/observatie/ObservatieDataTypes.xsd#0:0",
 					"name": "UitvoeringAnalyseType",
 					"namespace": "http://observatie.kern.schemas.dov.vlaanderen.be",
@@ -28800,7 +28917,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 482
+								"ref": 485
 							}
 						},
 						{
@@ -28842,7 +28959,7 @@
 					}
 				},
 				{
-					"id": 493,
+					"id": 496,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "union_AnonymousType",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -28884,7 +29001,7 @@
 									"binding": "java.util.List",
 									"element-type": {
 										"@type": "properties",
-										"@value": {"binding":"java.lang.String","type":417}
+										"@value": {"binding":"java.lang.String","type":420}
 
 									},
 									"has-value": true,
@@ -28898,7 +29015,7 @@
 					}
 				},
 				{
-					"id": 494,
+					"id": 497,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "unsignedByte",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -28917,11 +29034,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 497
+						"ref": 500
 					}
 				},
 				{
-					"id": 495,
+					"id": 498,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "unsignedInt",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -28940,11 +29057,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 496
+						"ref": 499
 					}
 				},
 				{
-					"id": 496,
+					"id": 499,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "unsignedLong",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -28967,7 +29084,7 @@
 					}
 				},
 				{
-					"id": 497,
+					"id": 500,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "unsignedShort",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -28986,11 +29103,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 495
+						"ref": 498
 					}
 				},
 				{
-					"id": 498,
+					"id": 501,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/bodem/ClassificatieDataCodes.xsd#0:0",
 					"name": "VarianteMoedermateriaalEnumType",
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be",
@@ -29012,11 +29129,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 499,
+					"id": 502,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/bodem/ClassificatieDataCodes.xsd#0:0",
 					"name": "VarianteProfielontwikkelingEnumType",
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be",
@@ -29038,11 +29155,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 500,
+					"id": 503,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/generiek/Gml3Geometry.xsd#0:0",
 					"name": "VectorType",
 					"namespace": "http://www.opengis.net/gml/3.2",
@@ -29060,7 +29177,7 @@
 					}
 				},
 				{
-					"id": 501,
+					"id": 504,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/generiek/OrganisatieDataTypes.xsd#0:0",
 					"name": "VestigingsNummerType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
@@ -29076,11 +29193,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 502,
+					"id": 505,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/sondering/SonderingDataTypes.xsd#0:0",
 					"name": "VisueelOnderzoekType",
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be",
@@ -29102,7 +29219,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 470
+								"ref": 473
 							}
 						},
 						{
@@ -29144,7 +29261,7 @@
 					}
 				},
 				{
-					"id": 503,
+					"id": 506,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/acd/generiek/geografie/Geografie.xsd#0:0",
 					"name": "VlaamseGemeenteEnumType",
 					"namespace": "http://geografie.schemas.milieuinfo.be",
@@ -29166,11 +29283,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 504,
+					"id": 507,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/acd/generiek/geografie/Geografie.xsd#0:0",
 					"name": "VlaamseGemeenteNUTSCodeType",
 					"namespace": "http://geografie.schemas.milieuinfo.be",
@@ -29192,11 +29309,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 505,
+					"id": 508,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/generiek/GeneriekeDataCodes.xsd#0:0",
 					"name": "VlaamseHoofdgemeenteNISCodeType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
@@ -29204,25 +29321,25 @@
 					"constraints": {
 						"enumeration": {
 							"@type": "properties",
-							"@value": {"allowOthers":false,"values":["11001","11002","11004","11005","11007","11008","11009","11013","11016","11018","11021","11022","11023","11024","11025","11029","11030","11035","11037","11038","11039","11040","11044","11050","11052","11053","11054","11055","11056","11057","12002","12005","12007","12009","12014","12021","12025","12026","12029","12030","12034","12035","12040","12041","13001","13002","13003","13004","13006","13008","13010","13011","13012","13013","13014","13016","13017","13019","13021","13023","13025","13029","13031","13035","13036","13037","13040","13044","13046","13049","13053","23002","23003","23009","23016","23023","23024","23025","23027","23032","23033","23038","23039","23045","23047","23050","23052","23060","23062","23064","23081","23086","23088","23094","23096","23097","23098","23099","23100","23101","23102","23103","23104","23105","24001","24007","24008","24009","24011","24014","24016","24020","24028","24033","24038","24041","24043","24045","24048","24054","24055","24059","24062","24066","24086","24094","24104","24107","24109","24130","24133","24134","24135","24137","31003","31004","31005","31006","31012","31022","31033","31040","31042","31043","32003","32006","32010","32011","32030","33011","33016","33021","33029","33037","33039","33040","33041","34002","34003","34009","34013","34022","34023","34025","34027","34040","34041","34042","34043","35002","35005","35006","35011","35013","35014","35029","36006","36007","36008","36010","36011","36012","36015","36019","37002","37007","37010","37011","37012","37015","37017","37018","37020","38002","38008","38014","38016","38025","41002","41011","41018","41024","41027","41034","41048","41063","41081","41082","42003","42004","42006","42008","42010","42011","42023","42025","42026","42028","43002","43005","43007","43010","43014","43018","44001","44011","44012","44013","44019","44020","44021","44029","44034","44036","44040","44043","44045","44048","44049","44052","44064","44072","44073","44080","44081","44082","44083","44084","44085","45017","45035","45041","45057","45059","45060","45061","45062","45063","45064","45068","45065","46003","46013","46014","46020","46021","46024","46025","71002","71004","71011","71016","71017","71020","71022","71024","71034","71037","71045","71047","71053","71057","71066","71067","71069","71070","72003","72004","72018","72020","72021","72022","72025","72029","72030","72037","72038","72039","72040","72041","72042","72043","73001","73006","73009","73022","73028","73032","73040","73042","73066","73083","73098","73107","73109"]}
+							"@value": {"allowOthers":false,"values":["11001","11002","11004","11005","11007","11008","11009","11013","11016","11018","11021","11022","11023","11024","11025","11029","11030","11035","11037","11038","11039","11040","11044","11050","11052","11053","11054","11055","11056","11057","12002","12005","12007","12009","12014","12021","12025","12026","12029","12030","12034","12035","12040","12041","13001","13002","13003","13004","13006","13008","13010","13011","13012","13013","13014","13016","13017","13019","13021","13023","13025","13029","13031","13035","13036","13037","13040","13044","13046","13049","13053","23002","23003","23009","23016","23023","23024","23025","23027","23032","23033","23038","23039","23045","23047","23050","23052","23060","23062","23064","23081","23086","23088","23094","23096","23097","23098","23099","23100","23101","23102","23103","23104","23105","24001","24007","24008","24009","24011","24014","24016","24020","24028","24033","24038","24041","24043","24045","24048","24054","24055","24059","24062","24066","24086","24094","24104","24107","24109","24130","24133","24134","24135","24137","31003","31004","31005","31006","31012","31022","31033","31040","31042","31043","32003","32006","32010","32011","32030","33011","33016","33021","33029","33037","33039","33040","33041","34002","34003","34009","34013","34022","34023","34025","34027","34040","34041","34042","34043","35002","35005","35006","35011","35013","35014","35029","36006","36007","36008","36010","36011","36012","36015","36019","37002","37007","37010","37011","37012","37015","37017","37018","37020","38002","38008","38014","38016","38025","41002","41011","41018","41024","41027","41034","41048","41063","41081","41082","42003","42004","42006","42008","42010","42011","42023","42025","42026","42028","43002","43005","43007","43010","43014","43018","44001","44011","44012","44013","44019","44020","44021","44029","44034","44036","44040","44043","44045","44048","44049","44052","44064","44072","44073","44080","44081","44082","44083","44084","44085","45017","45035","45041","45057","45059","45060","45061","45062","45063","45064","45068","45065","46003","46013","46014","46020","46021","46024","46025","71002","71004","71011","71016","71017","71020","71022","71024","71034","71037","71045","71047","71053","71057","71066","71067","71069","71070","72003","72004","72018","72020","72021","72022","72025","72029","72030","72037","72038","72039","72040","72041","72042","72043","73001","73006","73009","73022","73028","73032","73040","73042","73066","73083","73098","73107","73109","23106","37021","37022","44086","44087","46029","44088","46030","73110","73111","71071","71072"]}
 
 						},
 						"has-value": true,
 						"mapping-relevant": false,
 						"validation": {
 							"@type": "validator",
-							"@value": {"type":"and","config":[{"@type":"validator","@value":{"type":"enumeration","config":["11001","11002","11004","11005","11007","11008","11009","11013","11016","11018","11021","11022","11023","11024","11025","11029","11030","11035","11037","11038","11039","11040","11044","11050","11052","11053","11054","11055","11056","11057","12002","12005","12007","12009","12014","12021","12025","12026","12029","12030","12034","12035","12040","12041","13001","13002","13003","13004","13006","13008","13010","13011","13012","13013","13014","13016","13017","13019","13021","13023","13025","13029","13031","13035","13036","13037","13040","13044","13046","13049","13053","23002","23003","23009","23016","23023","23024","23025","23027","23032","23033","23038","23039","23045","23047","23050","23052","23060","23062","23064","23081","23086","23088","23094","23096","23097","23098","23099","23100","23101","23102","23103","23104","23105","24001","24007","24008","24009","24011","24014","24016","24020","24028","24033","24038","24041","24043","24045","24048","24054","24055","24059","24062","24066","24086","24094","24104","24107","24109","24130","24133","24134","24135","24137","31003","31004","31005","31006","31012","31022","31033","31040","31042","31043","32003","32006","32010","32011","32030","33011","33016","33021","33029","33037","33039","33040","33041","34002","34003","34009","34013","34022","34023","34025","34027","34040","34041","34042","34043","35002","35005","35006","35011","35013","35014","35029","36006","36007","36008","36010","36011","36012","36015","36019","37002","37007","37010","37011","37012","37015","37017","37018","37020","38002","38008","38014","38016","38025","41002","41011","41018","41024","41027","41034","41048","41063","41081","41082","42003","42004","42006","42008","42010","42011","42023","42025","42026","42028","43002","43005","43007","43010","43014","43018","44001","44011","44012","44013","44019","44020","44021","44029","44034","44036","44040","44043","44045","44048","44049","44052","44064","44072","44073","44080","44081","44082","44083","44084","44085","45017","45035","45041","45057","45059","45060","45061","45062","45063","45064","45068","45065","46003","46013","46014","46020","46021","46024","46025","71002","71004","71011","71016","71017","71020","71022","71024","71034","71037","71045","71047","71053","71057","71066","71067","71069","71070","72003","72004","72018","72020","72021","72022","72025","72029","72030","72037","72038","72039","72040","72041","72042","72043","73001","73006","73009","73022","73028","73032","73040","73042","73066","73083","73098","73107","73109"]}}]}
+							"@value": {"type":"and","config":[{"@type":"validator","@value":{"type":"enumeration","config":["11001","11002","11004","11005","11007","11008","11009","11013","11016","11018","11021","11022","11023","11024","11025","11029","11030","11035","11037","11038","11039","11040","11044","11050","11052","11053","11054","11055","11056","11057","12002","12005","12007","12009","12014","12021","12025","12026","12029","12030","12034","12035","12040","12041","13001","13002","13003","13004","13006","13008","13010","13011","13012","13013","13014","13016","13017","13019","13021","13023","13025","13029","13031","13035","13036","13037","13040","13044","13046","13049","13053","23002","23003","23009","23016","23023","23024","23025","23027","23032","23033","23038","23039","23045","23047","23050","23052","23060","23062","23064","23081","23086","23088","23094","23096","23097","23098","23099","23100","23101","23102","23103","23104","23105","24001","24007","24008","24009","24011","24014","24016","24020","24028","24033","24038","24041","24043","24045","24048","24054","24055","24059","24062","24066","24086","24094","24104","24107","24109","24130","24133","24134","24135","24137","31003","31004","31005","31006","31012","31022","31033","31040","31042","31043","32003","32006","32010","32011","32030","33011","33016","33021","33029","33037","33039","33040","33041","34002","34003","34009","34013","34022","34023","34025","34027","34040","34041","34042","34043","35002","35005","35006","35011","35013","35014","35029","36006","36007","36008","36010","36011","36012","36015","36019","37002","37007","37010","37011","37012","37015","37017","37018","37020","38002","38008","38014","38016","38025","41002","41011","41018","41024","41027","41034","41048","41063","41081","41082","42003","42004","42006","42008","42010","42011","42023","42025","42026","42028","43002","43005","43007","43010","43014","43018","44001","44011","44012","44013","44019","44020","44021","44029","44034","44036","44040","44043","44045","44048","44049","44052","44064","44072","44073","44080","44081","44082","44083","44084","44085","45017","45035","45041","45057","45059","45060","45061","45062","45063","45064","45068","45065","46003","46013","46014","46020","46021","46024","46025","71002","71004","71011","71016","71017","71020","71022","71024","71034","71037","71045","71047","71053","71057","71066","71067","71069","71070","72003","72004","72018","72020","72021","72022","72025","72029","72030","72037","72038","72039","72040","72041","72042","72043","73001","73006","73009","73022","73028","73032","73040","73042","73066","73083","73098","73107","73109","23106","37021","37022","44086","44087","46029","44088","46030","73110","73111","71071","71072"]}}]}
 
 						},
 						"xsd_elements": [],
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 506,
+					"id": 509,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/acd/generiek/geografie/Geografie.xsd#0:0",
 					"name": "VlaamseHoofdgemeenteNISCodeType",
 					"namespace": "http://geografie.schemas.milieuinfo.be",
@@ -29244,11 +29361,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 507,
+					"id": 510,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/acd/generiek/geografie/Geografie.xsd#0:0",
 					"name": "VlaamsePostcodeEnumType",
 					"namespace": "http://geografie.schemas.milieuinfo.be",
@@ -29270,11 +29387,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 508,
+					"id": 511,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/acd/generiek/geografie/Geografie.xsd#0:0",
 					"name": "VlaamseProvincieNISCodeType",
 					"namespace": "http://geografie.schemas.milieuinfo.be",
@@ -29296,11 +29413,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 509,
+					"id": 512,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/acd/generiek/geografie/Geografie.xsd#0:0",
 					"name": "VlaamseProvincieNUTSCodeType",
 					"namespace": "http://geografie.schemas.milieuinfo.be",
@@ -29322,11 +29439,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 510,
+					"id": 513,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/acd/generiek/geografie/Geografie.xsd#0:0",
 					"name": "VlaamsXLambertCoordinaatType",
 					"namespace": "http://geografie.schemas.milieuinfo.be",
@@ -29347,7 +29464,7 @@
 					}
 				},
 				{
-					"id": 511,
+					"id": 514,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/acd/generiek/geografie/Geografie.xsd#0:0",
 					"name": "VlaamsYLambertCoordinaatType",
 					"namespace": "http://geografie.schemas.milieuinfo.be",
@@ -29368,7 +29485,7 @@
 					}
 				},
 				{
-					"id": 512,
+					"id": 515,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/interpretatie/AntropogeneKenmerkenDataCodes.xsd#0:0",
 					"name": "VochtgehalteAKEnumType",
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be",
@@ -29390,11 +29507,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 404
+						"ref": 405
 					}
 				},
 				{
-					"id": 513,
+					"id": 516,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/gwmeetnet/FilterDataCodes.xsd#0:0",
 					"name": "WaarnemingEnumType",
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
@@ -29416,11 +29533,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 514,
+					"id": 517,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/gwmeetnet/FilterDataTypes.xsd#0:0",
 					"name": "WaarnemingType",
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
@@ -29452,7 +29569,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 482
+								"ref": 485
 							}
 						},
 						{
@@ -29463,7 +29580,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 513
+								"ref": 516
 							}
 						},
 						{
@@ -29505,7 +29622,7 @@
 					}
 				},
 				{
-					"id": 515,
+					"id": 518,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/gwmeetnet/FilterDataTypes.xsd#0:0",
 					"name": "WatermonsterType",
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
@@ -29538,7 +29655,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -29560,7 +29677,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 492
+								"ref": 495
 							}
 						},
 						{
@@ -29591,7 +29708,7 @@
 					}
 				},
 				{
-					"id": 516,
+					"id": 519,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/boring/BoringDataTypes.xsd#0:0",
 					"name": "WetKaderType",
 					"namespace": "http://boring.kern.schemas.dov.vlaanderen.be",
@@ -29640,7 +29757,7 @@
 													"nillable": false
 												},
 												"propertyType": {
-													"ref": 466
+													"ref": 469
 												}
 											}
 										]
@@ -29672,7 +29789,7 @@
 													"nillable": false
 												},
 												"propertyType": {
-													"ref": 466
+													"ref": 469
 												}
 											}
 										]
@@ -29704,7 +29821,7 @@
 													"nillable": false
 												},
 												"propertyType": {
-													"ref": 466
+													"ref": 469
 												}
 											}
 										]
@@ -29774,7 +29891,7 @@
 													"nillable": false
 												},
 												"propertyType": {
-													"ref": 466
+													"ref": 469
 												}
 											}
 										]
@@ -29799,7 +29916,7 @@
 					}
 				},
 				{
-					"id": 517,
+					"id": 520,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "whiteSpace_AnonymousType",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -29861,7 +29978,7 @@
 					}
 				},
 				{
-					"id": 518,
+					"id": 521,
 					"location": "http://www.w3.org/2001/XMLSchema.xsd#0:0",
 					"name": "wildcard",
 					"namespace": "http://www.w3.org/2001/XMLSchema",
@@ -29925,7 +30042,7 @@
 					}
 				},
 				{
-					"id": 519,
+					"id": 522,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/generiek/GeometrieDataTypes.xsd#0:0",
 					"name": "WKTType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
@@ -29937,11 +30054,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 520,
+					"id": 523,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/bodem/ClassificatieDataTypes.xsd#0:0",
 					"name": "WrbBodemClassificatieType",
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be",
@@ -29963,7 +30080,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 525
+								"ref": 528
 							}
 						},
 						{
@@ -30000,7 +30117,7 @@
 													"nillable": false
 												},
 												"propertyType": {
-													"ref": 524
+													"ref": 527
 												}
 											},
 											{
@@ -30011,7 +30128,7 @@
 													"nillable": false
 												},
 												"propertyType": {
-													"ref": 466
+													"ref": 469
 												}
 											}
 										]
@@ -30025,7 +30142,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 466
+										"ref": 469
 									}
 								}
 							]
@@ -30038,7 +30155,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -30049,7 +30166,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 466
+								"ref": 469
 							}
 						},
 						{
@@ -30071,7 +30188,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 522
+								"ref": 525
 							}
 						},
 						{
@@ -30112,7 +30229,7 @@
 					}
 				},
 				{
-					"id": 521,
+					"id": 524,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/bodem/ClassificatieDataCodes.xsd#0:0",
 					"name": "WrbQualifierEnumType",
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be",
@@ -30134,11 +30251,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 522,
+					"id": 525,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/bodem/ClassificatieDataTypes.xsd#0:0",
 					"name": "WrbQualifierType",
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be",
@@ -30185,7 +30302,7 @@
 													"nillable": false
 												},
 												"propertyType": {
-													"ref": 521
+													"ref": 524
 												}
 											},
 											{
@@ -30196,7 +30313,7 @@
 													"nillable": false
 												},
 												"propertyType": {
-													"ref": 466
+													"ref": 469
 												}
 											}
 										]
@@ -30210,7 +30327,7 @@
 										"nillable": false
 									},
 									"propertyType": {
-										"ref": 466
+										"ref": 469
 									}
 								}
 							]
@@ -30223,7 +30340,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 523
+								"ref": 526
 							}
 						}
 					],
@@ -30232,7 +30349,7 @@
 					}
 				},
 				{
-					"id": 523,
+					"id": 526,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/bodem/ClassificatieDataCodes.xsd#0:0",
 					"name": "WrbQualifierTypeEnumType",
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be",
@@ -30254,11 +30371,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 524,
+					"id": 527,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/bodem/ClassificatieDataCodes.xsd#0:0",
 					"name": "WrbReferenceSoilGroupEnumType",
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be",
@@ -30280,11 +30397,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 525,
+					"id": 528,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/bodem/ClassificatieDataCodes.xsd#0:0",
 					"name": "WRBVersieEnumType",
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be",
@@ -30306,11 +30423,11 @@
 						"xsd_restriction": true
 					},
 					"superType": {
-						"ref": 466
+						"ref": 469
 					}
 				},
 				{
-					"id": 526,
+					"id": 529,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/generiek/GeneriekeDataTypes.xsd#0:0",
 					"name": "XCoordinaatType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
@@ -30331,7 +30448,7 @@
 					}
 				},
 				{
-					"id": 527,
+					"id": 530,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/generiek/EntiteitDataTypes.xsd#0:0",
 					"name": "XYType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
@@ -30352,7 +30469,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 526
+								"ref": 529
 							}
 						},
 						{
@@ -30363,7 +30480,7 @@
 								"nillable": false
 							},
 							"propertyType": {
-								"ref": 528
+								"ref": 531
 							}
 						},
 						{
@@ -30405,7 +30522,7 @@
 					}
 				},
 				{
-					"id": 528,
+					"id": 531,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/generiek/GeneriekeDataTypes.xsd#0:0",
 					"name": "YCoordinaatType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
@@ -30426,7 +30543,7 @@
 					}
 				},
 				{
-					"id": 529,
+					"id": 532,
 					"location": "https://ontwikkel.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/generiek/EntiteitDataTypes.xsd#0:0",
 					"name": "ZType",
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",

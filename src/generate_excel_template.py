@@ -485,11 +485,14 @@ def generate_standard_templates(project_root, mode='local'):
                color_choice=False)
     create_xls(f'{project_root}/data/geologie_template_full_oefen.xlsx', sheets, root, project_root=project_root)
 
-    # sheets = ['opdracht', 'bodemsite', 'boring', 'bodemlocatie', 'interpretaties', 'bodemmonster', 'bodemobservatie']
-    # create_xls(f'{project_root}/data/evaluatie_THK_PFAS_oefen.xlsx', sheets, root,
-    #            header_config=header_filename,
-    #            priority_config=priorities_filename,
-    #            color_choice=False)
+    sheets = ['grondwaterlocatie', 'filter', 'filtermeting', 'filterdebietmeter', 'bodemlocatie',
+              'bodemsite',
+              'bodemmonster',
+              'bodemobservatie',
+              'bodemlocatieclassificatie',
+              'bodemkundigeopbouw',
+              'boring', 'interpretaties', 'grondmonster', 'opdracht', 'monster']
+    create_xls(f'{project_root}/data/template_full_oefen.xlsx', sheets, root, project_root=project_root)
 
 
 if __name__ == '__main__':
