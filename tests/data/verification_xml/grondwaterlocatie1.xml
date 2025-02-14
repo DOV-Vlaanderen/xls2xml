@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns4:dov-schema xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns4="http://kern.schemas.dov.vlaanderen.be" xsi:schemaLocation="http://kern.schemas.dov.vlaanderen.be https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd">
+<ns4:dov-schema xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:ns4="http://kern.schemas.dov.vlaanderen.be"
+                xsi:schemaLocation="http://kern.schemas.dov.vlaanderen.be https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd">
     <grondwaterlocatie>
         <identificatie>4-0109</identificatie>
         <dataidentifier>
@@ -42,13 +44,11 @@
             </beheerder>
         </beheer>
         <afwerking>
-            <beschermbuis>
-                <materiaal>pvc</materiaal>
-            </beschermbuis>
+            <materiaal>pvc</materiaal>
         </afwerking>
         <status>publiek</status>
     </grondwaterlocatie>
-	<grondwaterlocatie>
+    <grondwaterlocatie>
         <identificatie>Gent-Noendries-04</identificatie>
         <dataidentifier>
             <permkey>2022-104515</permkey>
