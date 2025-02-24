@@ -4,6 +4,7 @@ import xmlschema
 import pandas as pd
 import numpy as np
 from src.dfs_schema import ChoiceNode, SequenceNode, get_dfs_schema, get_XML_schema
+from tqdm import tqdm
 import traceback
 from pathlib import Path
 import os
@@ -163,20 +164,28 @@ def get_partition(df, filter, current_lijst, node):
             last_row = tuple(row)
             possibilities.add(tuple(row))
 
-    new_filters = []
-    for pos in possibilities:
-        started = False
-        new_filter = []
-        for i, row in df.loc[:, identifiers].iterrows():
-            if tuple(row) == pos or (all([(x == y or (isinstance(x, float) and math.isnan(x))) for x, y in
-                                          zip(tuple(row), pos)]) and started):
-                started = True
-                new_filter.append(True)
-            else:
-                started = False
-                new_filter.append(False)
+    pos2index = {pos: i for i, pos in enumerate(possibilities)}
+    new_filters = [np.zeros(df.shape[0], dtype=bool) for _ in possibilities]
 
-        new_filters.append(filter * np.array(new_filter))
+    prev_row = None
+    prev_pos = None
+
+    for i, row in df.loc[:, identifiers].iterrows():
+
+        if filter[i]:
+
+            if prev_row is not None and all([(x == y or (isinstance(x, float) and math.isnan(x))) for x, y in
+                                             zip(tuple(row), prev_row)]):
+                new_filters[prev_pos][i] = True
+
+            else:
+                j = pos2index[tuple(row)]
+                new_filters[j][i] = True
+                prev_row = tuple(row)
+                prev_pos = j
+
+    new_filters = [filter * nf for nf in new_filters]
+
     assert not new_filters or all(sum(new_filters) == filter), 'Not a perfect partition?'
     return new_filters
 
@@ -286,7 +295,7 @@ def read_sheets(filename, sheets, xml_schema=None, mode='local', xsd_source='pro
             try:
                 base = root.get_specific_child(sheet)
                 partition = get_partition(df, np.ones(df.shape[0], dtype='bool'), [], base)
-                for part in partition:
+                for part in tqdm(partition):
                     data_root.children[sheet].append(recursive_data_read(df, part, base, []))
             except ValueError:
                 print(f'Conversion of sheet {sheet} failed')
@@ -335,6 +344,6 @@ def read_to_xml(input_filename, output_filename='./dist/result.xml', sheets=None
 
 
 if __name__ == '__main__':
-    # read_to_xml('../tests/data/filled_templates/bodem_template_full2.xlsx', '../dist/dev.xml', sheets)
-    read_to_xml('../data_voorbeeld/output_file.xlsx', '../dist/bug.xml', sheets=['bodemlocatie'],
-                xsd_source='productie')
+    # read_to_xml('../tests/data/filled_templates/bodem_template_full2.xlsx', '../dist/dev.xml', sheets=['bodemlocatie'])
+    read_to_xml('../data_voorbeeld/grondwater_opmerking2.xlsx', '../dist/bug.xml', sheets=['filter'],
+                xsd_source='oefen')
