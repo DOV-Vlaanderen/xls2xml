@@ -448,7 +448,7 @@ def generate_standard_templates(project_root, mode='local'):
               'bodemobservatie',
               'bodemlocatieclassificatie',
               'bodemkundigeopbouw',
-              'boring', 'interpretaties', 'grondmonster', 'opdracht']
+              'boring', 'interpretaties', 'grondmonster', 'opdracht','monster','observatie']
     create_xls(f'{project_root}/data/template_full.xlsx', sheets, root, project_root=project_root)
 
     # OEFEN
