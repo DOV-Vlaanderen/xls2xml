@@ -409,7 +409,7 @@ def generate_standard_templates(project_root, mode='local'):
     header_filename = os.path.join(project_root, 'config', 'header_convertor.ini')
     root = get_dfs_schema(project_root=project_root, mode=mode)
 
-    sheets = ['grondwaterlocatie', 'filter', 'filtermeting', 'opdracht']
+    sheets = ['grondwaterlocatie', 'filter', 'filtermeting', 'opdracht','monster','observatie']
     create_xls(f'{project_root}/data/grondwater_template.xlsx', sheets, root, project_root=project_root,
                header_config=header_filename,
                priority_config=priorities_filename,
@@ -418,7 +418,7 @@ def generate_standard_templates(project_root, mode='local'):
     create_xls(f'{project_root}/data/grondwater_template_full.xlsx', sheets, root, project_root=project_root)
 
     sheets = ['bodemlocatie', 'bodemsite', 'bodemmonster', 'bodemobservatie',
-              'bodemkundigeopbouw', 'opdracht']
+              'bodemkundigeopbouw', 'opdracht','monster','observatie']
     create_xls(f'{project_root}/data/bodem_template.xlsx', sheets, root, project_root=project_root,
                header_config=header_filename,
                priority_config=priorities_filename,
@@ -427,14 +427,14 @@ def generate_standard_templates(project_root, mode='local'):
     sheets.sort()
     create_xls(f'{project_root}/data/bodem_template_full.xlsx', sheets, root, project_root=project_root)
 
-    sheets = ['boring', 'interpretaties', 'grondmonster', 'opdracht']
+    sheets = ['boring', 'interpretaties', 'grondmonster', 'opdracht','monster','observatie']
     create_xls(f'{project_root}/data/geologie_template.xlsx', sheets, root, project_root=project_root,
                header_config=header_filename,
                priority_config=priorities_filename,
                color_choice=False)
     create_xls(f'{project_root}/data/geologie_template_full.xlsx', sheets, root, project_root=project_root)
 
-    sheets = ['opdracht']
+    sheets = ['opdracht','monster','observatie']
     create_xls(f'{project_root}/data/opdracht_template.xlsx', sheets, root, project_root=project_root,
                header_config=header_filename,
                priority_config=priorities_filename,
@@ -459,7 +459,7 @@ def generate_standard_templates(project_root, mode='local'):
     header_filename = f'{project_root}/config/header_convertor_oefen.ini'
     root = get_dfs_schema(project_root, xsd_source='oefen', mode=mode)
 
-    sheets = ['grondwaterlocatie', 'filter', 'filtermeting', 'opdracht']
+    sheets = ['grondwaterlocatie', 'filter', 'filtermeting', 'opdracht','monster','observatie']
     create_xls(f'{project_root}/data/grondwater_template_oefen.xlsx', sheets, root, project_root=project_root,
                header_config=header_filename,
                priority_config=priorities_filename,
@@ -469,7 +469,7 @@ def generate_standard_templates(project_root, mode='local'):
 
 
     sheets = ['bodemlocatie', 'bodemsite', 'bodemmonster', 'bodemobservatie',
-              'bodemkundigeopbouw', 'opdracht']
+              'bodemkundigeopbouw', 'opdracht','monster','observatie']
     create_xls(f'{project_root}/data/bodem_template_oefen.xlsx', sheets, root, project_root=project_root,
                header_config=header_filename,
                priority_config=priorities_filename,
@@ -478,7 +478,7 @@ def generate_standard_templates(project_root, mode='local'):
     sheets.sort()
     create_xls(f'{project_root}/data/bodem_template_full_oefen.xlsx', sheets, root, project_root=project_root)
 
-    sheets = ['boring', 'interpretaties', 'grondmonster', 'opdracht']
+    sheets = ['boring', 'interpretaties', 'grondmonster', 'opdracht','monster','observatie']
     create_xls(f'{project_root}/data/geologie_template_oefen.xlsx', sheets, root, project_root=project_root,
                header_config=header_filename,
                priority_config=priorities_filename,
@@ -491,7 +491,7 @@ def generate_standard_templates(project_root, mode='local'):
               'bodemobservatie',
               'bodemlocatieclassificatie',
               'bodemkundigeopbouw',
-              'boring', 'interpretaties', 'grondmonster', 'opdracht', 'monster']
+              'boring', 'interpretaties', 'grondmonster', 'opdracht', 'monster','observatie']
     create_xls(f'{project_root}/data/template_full_oefen.xlsx', sheets, root, project_root=project_root)
 
 
