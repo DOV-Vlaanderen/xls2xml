@@ -405,94 +405,64 @@ def create_xls(filename, sheets, root, project_root,
 
 
 def generate_standard_templates(project_root, mode='local'):
-    priorities_filename = os.path.join(project_root, 'config', 'priority_config_beknopt.ini')
-    header_filename = os.path.join(project_root, 'config', 'header_convertor.ini')
-    root = get_dfs_schema(project_root=project_root, mode=mode)
+    configs = [
+        ('productie', 'priority_config_beknopt.ini', 'header_convertor.ini'),
+        ('oefen', 'priority_config_beknopt_oefen.ini', 'header_convertor_oefen.ini'),
+    ]
 
-    sheets = ['grondwaterlocatie', 'filter', 'filtermeting', 'opdracht','monster','observatie']
-    create_xls(f'{project_root}/data/grondwater_template.xlsx', sheets, root, project_root=project_root,
-               header_config=header_filename,
-               priority_config=priorities_filename,
-               color_choice=False)
-    sheets += ['filterdebietmeter']
-    create_xls(f'{project_root}/data/grondwater_template_full.xlsx', sheets, root, project_root=project_root)
+    for omgeving, priorities_filename, header_filename in configs:
+        priorities_filename = os.path.join(project_root, 'config', priorities_filename)
+        header_filename = os.path.join(project_root, 'config', header_filename)
+        root = get_dfs_schema(project_root, xsd_source=omgeving, mode=mode)
 
-    sheets = ['bodemlocatie', 'bodemsite', 'bodemmonster', 'bodemobservatie',
-              'bodemkundigeopbouw', 'opdracht','monster','observatie']
-    create_xls(f'{project_root}/data/bodem_template.xlsx', sheets, root, project_root=project_root,
-               header_config=header_filename,
-               priority_config=priorities_filename,
-               color_choice=False)
-    sheets.append('bodemlocatieclassificatie')
-    sheets.sort()
-    create_xls(f'{project_root}/data/bodem_template_full.xlsx', sheets, root, project_root=project_root)
+        # GRONDWATER
+        sheets = ['grondwaterlocatie', 'filter', 'filtermeting', 'opdracht', 'monster', 'observatie']
+        create_xls(f'{project_root}/templates/{omgeving}/grondwater_template.xlsx', sheets, root, project_root=project_root,
+                   header_config=header_filename,
+                   priority_config=priorities_filename,
+                   color_choice=False)
+        sheets += ['filterdebietmeter']
+        create_xls(f'{project_root}/templates/{omgeving}/grondwater_template_full.xlsx', sheets, root,
+                   project_root=project_root)
 
-    sheets = ['boring', 'interpretaties', 'grondmonster', 'opdracht','monster','observatie']
-    create_xls(f'{project_root}/data/geologie_template.xlsx', sheets, root, project_root=project_root,
-               header_config=header_filename,
-               priority_config=priorities_filename,
-               color_choice=False)
-    create_xls(f'{project_root}/data/geologie_template_full.xlsx', sheets, root, project_root=project_root)
+        # BODEM
+        sheets = ['bodemlocatie', 'bodemsite', 'bodemmonster', 'bodemobservatie',
+                  'bodemkundigeopbouw', 'opdracht', 'monster', 'observatie']
+        create_xls(f'{project_root}/templates/{omgeving}/bodem_template.xlsx', sheets, root, project_root=project_root,
+                   header_config=header_filename,
+                   priority_config=priorities_filename,
+                   color_choice=False)
+        sheets.append('bodemlocatieclassificatie')
+        sheets.sort()
+        create_xls(f'{project_root}/templates/{omgeving}/bodem_template_full.xlsx', sheets, root, project_root=project_root)
 
-    sheets = ['opdracht','monster','observatie']
-    create_xls(f'{project_root}/data/opdracht_template.xlsx', sheets, root, project_root=project_root,
-               header_config=header_filename,
-               priority_config=priorities_filename,
-               color_choice=False
-               )
-    create_xls(f'{project_root}/data/opdracht_template_full.xlsx', sheets, root, project_root=project_root)
+        sheets = ['boring', 'interpretaties', 'grondmonster', 'opdracht', 'monster', 'observatie']
+        create_xls(f'{project_root}/templates/{omgeving}/geologie_template.xlsx', sheets, root, project_root=project_root,
+                   header_config=header_filename,
+                   priority_config=priorities_filename,
+                   color_choice=False)
+        create_xls(f'{project_root}/templates/{omgeving}/geologie_template_full.xlsx', sheets, root,
+                   project_root=project_root)
 
-    sheets = ['grondwaterlocatie', 'filter', 'filtermeting', 'filterdebietmeter', 'bodemlocatie',
-              'bodemsite',
-              'bodemmonster',
-              'bodemobservatie',
-              'bodemlocatieclassificatie',
-              'bodemkundigeopbouw',
-              'boring', 'interpretaties', 'grondmonster', 'opdracht','monster','observatie']
-    create_xls(f'{project_root}/data/template_full.xlsx', sheets, root, project_root=project_root)
+        sheets = ['opdracht', 'monster', 'observatie']
+        create_xls(f'{project_root}/templates/{omgeving}/opdracht_template.xlsx', sheets, root, project_root=project_root,
+                   header_config=header_filename,
+                   priority_config=priorities_filename,
+                   color_choice=False
+                   )
+        create_xls(f'{project_root}/templates/{omgeving}/opdracht_template_full.xlsx', sheets, root,
+                   project_root=project_root)
 
-    # OEFEN
-
-
-
-    priorities_filename = f'{project_root}/config/priority_config_beknopt_oefen.ini'
-    header_filename = f'{project_root}/config/header_convertor_oefen.ini'
-    root = get_dfs_schema(project_root, xsd_source='oefen', mode=mode)
-
-    sheets = ['grondwaterlocatie', 'filter', 'filtermeting', 'opdracht','monster','observatie']
-    create_xls(f'{project_root}/data/grondwater_template_oefen.xlsx', sheets, root, project_root=project_root,
-               header_config=header_filename,
-               priority_config=priorities_filename,
-               color_choice=False)
-    sheets += ['filterdebietmeter']
-    create_xls(f'{project_root}/data/grondwater_template_full_oefen.xlsx', sheets, root, project_root=project_root)
+        sheets = ['grondwaterlocatie', 'filter', 'filtermeting', 'filterdebietmeter', 'bodemlocatie',
+                  'bodemsite',
+                  'bodemmonster',
+                  'bodemobservatie',
+                  'bodemlocatieclassificatie',
+                  'bodemkundigeopbouw',
+                  'boring', 'interpretaties', 'grondmonster', 'opdracht', 'monster', 'observatie']
+        create_xls(f'{project_root}/templates/{omgeving}/template_full.xlsx', sheets, root, project_root=project_root)
 
 
-    sheets = ['bodemlocatie', 'bodemsite', 'bodemmonster', 'bodemobservatie',
-              'bodemkundigeopbouw', 'opdracht','monster','observatie']
-    create_xls(f'{project_root}/data/bodem_template_oefen.xlsx', sheets, root, project_root=project_root,
-               header_config=header_filename,
-               priority_config=priorities_filename,
-               color_choice=False)
-    sheets.append('bodemlocatieclassificatie')
-    sheets.sort()
-    create_xls(f'{project_root}/data/bodem_template_full_oefen.xlsx', sheets, root, project_root=project_root)
-
-    sheets = ['boring', 'interpretaties', 'grondmonster', 'opdracht','monster','observatie']
-    create_xls(f'{project_root}/data/geologie_template_oefen.xlsx', sheets, root, project_root=project_root,
-               header_config=header_filename,
-               priority_config=priorities_filename,
-               color_choice=False)
-    create_xls(f'{project_root}/data/geologie_template_full_oefen.xlsx', sheets, root, project_root=project_root)
-
-    sheets = ['grondwaterlocatie', 'filter', 'filtermeting', 'filterdebietmeter', 'bodemlocatie',
-              'bodemsite',
-              'bodemmonster',
-              'bodemobservatie',
-              'bodemlocatieclassificatie',
-              'bodemkundigeopbouw',
-              'boring', 'interpretaties', 'grondmonster', 'opdracht', 'monster','observatie']
-    create_xls(f'{project_root}/data/template_full_oefen.xlsx', sheets, root, project_root=project_root)
 
 
 if __name__ == '__main__':
