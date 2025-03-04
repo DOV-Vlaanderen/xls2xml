@@ -30,7 +30,7 @@ Heb je het script reeds aangeleverd gekregen als zip bestand? Kijk dan zeker op 
 
 ## Stap 3: Data voorbereiden
 
-Het script vergt aangeleverde data in het juiste formaat. In de map data vind je de Excel-template (template.xlsx) die nodig is voor het aanleveren van de data.
+Het script vergt aangeleverde data in het juiste formaat. In de map templates vind je de Excel-template (template.xlsx) die nodig is voor het aanleveren van de data.
 
 Vul het Excel-bestand in met de data die je in DOV wenst toe te voegen. 
 In het excel bestand zijn enkele gegevensvalidaties aanwezig. Zo zijn enkel datums later dan 01/01/1900 toegelaten in velden waar een datum wordt verwacht.
