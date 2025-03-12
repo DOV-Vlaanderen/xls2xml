@@ -408,6 +408,7 @@ def generate_standard_templates(project_root, mode='local'):
     configs = [
         ('productie', 'priority_config_beknopt.ini', 'header_convertor.ini'),
         ('oefen', 'priority_config_beknopt_oefen.ini', 'header_convertor_oefen.ini'),
+        ('ontwikkel', 'priority_config_beknopt_oefen.ini', 'header_convertor_oefen.ini'),
     ]
 
     for omgeving, priorities_filename, header_filename in configs:
@@ -436,6 +437,7 @@ def generate_standard_templates(project_root, mode='local'):
         sheets.sort()
         create_xls(f'{project_root}/templates/{omgeving}/{omgeving}_bodem_template_full.xlsx', sheets, root, project_root=project_root)
 
+        #GEOLOGIE
         sheets = ['boring', 'interpretaties', 'grondmonster', 'opdracht', 'monster', 'observatie']
         create_xls(f'{project_root}/templates/{omgeving}/{omgeving}_geologie_template.xlsx', sheets, root, project_root=project_root,
                    header_config=header_filename,
@@ -444,6 +446,7 @@ def generate_standard_templates(project_root, mode='local'):
         create_xls(f'{project_root}/templates/{omgeving}/{omgeving}_geologie_template_full.xlsx', sheets, root,
                    project_root=project_root)
 
+        #OPDRACHT
         sheets = ['opdracht', 'monster', 'observatie']
         create_xls(f'{project_root}/templates/{omgeving}/{omgeving}_opdracht_template.xlsx', sheets, root, project_root=project_root,
                    header_config=header_filename,
@@ -453,6 +456,7 @@ def generate_standard_templates(project_root, mode='local'):
         create_xls(f'{project_root}/templates/{omgeving}/{omgeving}_opdracht_template_full.xlsx', sheets, root,
                    project_root=project_root)
 
+        #FULL
         sheets = ['grondwaterlocatie', 'filter', 'filtermeting', 'filterdebietmeter', 'bodemlocatie',
                   'bodemsite',
                   'bodemmonster',

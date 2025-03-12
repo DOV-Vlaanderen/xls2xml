@@ -4,7 +4,6 @@ import xmlschema
 import pandas as pd
 import numpy as np
 from src.dfs_schema import ChoiceNode, SequenceNode, get_dfs_schema, get_XML_schema
-from tqdm import tqdm
 import traceback
 from pathlib import Path
 import os
@@ -218,9 +217,9 @@ def recursive_data_read(df, schema_node, current_lijst) -> DataNode:
     for c in schema_node.children:
         current_lijst.append(c.name)
         if c.max_amount > 1 or (isinstance(schema_node, ChoiceNode) and schema_node.max_amount > 1):
-            partition = get_partition(df, np.ones(df.shape[0],dtype=bool), current_lijst, c)
+            partition = get_partition(df, np.ones(df.shape[0], dtype=bool), current_lijst, c)
         else:
-            partition = [np.ones(df.shape[0],dtype=bool)]
+            partition = [np.ones(df.shape[0], dtype=bool)]
 
         for part in partition:
             data_node.children[c.name].append(recursive_data_read(df[part], c, current_lijst))
@@ -295,7 +294,7 @@ def read_sheets(filename, sheets, xml_schema=None, mode='local', xsd_source='pro
             try:
                 base = root.get_specific_child(sheet)
                 partition = get_partition(df, np.ones(df.shape[0], dtype='bool'), [], base)
-                for part in tqdm(partition):
+                for part in partition:
                     data_root.children[sheet].append(recursive_data_read(df[part], base, []))
             except ValueError:
                 print(f'Conversion of sheet {sheet} failed')
@@ -344,6 +343,6 @@ def read_to_xml(input_filename, output_filename='./dist/result.xml', sheets=None
 
 
 if __name__ == '__main__':
-    #read_to_xml('../tests/data/filled_templates/bodem_template_full2.xlsx', '../dist/dev.xml', sheets=['bodemlocatie'])
-    read_to_xml('../data_voorbeeld/grondwater_opmerking2.xlsx', '../dist/bug.xml', sheets=['filter'],
-                xsd_source='oefen')
+    # read_to_xml('../tests/data/filled_templates/bodem_template_full2.xlsx', '../dist/dev.xml', sheets=['bodemlocatie'])
+    read_to_xml('../data_voorbeeld/ovam_test.xlsx', '../dist/ovam_test.xml',
+                xsd_source='productie')
