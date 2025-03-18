@@ -15,7 +15,7 @@ pandas==2.2.2
 pluggy==1.5.0
 pyasn1==0.6.1
 pydov==3.1.0
-PySimpleGUI==5.0.8.1
+PySimpleGUI==5.0.8.2
 pytest==8.2.1
 python-dateutil==2.9.0.post0
 pytz==2023.3.post1
