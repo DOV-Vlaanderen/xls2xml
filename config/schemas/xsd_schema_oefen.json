@@ -2709,6 +2709,7 @@
 					"description": "geeft aan waar tow van het maaiveld de proef gestart is\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -2775,6 +2776,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [{"@type":"properties","@value":{"name":{"@type":"qualified-name","@value":{"name":"AbstractCurve","namespace":"http://www.opengis.net/gml/3.2"}},"substitutionGroup":{"@type":"qualified-name","@value":{"name":"AbstractGeometricPrimitive","namespace":"http://www.opengis.net/gml/3.2"}}}}],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"superType": {
@@ -2794,6 +2796,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [{"@type":"properties","@value":{"name":{"@type":"qualified-name","@value":{"name":"AbstractGeometricAggregate","namespace":"http://www.opengis.net/gml/3.2"}},"substitutionGroup":{"@type":"qualified-name","@value":{"name":"AbstractGeometry","namespace":"http://www.opengis.net/gml/3.2"}}}}],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"superType": {
@@ -2900,6 +2903,7 @@
 					"description": "A property with the content model of AbstractRingPropertyType encapsulates a ring to represent the surface boundary property of a surface.\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": true,
 						"mapping-relevant": false,
 						"xsd_elements": [{"@type":"properties","@value":{"name":{"@type":"qualified-name","@value":{"name":"interior","namespace":"http://www.opengis.net/gml/3.2"}}}},{"@type":"properties","@value":{"name":{"@type":"qualified-name","@value":{"name":"exterior","namespace":"http://www.opengis.net/gml/3.2"}}}}],
@@ -2931,9 +2935,11 @@
 					"constraints": {
 						"abstract": true,
 						"display-name": "AbstractRing",
+						"has-value": true,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [{"@type":"properties","@value":{"name":{"@type":"qualified-name","@value":{"name":"AbstractRing","namespace":"http://www.opengis.net/gml/3.2"}},"substitutionGroup":{"@type":"qualified-name","@value":{"name":"AbstractObject","namespace":"http://www.opengis.net/gml/3.2"}}}}],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"superType": {
@@ -2953,6 +2959,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [{"@type":"properties","@value":{"name":{"@type":"qualified-name","@value":{"name":"AbstractSurface","namespace":"http://www.opengis.net/gml/3.2"}},"substitutionGroup":{"@type":"qualified-name","@value":{"name":"AbstractGeometricPrimitive","namespace":"http://www.opengis.net/gml/3.2"}}}}],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"superType": {
@@ -2966,6 +2973,7 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"description": "actiewaakgebieden - versie 2016 - 2021\n",
 					"constraints": {
+						"binding": "java.lang.String",
 						"enumeration": {
 							"@type": "properties",
 							"@value": {"allowOthers":false,"values":["0400_ actiegebied_met_freatisch_alternatief","1000_actiegebied_2","1000_actiegebied_3","1000_actiegebied_4","1000_waakgebied","1100_waakgebied","1300_actiegebied_1","1300_actiegebied_2","1300_actiegebied_3","1300_actiegebied_4","0800_actiegebied_met_beperkt_freatisch_alternatief","0400_actiegebied_met_beperkt_freatisch_alternatief","0800_actiegebied_met_freatisch_alternatief","1100_waakgebied_Beringen","1100_waakgebied_Leuven","0400_actiegebied_verzilt","0400_waakgebied","0600_actiegebied_met_beperkt_freatisch_alternatief","0600_actiegebied_met_freatisch_alternatief","0600_waakgebied","0800_waakgebied","1000_actiegebied_1","geen actie/waakgebieden"]}
@@ -2992,6 +3000,7 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"description": "actiewaakgebieden - versie 2022 - 2027\n",
 					"constraints": {
+						"binding": "java.lang.String",
 						"enumeration": {
 							"@type": "properties",
 							"@value": {"allowOthers":false,"values":["0400_actiegebied_1_met_beperkt_freatisch_alternatief","0400_actiegebied_1_met_freatisch_alternatief","0400_actiegebied_1_verzilt","0400_actiegebied_2_met_beperkt_freatisch_alternatief","0400_actiegebied_2_met_freatisch_alternatief","0400_actiegebied_2_verzilt","0400_waakgebied","0600_actiegebied_met_beperkt_freatisch_alternatief","0600_actiegebied_met_freatisch_alternatief","0600_waakgebied","0800_actiegebied_met_beperkt_freatisch_alternatief","0800_actiegebied_met_freatisch_alternatief","0800_waakgebied","1000_actiegebied_1","1000_actiegebied_2","1000_actiegebied_3","1000_waakgebied_1","1000_waakgebied_2","1100_waakgebied_1","1300_actiegebied_1","1300_actiegebied_2","1300_actiegebied_3","1300_waakgebied_1","geen actie/waakgebieden"]}
@@ -3019,8 +3028,10 @@
 					"description": "geeft informatie over de aders in een laag van de gecodeerde lithologie\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -3073,6 +3084,7 @@
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -3147,8 +3159,10 @@
 					"description": "Een adres, waarbij iets verstuurbaar is.\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -3422,6 +3436,7 @@
 					"description": "Een alternatieve naam waaronder de boring gekend is bij een andere instantie\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -3504,6 +3519,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -3608,6 +3624,7 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -3659,6 +3676,7 @@
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -3758,6 +3776,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -3788,6 +3807,7 @@
 						"mappable": true,
 						"mapping-relevant": false,
 						"xsd_elements": [{"@type":"properties","@value":{"name":{"@type":"qualified-name","@value":{"name":"any","namespace":"http://www.w3.org/2001/XMLSchema"}}}}],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -3832,6 +3852,11 @@
 							"@value": {"allowOthers":true}
 
 						},
+						"geometry-metadata": {
+							"@type": "properties",
+							"@value": {"dimension":0}
+
+						},
 						"has-value": true,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -3859,6 +3884,11 @@
 						"enumeration": {
 							"@type": "properties",
 							"@value": {"allowOthers":true}
+
+						},
+						"geometry-metadata": {
+							"@type": "properties",
+							"@value": {"dimension":0}
 
 						},
 						"has-value": true,
@@ -3931,9 +3961,15 @@
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be",
 					"description": "de mogelijke HCOV codes voor de watervoerende laag (aquifer HCOVv1)\n",
 					"constraints": {
+						"binding": "java.lang.String",
 						"enumeration": {
 							"@type": "properties",
 							"@value": {"allowOthers":false,"values":["0000","0100","0110","0120","0130","0131","0132","0133","0134","0135","0140","0150","0151","0152","0153","0154","0160","0161","0162","0163","0170","0171","0172","0173","0200","0210","0211","0212","0213","0214","0215","0220","0221","0222","0223","0230","0231","0232","0233","0234","0240","0241","0242","0250","0251","0252","0253","0254","0255","0256","0300","0301","0302","0303","0304","0400","0410","0420","0430","0431","0432","0433","0434","0435","0436","0440","0441","0442","0450","0451","0452","0453","0500","0501","0502","0503","0504","0505","0600","0610","0611","0612","0620","0630","0631","0632","0640","0700","0701","0702","0800","0900","0910","0920","0921","0922","0923","0924","0925","1000","1010","1011","1012","1013","1014","1015","1020","1021","1022","1023","1030","1031","1032","1033","1034","1035","1100","1110","1111","1112","1113","1120","1130","1140","1150","1200","1210","1220","1230","1300","1310","1320","1330","1340"]}
+
+						},
+						"geometry-metadata": {
+							"@type": "properties",
+							"@value": {"dimension":0}
 
 						},
 						"has-value": true,
@@ -3957,6 +3993,7 @@
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be",
 					"description": "de mogelijke HCOV codes voor de watervoerende laag (aquifer HCOVv2)\n",
 					"constraints": {
+						"binding": "java.lang.String",
 						"enumeration": {
 							"@type": "properties",
 							"@value": {"allowOthers":false,"values":["A0000","A0100","A0200","A0300","A0110","A0120","A0130","A0131","A0132","A0133","A0134","A0140","A0150","A0151","A0152","A0153","A0160","A0161","A0162","A0163","A0164","A0165","A0170","A0180","A0181","A0182","A0183","A0184","A0185","A0186","A0187","A0188","A0189","A0210","A0220","A0221","A0222","A0223","A0224","A0225","A0226","A0230","A0231","A0232","A0233","A0234","A0235","A0236","A0237","A0238","A0240","A0250","A0251","A0252","A0253","A0254","A0255","A0256","A0257","A0258","A0301","A0302","A0303","A0304","A0305","A0400","A0410","A0420","A0430","A0431","A0432","A0433","A0434","A0440","A0441","A0442","A0450","A0451","A0452","A0453","A0500","A0501","A0502","A0503","A0504","A0505","A0600","A0610","A0611","A0612","A0620","A0630","A0631","A0632","A0633","A0700","A0701","A0702","A0800","A0801","A0802","A0803","A0900","A0901","A0902","A0903","A0904","A1000","A1010","A1011","A1012","A1013","A1020","A1021","A1022","A1030","A1031","A1032","A1033","A1034","A1035","A1100","A1101","A1102","A1103","A1104","A1200","A1210","A1220","A1300","A1310","A1320","A1330","A1340"]}
@@ -3987,6 +4024,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -4115,6 +4153,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -4249,6 +4288,7 @@
 					"description": "een auteur van een interpretatie bestaat uit 2 elementen: enerzijds een persoon, en anderzijds het bedrijf of de dienst waarvoor die persoon op dat moment werkzaam was\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -4290,6 +4330,7 @@
 					"description": "naam van een persoon aangevuld met de organisatie waartoe deze persoon behoort. Beide velden zijn niet verplicht in te vullen.\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -4492,6 +4533,7 @@
 					"description": "behandeling van een observatie\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -4569,6 +4611,7 @@
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -4676,6 +4719,7 @@
 					"description": "Classificatie volgens het Belgische bodemclassificatiesysteem\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -4771,6 +4815,7 @@
 					"description": "Locatie waar het Monster werd genomen. uitgangspunt: bemonsterdObject is een ruimtelijk iets\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -4812,6 +4857,7 @@
 					"description": "zie https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/#BemonsteringsProces\nProces geassocieerd met het maken van een Bemonsteringsobject. Het gaat hier over zaken als de manier van Bemonstering (Bemonsteringsprocedure) en het daarbij gebruikte instrumentarium (Bemonsteraar).\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -4941,6 +4987,8 @@
 					"description": "definitie van bijlagen\n",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -5184,6 +5232,8 @@
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -5288,6 +5338,7 @@
 					"description": "bodemkundig erfgoed van een bodemlocatie\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -5328,6 +5379,8 @@
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -5443,6 +5496,7 @@
 					"description": "bijkomende namen van de bodemlocatie\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -5484,6 +5538,7 @@
 					"description": "ligging van het bodemlocatie\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -5620,6 +5675,8 @@
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -5851,6 +5908,7 @@
 					"description": "unieke referentie van een bodemmonster\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -5924,6 +5982,8 @@
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -6250,10 +6310,12 @@
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -6431,6 +6493,8 @@
 					"namespace": "http://bodem.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -6614,8 +6678,10 @@
 					"description": "beschrijving van de toegepaste bekistingsmaterialen per diepte-interval.\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -6687,8 +6753,10 @@
 					"description": "gebruikte boordiameter per diepte-interval.\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -6738,6 +6806,7 @@
 					"description": "geeft voor een bepaalde boring aan of er boorgatmetingen uitgevoerd zijn.\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -6794,8 +6863,10 @@
 					"description": "beschrijving van de toegepaste uitvoeringsmethode per diepte-interval\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -6845,8 +6916,10 @@
 					"description": "beschrijving van de kleur waargenomen tijdens de boring per diepte-interval.\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -6896,6 +6969,7 @@
 					"description": "geeft voor een bepaalde boring aan of er stalen bewaard zijn.\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -6952,8 +7026,10 @@
 					"description": "geeft voor een bepaalde boring het waargenomen consistentie, opgesplitst per diepte-interval\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -7003,8 +7079,10 @@
 					"description": "geeft alle extra informatie ivm de uitvoering van de boring en van de opgemerkte eigenschappen tijdens het boren\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -7098,6 +7176,7 @@
 					"description": "geeft alle extra informatie ivm de uitvoering van de boring en van de opgemerkte eigenschappen tijdens het boren\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -7204,6 +7283,7 @@
 					"namespace": "http://boring.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -7582,6 +7662,8 @@
 					"namespace": "http://boring.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -8126,6 +8208,7 @@
 					"namespace": "http://grondmonster.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -8274,6 +8357,7 @@
 						"mappable": true,
 						"mapping-relevant": false,
 						"xsd_elements": [{"@type":"properties","@value":{"name":{"@type":"qualified-name","@value":{"name":"complexContent","namespace":"http://www.w3.org/2001/XMLSchema"}}}}],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -8470,6 +8554,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -8742,6 +8827,7 @@
 					"namespace": "http://geografie.schemas.milieuinfo.be",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -8783,8 +8869,10 @@
 					"description": "alle meetresultaten op een welbepaalde lengte of diepte\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -8954,8 +9042,10 @@
 					"description": "de metingen van de sonde\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -9005,8 +9095,10 @@
 					"description": "A container for an array of curves. The xs:elements are always contained in the array property, referencing geometry xs:elements or arrays of geometry xs:elements via XLinks is not supported.\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -9035,6 +9127,7 @@
 					"constraints": {
 						"abstract": false,
 						"display-name": "curveProperty",
+						"has-value": false,
 						"mappable": true,
 						"mapping-relevant": false,
 						"xsd_elements": [{"@type":"properties","@value":{"name":{"@type":"qualified-name","@value":{"name":"curveProperty","namespace":"http://www.opengis.net/gml/3.2"}}}}],
@@ -9064,6 +9157,7 @@
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -9157,6 +9251,7 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -9330,6 +9425,7 @@
 					"description": "diepteinterval aan de bodemkundige opbouw\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -9685,6 +9781,7 @@
 					"description": "Diepte tov begin van de boring\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -9727,6 +9824,7 @@
 					"constraints": {
 						"abstract": false,
 						"display-name": "posList",
+						"has-value": true,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [{"@type":"properties","@value":{"name":{"@type":"qualified-name","@value":{"name":"posList","namespace":"http://www.opengis.net/gml/3.2"}}}}],
@@ -9780,6 +9878,7 @@
 					"constraints": {
 						"abstract": false,
 						"display-name": "pos",
+						"has-value": true,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [{"@type":"properties","@value":{"name":{"@type":"qualified-name","@value":{"name":"pos","namespace":"http://www.opengis.net/gml/3.2"}}}}],
@@ -9849,7 +9948,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"location": "bundleresource://224.fwk1904467919/schemas/xml.xsd#0:0",
+								"location": "bundleresource://224.fwk327329632/schemas/xml.xsd#0:0",
 								"name": "AnonymousType",
 								"namespace": "http://www.w3.org/XML/1998/namespace/lang",
 								"constraints": {
@@ -9911,6 +10010,11 @@
 						"has-value": true,
 						"mappable": false,
 						"mapping-relevant": false,
+						"validation": {
+							"@type": "validator",
+							"@value": {"type":"and","config":[]}
+
+						},
 						"xsd_elements": [],
 						"xsd_restriction": true
 					},
@@ -9960,7 +10064,8 @@
 							"description": "Een Opdracht is een samensmelting van het huidige 'gedocumenteerd object' met informatie die gebruikt wordt om een studiegebied te kenmerken en af te bakenen. Het entiteittype bundelt gegevens die via een interne of externe opdracht in de databank ge\u00efmporteerd worden. Dit omvat eveneens ruimtelijke en niet-ruimtelijke informatie over de afbakening van bepaalde studiegebieden waarin een groep van gegevens verzameld werd.\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 375
@@ -9971,7 +10076,8 @@
 							"description": "Een Boring is locatie op het aardoppervlak waar een boring is uitgevoerd, nl een technische handeling waar men aan de hand van een boorapparaat grondstalen uit de ondergrond haalt. Tijdens de uitvoering van een boring kan men gebruik maken van verschillende soorten uitvoeringsmethoden, afhankelijk van het type grond en toepassingsgebied.\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 93
@@ -9982,7 +10088,8 @@
 							"description": "TODO\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 223
@@ -9992,7 +10099,8 @@
 							"name": "sondering",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 470
@@ -10003,7 +10111,8 @@
 							"description": "Een Interpretatie is een beschrijving van de ondergrond op een bepaalde locatie in Vlaanderen. Om de ondergrond te beschrijven wordt deze in functie van de diepte onderverdeeld in discrete stukken.\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 273
@@ -10014,7 +10123,8 @@
 							"description": "putten\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 229
@@ -10025,7 +10135,8 @@
 							"description": "filters\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 173
@@ -10036,7 +10147,8 @@
 							"description": "debietmeters aan filter\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 158
@@ -10047,7 +10159,8 @@
 							"description": "Verzameling van alle mogelijke metingen bij een filter\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 165
@@ -10058,7 +10171,8 @@
 							"description": "Verzameling van alle mogelijke bodemsites\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 76
@@ -10069,7 +10183,8 @@
 							"description": "Verzameling van alle mogelijke bodemlocaties\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 68
@@ -10080,7 +10195,8 @@
 							"description": "Verzameling van alle mogelijke bodemclassificaties\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 62
@@ -10091,7 +10207,8 @@
 							"description": "Verzameling van alle mogelijke bodemkundige opbouwen\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 58
@@ -10102,7 +10219,8 @@
 							"description": "Verzameling van alle mogelijke bodemmonsters\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 71
@@ -10113,7 +10231,8 @@
 							"description": "Verzameling van alle mogelijke bodemobservaties\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 74
@@ -10124,7 +10243,8 @@
 							"description": "monsters\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 327
@@ -10135,7 +10255,8 @@
 							"description": "Verzameling van alle mogelijke observaties\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 197
@@ -10201,6 +10322,7 @@
 					"namespace": "http://geografie.schemas.milieuinfo.be",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -10315,6 +10437,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -10600,6 +10723,7 @@
 						"binding": "eu.esdihumboldt.hale.common.schema.geometry.GeometryProperty",
 						"display-name": "Envelope",
 						"geometry-type": "org.locationtech.jts.geom.Polygon",
+						"has-value": false,
 						"mappable": true,
 						"mapping-relevant": false,
 						"xsd_elements": [{"@type":"properties","@value":{"name":{"@type":"qualified-name","@value":{"name":"Envelope","namespace":"http://www.opengis.net/gml/3.2"}},"substitutionGroup":{"@type":"qualified-name","@value":{"name":"AbstractObject","namespace":"http://www.opengis.net/gml/3.2"}}}}],
@@ -11340,6 +11464,7 @@
 						"mappable": true,
 						"mapping-relevant": false,
 						"xsd_elements": [{"@type":"properties","@value":{"name":{"@type":"qualified-name","@value":{"name":"maxExclusive","namespace":"http://www.w3.org/2001/XMLSchema"}}}},{"@type":"properties","@value":{"name":{"@type":"qualified-name","@value":{"name":"maxInclusive","namespace":"http://www.w3.org/2001/XMLSchema"}}}},{"@type":"properties","@value":{"name":{"@type":"qualified-name","@value":{"name":"minExclusive","namespace":"http://www.w3.org/2001/XMLSchema"}}}},{"@type":"properties","@value":{"name":{"@type":"qualified-name","@value":{"name":"minInclusive","namespace":"http://www.w3.org/2001/XMLSchema"}}}}],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -11408,6 +11533,7 @@
 						"mappable": true,
 						"mapping-relevant": false,
 						"xsd_elements": [{"@type":"properties","@value":{"name":{"@type":"qualified-name","@value":{"name":"field","namespace":"http://www.w3.org/2001/XMLSchema"}}}}],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -11451,6 +11577,7 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -11529,6 +11656,7 @@
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"description": "lijst van mogelijke types van filter\n",
 					"constraints": {
+						"binding": "java.lang.String",
 						"enumeration": {
 							"@type": "properties",
 							"@value": {"allowOthers":false,"values":["peilfilter","pompfilter","infiltratiefilter","omkeerbare filter","natuurlijke filter","installatiefilter","filtergroep"]}
@@ -11555,6 +11683,8 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -11607,6 +11737,8 @@
 					"description": "ligging van de filter in de diepte: aquifer, grondwatersysteem, grondwaterlichaam, regime ...\n",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -11617,8 +11749,9 @@
 							"name": "aquifer",
 							"description": "de aquifer (watervoerende laag) waarin de filter hangt (code) (HCOVv1)\n",
 							"constraints": {
-								"cardinality": "1..1",
-								"nillable": false
+								"cardinality": "0..1",
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 31
@@ -11628,8 +11761,9 @@
 							"name": "aquifer_hcovv2",
 							"description": "de aquifer (watervoerende laag) waarin de filter hangt (code) (HCOVv2)\n",
 							"constraints": {
-								"cardinality": "0..1",
-								"nillable": false
+								"cardinality": "1..1",
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 32
@@ -11640,7 +11774,8 @@
 							"description": "het grondwaterlichaam waarin de filter hangt (code)\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 226
@@ -11651,7 +11786,8 @@
 							"description": "het grondwatersysteem waartoe het grondwaterlichaam behoort\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 232
@@ -11662,7 +11798,8 @@
 							"description": "Afgesloten aquifer conform grondwaterdecreet (enkel export)\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 475
@@ -11673,7 +11810,8 @@
 							"description": "hydrogeologisch regime: dit is een lokale interpretatie i.f.v. de grondwaterstand, niet enkel i.f.v. de hydrogeologische opbouw. Deze toestand kan wijzigen in de loop der tijd.\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 253
@@ -11684,7 +11822,8 @@
 							"description": "controle hcov codes\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 161
@@ -11695,7 +11834,8 @@
 							"description": "actie-waakgebieden versie 2016 - 2021\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 9
@@ -11706,7 +11846,8 @@
 							"description": "actie-waakgebieden versie 2022 - 2027\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 10
@@ -11717,7 +11858,8 @@
 							"description": "het regime van de aquifer waarin de filter hangt\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 438
@@ -11760,6 +11902,8 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -11834,6 +11978,7 @@
 					"description": "verzamelpunt voor alle metingen die aan de filter uitgevoerd worden\n",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -11964,6 +12109,8 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -12004,6 +12151,7 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -12088,6 +12236,8 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -12127,6 +12277,8 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -12272,6 +12424,7 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -12284,7 +12437,8 @@
 							"description": "nummer van de filter. Moet uniek zijn binnen de put.\n",
 							"constraints": {
 								"cardinality": "1..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 475
@@ -12294,7 +12448,8 @@
 							"name": "dataidentifier",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 112
@@ -12305,7 +12460,8 @@
 							"description": "type van filter\n",
 							"constraints": {
 								"cardinality": "1..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 160
@@ -12316,7 +12472,8 @@
 							"description": "verwijzing naar een bestaande grondwaterlocatie (put, ...)\n",
 							"constraints": {
 								"cardinality": "1..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 228
@@ -12327,7 +12484,8 @@
 							"description": "tot welk meetnet behoort deze filter\n",
 							"constraints": {
 								"cardinality": "1..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 312
@@ -12338,7 +12496,8 @@
 							"description": "datum waarop de filter in gebruik genomen werd\n",
 							"constraints": {
 								"cardinality": "1..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 114
@@ -12349,7 +12508,8 @@
 							"description": "datum waarop de filter uit gebruik genomen werd\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 114
@@ -12360,7 +12520,8 @@
 							"description": "is er monstername mogelijk in de filter\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 78
@@ -12371,7 +12532,8 @@
 							"description": "de mogelijke waarden voor oxidatie-reductie toestand\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 388
@@ -12382,7 +12544,8 @@
 							"description": "details ivm de ligging van de filter in de diepte\n",
 							"constraints": {
 								"cardinality": "1..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 162
@@ -12393,7 +12556,8 @@
 							"description": "meetfrequentie van de filter\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 164
@@ -12404,7 +12568,8 @@
 							"description": "details ivm de opbouw van de filter\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 168
@@ -12415,7 +12580,8 @@
 							"description": "een filter kan bij verschillende organisaties een verschillende naam hebben. De primaire DOV naam is de identificatie, maar het is mogelijk om andere namen te definieren\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 166
@@ -12426,7 +12592,8 @@
 							"description": "opvulling van de filter na de uitgebruikname ervan\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 169
@@ -12437,7 +12604,8 @@
 							"description": "opmerkingen horende bij de filter\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 377
@@ -12448,7 +12616,8 @@
 							"description": "een afzonderlijke filter kan gekoppeld worden aan 1 of meerdere opdrachten\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 374
@@ -12459,7 +12628,8 @@
 							"description": "status toegekend aan de filter (geeft aan of de data publiek is of niet)\n",
 							"constraints": {
 								"cardinality": "0..1",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 472
@@ -12470,7 +12640,8 @@
 							"description": "bijlage horende bij de filter\n",
 							"constraints": {
 								"cardinality": "0..n",
-								"nillable": false
+								"nillable": false,
+								"xsd_attribute": false
 							},
 							"propertyType": {
 								"ref": 54
@@ -12535,6 +12706,7 @@
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -12649,6 +12821,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -12701,8 +12874,10 @@
 					"description": "fossiel geeft bijkomende gegevens weer i.v.m. de fossielen die in een laag van de lithologische codering teruggevonden werden.\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -12789,6 +12964,7 @@
 					"description": "fractiemetingen\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -12968,8 +13144,10 @@
 					"description": "Een omschreven plaats op het grondgebied; De omschrijving kan door een of meerdere van\n\t\t\tpunt, kadaster percId, polygoon of locatie.\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -13055,6 +13233,7 @@
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -13110,6 +13289,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -13279,6 +13459,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -13407,6 +13588,7 @@
 					"namespace": "http://observatie.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -13732,8 +13914,10 @@
 					"description": "A property that has a geometric primitive as its value domain may either be an appropriate geometry xs:element encapsulated in an xs:element of this type or an XLink reference to a remote geometry xs:element (where remote includes geometry xs:elements located elsewhere in the same document). Either the reference or the contained xs:element shall be given, but neither both nor none.\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -13833,6 +14017,7 @@
 					"constraints": {
 						"abstract": false,
 						"display-name": "geometryMembers",
+						"has-value": false,
 						"mappable": true,
 						"mapping-relevant": false,
 						"xsd_elements": [{"@type":"properties","@value":{"name":{"@type":"qualified-name","@value":{"name":"geometryMembers","namespace":"http://www.opengis.net/gml/3.2"}}}}],
@@ -13924,6 +14109,7 @@
 					"constraints": {
 						"abstract": false,
 						"display-name": "geometryMember",
+						"has-value": false,
 						"mappable": true,
 						"mapping-relevant": false,
 						"xsd_elements": [{"@type":"properties","@value":{"name":{"@type":"qualified-name","@value":{"name":"geometryMember","namespace":"http://www.opengis.net/gml/3.2"}}}}],
@@ -14039,6 +14225,7 @@
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -14094,6 +14281,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -14145,6 +14333,7 @@
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -14267,6 +14456,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -14374,6 +14564,7 @@
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -14414,6 +14605,7 @@
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -14582,6 +14774,7 @@
 					"description": "Een alternatieve naam waaronder het grondmonster gekend is bij een andere instantie\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -14647,6 +14840,7 @@
 					"name": "GrondmonsterParameterIDEnumType",
 					"namespace": "http://grondmonster.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
+						"binding": "java.lang.String",
 						"enumeration": {
 							"@type": "properties",
 							"@value": {"allowOthers":false,"values":["AREOMETER","ASGEHALTE","ASTM_CODE","ASTM_NAAM","BGGG","CHEM_AL","CHEM_CR","CHEM_CU","CHEM_FE","CHEM_HG","CHEM_K","CHEM_NI","CHEM_PB","CHEM_S","CHEM_AS","CHEM_CD","CHEM_ZN","GLAUCONIET_GT500","GLAUCONIET_KL63","GLAUCONIET_GT63","GLAUCONIET_TOTAAL","GLAUCONIET_TSS","HUMUSGEHALTE","KALKGEHALTE","KORRELVOLUMEMASSA","LASER","METHYLEENBLAUW","CHEM_MINOLIE","CHEM_NAFT","CHEM_BENZOAP","CHEM_BENZOAA","CHEM_FENAN","CHEM_FLUOR","CHEM_CHRYS","CHEM_BENZOBF","CHEM_BENZOKF","CHEM_BENZOGHIP","CHEM_INDENO","REFLECTIVITEIT","TOLUEEN","UITROLGRENS","VLOEIGRENS","VLUCHT_BESTAND","VOLUMEMASSA","WATEROPL_CHLORIDEN","WATERGEHALTE","ZEEFPROEF","ZWAVELGEHALTE","KSED","KPIP","KZNK "]}
@@ -14673,6 +14867,7 @@
 					"namespace": "http://grondmonster.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -14876,6 +15071,7 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -14971,6 +15167,7 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"description": "de mogelijke waarden voor grondwaterlichaam\n",
 					"constraints": {
+						"binding": "java.lang.String",
 						"enumeration": {
 							"@type": "properties",
 							"@value": {"allowOthers":false,"values":["BLKS_0160_GWL_1M","BLKS_0160_GWL_1S","BLKS_0400_GWL_1M","BLKS_0400_GWL_1S","BLKS_0400_GWL_2M","BLKS_0400_GWL_2S","BLKS_0600_GWL_1","BLKS_0600_GWL_2","BLKS_0600_GWL_3","BLKS_1000_GWL_1S","BLKS_1000_GWL_2S","BLKS_1100_GWL_1M","BLKS_1100_GWL_1S","BLKS_1100_GWL_2M","BLKS_1100_GWL_2S","CKS_0200_GWL_1","CKS_0200_GWL_2","CKS_0220_GWL_1","CKS_0250_GWL_1","CVS_0100_GWL_1","CVS_0160_GWL_1","CVS_0400_GWL_1","CVS_0600_GWL_1","CVS_0600_GWL_2","CVS_0800_GWL_1","CVS_0800_GWL_2","CVS_0800_GWL_3","KPS_0120_GWL_1","KPS_0120_GWL_2","KPS_0160_GWL_1","KPS_0160_GWL_2","KPS_0160_GWL_3","meerdere GWL","MS_0100_GWL_1","MS_0200_GWL_1","MS_0200_GWL_2","onbekend","SS_1000_GWL_1","SS_1000_GWL_2","SS_1300_GWL_1","SS_1300_GWL_2","SS_1300_GWL_3","SS_1300_GWL_4","SS_1300_GWL_5","X_BLKS_0400_GWL_2","X_BLKS_0600_GWL_2","X_BLKS_1000_GWL_2","X_BLKS_1100_GWL_2"]}
@@ -15023,6 +15220,7 @@
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"description": "unieke referentie van een grondwaterlocatie\n",
 					"constraints": {
+						"binding": "java.lang.String",
 						"has-value": true,
 						"mapping-relevant": false,
 						"validation": {
@@ -15044,6 +15242,7 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -15371,6 +15570,7 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"description": "de mogelijke waarden voor grondwatersysteem\n",
 					"constraints": {
+						"binding": "java.lang.String",
 						"enumeration": {
 							"@type": "properties",
 							"@value": {"allowOthers":false,"values":["Centraal Vlaams Systeem","Sokkelsysteem","Kust- en Poldersysteem","Centraal Kempisch Systeem","Brulandkrijtsysteem","Maassysteem","Ten N v.d. grens v. BLKS, in een aquifer v. BLKS","onbekend"]}
@@ -15402,6 +15602,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -15759,6 +15960,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"superType": {
@@ -16089,6 +16291,7 @@
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -16197,6 +16400,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -16279,6 +16483,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -16305,6 +16510,7 @@
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -16360,6 +16566,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -16386,6 +16593,7 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"description": "de mogelijke waarden voor het hydrogeologisch regime\n",
 					"constraints": {
+						"binding": "java.lang.String",
 						"enumeration": {
 							"@type": "properties",
 							"@value": {"allowOthers":false,"values":["freatisch","kwel","infiltratiegebied","hangwatertafel","gespannen","afgesloten met freatisch karakter"]}
@@ -16498,8 +16706,10 @@
 					"description": "Een locatie waarbij verplicht een Vlaamse gemeente uit de lijst dient gekozen te worden\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -16593,8 +16803,10 @@
 					"description": "Een locatie zoals gebruikt bij het IMJV\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -16707,6 +16919,7 @@
 						"mappable": true,
 						"mapping-relevant": false,
 						"xsd_elements": [{"@type":"properties","@value":{"name":{"@type":"qualified-name","@value":{"name":"import","namespace":"http://www.w3.org/2001/XMLSchema"}}}}],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -16749,6 +16962,7 @@
 						"mappable": true,
 						"mapping-relevant": false,
 						"xsd_elements": [{"@type":"properties","@value":{"name":{"@type":"qualified-name","@value":{"name":"include","namespace":"http://www.w3.org/2001/XMLSchema"}}}}],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -16775,6 +16989,7 @@
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -16830,6 +17045,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -16860,6 +17076,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -16942,6 +17159,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -17355,8 +17573,10 @@
 					"description": "lijst van interpretaties; deze lijst kan verschillende soorten interpretaties bevatten\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -17423,6 +17643,7 @@
 					"description": "lijst van interpretaties; deze lijst kan verschillende soorten interpretaties bevatten\n",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -17748,6 +17969,7 @@
 					"description": "Meetwaarden voor de korrelverdeling\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -17868,6 +18090,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -17897,6 +18120,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -18078,6 +18302,7 @@
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -18128,6 +18353,7 @@
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -18178,6 +18404,7 @@
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -18280,8 +18507,10 @@
 					"description": "Geeft antwoord op de vraag 'waar?' - probeert de ligging te omschrijven \n\t\t\taan de hand van percelen en een optionele begrenzing over of in de percelen.\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -18309,8 +18538,10 @@
 					"description": "A property with the content model of LinearRingPropertyType encapsulates a linear ring to represent a component of a surface boundary.\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -18512,6 +18743,7 @@
 						"mappable": true,
 						"mapping-relevant": false,
 						"xsd_elements": [{"@type":"properties","@value":{"name":{"@type":"qualified-name","@value":{"name":"list","namespace":"http://www.w3.org/2001/XMLSchema"}}}}],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -19393,6 +19625,7 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"description": "lijst van de mogelijke meetnetten\n",
 					"constraints": {
+						"binding": "java.lang.String",
 						"enumeration": {
 							"@type": "properties",
 							"@value": {"allowOthers":false,"values":["0","1","2","3","4","5","6","7","8","9","10","11","12","100","edov"]}
@@ -19620,6 +19853,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -19684,6 +19918,7 @@
 					"description": "de primaire naam en de andere namen. Ook de permkey zit daar bij.\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -19724,6 +19959,7 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -19816,6 +20052,7 @@
 					"namespace": "http://monster.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -20154,6 +20391,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"superType": {
@@ -20168,8 +20406,10 @@
 					"description": "A property that has a geometric aggregate as its value domain may either be an appropriate geometry xs:element encapsulated in an xs:element of this type or an XLink reference to a remote geometry xs:element (where remote includes geometry xs:elements located elsewhere in the same document). Either the reference or the contained xs:element shall be given, but neither both nor none.\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -20232,6 +20472,7 @@
 						"mappable": true,
 						"mapping-relevant": false,
 						"xsd_elements": [{"@type":"properties","@value":{"name":{"@type":"qualified-name","@value":{"name":"MultiGeometry","namespace":"http://www.opengis.net/gml/3.2"}},"substitutionGroup":{"@type":"qualified-name","@value":{"name":"AbstractGeometricAggregate","namespace":"http://www.opengis.net/gml/3.2"}}}}],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -20273,8 +20514,10 @@
 					"description": "A property that has a collection of points as its value domain may either be an appropriate geometry xs:element encapsulated in an xs:element of this type or an XLink reference to a remote geometry xs:element (where remote includes geometry xs:elements located elsewhere in the same document). Either the reference or the contained xs:element shall be given, but neither both nor none.\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -20350,8 +20593,10 @@
 					"description": "A property that has a collection of surfaces as its value domain may either be an appropriate geometry xs:element encapsulated in an xs:element of this type or an XLink reference to a remote geometry xs:element (where remote includes geometry xs:elements located elsewhere in the same document). Either the reference or the contained xs:element shall be given, but neither both nor none.\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -21227,6 +21472,7 @@
 						"mappable": true,
 						"mapping-relevant": false,
 						"xsd_elements": [{"@type":"properties","@value":{"name":{"@type":"qualified-name","@value":{"name":"notation","namespace":"http://www.w3.org/2001/XMLSchema"}}}}],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -21277,8 +21523,10 @@
 					"description": "de nulpunten van een sondering kunnen opgegeven worden voor 5 parameters: de conusweerstand (qc) in MPa, de totale weerstand (Qt) in kN, de plaatselijke kleefweerstand (fs) in MPa, de porienwaterspanning (u) in MPa en de helling in graden\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -21952,6 +22200,7 @@
 					"namespace": "http://observatie.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -22738,6 +22987,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"superType": {
@@ -22777,6 +23027,7 @@
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"description": "unieke referentie van een opdracht binnen een organisatie/bedrijf/dienst\n",
 					"constraints": {
+						"binding": "java.lang.String",
 						"has-value": true,
 						"mapping-relevant": false,
 						"validation": {
@@ -22798,6 +23049,7 @@
 					"namespace": "http://opdracht.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -22990,10 +23242,12 @@
 					"description": "hier kan je bijkomende informatie toevoegen\n",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -23046,6 +23300,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -23072,6 +23327,7 @@
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be",
 					"description": "lijst van opmerkingtypes specifiek voor een sondering\n",
 					"constraints": {
+						"binding": "java.lang.String",
 						"enumeration": {
 							"@type": "properties",
 							"@value": {"allowOthers":false,"values":["Afwijkingen van de norm","Reden vroegtijdig stoppen","Hernemen sondering","Speciale opstellingen","Waarnemingen tijdens uitvoering"]}
@@ -23098,6 +23354,7 @@
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"description": "lijst van types van opmerkingen voor alle domeinen.\n",
 					"constraints": {
+						"binding": "java.lang.String",
 						"enumeration": {
 							"@type": "properties",
 							"@value": {"allowOthers":false,"values":["Algemeen"]}
@@ -23395,6 +23652,7 @@
 					"namespace": "http://gwmeetnet.kern.schemas.dov.vlaanderen.be",
 					"description": "de mogelijke waarden voor oxidatie-reductie toestand\n",
 					"constraints": {
+						"binding": "java.lang.String",
 						"enumeration": {
 							"@type": "properties",
 							"@value": {"allowOthers":false,"values":["Mengzone","Onbekend","Oxidatie","Reductie"]}
@@ -24413,8 +24671,10 @@
 					"description": "bijkomende gegevens nodig bij de verwerking van de resultaten\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -24715,6 +24975,7 @@
 					"description": "plaats van het sondeeronderzoek\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -24888,14 +25149,14 @@
 					"constraints": {
 						"enumeration": {
 							"@type": "properties",
-							"@value": {"allowOthers":false,"values":["abus 6540","abus 8531","abus 408","abus 6503","werkslot abus 404","geen","onbekend","5-hoeksleutel (freatisch)","inbus 6","inbus 8","ANB bussleutel + ABUS 8531","ANB bussleutel + ABUS 408","sleutel 1","ANB bussleutel + ABUS 408","driehoek bus fietssluis + sleutel paal + ABUS 6503","toegangskaart + ABUS 6503"]}
+							"@value": {"allowOthers":false,"values":["abus 6540","abus 8531","abus 408","abus 6503","werkslot abus 404","geen","onbekend","5-hoeksleutel (freatisch)","inbus 6","inbus 8","ANB bussleutel + ABUS 8531","ANB bussleutel + ABUS 408","sleutel 1","driehoek bus fietssluis + sleutel paal + ABUS 6503","toegangskaart + ABUS 6503"]}
 
 						},
 						"has-value": true,
 						"mapping-relevant": false,
 						"validation": {
 							"@type": "validator",
-							"@value": {"type":"and","config":[{"@type":"validator","@value":{"type":"enumeration","config":["abus 6540","abus 8531","abus 408","abus 6503","werkslot abus 404","geen","onbekend","5-hoeksleutel (freatisch)","inbus 6","inbus 8","ANB bussleutel + ABUS 8531","ANB bussleutel + ABUS 408","sleutel 1","ANB bussleutel + ABUS 408","driehoek bus fietssluis + sleutel paal + ABUS 6503","toegangskaart + ABUS 6503"]}}]}
+							"@value": {"type":"and","config":[{"@type":"validator","@value":{"type":"enumeration","config":["abus 6540","abus 8531","abus 408","abus 6503","werkslot abus 404","geen","onbekend","5-hoeksleutel (freatisch)","inbus 6","inbus 8","ANB bussleutel + ABUS 8531","ANB bussleutel + ABUS 408","sleutel 1","driehoek bus fietssluis + sleutel paal + ABUS 6503","toegangskaart + ABUS 6503"]}}]}
 
 						},
 						"xsd_elements": [],
@@ -24956,6 +25217,7 @@
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -25204,6 +25466,7 @@
 						"mappable": true,
 						"mapping-relevant": false,
 						"xsd_elements": [{"@type":"properties","@value":{"name":{"@type":"qualified-name","@value":{"name":"redefine","namespace":"http://www.w3.org/2001/XMLSchema"}}}}],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -25547,6 +25810,7 @@
 					"namespace": "http://interpretatie.kern.schemas.dov.vlaanderen.be",
 					"description": "de mogelijke waarden voor het grondwaterregime\n",
 					"constraints": {
+						"binding": "java.lang.String",
 						"enumeration": {
 							"@type": "properties",
 							"@value": {"allowOthers":false,"values":["onbekend","freatisch","niet-freatisch","semi-freatisch"]}
@@ -25811,6 +26075,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -26118,6 +26383,7 @@
 						"mappable": true,
 						"mapping-relevant": false,
 						"xsd_elements": [{"@type":"properties","@value":{"name":{"@type":"qualified-name","@value":{"name":"schema","namespace":"http://www.w3.org/2001/XMLSchema"}}}}],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -26387,7 +26653,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"location": "bundleresource://224.fwk1904467919/schemas/xml.xsd#0:0",
+								"location": "bundleresource://224.fwk327329632/schemas/xml.xsd#0:0",
 								"name": "AnonymousType",
 								"namespace": "http://www.w3.org/XML/1998/namespace/lang",
 								"constraints": {
@@ -27215,6 +27481,7 @@
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
+						"xsd_mixed": false,
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -27328,8 +27595,10 @@
 					"description": "traject van de sonde\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -27531,6 +27800,7 @@
 					"description": "parameters die iets zeggen over de kwaliteit van de uitgevoerde sondering\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -27773,6 +28043,7 @@
 					"description": "beschrijving en waarnemingen van de sonde\n",
 					"constraints": {
 						"abstract": false,
+						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [],
@@ -27997,6 +28268,7 @@
 					"namespace": "http://sondering.kern.schemas.dov.vlaanderen.be",
 					"constraints": {
 						"abstract": false,
+						"binding": "java.lang.Object",
 						"has-value": false,
 						"mappable": false,
 						"mapping-relevant": false,
@@ -28266,6 +28538,7 @@
 					"namespace": "http://generiek.kern.schemas.dov.vlaanderen.be",
 					"description": "lijst van mogelijke statussen die je kan toekennen aan een entiteit (boring, sondering, interpretatie, opdracht, ...)\n",
 					"constraints": {
+						"binding": "java.lang.String",
 						"enumeration": {
 							"@type": "properties",
 							"@value": {"allowOthers":false,"values":["publiek","voor partners","permanent intern","intern in verwerking","intern afgewerkt"]}
@@ -28343,6 +28616,11 @@
 						"enumeration": {
 							"@type": "properties",
 							"@value": {"allowOthers":true}
+
+						},
+						"geometry-metadata": {
+							"@type": "properties",
+							"@value": {"dimension":0}
 
 						},
 						"has-value": true,
@@ -29755,6 +30033,7 @@
 					"constraints": {
 						"abstract": false,
 						"display-name": "vector",
+						"has-value": true,
 						"mappable": false,
 						"mapping-relevant": false,
 						"xsd_elements": [{"@type":"properties","@value":{"name":{"@type":"qualified-name","@value":{"name":"vector","namespace":"http://www.opengis.net/gml/3.2"}}}}],
