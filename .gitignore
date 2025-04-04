@@ -4,3 +4,4 @@ dev/*
 .ipynb_checkpoints/*
 .pytest_cache/*
 build/*
+__pycache__

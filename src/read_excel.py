@@ -9,6 +9,7 @@ from pathlib import Path
 import os
 import warnings
 import dateutil.parser as parser
+from tqdm import tqdm
 
 from ordered_set import OrderedSet
 
@@ -280,6 +281,7 @@ def read_sheets(filename, sheets, xml_schema=None, mode='local', xsd_source='pro
 
     root = get_dfs_schema(PROJECT_ROOT, xsd_source, mode)
     for sheet in sheets:
+        print(f"Processing Sheet: {sheet} ")
         sheet_available = False
         try:
             df = pd.read_excel(filename, sheet_name=sheet, dtype={'meetnet': str}).iloc[
@@ -294,15 +296,20 @@ def read_sheets(filename, sheets, xml_schema=None, mode='local', xsd_source='pro
             try:
                 base = root.get_specific_child(sheet)
                 partition = get_partition(df, np.ones(df.shape[0], dtype='bool'), [], base)
-                for part in partition:
+                for part in tqdm(partition, 
+                        desc=f"Processing {sheet}", 
+                        unit=" nodes",
+                        leave=True):
                     data_root.children[sheet].append(recursive_data_read(df[part], base, []))
             except ValueError:
                 print(f'Conversion of sheet {sheet} failed')
-
+        print("-------------------")
     data_root.delete_empty()
 
+    print("Start node mapping")
     json_dict = data_node_to_json(data_root, root)[0]
 
+    print("Start xml checking")
     if xml_schema is None:
         xml_schema = get_XML_schema(xsd_source)
     filled_xml = xml_schema.encode(json_dict)
