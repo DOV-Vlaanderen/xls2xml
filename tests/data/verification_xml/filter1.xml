@@ -12,7 +12,7 @@
         <datum_ingebruikname>2019-03-19</datum_ingebruikname>
         <monsternameMogelijk>false</monsternameMogelijk>
         <ligging>
-            <aquifer>0000</aquifer>
+            <aquifer_hcovv2>A0000</aquifer_hcovv2>
             <afgesloten_volgens_gwdecreet>niet te bepalen obv HCOV</afgesloten_volgens_gwdecreet>
             <regime>freatisch</regime>
         </ligging>
