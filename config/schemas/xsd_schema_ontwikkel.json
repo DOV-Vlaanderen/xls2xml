@@ -2711,6 +2711,7 @@
 						"abstract": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -2977,6 +2978,7 @@
 							"@value": {"type":"and","config":[{"@type":"validator","@value":{"type":"enumeration","config":["0400_ actiegebied_met_freatisch_alternatief","1000_actiegebied_2","1000_actiegebied_3","1000_actiegebied_4","1000_waakgebied","1100_waakgebied","1300_actiegebied_1","1300_actiegebied_2","1300_actiegebied_3","1300_actiegebied_4","0800_actiegebied_met_beperkt_freatisch_alternatief","0400_actiegebied_met_beperkt_freatisch_alternatief","0800_actiegebied_met_freatisch_alternatief","1100_waakgebied_Beringen","1100_waakgebied_Leuven","0400_actiegebied_verzilt","0400_waakgebied","0600_actiegebied_met_beperkt_freatisch_alternatief","0600_actiegebied_met_freatisch_alternatief","0600_waakgebied","0800_waakgebied","1000_actiegebied_1","geen actie/waakgebieden"]}}]}
 
 						},
+						"xsd_elements": [],
 						"xsd_restriction": true
 					},
 					"superType": {
@@ -3002,6 +3004,7 @@
 							"@value": {"type":"and","config":[{"@type":"validator","@value":{"type":"enumeration","config":["0400_actiegebied_1_met_beperkt_freatisch_alternatief","0400_actiegebied_1_met_freatisch_alternatief","0400_actiegebied_1_verzilt","0400_actiegebied_2_met_beperkt_freatisch_alternatief","0400_actiegebied_2_met_freatisch_alternatief","0400_actiegebied_2_verzilt","0400_waakgebied","0600_actiegebied_met_beperkt_freatisch_alternatief","0600_actiegebied_met_freatisch_alternatief","0600_waakgebied","0800_actiegebied_met_beperkt_freatisch_alternatief","0800_actiegebied_met_freatisch_alternatief","0800_waakgebied","1000_actiegebied_1","1000_actiegebied_2","1000_actiegebied_3","1000_waakgebied_1","1000_waakgebied_2","1100_waakgebied_1","1300_actiegebied_1","1300_actiegebied_2","1300_actiegebied_3","1300_waakgebied_1","geen actie/waakgebieden"]}}]}
 
 						},
+						"xsd_elements": [],
 						"xsd_restriction": true
 					},
 					"superType": {
@@ -3421,6 +3424,7 @@
 						"abstract": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -4288,6 +4292,7 @@
 						"abstract": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -4489,6 +4494,7 @@
 						"abstract": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -4672,6 +4678,7 @@
 						"abstract": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -4766,6 +4773,7 @@
 						"abstract": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -4806,6 +4814,7 @@
 						"abstract": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -5281,6 +5290,7 @@
 						"abstract": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -5435,6 +5445,7 @@
 						"abstract": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -5475,6 +5486,7 @@
 						"abstract": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -5852,6 +5864,7 @@
 						"abstract": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -6749,6 +6762,7 @@
 						"abstract": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -6906,6 +6920,7 @@
 						"abstract": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -7107,6 +7122,7 @@
 						"abstract": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -9704,6 +9720,7 @@
 						"abstract": false,
 						"mappable": false,
 						"mapping-relevant": false,
+						"xsd_elements": [],
 						"xsd_restriction": false
 					},
 					"declares": [
@@ -9865,7 +9882,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"location": "bundleresource://224.fwk523127911/schemas/xml.xsd#0:0",
+								"location": "bundleresource://224.fwk1293680848/schemas/xml.xsd#0:0",
 								"name": "AnonymousType",
 								"namespace": "http://www.w3.org/XML/1998/namespace/lang",
 								"constraints": {
@@ -26382,7 +26399,7 @@
 								"xsd_attribute": true
 							},
 							"propertyType": {
-								"location": "bundleresource://224.fwk523127911/schemas/xml.xsd#0:0",
+								"location": "bundleresource://224.fwk1293680848/schemas/xml.xsd#0:0",
 								"name": "AnonymousType",
 								"namespace": "http://www.w3.org/XML/1998/namespace/lang",
 								"constraints": {
