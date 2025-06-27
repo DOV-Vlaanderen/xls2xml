@@ -76,6 +76,13 @@ def parse_float(f):
     return t
 
 
+def parse_double(f):
+    if isinstance(f, str):
+        f = f.replace(',', '.').replace(' ', '')
+
+    return float(f)
+
+
 def clean_data(data, schema_node):
     """
     Cleans the data according to schema constraints.
@@ -96,7 +103,7 @@ def clean_data(data, schema_node):
                    'java.math.BigInteger': lambda x: int(x),
                    'java.sql.Date': parse_date,
                    'java.math.BigDecimal': parse_float,
-                   'java.lang.Double': parse_float,
+                   'java.lang.Double': parse_double,
                    'java.lang.String': lambda x: str(x),
                    'java.net.URI': lambda x: str(x),
                    'java.sql.Time': parse_time,
@@ -347,10 +354,6 @@ def read_to_xml(input_filename, output_filename='./dist/result.xml', sheets=None
 
 
 if __name__ == '__main__':
-    from itertools import product
-    import time
-
-    # read_to_xml('../tests/data/filled_templates/bodem_template_full2.xlsx', '../dist/dev.xml', sheets=['bodemlocatie'])
     sheets = ['observatie']
-    read_to_xml(f'../data_voorbeeld/observatie.xlsx', f'../dist/TV_test3.xml', sheets=sheets,
-                xsd_source='ontwikkel')
+    read_to_xml(f'../data_voorbeeld/btf.xlsx', f'../dist/TV_test3.xml',
+                xsd_source='productie')
