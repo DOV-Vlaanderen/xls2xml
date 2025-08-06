@@ -348,6 +348,12 @@ def add_sheet(workbook, sheet, xls_root, formats, last_code_lijst_index, color_c
                     'minimum': date(1500, 1, 1)
                 })
 
+            if data.data_type == 'java.lang.Boolean':
+                worksheet.data_validation(bottom_header_index + 1, data.col_range[0], 1000000, data.col_range[0], {
+                    'validate': 'list',
+                    'source': ['true', 'false']
+                })
+
             if data.code_lijst:
                 add_table_to_codelijst_sheet(workbook, data, cell_format, last_code_lijst_index)
                 last_code_lijst_index += 1
@@ -418,7 +424,8 @@ def generate_standard_templates(project_root, mode='local'):
 
         # GRONDWATER
         sheets = ['grondwaterlocatie', 'filter', 'filtermeting', 'opdracht', 'monster', 'observatie']
-        create_xls(f'{project_root}/templates/{omgeving}/{omgeving}_grondwater_template.xlsx', sheets, root, project_root=project_root,
+        create_xls(f'{project_root}/templates/{omgeving}/{omgeving}_grondwater_template.xlsx', sheets, root,
+                   project_root=project_root,
                    header_config=header_filename,
                    priority_config=priorities_filename,
                    color_choice=False)
@@ -429,26 +436,30 @@ def generate_standard_templates(project_root, mode='local'):
         # BODEM
         sheets = ['bodemlocatie', 'bodemsite', 'bodemmonster', 'bodemobservatie',
                   'bodemkundigeopbouw', 'opdracht', 'monster', 'observatie']
-        create_xls(f'{project_root}/templates/{omgeving}/{omgeving}_bodem_template.xlsx', sheets, root, project_root=project_root,
+        create_xls(f'{project_root}/templates/{omgeving}/{omgeving}_bodem_template.xlsx', sheets, root,
+                   project_root=project_root,
                    header_config=header_filename,
                    priority_config=priorities_filename,
                    color_choice=False)
         sheets.append('bodemlocatieclassificatie')
         sheets.sort()
-        create_xls(f'{project_root}/templates/{omgeving}/{omgeving}_bodem_template_full.xlsx', sheets, root, project_root=project_root)
+        create_xls(f'{project_root}/templates/{omgeving}/{omgeving}_bodem_template_full.xlsx', sheets, root,
+                   project_root=project_root)
 
-        #GEOLOGIE
+        # GEOLOGIE
         sheets = ['boring', 'interpretaties', 'grondmonster', 'opdracht', 'monster', 'observatie']
-        create_xls(f'{project_root}/templates/{omgeving}/{omgeving}_geologie_template.xlsx', sheets, root, project_root=project_root,
+        create_xls(f'{project_root}/templates/{omgeving}/{omgeving}_geologie_template.xlsx', sheets, root,
+                   project_root=project_root,
                    header_config=header_filename,
                    priority_config=priorities_filename,
                    color_choice=False)
         create_xls(f'{project_root}/templates/{omgeving}/{omgeving}_geologie_template_full.xlsx', sheets, root,
                    project_root=project_root)
 
-        #OPDRACHT
+        # OPDRACHT
         sheets = ['opdracht', 'monster', 'observatie']
-        create_xls(f'{project_root}/templates/{omgeving}/{omgeving}_opdracht_template.xlsx', sheets, root, project_root=project_root,
+        create_xls(f'{project_root}/templates/{omgeving}/{omgeving}_opdracht_template.xlsx', sheets, root,
+                   project_root=project_root,
                    header_config=header_filename,
                    priority_config=priorities_filename,
                    color_choice=False
@@ -456,7 +467,7 @@ def generate_standard_templates(project_root, mode='local'):
         create_xls(f'{project_root}/templates/{omgeving}/{omgeving}_opdracht_template_full.xlsx', sheets, root,
                    project_root=project_root)
 
-        #FULL
+        # FULL
         sheets = ['grondwaterlocatie', 'filter', 'filtermeting', 'filterdebietmeter', 'bodemlocatie',
                   'bodemsite',
                   'bodemmonster',
@@ -464,9 +475,8 @@ def generate_standard_templates(project_root, mode='local'):
                   'bodemlocatieclassificatie',
                   'bodemkundigeopbouw',
                   'boring', 'interpretaties', 'grondmonster', 'opdracht', 'monster', 'observatie']
-        create_xls(f'{project_root}/templates/{omgeving}/{omgeving}_template_full.xlsx', sheets, root, project_root=project_root)
-
-
+        create_xls(f'{project_root}/templates/{omgeving}/{omgeving}_template_full.xlsx', sheets, root,
+                   project_root=project_root)
 
 
 if __name__ == '__main__':

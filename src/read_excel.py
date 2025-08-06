@@ -99,7 +99,7 @@ def clean_data(data, schema_node):
         return None
     else:
 
-        cleaner = {'java.lang.Boolean': lambda x: bool(x),
+        cleaner = {'java.lang.Boolean': lambda x: bool({'true': True, 'false': False}.get(x, x)),
                    'java.math.BigInteger': lambda x: int(x),
                    'java.sql.Date': parse_date,
                    'java.math.BigDecimal': parse_float,
@@ -355,5 +355,5 @@ def read_to_xml(input_filename, output_filename='./dist/result.xml', sheets=None
 
 if __name__ == '__main__':
     sheets = ['observatie']
-    read_to_xml(f'../data_voorbeeld/btf.xlsx', f'../dist/TV_test3.xml',
+    read_to_xml(f'../data_voorbeeld/bod_opbouw2.xlsx', f'../dist/result2.xml',
                 xsd_source='productie')
