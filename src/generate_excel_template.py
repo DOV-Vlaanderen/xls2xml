@@ -72,13 +72,12 @@ def fill_priority(current_node, previous_names, convertor):
 
     if isinstance(current_node, ChoiceNode):
         assert not (current_node.priority[0] < 4 and all(
-            c.priority[0] >= 4 for c in current_node.children if c.min_amount > 0)
-                    and [c for c in current_node.children if
-                         c.min_amount > 0]), 'Removed a node that is necessary for its parent!'
+            c.priority[0] >= 4 for c in current_node.children if c.min_amount > 0) and [c for c in current_node.children
+                                                                                        if
+                                                                                        c.min_amount > 0]), 'Removed a node that is necessary for its parent!'
     else:
-        assert not (current_node.priority[0] < 4 and
-                    any(c.priority[0] >= 4 and c.min_amount > 0 for c in
-                        current_node.children)), f'Removed node(s) {[c for c in current_node.children if c.priority[0] >= 4 and c.min_amount > 0]} that is necessary for its parent {previous_names, current_node}!'
+        assert not (current_node.priority[0] < 4 and any(c.priority[0] >= 4 and c.min_amount > 0 for c in
+                                                         current_node.children)), f'Removed node(s) {[c for c in current_node.children if c.priority[0] >= 4 and c.min_amount > 0]} that is necessary for its parent {previous_names, current_node}!'
     return current_node.priority
 
 
@@ -270,8 +269,7 @@ def add_table_to_codelijst_sheet(workbook, data, cell_format, last_code_lijst_in
     # Gegevensvalidatie toevoegen
     worksheet.data_validation(bottom_header_index + 1, data.col_range[0], 1000000, data.col_range[0], {
         'validate': 'list',
-        'source': f"='Codelijsten'!${get_nth_col_name(2 * last_code_lijst_index)}${4}:'"
-                  f"'${get_nth_col_name(2 * last_code_lijst_index)}${4 - 1 + len(data.code_lijst)}"
+        'source': f"='Codelijsten'!${get_nth_col_name(2 * last_code_lijst_index)}${4}:${get_nth_col_name(2 * last_code_lijst_index)}${4 - 1 + len(data.code_lijst)}"
     })
 
     # link toevoegen
