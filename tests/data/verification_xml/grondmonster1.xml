@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns4:dov-schema xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                xmlns:ns4="http://kern.schemas.dov.vlaanderen.be"
-                xsi:schemaLocation="http://kern.schemas.dov.vlaanderen.be https://www.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd">
+<ns0:dov-schema xmlns:ns0="http://kern.schemas.dov.vlaanderen.be">
     <grondmonster>
         <naam>1</naam>
         <dataidentifier>
@@ -9,10 +7,11 @@
             <uri>https://www.dov.vlaanderen.be/data/grondmonster/2017-157170</uri>
         </dataidentifier>
         <boring>GEO-69/641-b5</boring>
+        <datum_monstername>1970-03-02</datum_monstername>
         <monstertype>ongeroerd</monstertype>
         <diepte>
-            <van>1.00</van>
-            <tot>1.30</tot>
+            <van>1.0</van>
+            <tot>1.3</tot>
         </diepte>
         <observatieReeksData>
             <korrelverdeling_reeks>
@@ -42,27 +41,6 @@
             </proefuitvoering>
         </proefuitvoeringsData>
         <opdracht>GEO-69/641</opdracht>
-        <bijlage>
-            <titel>Korrelverdeling</titel>
-            <jaar>2017</jaar>
-            <bijlage_type>andere</bijlage_type>
-            <opmerking>Id: GEO-69/641 Beschikbaar bij: MVG - Afdeling Geotechniek</opmerking>
-            <url>https://www.dov.vlaanderen.be/data/grondmonster/2017-171246</url>
-        </bijlage>
-        <bijlage>
-            <titel>Onderkenningsproeven</titel>
-            <jaar>2017</jaar>
-            <bijlage_type>andere</bijlage_type>
-            <opmerking>Id: GEO-69/641 Beschikbaar bij: MVG - Afdeling Geotechniek</opmerking>
-            <url>https://www.dov.vlaanderen.be/data/grondmonster/2017-171246</url>
-        </bijlage>
-        <bijlage>
-            <titel>Volumemassa en watergehalte</titel>
-            <jaar>2017</jaar>
-            <bijlage_type>andere</bijlage_type>
-            <opmerking>Id: GEO-69/641 Beschikbaar bij: MVG - Afdeling Geotechniek</opmerking>
-            <url>https://www.dov.vlaanderen.be/data/grondmonster/2017-171246</url>
-        </bijlage>
     </grondmonster>
     <grondmonster>
         <naam>N2</naam>
@@ -71,9 +49,10 @@
             <uri>https://www.dov.vlaanderen.be/data/grondmonster/2017-171246</uri>
         </dataidentifier>
         <boring>GEO-09/044-B3</boring>
+        <datum_monstername>2010-06-11</datum_monstername>
         <monstertype>ongeroerd</monstertype>
         <diepte>
-            <van>4.50</van>
+            <van>4.5</van>
             <tot>4.98</tot>
         </diepte>
         <observatieData>
@@ -96,13 +75,13 @@
             <korrelverdeling_reeks>
                 <humus_kalk_verwijderd>N</humus_kalk_verwijderd>
                 <korrelverdeling>
-                    <diameter>0.710000</diameter>
-                    <fractie>0.00</fractie>
+                    <diameter>0.71</diameter>
+                    <fractie>0.0</fractie>
                     <methode>ZEEFPROEF</methode>
                 </korrelverdeling>
                 <korrelverdeling>
-                    <diameter>0.500000</diameter>
-                    <fractie>0.00</fractie>
+                    <diameter>0.5</diameter>
+                    <fractie>0.0</fractie>
                     <methode>ZEEFPROEF</methode>
                 </korrelverdeling>
             </korrelverdeling_reeks>
@@ -120,12 +99,5 @@
             </proefuitvoering>
         </proefuitvoeringsData>
         <opdracht>GEO-09/044</opdracht>
-        <bijlage>
-            <titel>Schuifweerstandskarakteristieken</titel>
-            <jaar>2017</jaar>
-            <bijlage_type>andere</bijlage_type>
-            <opmerking>Id: GEO-09/044 Beschikbaar bij: VO - Afdeling Geotechniek</opmerking>
-            <url>https://www.dov.vlaanderen.be/data/grondmonster/2017-171246</url>
-        </bijlage>
     </grondmonster>
-</ns4:dov-schema>
+</ns0:dov-schema>
