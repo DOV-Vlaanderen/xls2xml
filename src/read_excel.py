@@ -10,6 +10,7 @@ import warnings
 import dateutil.parser as parser
 from decimal import Decimal, getcontext
 from ordered_set import OrderedSet
+from src.validation import Validator
 
 warnings.filterwarnings("ignore", message="Data Validation extension is not supported and will be removed")
 
@@ -315,9 +316,13 @@ def read_sheets(filename, sheets, xml_schema=None, mode='local', xsd_source='pro
 
     if xml_schema is None:
         xml_schema = get_XML_schema(xsd_source)
-    filled_xml = xml_schema.encode(json_dict)
 
-    return filled_xml
+    validator = Validator(json_dict, xml_schema)
+    validator.validate()
+
+    filled_xml = xml_schema.encode(validator.corrected)
+
+    return filled_xml, validator
 
 
 def write_xml(xml, filename):
@@ -335,7 +340,7 @@ def write_xml(xml, filename):
 
 
 def read_to_xml(input_filename, output_filename='./dist/result.xml', sheets=None, mode='local',
-                xsd_source='productie', project_root=None, xml_schema=None, df_range=None):
+                xsd_source='productie', project_root=None, xml_schema=None, df_range=None) -> Validator:
     """
     Reads data from Excel sheets and generates filled XML.
 
@@ -348,12 +353,15 @@ def read_to_xml(input_filename, output_filename='./dist/result.xml', sheets=None
         global PROJECT_ROOT
         PROJECT_ROOT = project_root
 
-    filled_xml = read_sheets(input_filename, sheets=sheets, mode=mode, xsd_source=xsd_source, xml_schema=xml_schema,
-                             df_range=df_range)
+    filled_xml, rapport = read_sheets(input_filename, sheets=sheets, mode=mode, xsd_source=xsd_source,
+                                      xml_schema=xml_schema,
+                                      df_range=df_range)
+
     write_xml(filled_xml, output_filename)
+
+    return rapport
 
 
 if __name__ == '__main__':
-    sheets = ['observatie']
-    read_to_xml(f'../data_voorbeeld/bod_opbouw2.xlsx', f'../dist/result2.xml',
+    read_to_xml('../data_voorbeeld/A8A18A10.xlsx', '../dist/result.xml',
                 xsd_source='productie')

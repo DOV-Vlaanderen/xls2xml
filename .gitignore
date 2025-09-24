@@ -4,3 +4,7 @@ dev/*
 .ipynb_checkpoints/*
 .pytest_cache/*
 build/*
+data_voorbeeld/*
+dist/*
+results/*
+templates/ontwikkel/*

@@ -33,6 +33,9 @@ if __name__ == '__main__':
 
     # Call the read_to_xml function with provided arguments
     if args.sheets:
-        read_to_xml(args.input_file, args.output_file, sheets=args.sheets, mode=args.mode, xsd_source=args.omgeving)
+        rapport = read_to_xml(args.input_file, args.output_file, sheets=args.sheets, mode=args.mode,
+                              xsd_source=args.omgeving)
     else:
-        read_to_xml(args.input_file, args.output_file, mode=args.mode, xsd_source=args.omgeving)
+        rapport = read_to_xml(args.input_file, args.output_file, mode=args.mode, xsd_source=args.omgeving)
+
+    print(rapport.get_error_rapport())
