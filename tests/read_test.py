@@ -68,7 +68,7 @@ class ValidationNode:
 
 def xls2xml_test(xls_filename, xml_filename, sheets):
     valid_xml = ValidationNode(et.parse(xml_filename).getroot())
-    generated_xml = ValidationNode(read_sheets(xls_filename, sheets, XML_SCHEMA))
+    generated_xml = ValidationNode(read_sheets(xls_filename, sheets, XML_SCHEMA)[0])
 
     assert valid_xml == generated_xml
 
