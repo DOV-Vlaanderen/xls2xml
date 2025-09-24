@@ -12,7 +12,7 @@ if __name__ == '__main__':
     # Adding optional argument
     parser.add_argument("-o", "--output_file",
                         help="Output file to which the parsed XML-file is outputted, default: dist/dev.xml",
-                        default='./dist/dev.xml')
+                        default='./results/result.xml')
 
     parser.add_argument("-m", "--mode",
                         help="Run in local or online mode, options are 'local' and 'online', default: local",

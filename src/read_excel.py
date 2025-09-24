@@ -339,7 +339,7 @@ def write_xml(xml, filename):
         f.write(xmlschema.etree_tostring(xml))
 
 
-def read_to_xml(input_filename, output_filename='./dist/result.xml', sheets=None, mode='local',
+def read_to_xml(input_filename, output_filename='./results/result.xml', sheets=None, mode='local',
                 xsd_source='productie', project_root=None, xml_schema=None, df_range=None) -> Validator:
     """
     Reads data from Excel sheets and generates filled XML.
@@ -363,5 +363,5 @@ def read_to_xml(input_filename, output_filename='./dist/result.xml', sheets=None
 
 
 if __name__ == '__main__':
-    read_to_xml('../data_voorbeeld/A8A18A10.xlsx', '../dist/result.xml',
+    read_to_xml('../data_voorbeeld/A8A18A10.xlsx', '../results/result.xml',
                 xsd_source='productie')
