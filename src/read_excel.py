@@ -363,5 +363,5 @@ def read_to_xml(input_filename, output_filename='./results/result.xml', sheets=N
 
 
 if __name__ == '__main__':
-    read_to_xml('../data_voorbeeld/A8A18A10.xlsx', '../results/result.xml',
-                xsd_source='productie')
+    read_to_xml('../templates/ontwikkel/ontwikkel_geologie_template.xlsx', '../results/result.xml',
+                xsd_source='ontwikkel')

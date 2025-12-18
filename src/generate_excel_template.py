@@ -72,9 +72,7 @@ def fill_priority(current_node, previous_names, convertor):
 
     if isinstance(current_node, ChoiceNode):
         assert not (current_node.priority[0] < 4 and all(
-            c.priority[0] >= 4 for c in current_node.children if c.min_amount > 0) and [c for c in current_node.children
-                                                                                        if
-                                                                                        c.min_amount > 0]), 'Removed a node that is necessary for its parent!'
+            c.priority[0] >= 4 for c in current_node.children)), 'Removed a node that is necessary for its parent!'
     else:
         assert not (current_node.priority[0] < 4 and any(c.priority[0] >= 4 and c.min_amount > 0 for c in
                                                          current_node.children)), f'Removed node(s) {[c for c in current_node.children if c.priority[0] >= 4 and c.min_amount > 0]} that is necessary for its parent {previous_names, current_node}!'
@@ -417,10 +415,25 @@ def generate_standard_templates(project_root, mode='local'):
         ('ontwikkel', 'priority_config_beknopt_oefen.ini', 'header_convertor_oefen.ini'),
     ]
 
+
+
+
+
     for omgeving, priorities_filename, header_filename in configs:
         priorities_filename = os.path.join(project_root, 'config', priorities_filename)
         header_filename = os.path.join(project_root, 'config', header_filename)
         root = get_dfs_schema(project_root, xsd_source=omgeving, mode=mode)
+
+        # FULL
+        sheets = ['grondwaterlocatie', 'filter', 'filtermeting', 'filterdebietmeter', 'bodemlocatie',
+                  'bodemsite',
+                  'bodemmonster',
+                  'bodemobservatie',
+                  'bodemlocatieclassificatie',
+                  'bodemkundigeopbouw',
+                  'boring', 'interpretaties', 'grondmonster', 'opdracht', 'monster', 'observatie', 'sondering']
+        create_xls(f'{project_root}/templates/{omgeving}/{omgeving}_template_full.xlsx', sheets, root,
+                   project_root=project_root)
 
         # GRONDWATER
         sheets = ['grondwaterlocatie', 'filter', 'filtermeting', 'opdracht', 'monster', 'observatie']
@@ -467,16 +480,7 @@ def generate_standard_templates(project_root, mode='local'):
         create_xls(f'{project_root}/templates/{omgeving}/{omgeving}_opdracht_template_full.xlsx', sheets, root,
                    project_root=project_root)
 
-        # FULL
-        sheets = ['grondwaterlocatie', 'filter', 'filtermeting', 'filterdebietmeter', 'bodemlocatie',
-                  'bodemsite',
-                  'bodemmonster',
-                  'bodemobservatie',
-                  'bodemlocatieclassificatie',
-                  'bodemkundigeopbouw',
-                  'boring', 'interpretaties', 'grondmonster', 'opdracht', 'monster', 'observatie']
-        create_xls(f'{project_root}/templates/{omgeving}/{omgeving}_template_full.xlsx', sheets, root,
-                   project_root=project_root)
+
 
 
 if __name__ == '__main__':

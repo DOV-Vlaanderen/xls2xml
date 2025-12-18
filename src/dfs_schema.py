@@ -162,6 +162,9 @@ class ChoiceNode(Node):
 
         return val
 
+    def __class__(self):
+        return 'ChoiceNode'
+
 
 class SequenceNode(Node):
     """
@@ -173,6 +176,9 @@ class SequenceNode(Node):
 
     def __str__(self) -> str:
         return f'SequenceNode(name="{self.name}", {self.min_amount}..{self.max_amount})'
+
+    def __class__(self):
+        return 'SequenceNode'
 
 
 def create_dfs_schema(node, old_node: Node = None) -> Node:
@@ -240,6 +246,12 @@ def get_content(current_type):
     if current_type.local_name == 'PointType':
         content = content[1:] + content[:1]  # For some reason Point is in the wrong order? Bit of a dirty hack
 
+    if current_type.local_name == 'MultiSurfaceType':
+        content = content[2:] + content[:2]  # For some reason MultiSurface is in the wrong order? Bit of a dirty hack
+
+    if current_type.local_name == 'PolygonType':
+        content = content[2:] + content[:2]  # For some reason Polygon is in the wrong order? Bit of a dirty hack
+
     return list(content)
 
 
@@ -276,10 +288,19 @@ def get_binding(current_type):
     return CONVERTOR[current_type.id]
 
 
-def recursive_fill(current_node, current_type):
+def recursive_fill(current_node, current_type, subgroup):
     choices = 0
     sequences = 0
     content = []
+
+    if current_type.name in subgroup:
+        subs = list(subgroup[current_type.name])
+        if len(subs) > 1:
+            raise NotImplementedError
+
+        current_type = subs[0]
+        current_node.name = current_type.local_name
+
     if isinstance(current_type, XsdGroup):
         current_node.min_amount = current_type.min_occurs
         current_node.max_amount = current_type.max_occurs if current_type.max_occurs is not None else math.inf
@@ -300,7 +321,14 @@ def recursive_fill(current_node, current_type):
 
     for child_type in content:
         child_node, choices, sequences = get_child_node(child_type, choices, sequences)
-        current_node.children.append(recursive_fill(child_node, child_type))
+
+        child = recursive_fill(child_node, child_type, subgroup)
+        if isinstance(current_type.content, XsdGroup):
+            child.min_amount = min(child.min_amount, current_type.content.min_occurs)
+            child.max_amount = max(child.max_amount,
+                                   current_type.content.max_occurs if current_type.content.max_occurs is not None else math.inf)
+
+        current_node.children.append(child)
 
     if not isinstance(current_node, ChoiceNode) and not isinstance(current_node, SequenceNode):
         current_node.binding = DEFAULT_TYPE
@@ -352,8 +380,9 @@ def get_dfs_schema_from_url(url, xml_schema=None):
         xml_schema = xmlschema.XMLSchema(url)
     root_node = Node()
     root_type = xml_schema.root_elements[0]
+    sub_groups = xml_schema.substitution_groups.target_dict
 
-    recursive_fill(root_node, root_type)
+    recursive_fill(root_node, root_type, sub_groups)
     clean_sequence_nodes(root_node, None)
 
     return root_node
@@ -363,7 +392,6 @@ def schema_to_json(filename, dfs_schema):
     result = []
     dfs_node_to_json(dfs_schema, result)
     print('r')
-
 
 
 def dfs_node_to_json(node, result):
@@ -406,6 +434,7 @@ def get_dfs_schema_from_local(project_root, config_filename="xsd_schema.json") -
     root = create_dfs_schema(TYPE_LIJST[dov_schema_id])
     root.min_amount = 1
     root.max_amount = 1
+    clean_sequence_nodes(root, None)
 
     return root
 
@@ -433,6 +462,9 @@ def get_dfs_schema(project_root=None, xsd_source="productie", mode='local', xml_
 
 
 if __name__ == '__main__':
-    dfs_schema = get_dfs_schema_from_local(os.path.dirname(os.path.dirname(__file__)))
+    from pathlib import Path
 
+    # dfs_schema = get_dfs_schema_from_local(os.path.dirname(os.path.dirname(__file__)))
+    PROJECT_ROOT = Path(os.path.dirname(os.path.dirname(__file__)))
+    dfs_schema = get_dfs_schema(PROJECT_ROOT, 'productie', 'online')
     schema_to_json('test.json', dfs_schema)
