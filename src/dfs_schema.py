@@ -9,11 +9,34 @@ from xmlschema.validators.attributes import XsdAttribute
 import xmlschema
 import math
 import sys
+from urllib.parse import urlparse
+import re
+
+VERSION_RE = re.compile(r"^\d+(\.\d+)*$")
 
 # Global variables to store schema data
 TYPE_LIJST = dict()
 dov_schema_id = None
 DEFAULT_TYPE = "java.lang.Object"
+
+
+def namespace_root(url: str) -> str:
+    if url in ("", 'http://www.w3.org/2001/XMLSchema') or 'urn:' in url:
+        return "http://www.w3.org/2001/XMLSchema"
+    parsed = urlparse(url)
+    parts = [p for p in parsed.path.split("/") if p]
+
+    kept = []
+    for part in parts:
+        kept.append(part)
+        if VERSION_RE.match(part):
+            break
+    else:
+        # No version segment found -> discard path
+        kept = []
+
+    path = "/" + "/".join(kept) if kept else "/"
+    return f"{parsed.scheme}://{parsed.netloc}{path}"
 
 
 def init(project_root, config_filename="xsd_schema.json") -> None:
@@ -45,6 +68,7 @@ class Node:
         self.binding = None
         self.priority = None
         self.source = None
+        self.namespace = None
 
     def set_metadata(self, metadata: dict) -> None:
         """
@@ -200,6 +224,8 @@ def create_dfs_schema(node, old_node: Node = None) -> Node:
             current_node = SequenceNode()
         else:
             current_node = Node()
+
+        current_node.namespace = namespace_root(node['namespace'])
     else:
         current_node = old_node
 
@@ -319,6 +345,11 @@ def recursive_fill(current_node, current_type, subgroup):
             isinstance(current_node, ChoiceNode) or isinstance(current_node, SequenceNode))):
         content = get_content(current_type)
 
+    if isinstance(current_type, XsdAttribute):
+        current_node.namespace = namespace_root("")
+    else:
+        current_node.namespace = namespace_root(current_type.default_namespace)
+
     for child_type in content:
         child_node, choices, sequences = get_child_node(child_type, choices, sequences)
 
@@ -349,19 +380,35 @@ def recursive_fill(current_node, current_type, subgroup):
     return current_node
 
 
-def clean_sequence_nodes(current_node, prev_node):
+def clean_nodes(current_node, prev_node):
+    if current_node.namespace is None:
+        current_node.namespace = prev_node.namespace
+
+    if '/gml/' in current_node.namespace:
+        current_node.name = f'gml:{current_node.name}'
+
+        if 'pos' in current_node.name:
+            current_node.children = []
+            current_node.binding = 'java.util.List'
+
     for child_node in current_node.children:
-        clean_sequence_nodes(child_node, current_node)
+        clean_nodes(child_node, current_node)
 
     if isinstance(current_node, SequenceNode) and (
             not isinstance(prev_node, ChoiceNode) or len(current_node.children) <= 1):
         index = prev_node.children.index(current_node)
         prev_node.children = prev_node.children[:index] + current_node.children + prev_node.children[index + 1:]
 
+    if current_node.name == 'srsName':
+        current_node.name = '@srsName'
+
+    if current_node.name == 'srsDimension':
+        current_node.name = '@srsDimension'
+
 
 def compare_nodes(node1, node2):
-    assert (node1.name, node1.min_amount, node1.max_amount, len(node1.children)) == (
-        node2.name, node2.min_amount, node2.max_amount, len(node2.children))
+    assert (node1.name, node1.min_amount, node1.max_amount, len(node1.children), node1.namespace) == (
+        node2.name, node2.min_amount, node2.max_amount, len(node2.children), node2.namespace)
 
     if not node1.children:
         assert node1.binding == node2.binding
@@ -383,7 +430,7 @@ def get_dfs_schema_from_url(url, xml_schema=None):
     sub_groups = xml_schema.substitution_groups.target_dict
 
     recursive_fill(root_node, root_type, sub_groups)
-    clean_sequence_nodes(root_node, None)
+    clean_nodes(root_node, None)
 
     return root_node
 
@@ -419,7 +466,9 @@ def get_project_root():
 def get_XML_schema(omgeving):
     if omgeving == 'productie':
         omgeving = 'www'
-    xml_schema = xmlschema.XMLSchema(f'https://{omgeving}.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd')
+    xml_schema = xmlschema.XMLSchema(f'https://{omgeving}.dov.vlaanderen.be/xdov/schema/latest/xsd/kern/dov.xsd',
+                                     )
+
     return xml_schema
 
 
@@ -434,7 +483,7 @@ def get_dfs_schema_from_local(project_root, config_filename="xsd_schema.json") -
     root = create_dfs_schema(TYPE_LIJST[dov_schema_id])
     root.min_amount = 1
     root.max_amount = 1
-    clean_sequence_nodes(root, None)
+    clean_nodes(root, None)
 
     return root
 
@@ -463,6 +512,8 @@ def get_dfs_schema(project_root=None, xsd_source="productie", mode='local', xml_
 
 if __name__ == '__main__':
     from pathlib import Path
+
+    print(namespace_root("http://generiek.kern.schemas.dov.vlaanderen.be/AanvangspeilType/gestart_op"))
 
     # dfs_schema = get_dfs_schema_from_local(os.path.dirname(os.path.dirname(__file__)))
     PROJECT_ROOT = Path(os.path.dirname(os.path.dirname(__file__)))

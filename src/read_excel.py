@@ -108,6 +108,7 @@ def clean_data(data, schema_node):
                    'java.lang.String': lambda x: str(x),
                    'java.net.URI': lambda x: str(x),
                    'java.sql.Time': parse_time,
+                   'java.util.List': lambda x: list(float(k.strip(' ')) for k in x.split(',')),
                    'java.lang.Object': lambda x: str(x)}
 
         binding = schema_node.binding
@@ -212,7 +213,9 @@ def recursive_data_read(df, schema_node, current_lijst) -> DataNode:
         DataNode: Constructed data node.
     """
 
-    data_node = DataNode(schema_node.name)
+    node_name = schema_node.name
+
+    data_node = DataNode(node_name)
     if not schema_node.children:
         data = OrderedSet()
         column = '-'.join(current_lijst)
@@ -220,7 +223,10 @@ def recursive_data_read(df, schema_node, current_lijst) -> DataNode:
             for d in df.loc[:, column]:
                 d = clean_data(d, schema_node)
                 if d is not None:
-                    data.add(d)
+                    if isinstance(d, list):
+                        data.update(d)
+                    else:
+                        data.add(d)
         data_node.data += list(data)
 
     for c in schema_node.children:
@@ -253,7 +259,10 @@ def data_node_to_json(data_node, schema_node):
             return [None]
         return data_node.data
     assert not (schema_node.children and data_node.data), 'Undefined behaviour!'
-    json_dict = dict()
+    json_dict = {}
+
+    if schema_node.name is None:
+        json_dict["@xmlns:gml"] = "http://www.opengis.net/gml/3.2"
 
     for c in schema_node.children:
 
@@ -264,6 +273,11 @@ def data_node_to_json(data_node, schema_node):
                         json_dict[key] = json_dict.get(key, []) + val
                 else:
                     json_dict[c.name] = json_dict.get(c.name, []) + data_node_to_json(prop_c, c)
+
+    for key, val in json_dict.items():
+        if key[0] == '@' and isinstance(val, list):
+            assert len(val) == 1, 'undefined behaviour!'
+            json_dict[key]=val[0]
 
     return [json_dict]
 
@@ -363,5 +377,7 @@ def read_to_xml(input_filename, output_filename='./results/result.xml', sheets=N
 
 
 if __name__ == '__main__':
-    read_to_xml('../templates/ontwikkel/ontwikkel_geologie_template.xlsx', '../results/result.xml',
-                xsd_source='ontwikkel')
+    r = read_to_xml('../data_voorbeeld/final2.xlsx', '../results/result.xml',
+                    xsd_source='oefen')
+
+    print(r.get_error_rapport())
