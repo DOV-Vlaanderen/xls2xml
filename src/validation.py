@@ -12,12 +12,15 @@ class Validator:
 
     def validate(self):
         for key, subjects in self.json_dict.items():
-            for subject in subjects:
-                try:
-                    self.xml_schema.encode({key: subject})
-                    self.corrected[key].append(subject)
-                except XMLSchemaValidationError as e:
-                    self.errors[key].append((subject, e))
+            if isinstance(subjects, dict):
+                for subject in subjects:
+                    try:
+                        self.xml_schema.encode({key: subject})
+                        self.corrected[key].append(subject)
+                    except XMLSchemaValidationError as e:
+                        self.errors[key].append((subject, e))
+            else:
+                self.corrected[key] = subjects
 
     def get_error_rapport(self):
         rapport = ''
