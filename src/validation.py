@@ -12,10 +12,12 @@ class Validator:
 
     def validate(self):
         for key, subjects in self.json_dict.items():
-            if isinstance(subjects, dict):
+            if isinstance(subjects, list):
                 for subject in subjects:
                     try:
-                        self.xml_schema.encode({key: subject})
+                        self.xml_schema.encode({key: [subject]}, namespaces={
+                            'gml': 'http://www.opengis.net/gml/3.2',
+                        })
                         self.corrected[key].append(subject)
                     except XMLSchemaValidationError as e:
                         self.errors[key].append((subject, e))
@@ -24,7 +26,7 @@ class Validator:
 
     def get_error_rapport(self):
         rapport = ''
-        for key in set(self.corrected.keys()) | set(self.errors.keys()):
+        for key in (set(self.corrected.keys()) | set(self.errors.keys())) - {'@xmlns:gml'}:
             correct = self.corrected[key]
             wrong = self.errors[key]
 

@@ -108,7 +108,7 @@ def clean_data(data, schema_node):
                    'java.lang.String': lambda x: str(x),
                    'java.net.URI': lambda x: str(x),
                    'java.sql.Time': parse_time,
-                   'java.util.List': lambda x: list(float(k.strip(' ')) for k in x.split(',')),
+                   'java.util.List': lambda x: list(float(l) for k in x.split(',') for l in k.split(' ') if l != ''),
                    'java.lang.Object': lambda x: str(x)}
 
         binding = schema_node.binding
@@ -277,7 +277,7 @@ def data_node_to_json(data_node, schema_node):
     for key, val in json_dict.items():
         if key[0] == '@' and isinstance(val, list):
             assert len(val) == 1, 'undefined behaviour!'
-            json_dict[key]=val[0]
+            json_dict[key] = val[0]
 
     return [json_dict]
 
@@ -306,8 +306,8 @@ def read_sheets(filename, sheets, xml_schema=None, mode='local', xsd_source='pro
         sheet_available = False
         try:
             df = pd.read_excel(filename, sheet_name=sheet, dtype={'meetnet': str}).iloc[
-                 root.get_specific_child(sheet).get_max_depth():,
-                 :].reset_index(
+                root.get_specific_child(sheet).get_max_depth():,
+                :].reset_index(
                 drop=True)
             sheet_available = True
         except ValueError:
@@ -321,7 +321,7 @@ def read_sheets(filename, sheets, xml_schema=None, mode='local', xsd_source='pro
                 partition = get_partition(df, np.ones(df.shape[0], dtype='bool'), [], base)
                 for part in partition:
                     data_root.children[sheet].append(recursive_data_read(df[part], base, []))
-            except ValueError:
+            except ValueError as e:
                 print(f'Conversion of sheet {sheet} failed')
 
     data_root.delete_empty()
@@ -334,7 +334,9 @@ def read_sheets(filename, sheets, xml_schema=None, mode='local', xsd_source='pro
     validator = Validator(json_dict, xml_schema)
     validator.validate()
 
-    filled_xml = xml_schema.encode(validator.corrected)
+    filled_xml = xml_schema.encode(validator.corrected, namespaces={
+        'gml': 'http://www.opengis.net/gml/3.2',
+    })
 
     return filled_xml, validator
 
@@ -350,7 +352,9 @@ def write_xml(xml, filename):
 
     with open(filename, 'w', encoding="utf-8") as f:
         f.write('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n')
-        f.write(xmlschema.etree_tostring(xml))
+        f.write(xmlschema.etree_tostring(xml, namespaces={
+            'gml': 'http://www.opengis.net/gml/3.2',
+        }))
 
 
 def read_to_xml(input_filename, output_filename='./results/result.xml', sheets=None, mode='local',
@@ -377,7 +381,7 @@ def read_to_xml(input_filename, output_filename='./results/result.xml', sheets=N
 
 
 if __name__ == '__main__':
-    r = read_to_xml('../data_voorbeeld/final2.xlsx', '../results/result.xml',
-                    xsd_source='oefen')
+    r = read_to_xml('../data_voorbeeld/demo.xlsx', '../results/demo.xml',
+                    xsd_source='productie')
 
     print(r.get_error_rapport())

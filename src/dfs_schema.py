@@ -92,6 +92,9 @@ class Node:
                     constraint_stack.append(cm['propertyType'])
             if "superType" in cm:
                 constraint_stack.append(TYPE_LIJST[cm['superType']['ref']])
+
+            if 'xsd_attribute' in cm['constraints'] and cm['constraints']['xsd_attribute']:
+                self.name = '@'+self.name
         enums = [c['values'] for c in [c['enumeration']['@value'] for c in self.constraints if 'enumeration' in c] if
                  c['allowOthers'] == False]
 
@@ -347,6 +350,7 @@ def recursive_fill(current_node, current_type, subgroup):
 
     if isinstance(current_type, XsdAttribute):
         current_node.namespace = namespace_root("")
+        current_node.name = '@'+current_node.name
     else:
         current_node.namespace = namespace_root(current_type.default_namespace)
 
@@ -399,11 +403,6 @@ def clean_nodes(current_node, prev_node):
         index = prev_node.children.index(current_node)
         prev_node.children = prev_node.children[:index] + current_node.children + prev_node.children[index + 1:]
 
-    if current_node.name == 'srsName':
-        current_node.name = '@srsName'
-
-    if current_node.name == 'srsDimension':
-        current_node.name = '@srsDimension'
 
 
 def compare_nodes(node1, node2):
