@@ -137,6 +137,8 @@ def get_identifiers(node, current_lijst, identifiers):
     #     return
 
     relevant_children = [c for c in node.children if c.max_amount <= 1]
+    if node.name == 'monster' and not current_lijst:
+        relevant_children = [c for c in node.children if c.name == 'identificator'] + relevant_children
 
     for c in relevant_children:
         current_lijst.append(c.name)
