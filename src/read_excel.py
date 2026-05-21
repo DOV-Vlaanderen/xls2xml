@@ -226,7 +226,7 @@ def recursive_data_read(df, schema_node, current_lijst) -> DataNode:
                 d = clean_data(d, schema_node)
                 if d is not None:
                     if isinstance(d, list):
-                        data.update(d)
+                        data=d
                     else:
                         data.add(d)
         data_node.data += list(data)

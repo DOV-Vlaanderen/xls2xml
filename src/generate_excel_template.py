@@ -8,13 +8,15 @@ from datetime import date
 from pathlib import Path
 import os
 
-# Initialize configparser objects
-header_convertor = configparser.ConfigParser()
-codelijst_beschrijvingen = configparser.ConfigParser()
 
+# Initialize configparser objects
+header_convertor = configparser.ConfigParser(delimiters=('=',))
+codelijst_beschrijvingen = configparser.ConfigParser(delimiters=('=',))
+codelijst_beschrijvingen.optionxform = str
 # Initialize defaultdict for priority columns
-priority_columns = configparser.ConfigParser()
+priority_columns = configparser.ConfigParser(delimiters=('=',))
 PROJECT_ROOT = None
+
 
 
 class ExcelData:
@@ -26,6 +28,7 @@ class ExcelData:
         self.col_range = None
         self.row_range = None
         self.data = None
+        self.og_data = None
         self.code_lijst = None
         self.data_type = None
         self.mandatory = False
@@ -48,6 +51,7 @@ class ExcelData:
         copy_data.col_range = self.col_range
         copy_data.row_range = self.row_range
         copy_data.data = self.data
+        copy_data.og_data = self.og_data
         copy_data.code_lijst = self.code_lijst
         copy_data.data_type = self.data_type
         copy_data.mandatory = self.mandatory
@@ -193,6 +197,7 @@ def get_excel_format_data(xls_root):
     for cell_data in [s for s in sheet_data if s.row_range[0] == 0]:
         header_data = cell_data.copy()
         header_data.row_range = (max_n + 1, max_n + 1)
+        header_data.og_data = header_data.data
         if xls_root.name in header_convertor and cell_data.data in header_convertor[xls_root.name]:
             header_data.data = header_convertor[xls_root.name][cell_data.data]
         header_row.append(header_data)
@@ -204,9 +209,11 @@ def initialize_config(beschrijving_config, header_config, priority_config):
     global header_convertor
     global codelijst_beschrijvingen
     global priority_columns
-    header_convertor = configparser.ConfigParser()
-    codelijst_beschrijvingen = configparser.ConfigParser()
-    priority_columns = configparser.ConfigParser()
+    header_convertor = configparser.ConfigParser(delimiters=('=',))
+    codelijst_beschrijvingen = configparser.ConfigParser(delimiters=('=',))
+    priority_columns = configparser.ConfigParser(delimiters=('=',))
+    codelijst_beschrijvingen.optionxform = str
+
 
     if beschrijving_config is not None:
         codelijst_beschrijvingen.read(beschrijving_config, encoding='utf-8')
@@ -251,9 +258,9 @@ def add_table_to_codelijst_sheet(workbook, data, cell_format, last_code_lijst_in
     for i, code in enumerate(data.code_lijst):
         codelijst_worksheet.write(i + 3, 2 * last_code_lijst_index, code)
         beschrijving = '/'
-        if f'{sheet}-{data.data}' in codelijst_beschrijvingen and code in codelijst_beschrijvingen[
-            f'{sheet}-{data.data}']:
-            beschrijving = codelijst_beschrijvingen[f'{sheet}-{data.data}'][code]
+        if f'{sheet}-{data.og_data}' in codelijst_beschrijvingen and code in codelijst_beschrijvingen[
+            f'{sheet}-{data.og_data}']:
+            beschrijving = codelijst_beschrijvingen[f'{sheet}-{data.og_data}'][code]
 
         codelijst_worksheet.write(i + 3, 2 * last_code_lijst_index + 1, beschrijving)
 
@@ -303,7 +310,7 @@ def write_cell(data, worksheet, cell_format):
 
 
 def add_metadata_sheet(workbook, root, project_root):
-    config = configparser.ConfigParser()
+    config = configparser.ConfigParser(delimiters=('=',))
     config.read(os.path.join(project_root, 'config', 'config.ini'))
     worksheet = workbook.add_worksheet('metadata')
 
@@ -337,7 +344,7 @@ def add_sheet(workbook, sheet, xls_root, formats, last_code_lijst_index, color_c
         if data.row_range[0] == bottom_header_index:
             worksheet.set_column(data.col_range[0], data.col_range[1], len(data.data) * 2,
                                  formats[data.data_type],
-                                 {'hidden': data.priority[0] >= 3 and not data.mandatory})
+                                 {'hidden': data.priority[0] >= 3 and (not data.mandatory or data.priority[1] == 999)})
 
             if data.data_type == 'java.sql.Date':
                 worksheet.data_validation(bottom_header_index + 1, data.col_range[0], 1000000, data.col_range[0], {
@@ -415,10 +422,6 @@ def generate_standard_templates(project_root, mode='local'):
         ('ontwikkel', 'priority_config_beknopt_oefen.ini', 'header_convertor_oefen.ini'),
     ]
 
-
-
-
-
     for omgeving, priorities_filename, header_filename in configs:
         priorities_filename = os.path.join(project_root, 'config', priorities_filename)
         header_filename = os.path.join(project_root, 'config', header_filename)
@@ -479,8 +482,6 @@ def generate_standard_templates(project_root, mode='local'):
                    )
         create_xls(f'{project_root}/templates/{omgeving}/{omgeving}_opdracht_template_full.xlsx', sheets, root,
                    project_root=project_root)
-
-
 
 
 if __name__ == '__main__':
