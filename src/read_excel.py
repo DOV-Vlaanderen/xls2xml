@@ -83,6 +83,11 @@ def parse_double(f):
 
     return float(f)
 
+def parse_datetime(dt):
+    if isinstance(dt, str):
+        dt = parser.parse(dt, dayfirst=True)
+    return dt.strftime("%Y-%m-%dT%H:%M:%S")
+
 
 def clean_data(data, schema_node):
     """
@@ -103,6 +108,7 @@ def clean_data(data, schema_node):
         cleaner = {'java.lang.Boolean': lambda x: bool({'true': True, 'false': False}.get(x, x)),
                    'java.math.BigInteger': lambda x: int(x),
                    'java.sql.Date': parse_date,
+                   'java.sql.Timestamp': parse_datetime,
                    'java.math.BigDecimal': parse_float,
                    'java.lang.Double': parse_double,
                    'java.lang.String': lambda x: str(x),
