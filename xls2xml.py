@@ -25,6 +25,11 @@ if __name__ == '__main__':
     parser.add_argument("-s", "--sheets", nargs='+',
                         help="Sheet(s) from excel file that needs to be parsed, by default all sheets will be parsed")
 
+    parser.add_argument("--lax", action='store_true',
+                        help="Schrijf alle objecten naar XML, ook als ze niet voldoen aan het XSD-schema "
+                             "(bv. nieuwe parameters/eenheden die nog niet in de DOV-codelijsten zitten). "
+                             "Fouten worden als waarschuwing gerapporteerd.")
+
     # Read arguments from command line
     args = parser.parse_args()
 
@@ -34,8 +39,9 @@ if __name__ == '__main__':
     # Call the read_to_xml function with provided arguments
     if args.sheets:
         rapport = read_to_xml(args.input_file, args.output_file, sheets=args.sheets, mode=args.mode,
-                              xsd_source=args.omgeving)
+                              xsd_source=args.omgeving, validation='lax' if args.lax else 'strict')
     else:
-        rapport = read_to_xml(args.input_file, args.output_file, mode=args.mode, xsd_source=args.omgeving)
+        rapport = read_to_xml(args.input_file, args.output_file, mode=args.mode, xsd_source=args.omgeving,
+                              validation='lax' if args.lax else 'strict')
 
     print(rapport.get_error_rapport())
